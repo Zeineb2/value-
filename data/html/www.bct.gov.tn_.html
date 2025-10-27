@@ -1,0 +1,2119 @@
+
+
+<!DOCTYPE html>
+   <html lang="fr" dir="ltr" >
+ 
+ 
+
+
+
+
+       
+   
+         
+        <!-- main header --><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" href="css/template.css" />
+       <!--[if lt IE 8]><link rel="stylesheet" href="css/ie.css" /><![endif]-->
+        <script src="js/jquery.min.js" type="text/javascript" language="JavaScript"></script>
+        <script src='js/bjqs-1.3.min.js' type="text/javascript" language="JavaScript"></script>
+        <script src="js/bct.js" type="text/javascript" language="JavaScript"></script>
+        <script src="js/highcharts.js" type="text/javascript"></script>
+        <script src="js/modules/exporting.js" type="text/javascript" language="JavaScript"></script>
+        <script src="js/bct-charts.js" type="text/javascript" language="JavaScript"></script>
+        
+        <title>Banque Centrale de Tunisie, Accueil</title>
+       
+       <script type="text/javascript">
+              $(document).ready(function() {
+                  $('#call').click(function ()
+                  {
+                      $.ajax({
+                          type: "post",
+                          url: "chercher.jsp", //this is my servlet
+                          data: "input=" +$('#textValue').val()+"&langue="+$('#langue').val(),
+                          success: function(msg){      
+                              //$('#recherche').append("<a href=''>R�sultat de la recherche");
+                              //$('#output').append(msg);
+                              $('#recherche').html("<a href=''>R�sultat de la recherche</a>");
+                                  
+                                  $('#output').html(msg);
+                          }
+                      });
+                  });
+      
+              });
+                                                         
+            function plus_actualite(par){ 
+                if(par==""){
+                   var req = "{ }";
+                }else{
+                   var req = "la="+par;
+                }    
+                var request = $.ajax({
+                    url: "plus_actualite.jsp",
+                    type: "POST",
+                    data: req,
+                    dataType: "html"
+                });
+                request.done(function( msg ) {
+                   $( "#inline" ).html( msg );
+                   $('#box').click();
+                });
+                request.fail(function( jqXHR, textStatus ) {
+                    alert( "Request failed: " + textStatus );
+                });
+            }
+            
+            function contact(par){
+  //alert('rr');
+  if(par==""){
+  var req = "{ }";
+  }else{
+  var req = "la="+par;
+  }
+	var request = $.ajax({
+	  url: "contact.jsp",
+	  type: "POST",
+	   data: req,
+	  
+	  dataType: "html"
+	});
+	 
+	request.done(function( msg ) {
+	//alert('ee');
+	  $( "#inline" ).html( msg );
+	  $('#box2').click();
+	});
+	 
+	request.fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
+}
+       </script>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49548874-1', 'bct.gov.tn');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body id="bct">
+             <a href="#inline" rel="inline-550-550"  class="pirobox_gall1" title="Inline content" id="box">	
+</a>
+		 <a href="#inline" rel="inline-650-550"  class="pirobox_gall1" title="Inline content" id="box1">	
+</a>
+     <a href="#inline" rel="inline-550-250"  class="pirobox_gall1" title="Inline content" id="box2">	
+</a>
+<!-- Version2: Search detail-->
+    <div class="bct-search-region">
+        <div class="bct-content">
+            <form action="/recherche/search/search.php" method="GET" class="form-search" target="_blank">
+                  <input type="text" id="query" name="query" onFocus="if(this.value=='Tapez votre texte ici...')this.value=''" onBlur="if(this.value=='')this.value='Tapez votre texte ici...'" value="Tapez votre texte ici..."/>
+                  <input type="submit" value="RECHERCHE" class="button1"/>
+                  <input type="hidden" name="search" value="1">
+                  <!--<a href="#">Recherche avanc�e</a> !-->
+                  <input type="hidden" value='' id="langue"/>
+            </form>
+        </div>
+    </div>  
+        <!-- end Search detail -->
+        <!-- Version2: Language detail-->
+    <div class="bct-lg-region">
+        <div class="bct-content">
+            <div class="link-lg">
+                <span>Choisir une autre langue :</span>
+                <a href="/bct/siteprod/index.jsp?la=AN">English</a>
+                <span class="separator">|</span>
+                <a href="arabe/index_ar.jsp">&#1593;&#1585;&#1576;&#1610;</a>
+            </div>
+       </div>
+    </div>  
+        <!-- end Language detail -->
+        <!-- top region -->
+    <div class="bct-top">
+       <div class="bct-content">
+            <div class="top-menu">
+                 <a class="home" href="index.jsp" title="Accueil"></a>
+                 <span></span>
+                 <a class="message" href="mailto:webmaster@bct.gov.tn" title="Message"></a>
+                 <span></span>
+                 <a class="sitemap" href="plan_site3.jsp" title="Plan du site"></a>
+                 <span></span>
+                 <a class="rss" href="RSS.jsp" title="Rss"></a>
+            </div>
+            <div class="top-right">
+                 <div class="lang">
+                       <a href="/bct/siteprod/index.jsp?la=AN" style="background:none;padding-right:5px ">English</a> | <a href="arabe/index_ar.jsp" style="background:none;padding-right:5px ">&#1593;&#1585;&#1576;&#1610;</a>
+                      <span class="lang-fr" style=""></span>
+                 </div>
+                 <div class="search">
+                      <a href="#"></a>
+                 </div>
+           </div>
+       </div>  
+   </div>
+        <!-- end top region -->
+        <!-- Logo 
+   <div class="bct-content bct-logo"><a href="index.jsp">
+       <img alt="BCT" src="images/logo.jpg"/> </a>
+   </div>
+        <!-- end logo  -->
+ <!-- main header -->
+   
+  <div id="bct-header" style="height:228px ">
+
+      <div class="mainmenu">
+                        <!-- Version2: Main menu -->
+          <div class="bct-menu-content bct-menu">
+              <ul id="nav">
+                    
+                    <li class="top">
+                                                                        
+                            <a href=# class="top_link">La BCT</a>
+                            <ul  class="sub">
+                                
+                                <li class="top">
+                                                                       
+                                    <a href=#  class="fly">Gouvernance</a>     
+                                        
+                                    <ul>
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=153>
+                                                Cadre légal
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=159>
+                                                Organigramme
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=230>
+                                                Plan stratégique
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=160>
+                                                Implantations de la BCT
+                                            </a>
+                                        </li>   
+                                        
+                                    </ul>
+                                    
+                                <li class="top">
+                                                                       
+                                    <a href=#  class="fly">Conseil d'administration</a>     
+                                        
+                                    <ul>
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=81>
+                                                Cadre juridique
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=82>
+                                                Composition
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=83>
+                                                Communiqués
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=84>
+                                                Historique
+                                            </a>
+                                        </li>   
+                                        
+                                    </ul>
+                                    
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=209  class="fly">Etats financiers</a>     
+                                        
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=54  class="fly">Risque Pays</a>     
+                                        
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    <li class="top">
+                                                                        
+                            <a href=# class="top_link">Missions</a>
+                            <ul  class="sub">
+                                
+                                <li class="top">
+                                                                       
+                                    <a href=#  class="fly">Politique Monétaire</a>     
+                                        
+                                    <ul>
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=91>
+                                                Mise en oeuvre de la politique monétaire
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=223>
+                                                Marché de la pension livrée 
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=93>
+                                                Organisation des marchés de capitaux
+                                            </a>
+                                        </li>   
+                                        
+                                    </ul>
+                                    
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=59  class="fly">Supervision Bancaire</a>     
+                                        
+                                <li class="top">
+                                                                       
+                                    <a href=#  class="fly">Systèmes et moyens de paiement</a>     
+                                        
+                                    <ul>
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=60>
+                                                Moyens de paiement
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=96>
+                                                Systèmes de paiement
+                                            </a>
+                                        </li>   
+                                        
+                                        <li class="top">
+                                            
+                                            <a href=page.jsp?id=61>
+                                                Surveillance des systèmes et des moyens de paiement
+                                            </a>
+                                        </li>   
+                                        
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    <li class="top">
+                                                                        
+                            <a href=# class="top_link">Réglementation</a>
+                            <ul  class="sub">
+                                
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=227  class="fly">Loi portant statut <br>de la BCT & loi bancaire</a>     
+                                        
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=229  class="fly">Réglementation régissant l'octroi<br>et le retrait d'agréments</a>     
+                                        
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=226  class="fly">Circulaires & Notes</a>     
+                                        
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=66  class="fly">Réglementation bancaire</a>     
+                                        
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=67  class="fly">Réglementation des changes</a>     
+                                        
+                                </li>
+                            </ul>
+                        </li>
+                        
+                       <li class="top">
+                          
+                          <a href=stat_index.jsp class="top_link">Statistiques</a>
+                       </li>
+                       
+                    <li class="top">
+                                                                        
+                            <a href=# class="top_link">Publications</a>
+                            <ul  class="sub">
+                                
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=76  class="fly">catalogue</a>     
+                                        
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=77  class="fly">Archives</a>     
+                                        
+                                <li class="top">
+                                                                       
+                                    <a href=page.jsp?id=78  class="fly">S'abonner</a>     
+                                        
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    <li class="top">
+                                                                        
+                            <a href=page.jsp?id=244 class="top_link">Espace Etudiant</a>
+                            <ul  class="sub">
+                                
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    <li class="top">
+                                                                        
+                            <a href=page.jsp?id=241 class="top_link">RECRUTEMENT</a>
+                            <ul  class="sub">
+                                
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    <li class="top">
+                                                                        
+                            <a href=page.jsp?id=236 class="top_link">Accès à l'information</a>
+                            <ul  class="sub">
+                                
+                                </li>
+                            </ul>
+                        </li>
+                        
+					 <!--  <li class='top'><a class='top_link' style='cursor: pointer;' href='page.jsp?id=228'>Recrutement</a></li> -->
+                      <li class="top"><a class="top_link" style="cursor: pointer;" onclick="contact('')">Contact</a></li> 
+                  </ul>
+              </div> 
+                        <!-- end Main menu -->
+          </div>
+                <!-- Slide show -->
+		      <div class="slideshow" style='background:url("images/banner-main1.png") no-repeat scroll center center rgba(0, 0, 0, 0);height:187px '>
+			  <div style="width:1005px;margin:0 auto;padding:15px 0 0; ">
+			  <img src="images/logo.png" style="float:right;width:400px;">
+			  </div>
+			  
+			<!-- Version2: Slider news
+			       <div class="bct-content">
+				        <div id="bct-slider">
+				            <CENTER><FONT size="4pt" color="#13265e"><b> </b></font></CENTER> 
+                   <div class="slider">
+				   <!--<div class="actualite">
+           <br/>
+           <br/>            !-->
+           <!-- Including Mousewheel jQuery plugin -->
+                      <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+
+        <!-- Including ulslide jQuery plugin -->
+                      <script type="text/javascript" src="js/jquery.ulslide.js"></script>
+                      <style type="text/css">
+                      		/* Pager style */
+                      		#slide2-pager {
+                      			clear:both;
+                      			list-style-type:none;
+                      			overflow:hidden;
+                      			margin:0;
+                      			padding:0;
+                      			position: relative;
+                            left: 66px;
+                      		}
+                      		#slide2-pager li {
+                      			float: left;
+                      		}
+                      		#slide2-pager li a{
+                      			background: #666;
+                      			text-indent: -9999px;
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            margin: 0 5px;
+                            outline: 0;
+                            -moz-border-radius: 5px;
+                            -webkit-border-radius: 5px;
+                            border-radius: 5px;
+                      		}
+                      		#slide2-pager li a.usl-current{
+                      			text-decoration: underline;
+                      			/*background-color: #777;*/
+                      			background-color: #000;
+                      		}
+                      </style>
+                     
+					
+					
+					                 
+                </div>
+				<!--	</div>!-->
+				  </div>
+				</div>
+			</div>
+			<!-- end Slider -->
+		</div>
+		<!-- end Slide show -->
+	</div>	
+        
+        <!-- end main header -->
+         
+        <!-- end main header -->
+       
+
+         
+<link href="css_pirobox/style_1/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
+<script type="text/javascript" src="js/pirobox_extended.js"></script>
+
+
+    
+    <link rel="Stylesheet" type="text/css" href="css/evoslider.css" />
+    <link rel="Stylesheet" type="text/css" href="css/accordionza/accordionza.css" />   
+    
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.evoslider-2.1.4.js"></script>           
+    
+    
+   <link rel="stylesheet" type="text/css" href="carousel/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="carousel/slick-theme.min.css"/>
+     <script type="text/javascript" src="carousel/slick.min.js"></script>
+
+   <style>
+    .actualites-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-family: Arial, sans-serif;
+        margin: 30px 0;
+    }
+
+    .titre-section {
+        width: 100%;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .actualite-principale {
+        flex: 2;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .actualite-principale img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .actualite-principale h3 {
+        font-size: 18px;
+        margin: 10px 0 5px 0;
+    }
+
+    .actualite-principale p {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .liste-actus {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .actu-item {
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+
+    .actu-item img {
+        width: 80px;
+        height: 60px;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+
+    .actu-item .details {
+        flex: 1;
+    }
+
+    .actu-item .details h4 {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .actu-item .details span {
+        font-size: 12px;
+        color: gray;
+    }
+
+    .lire-suite {
+        color: blue;
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    .lire-suite:hover {
+        text-decoration: underline;
+    }
+    .slick-slider-actualite {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.slick-slider-actualite > div {
+    height: 500px;
+    overflow: hidden;
+}
+
+.slick-slider-actualite img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+.slick-custom-prev,
+.slick-custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+  backdrop-filter: blur(8px); /* blur effect */
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+.slick-custom-prev:hover,
+.slick-custom-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  color: white;
+}
+
+.slick-custom-prev {
+  left: 12px;
+}
+
+.slick-custom-next {
+  right: 12px;
+}
+
+</style>
+    <style>
+        .slick-slider {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 5px;
+            overflow: visible;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+        }
+
+        .slick-slider .slider-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .slider-content {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .slider-content .date {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: blue; /* Couleur de la date */
+        }
+
+        .slider-content .description {
+            margin-bottom: 20px;
+        }
+
+        .slider-content .button {
+            background-color: #cb000e; /* Couleur du bouton */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .slider-image {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider-image img {
+            width: 75%; /* Ajuste la largeur */
+            height: 130px; /* Hauteur fixe pour les images */
+            object-fit: cover; /* Garde le ratio d'aspect de l'image */
+            border-radius: 5px;
+        }
+        .slick-dots li button:before {
+    font-size: 18px; /* Taille du dot */
+    color: #000; /* Couleur des dots */
+    opacity: 1; /* Assurez-vous qu'ils soient opaques */
+}
+
+.slick-dots li.slick-active button:before {
+    font-size: 22px; /* Taille du dot actif */
+    color: #007BFF; /* Couleur du dot actif  */
+}
+
+    </style>
+    
+    
+<script type="text/javascript">
+$(document).ready(function() {
+	$().piroBox_ext({ 
+	piro_speed : 700,
+		bg_alpha : 0.5,
+		slideShow : 'false',
+		piro_scroll : true // pirobox always positioned at the center of the page 
+	});
+});
+</script>
+<script type="text/javascript">
+function plus_actualite(par){ 
+                if(par==""){
+                   var req = "{ }";
+                }else{
+                   var req = "la="+par;
+                }    
+                var request = $.ajax({
+                    url: "plus_actualite.jsp",
+                    type: "POST",
+                    data: req,
+                    dataType: "html"
+                });
+                request.done(function( msg ) {
+                   $( "#inline" ).html( msg );
+                   $('#box').click();
+                });
+                request.fail(function( jqXHR, textStatus ) {
+                    alert( "Request failed: " + textStatus );
+                });
+            }
+function ajax_tab(par){
+  //alert('rr '+par);
+  if(par==""){
+  var req = "{ }";
+  }else{
+  var req = "la="+par;
+  }
+	var request = $.ajax({
+	  url: "liste_cours_m.jsp",
+	  type: "POST", 
+	  data:  req,
+	       
+	  dataType: "html"
+	});
+	 
+	request.done(function( msg ) {
+	//alert('ee');
+	  $( "#inline" ).html( msg );
+	  $('#box').click();
+	});
+	 
+	request.fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
+  
+}
+function ajax_page(par){
+  //alert('rr');
+  if(par==""){
+  var req = "{ }";
+  }else{
+  var req = "la="+par;
+  }
+	var request = $.ajax({
+	  url: "page_ajax.jsp",
+	  type: "POST",
+	   data: req,
+	  
+	  dataType: "html"
+	});
+	 
+	request.done(function( msg ) {
+	//alert('ee');
+	  $( "#inline" ).html( msg );
+	  $('#box1').click();
+	});
+	 
+	request.fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
+  }
+  function liens_utiles(par){
+  //alert('rr');
+  if(par==""){
+  var req = "{ }";
+  }else{
+  var req = "la="+par;
+  }
+	var request = $.ajax({
+
+	  url: "liens_utiles.jsp",
+	  type: "POST",
+	   data: req,
+	  
+	  dataType: "html"
+	});
+	 
+	request.done(function( msg ) {
+	//alert('ee');
+	  $( "#inline" ).html( msg );
+	  $('#box1').click();
+	});
+	 
+	request.fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
+}
+  
+</script>
+        
+        <!-- modules -->
+       
+        
+  	
+<!-- end main header -->
+    <div id="inline" style="display:none; background:white;z-index:9999">
+                                            
+                                            
+                                         </div>
+                                         
+                                         <!--version française!-->
+  <div id="contenu"><br>
+  <div id="actualite" class="slick-slider">
+        <!-- Start Slick Slider -->
+        
+                    <div class="slider-item">
+                        <div class="slider-content">
+                            <div class="date">30-07-2025</div>
+                            <div class="description">COMMUNIQUE DE PRESSE DU CONSEIL D'ADMINISTRATION DE<br>LA BANQUE CENTRALE DE TUNISIE REUNI LE 30 JUILLET 2025
+
+</div>
+                            <a class="button" href="actualites.jsp?id=1176">Lire la suite</a>
+                        </div>
+                        <div class="slider-image">
+                            <img src="images/actu/bct.jpg" alt="Image">
+                        </div>
+                    </div>
+        
+                    <div class="slider-item">
+                        <div class="slider-content">
+                            <div class="date">29-07-2025</div>
+                            <div class="description">AVIS D'APPEL D'OFFRES NATIONAL N°2025/03</div>
+                            <a class="button" href="actualites.jsp?id=1175">Lire la suite</a>
+                        </div>
+                        <div class="slider-image">
+                            <img src="images/actu/appel3.jpg" alt="Image">
+                        </div>
+                    </div>
+        
+                    <div class="slider-item">
+                        <div class="slider-content">
+                            <div class="date">24-07-2025</div>
+                            <div class="description">Signature d'une convention de coopération et d'échange d'informations entre la BCT et le CGA
+
+</div>
+                            <a class="button" href="actualites.jsp?id=1174">Lire la suite</a>
+                        </div>
+                        <div class="slider-image">
+                            <img src="images/actu/communique.jpg" alt="Image">
+                        </div>
+                    </div>
+        
+                    <div class="slider-item">
+                        <div class="slider-content">
+                            <div class="date">23-07-2025</div>
+                            <div class="description">AVIS D'APPEL D'OFFRES NATIONAL N°2025/02</div>
+                            <a class="button" href="actualites.jsp?id=1173">Lire la suite</a>
+                        </div>
+                        <div class="slider-image">
+                            <img src="images/actu/appel3.jpg" alt="Image">
+                        </div>
+                    </div>
+        
+                    <div class="slider-item">
+                        <div class="slider-content">
+                            <div class="date">22-07-2025</div>
+                            <div class="description">Les avantages offerts aux TRE sur le plan change en 2  minutes</div>
+                            <a class="button" href="actualites.jsp?id=1172">Lire la suite</a>
+                        </div>
+                        <div class="slider-image">
+                            <img src="images/actu/bct.jpg" alt="Image">
+                        </div>
+                    </div>
+        
+    </div>
+    
+     <div style="cursor: pointer; color: #3887C5; position: relative; font-weight: 700; width: 100%; top: 5px" class="more" onClick="plus_actualite('')">
+        <p align="right"><br>+ d'actualités</p>
+    </div>
+</hr>
+
+
+
+
+  
+  
+  <div id="recherche" class="bct-content">
+         
+               
+          <div class="bct-modules">
+                <div  class="module">
+                   
+                  <h3 style="text-align:center">Principaux Taux<br><br></h3>
+                  <div class="content">
+                    
+                  
+                        <span>Taux du march&eacute; mon&eacute;taire (TM) au 15/08/2025: <b>7,50000</b> %</span>
+                       <span>Taux d'intérêt directeur  au 15/08/2025: <b>7,50000</b> %</span>
+                        
+                        <span>Taux moyen du marché monétaire (TMM) du mois de Juillet 2025: <b>7,50000</b> %</span>
+                        
+                         <span>Taux de rémunération de l'épargne (TRE) du mois de Août 2025: <b>6,50000</b> %</span>
+                        <!--<span>Taux de facilité de prêt au 15/01/2014: <b>4,75000</b> %</span>
+                        <span>Taux de facilité de dépôt au 15/01/2014: <b>4,25000</b> %</span>  !-->
+						<div align="">
+							<span><b><a  href="Tunibor_archive.jsp"  >
+								TUNIBOR
+							</a></b></span>
+							<span><a href="courbe_taux_place.jsp"  ><b>Courbe des taux de la place</b></a></span>
+						</div>
+						
+                         <br/>
+                        <a href="javascript:void(0);" onClick="ajax_page('')" class="more"><p align="right">+ d'info</p></a>
+                  </div>
+                  
+                  
+                </div>
+                <div class="module">
+                   
+                  <h3 style="text-align:center">COURS MOYENS DES DEVISES  14/08/2025</h3>
+                  <div class="content flags">
+                  <span><div style="width:62px">&nbsp;&nbsp;&nbsp;&nbsp;</div></span>
+                  <span><div style="width:59px"><b>Unité</b></div></span>
+                  <span><b>Valeur</b></span>  
+                  
+                  
+                         
+                        <div><img alt='CAD/CHF' src='images/drapeaux/canada.gif' /><span><div  align="center" style="width:20px">CAD:</div></span>
+                        <span><div  align="center" style="width:60px"><b>1</b>   </div></span>
+                        <span>   <b>2,1196</b></span></div>
+                       
+                        
+                        
+                         
+                        <div><img alt='USD/CHF' src='images/drapeaux/usa.gif' /><span><div  align="center" style="width:20px">USD:</div></span>
+                        <span><div  align="center" style="width:60px"><b>1</b>   </div></span>
+                        <span>   <b>2,9000</b></span></div>
+                       
+                        
+                        
+                         
+                        <div><img alt='GBP/CHF' src='images/drapeaux/sterling.gif' /><span><div  align="center" style="width:20px">GBP:</div></span>
+                        <span><div  align="center" style="width:60px"><b>1</b>   </div></span>
+                        <span>   <b>3,9659</b></span></div>
+                       
+                        
+                        
+                         
+                        <div><img alt='JPY/CHF' src='images/drapeaux/japan.gif' /><span><div  align="center" style="width:20px">JPY:</div></span>
+                        <span><div  align="center" style="width:60px"><b>1000</b>   </div></span>
+                        <span>   <b>19,9309</b></span></div>
+                       
+                        
+                        
+                         
+                        <div><img alt='MAD/CHF' src='images/drapeaux/morocco.gif' /><span><div  align="center" style="width:20px">MAD:</div></span>
+                        <span><div  align="center" style="width:60px"><b>10</b>   </div></span>
+                        <span>   <b>3,2454</b></span></div>
+                       
+                        
+                        
+                         
+                        <div><img alt='EUR/CHF' src='images/drapeaux/euro.gif' /><span><div  align="center" style="width:20px">EUR:</div></span>
+                        <span><div  align="center" style="width:60px"><b>1</b>   </div></span>
+                        <span>   <b>3,3511</b></span></div>
+                       
+                        
+                        
+                         
+                        <div><img alt='LYD/CHF' src='images/drapeaux/libya.gif' /><span><div  align="center" style="width:20px">LYD:</div></span>
+                        <span><div  align="center" style="width:60px"><b>1</b>   </div></span>
+                        <span>   <b>0,5389</b></span></div>
+                       
+                        
+                        
+                  
+                       <!-- <div><img alt="USD/CHF" src="images/flag-usd.jpg" /><span>USD/CHF : 0.9472</span></div>
+                        <div><img alt="JPY/CHF" src="images/flag-jpy.jpg" /><span>JPY/CHF : 1.2096</span></div>
+                        <div><img alt="GBP/CHF" src="images/flag-eng.jpg" /><span>GBP/CHF : 1.5143</span></div>
+                        <div><img alt="DZD/CHF" src="images/flag-alg.jpg" /><span>DZD/CHF : 1.2096</span></div>
+                        <div><img alt="GBP/CHF" src="images/flag-gbp.jpg" /><span>GBP/CHF : 1.5143</span></div>
+                        <div><img alt="SEK/CHF" src="images/flag-sek.jpg" /><span>SEK/CHF : 2.4798</span></div>
+                        <div><img alt="KWD/CHF" src="images/flag-kwd.jpg" /><span>KWD/CHF : 5.7119</span></div>-->
+                      <br/> <br><br> <a style="cursor: pointer;" class="more" onClick="ajax_tab('')"><p align="right">+ d'info</p></a>
+                  </div>
+                  
+                </div>
+                <div class="module">
+                
+               
+                   <h3 style="text-align:center">Principaux Indicateurs <br><br></h3>
+                  <div class="content">
+                      
+                        
+                        
+                        <span>Compte courant du Tr&eacute;sor au  14/08/2025  : <b>1155</b> MDT</span>
+                         
+                        
+                         
+                          <span>Avoirs nets en devises au 15/08/2025 <b>(*)</b> : 
+                       <br/>  &emsp;en MDT&nbsp;: <b>24096</b> 
+                        <br/> &emsp;en jours d'importation: <b>104</b></span>
+                         
+                         <span>Billets et monnaies en circulation au 14/08/2025 <b>25900</b> MDT</span>
+                        
+                        
+                        <span>Volume global de refinancement au 15/08/2025: <b>13214</b> MDT </span>
+                         <br> <b>(*) Données provisoires</b>
+						 <a href="indicateurs.jsp" class="more" style="margin-top:-2px "><p align="right">+ d'info</p></a>
+                  </div>
+                  
+                </div>
+                <div class="module last ">
+                  <h3 style="text-align:center">Informations pratiques<br><br></h3>
+                 <!-- <div id="chart-line-basic" style="min-width:232px; height: 210px; margin: 0 auto"></div> -->
+				
+                                  <div class="content">
+                                        <span><B><a href="cours.jsp">Cours Moyens Quotidiens de Devises</a></b></span>
+										<span><b><a href="page.jsp?id=68">Lignes de financement extérieures en faveur des entreprises tunisiennes</a></b></span>
+                                        <span><b><a href="indicateurs.jsp">Indicateurs Monétaires & Financiers Quotidiens</a></b></span>
+                                        <span><b><a href="page.jsp?id=163&idAccor=1">Avis d'appel d'offres</a></b></span>
+                                        <span><b><a href="https://gosdmx.bct.gov.tn/gosdmx/pnrd?lang=FR">Page Nationale Résumée des Données</a></b></span>
+                                        <span><b><a href="page.jsp?id=161">Situation comptable décadaire de la BCT</a></b></span>
+										<!--<span><b><a href="actualites.jsp?id=543">Opérations de refinancement à plus long terme d’une durée de six mois </a></b></span>-->
+										<span><b><a href="documents/Calendrier_Indicatif_OPR_fr.pdf">Calendrier indicatif pour les opérations d’appel d’offres régulières</a></b></span>
+										<span><b><a href="documents/FICHE_D_INFORMATION_20200421_fr.pdf">Opérations de refinancement à plus long terme d’une durée d’un mois - COVID19</a></b></span>
+                                        <!--<b><a href="#" class="more">+ d'info</a></b>    !-->
+                                  </div>
+                                
+                </div>
+         </div>
+         
+         
+        
+         
+       
+
+
+
+<div class="actualites-container">
+    <div class="titre-section">Activités du Gouverneur de la Banque Centrale de Tunisie</div>
+
+    <!-- Toutes les actualités, affichée une seule à la fois -->
+    <div class="actualite-principale">
+        
+
+        
+        <div class="bloc-activite" id="bloc-0" style="display:block;">
+            <div class="slick-slider-actualite">
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250724_01.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250724_02.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250724_03.jpg" alt=""/></div>
+                
+            </div>
+            <h3>Signature d'une convention de coopération et d'échange<br>d'informations entre la BCT et le CGA</h3>
+            <p>Signature d'une convention de coopération et d'échange d'informations entre la BCT et le CGA
+
+</p>
+            <span style="font-size: 12px; color: gray;">24-07-2025</span><br>
+            <a class="lire-suite" href="actualites.jsp?id=1174">Lire la suite</a>
+        </div>
+        
+
+        
+        <div class="bloc-activite" id="bloc-1" style="display:none;">
+            <div class="slick-slider-actualite">
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250724_01.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250724_02.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250724_03.jpg" alt=""/></div>
+                
+            </div>
+            <h3>Signature d'une convention de coopération et d'échange<br>d'informations entre la BCT et le CGA</h3>
+            <p>Signature d'une convention de coopération et d'échange d'informations entre la BCT et le CGA
+
+</p>
+            <span style="font-size: 12px; color: gray;">24-07-2025</span><br>
+            <a class="lire-suite" href="actualites.jsp?id=1174">Lire la suite</a>
+        </div>
+        
+        <div class="bloc-activite" id="bloc-2" style="display:none;">
+            <div class="slick-slider-actualite">
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250702_01.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250702_02.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250702_03.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250702_04.jpg" alt=""/></div>
+                
+            </div>
+            <h3>Communiqué de Presse</h3>
+            <p>Le Gouverneur de la Banque Centrale de Tunisie appelle à l'élaboration d'une vision arabe unifiée pour promouvoir l'épargne et la culture financière, ainsi qu'à l'intégration de l'éducation financière dans les programmes scolaires
+
+</p>
+            <span style="font-size: 12px; color: gray;">02-07-2025</span><br>
+            <a class="lire-suite" href="actualites.jsp?id=1170">Lire la suite</a>
+        </div>
+        
+        <div class="bloc-activite" id="bloc-3" style="display:none;">
+            <div class="slick-slider-actualite">
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250525_00.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250525_03.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250525_01.jpg" alt=""/></div>
+                
+            </div>
+            <h3>Participation du Gouverneur à la conférence « Stratégie Nationale d'Inclusion Financière » organisée par la Banque Centrale d'Irak</h3>
+            <p>Signature d'un protocole d'accord de coopération et de coordination entre la Banque centrale de Tunisie et son homologue irakienne</p>
+            <span style="font-size: 12px; color: gray;">25-05-2025</span><br>
+            <a class="lire-suite" href="actualites.jsp?id=1164">Lire la suite</a>
+        </div>
+        
+        <div class="bloc-activite" id="bloc-4" style="display:none;">
+            <div class="slick-slider-actualite">
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250515_01.jpg" alt=""/></div>
+                
+            </div>
+            <h3>Participation du Gouverneur à la journée d'information portant sur le lancement de la mise en place d'une nouvelle ligne de crédit</h3>
+            <p>COMMUNIQUE DE PRESSE</p>
+            <span style="font-size: 12px; color: gray;">15-05-2025</span><br>
+            <a class="lire-suite" href="actualites.jsp?id=1161">Lire la suite</a>
+        </div>
+        
+        <div class="bloc-activite" id="bloc-5" style="display:none;">
+            <div class="slick-slider-actualite">
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250513_01.jpg" alt=""/></div>
+                
+                        <div><img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250513_02.jpg" alt=""/></div>
+                
+            </div>
+            <h3>Participation du Gouverneur à la cérémonie d'ouverture de la 20ème édition de la conférence de la Fédération Arabe des Marchés des Capitaux</h3>
+            <p>Communiqué de presse</p>
+            <span style="font-size: 12px; color: gray;">13-05-2025</span><br>
+            <a class="lire-suite" href="actualites.jsp?id=1160">Lire la suite</a>
+        </div>
+        
+    </div>
+
+    <!-- Liste secondaire avec image, titre, extrait description -->
+    <div class="liste-actus">
+         
+        
+        <div class="actu-item" onclick="afficherBloc('bloc-1')" style="cursor:pointer; display:flex; gap:10px; align-items:center; margin-bottom:10px; border:1px solid #ddd; padding:10px;">
+            
+                <img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250724_01.jpg" alt="image activité" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px;">
+            
+            <div class="details">
+    <h4 style="margin: 0 0 2px 0;">Signature d'une convention de coopération et d'échange<br>d'informations entre la BCT et le CGA</h4>
+                <p style="margin: 0; font-size: 12px; color: #555;">24-07-2025</p>
+            </div>
+        </div>
+        
+        <div class="actu-item" onclick="afficherBloc('bloc-2')" style="cursor:pointer; display:flex; gap:10px; align-items:center; margin-bottom:10px; border:1px solid #ddd; padding:10px;">
+            
+                <img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250702_01.jpg" alt="image activité" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px;">
+            
+            <div class="details">
+    <h4 style="margin: 0 0 2px 0;">Communiqué de Presse</h4>
+                <p style="margin: 0; font-size: 12px; color: #555;">02-07-2025</p>
+            </div>
+        </div>
+        
+        <div class="actu-item" onclick="afficherBloc('bloc-3')" style="cursor:pointer; display:flex; gap:10px; align-items:center; margin-bottom:10px; border:1px solid #ddd; padding:10px;">
+            
+                <img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250525_00.jpg" alt="image activité" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px;">
+            
+            <div class="details">
+    <h4 style="margin: 0 0 2px 0;">Participation du Gouverneur à la conférence « Stratégie Nationale d'Inclusion Financière » organisée par la Banque Centrale d'Irak</h4>
+                <p style="margin: 0; font-size: 12px; color: #555;">25-05-2025</p>
+            </div>
+        </div>
+        
+        <div class="actu-item" onclick="afficherBloc('bloc-4')" style="cursor:pointer; display:flex; gap:10px; align-items:center; margin-bottom:10px; border:1px solid #ddd; padding:10px;">
+            
+                <img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250515_01.jpg" alt="image activité" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px;">
+            
+            <div class="details">
+    <h4 style="margin: 0 0 2px 0;">Participation du Gouverneur à la journée d'information portant sur le lancement de la mise en place d'une nouvelle ligne de crédit</h4>
+                <p style="margin: 0; font-size: 12px; color: #555;">15-05-2025</p>
+            </div>
+        </div>
+        
+        <div class="actu-item" onclick="afficherBloc('bloc-5')" style="cursor:pointer; display:flex; gap:10px; align-items:center; margin-bottom:10px; border:1px solid #ddd; padding:10px;">
+            
+                <img src="https://www.bct.gov.tn/bct/siteprod/images/Act_20250513_01.jpg" alt="image activité" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px;">
+            
+            <div class="details">
+    <h4 style="margin: 0 0 2px 0;">Participation du Gouverneur à la cérémonie d'ouverture de la 20ème édition de la conférence de la Fédération Arabe des Marchés des Capitaux</h4>
+                <p style="margin: 0; font-size: 12px; color: #555;">13-05-2025</p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+        
+         
+         
+        
+        </div>
+        
+        <!-- end modules  -->
+        
+        
+        <!-- main body -->
+        <div id="bct-body">
+                <div id="output" class="bct-content">
+                        <div class="column1">
+                                <div class="module">
+                               <!--   <h3 class="bct-mod-hdr" id="1">Etudes de la banque centrale de tunisie</h3>-->
+							   <h3 class="bct-mod-hdr" id="1"><br></h3>
+								  <div class="content bct-mod-content-1">
+<table style="
+    
+    width:75%;
+"><tbody><tr><td><center><br><br><br><br>Pour s’informer sur les opérations de change et de commerce extérieur<br>
+      <a href="mailto:op.changes@bct.gov.tn" title="Message">op.changes@bct.gov.tn</a><br>
+	<img alt="Numéro vert" src="images/201812_Numero_vert.gif">
+    <br><br><br><br></center></td><td>
+    <center>	<a href="documents/Liste_bureaux_de_change_autorises_fr.pdf">Liste des bureaux de change autorisés par la BCT</a>
+                                      <center> <br><br>
+    </center></center></td>
+    </tr>
+<tr><td>
+    <center>
+ <a href="actualites.jsp?id=568">Questions fréquemment posées sur la règlementation des changes</a><br><br> 
+<a href="actualites.jsp?id=567">Documents nécessaires pour le traitement des différentes demandes d'autorisation</a>
+
+</center>
+    </td>
+    <td>
+<a href="page.jsp?id=235" title="ibct">
+                                 <!-- <a href="#" title="BCT third banner">!-->
+                                        <img alt="Fiche Investissement" src="images/Banniere_TRE.jpg">
+                                  </a></td>
+    
+</tr>
+
+
+</tbody></table>
+								  
+								  <!-- <span><a href="documents/Document_20181108_fr.pdf" target="blank"> -->
+								<!-- Evolutions économiques et monétaires et perspectives à moyen terme -  Octobre 2018-->
+							<!--	 </a></span> -->
+							<!--	   <span><a href="documents/Paper_201803_EN.pdf" target="blank">-->
+							<!--	 Impact des chocs de politique monétaire sur la courbe des taux: Evidence empirique sur le marché obligataire Tunisien – (en anglais)-->
+							<!--	 </a></span> -->
+                                 
+							<!--	   <span><a href="documents/Commerce_Exterieur_20171231_fr.pdf">-->
+							<!--	 Analyse des échanges commerciaux de la Tunisie - Année 2017-->
+							<!--	 </a></span> -->
+
+							<!--	 <span><a href="documents/Evolutions_Economiques_Monetaires_Octobre_2017.pdf">-->
+							<!--	 Evolutions Economiques et Monétaires- Octobre 2017-->
+							<!--	 </a></span> -->
+								 
+							<!--	 <span><a href="documents/Document_Travail_201706_fr.pdf">-->
+							<!--	 Modèle de prévision de l’inflation à court terme pour la Tunisie-->
+							<!--	 </a></span> -->
+
+
+							<!--	<span><a href="documents/Document_20170404_fr.pdf">-->
+							<!--	 Evolutions monétaires et conjoncturelles - Mars 2017-->
+							<!--	</a></span> -->
+							<!--	<span><a href="documents/Commerce_Exterieur_20161231_fr.pdf">-->
+							<!--	Analyse des échanges commerciaux de la Tunisie - Année 2016-->
+							<!--	 </a></span> -->
+								 
+							<!--	 <span><a href="documents/Document_20170106_fr.pdf">-->
+							<!--	Les 100 mesures phares de la nouvelle loi bancaire-->
+							<!--	 </a></span> -->
+								 
+								
+								
+								 
+							<!--	  <span><a href="documents/Etude_BCT_20150113.pdf">-->
+							<!--	Les mécanismes de transmissions de la politique monétaire en Tunisie-->
+							<!--	 </a></span> -->
+								 
+								 
+							<!--	  <span><a href="documents/Etude_20141216.pdf">-->
+							<!--	 Analyse de l’impact de la variation des prix, du taux de change et des quantités sur l'évolution des échanges commerciaux du secteur énergétique-->
+							<!--	 </a></span> -->
+								 
+								 
+								 
+							<!--	  <span><a href="documents/modele.pdf">-->
+							<!--	 Modèle de Prévision à Moyen Terme pour la Tunisie.-->
+							<!--	 </a></span> -->
+								 
+								 
+							<!--	  <span><a href="documents/etude_bct.pdf">-->
+							<!--	 Construction d'un indicateur des conditions monétaires pour la Tunisie-->
+							<!--	 </a></span> -->
+								 
+								 
+							<!--	  <span><a href="documents/EBCT.pdf">-->
+							<!--	 Prévision à court terme de la croissance économique en Tunisie<br>-->
+							<!--	 Modèle de Prévision de l’Activité à Court Terme-->
+							<!--	 </a></span> -->
+
+								
+
+
+
+
+<!--<span><a href="documents/Commerce_Exterieur_20160331_fr.pdf">Analyse des Echanges Commerciaux de la Tunisie - Premier trimestre 2016 
+<!--</a></span>  		
+<!--								  <span><a href="documents/Document_20160801.pdf">Evolutions monétaires et conjoncturelles et perspectives à moyen terme - Juillet 2016</a></span>  								                                     
+<!--					<span><a href="documents/Etude_20141216.pdf">Analyse de l’impact de la variation des prix, du taux de change et des quantités sur  l'évolution des échanges commerciaux du secteur énergétique</a></span>
+<!--					<span><a href="documents/Commerce_Exterieur_20160331_fr.pdf">Analyse des Echanges Commerciaux de la Tunisie - Premier trimestre 2016</a></span>
+<!--                                        <span><a href="documents/modele.pdf">&nbsp;Modèle de Prévision à&nbsp;Moyen Terme pour la Tunisie.</a></span>
+<!--                                        <span><a href="documents/etude_bct.pdf">Construction d'un indicateur des conditions monétaires pour la Tunisie</a></span>
+<!--                                        <span><a href="documents/EBCT.pdf">Prévision à court terme de la croissance économique en Tunisie</a></span>
+<!--                                        <span><a href="documents/1.pdf">Présentation du projet de jumelage</a></span>
+<!--										<span><a href="documents/ETUDE_20140703.pdf">Rapport sur l’évolution des conditions de banque en Tunisie au cours de la période
+<!--<br>
+<!--Octobre 2011/Octobre 2013</a></span>-->
+
+
+                                    <!--    <a href="page.jsp?id=76&idAccor=2" class="more">+ d'info</a>-->
+										
+                                  </div>
+                                </div>
+                                <div class="module">
+                                  <h3 class="bct-mod-hdr" id="2">Publications</h3>
+                                  <div class="content bct-mod-content-2">
+                                     <!--debut horiz!-->
+                                     
+                                     
+                                            <style type="text/css">
+                                    	#slide3-pager {
+			clear:both;
+			list-style-type:none;
+			overflow:hidden;
+			margin:0;
+			/*padding:0;*/
+		}
+		#slide3-pager li {
+			float: left;
+		}
+		#slide3-pager li a{
+		/*	background: #666;
+			text-indent: -9999px;
+display: block;
+margin: 0 5px;
+outline: 0;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;   */
+height: 52px;
+width: 120px;
+margin: 0 5px;
+padding: 1px 15px 0 1px;
+text-align: center;
+font-size: 1em;
+line-height: 1em;
+color: #fff;
+text-decoration: none;
+border-right: 1px solid #fff;
+background: #00668d;
+display: block;
+overflow: hidden;
+		}
+		#slide3-pager li a.usl-current{
+			/*text-decoration: underline;  */
+			/*background-color: #777;*/
+			/* background: transparent url("images/arrow-up.gif") no-repeat center 0;*/
+			/* padding:0;
+       border:3px solid #fff;
+       background-position:0 -44px; */
+       background: #169AC4;
+		}
+        </style> 
+                                    
+               <div class="content">
+
+				         <ul id="slide2">
+                    <li> 
+                      <table border="0"><tr><td>                               
+					               <div class="bct-row" ibct1d="s1">
+                              <div class="img"><a href="documents/RA_fr.pdf" title="#"><img alt="Publication1" style="width:84px;height:124px;" src="images/rpfr015.gif" /></a></div>
+                          </td>
+                            <td>
+                                <div class="data">
+                                    <h3 style="background: #fff;"><a href="documents/RA_fr.pdf" title="Rapport Annuel" style="color: #de0101!important;
+text-transform: none;">Rapport Annuel </a></h3>
+                                      <p>Le rapport comporte une analyse des principales évolutions économiques, financières, et monétaires aux plans international et national et une présentation des activités de la BCT et de ses états financiers  (...)</p>
+                                  </div>
+                            </div>
+						 
+						                  </td></tr></table>
+                        </li>        
+                        <li>  
+                          <table border="0"><tr><td>                   
+					                   <div class="bct-row" id="s2">
+                                  <div class="img"><a href="documents/dette.pdf" title="#"><img alt="Publication2" src="images/publication2.jpg" /></a></div>
+                                </td>
+                                <td>
+                                  <div class="data">
+                                    <h3 style="background: #fff;"><a href="documents/dette.pdf" title="Dette Extérieure de la Tunisie" style="color: #de0101!important;
+text-transform: none;">Dette Extérieure de la Tunisie </a></h3>
+                                     <p>La brochure de la Dette Extérieure de la Tunisie présente une analyse détaillée de l'évolution de la structure de l'encours de la dette du pays après un aperçu succinct de la conjoncture internationale (...)</p>
+                                   </div>
+                               </div>
+						 
+						                    </td></tr></table>
+                          </li>  
+                          <li>
+                             <table border="0"><tr><td>                     
+					                       <div class="bct-row" id="s3">                                                           
+                                    <div class="img"><a href="documents/Balance.pdf" title="#"><img alt="Publication3" src="images/publication3.jpg" /></a></div>
+                                 </td>
+                                 <td>
+                                    <div class="data">
+                                        <h3 style="background: #fff;"><a href="documents/Balance.pdf" title="Balance des Paiements" style="color: #de0101!important;
+text-transform: none;">Balance des Paiements </a></h3>
+                                         <p>La brochure de la Balance des paiements de la Tunisie présente l'évolution et la structure des relations économiques et financières entretenues par la Tunisie avec l'extérieur ainsi que les dispositions réglementaires intervenues au cours de l'année considérée en matière de paiements extérieurs (...)</p>
+                                     </div>
+                                  </div>
+						                    </td></tr></table>
+                            </li> 
+                            
+                             <li>
+                             <table border="0"><tr><td>                     
+					                       <div class="bct-row" id="s4">                                                           
+                                    <div class="img"><a href="documents/sup_bc_fr.pdf" title="#"><img alt="Publication6" src="images/publication6.jpg" /></a></div>
+                                 </td>
+                                 <td>
+                                    <div class="data">
+                                        <h3 style="background: #fff;"><a href="documents/sup_bc_fr.pdf" title="Rapport sur la Supervision Bancaire" style="color: #de0101!important;
+text-transform: none;">Rapport sur la Supervision Bancaire </a></h3>
+                                         <p>La publication du rapport annuel sur la supervision bancaire s'inscrit dans une nouvelle tradition de divulgation et de transparence inspirée des règles de bonne gouvernance et des normes internationales en matière de contrôle interne (...)</p>
+                                     </div>
+                                  </div>
+						                    </td></tr></table>
+                            </li> 
+                            
+                            <li>
+                                <table border="0"><tr><td>
+                                    <div class="bct-row" id="s5">                                                           
+                                        <div class="img"><a href="documents/Conjoncture_fr.pdf" title="#"><img alt="Publication4" src="images/publication4.jpg" /></a></div>
+                                    </td>
+                                    <td>
+                                        <div class="data">
+                                          <h3 style="background: #fff;"><a href="documents/Conjoncture_fr.pdf" title="Périodique de Conjoncture" style="color: #de0101!important;
+text-transform: none;">Périodique de Conjoncture </a></h3>
+                                          <p>Le Périodique de Conjoncture présente une analyse succincte des faits saillants de la conjoncture internationale et nationale. Il présente, en outre, les principales mesures, à caractères économique, monétaire et financier, prises au cours de la période considérée (...)</p>
+                                        </div>
+                                     </div>
+						                        </td></tr></table>
+                            </li> 
+                            <li>
+                            <table border="0"><tr><td> <div class="bct-row" id="s6">                                                           
+                                 <div class="img"><a href="documents/BSF_fr.pdf" title="#" style="color: #de0101!important;
+text-transform: none;"><img alt="Publication5" src="images/publication5.jpg" /></a></div>
+                                   </td>
+                                    <td>
+                                      <div class="data">
+                                          <h3 style="background: #fff;"><a href="documents/BSF_fr.pdf" title="Bulletin Statistiques Financières" style="color: #de0101!important;
+text-transform: none;">Bulletin Statistiques Financières </a></h3>
+                                           <p>Le bulletin Statistiques Financières comporte des statistiques monétaires, financières et économiques, ainsi qu'un aperçu succinct de la méthodologie adoptée pour leur élaboration. Il est complété par un supplément mensuel des principaux indicateurs monétaires et de paiements extérieurs (...)</p>
+                                        </div>
+                                    </div>
+						                    </td></tr></table>
+						
+                               </li> 
+							    <li>
+                            <table border="0"><tr><td> <div class="bct-row" id="s7">                                                           
+                                 <div class="img"><a href="documents/Bulletin_des_paiements_1.pdf" title="#" style="color: #de0101!important;
+text-transform: none;"><img alt="Publication7" src="images/Bulletin_des_paiements_thumb.jpg" /></a></div>
+                                   </td>
+                                    <td>
+                                      <div class="data">
+                                          <h3 style="background: #fff;"><a href="documents/Bulletin_des_paiements_1.pdf" title="Bulletin des paiements" style="color: #de0101!important;
+text-transform: none;">Bulletin des paiements</a></h3>
+                                           <p>Le Bulletin des paiements a pour objectif d’informer le public des indicateurs et tendances saillants en la matière ainsi que des projets structurants qui soutiennent le développement des paiements digitaux consacrant la stratégie de la Banque Centrale de Tunisie adoptée à l’effet pour promouvoir l’inclusion financière et le decashing.</p>
+                                        </div>
+                                    </div>
+						                    </td></tr></table>						
+                               </li> 
+							    <li>
+                            <table border="0"><tr><td> <div class="bct-row" id="s8">                                                           
+                                 <div class="img"><a href="documents/RA_OIF_2017_fr.pdf" title="#" style="color: #de0101!important;
+text-transform: none;"><img alt="Publication7" src="images/MEDIATION_BANCAIRE_FR.gif" style="heitgh:120px;width:90px;"/></a></div>
+                                   </td>
+                                    <td>
+                                      <div class="data">
+                                          <h3 style="background: #fff;"><a href="documents/RAPPORT_ANNUEL_MEDIATION_BANCAIRE_FR.pdf" title="Bulletin Statistiques Financières" style="color: #de0101!important;
+text-transform: none;">Rapport Annuel de la Médiation Bancaire</a></h3>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+						                    </td></tr></table>						
+                               </li> 
+					              </ul>                 
+					              <ul id="slide3-pager" style="padding:0">
+            <li style="padding: 10px 0 0;"><a href="#s1" style="color: #fff;">Rapport Annuel</a></li>
+            <li style="padding: 10px 0 0;"><a href="#s2" style="color: #fff;">Dette Extérieure de la Tunisie</a></li>
+            <li style="padding: 10px 0 0;"><a href="#s3" style="color: #fff;">Balance des Paiements</a></li>
+            <li style="padding: 10px 0 0;"><a href="#s4" style="color: #fff;">Rapport sur la Supervision Bancaire</a></li>
+            <li style="padding: 10px 0 0;"><a href="#s5" style="color: #fff;">Périodique de Conjoncture</a></li>
+            <li style="padding: 10px 0 0;"><a href="#s6" style="color: #fff;">Bulletin Statistiques Financières</a></li>
+	    <li style="padding: 10px 0 0;"><a href="#s7" style="color: #fff;">Bulletin des paiements</a></li>
+		<li style="padding: 10px 0 0;"><a href="#s8" style="color: #fff;">Rapport Annuel de la Médiation Bancaire</a></li>
+        </ul>
+        <script type="text/javascript">
+            $(function() {						
+                $('#slide2').ulslide({
+                statusbar: true,
+                    width: 600,
+                    height: 163,
+					duration: 2000,
+					effect: {
+						type: 'slide', // slide or fade
+						axis: 'x',     // x, y
+						distance: 40   // Distance between frames
+					},
+					
+                    mousewheel: true,
+                  //  duration: 500,
+                    autoslide: 10000,
+                    pager: '#slide3-pager a'
+                });
+            });
+        </script>
+					</div>
+                                     
+                                     
+                                     
+                                     <!--fin horiz!-->
+                                  
+                                  
+                                  
+                                  
+                                  
+                                       <!-- <div class="bct-row">
+                                                <div class="img"><a href="#" title="#"><img alt="Publication1" src="images/publication1.jpg" /></a></div>
+                                                <div class="data">
+                                                        <h3><a href="#" title="Rapport annuel">Rapport annuel</a></h3>
+                                                        <p>Le rapport annuel de la Banque Centrale de Tunisie est soumis au Président de la République par le Gouverneur.Il comporte dans sa nouvelle version, deux axes principaux: Le rapport économique et les opérations de la Banque Centrale de Tunisie (...)</p>
+                                                </div>
+                                        </div>
+                                        <div class="bct-row">
+                                                <div class="img"><a href="#" title="#"><img alt="Publication2" src="images/publication2.jpg" /></a></div>
+                                                <div class="data">
+                                                        <h3><a href="#" title="Rapport annuel">Dette Extérieure de la Tunisie</a></h3>
+                                                        <p>La brochure de la Dette Extérieure de la Tunisie présente une analyse détaillée de l'évolution de la structure de l'encours de la dette du pays après un aperçu succinct de la conjoncture internationale (...)</p>
+                                                </div>
+                                        </div>
+                                        <a href="page.jsp?id=76" class="more">+ de publications</a>  !-->
+                                  </div>
+                                 </div>
+                                <div class="module">
+                                  <h3 class="bct-mod-hdr" id="3">Telechargement de formulaires de la BCT</h3>
+                                  <div class="content bct-mod-content-3">
+                                            <b style="margin: 0px;
+padding: 5px 10px 5px 10px;
+font-size: 13px;" class="bct-mod-texte cls1" id="1">Autorisations de transferts (à télécharger recto-verso en 4 exemplaires)</b>
+                                  <div class="content bct-mod-content-texte-1" style="display:none">
+                                  
+                                        <SPAN> <A href="documents/f1.pdf" target="_blank" class=node> Formulaire n°1(F1)couleur verte  </A></SPAN>
+
+            <SPAN> <A href="documents/f2.pdf" target="_blank" class=node> Formulaire n°2(F2) couleur blanche </A></SPAN>
+
+          </div>
+            <br/> <br/>
+          <b style="margin: 0px;
+padding: 5px 10px 5px 10px;
+font-size: 13px;" class="bct-mod-texte cls1" id="2">Opérations de caisse (ces documents existent seulement en version arabe)</b>
+                                  <div class="content bct-mod-content-texte-2" style="display:none">
+                                  
+                                        <SPAN> <A href="documents/caisse2.pdf" target="_blank" class=node> Bordereau de versement en Dinars  </A></SPAN>
+
+            <SPAN> <A href="documents/caisse1.pdf" target="_blank" class=node> Bulletin d'échange </A></SPAN>
+
+          </div>
+          
+              <br/>  <br/>
+          <b style="margin: 0px;
+padding: 5px 10px 5px 10px;
+font-size: 13px;" class="bct-mod-texte cls1" id="3">Acquisition des publications de la BCT</b>
+                                  <div class="content bct-mod-content-texte-3" style="display:none">
+                                  
+                                        <SPAN> <A href="documents/commande.pdf" target="_blank" class=node> Bulletin de commande de publications de la BCT  </A></SPAN>
+
+            <SPAN> <A href="documents/abonnement_pub.pdf" target="_blank" class=node> Bulletin d'abonnement aux publications de la BCT </A></SPAN>
+
+          </div>
+           <br/>      <br/>
+           <b style="margin: 0px;
+padding: 5px 10px 5px 10px;
+font-size: 13px;" class="bct-mod-texte cls1" id="4">Bons de commande à l'attention des numismates</b>
+                                  <div class="content bct-mod-content-texte-4" style="display:none">
+                                  
+                                        <SPAN> <A href="documents/vente.pdf" target="_blank" class=node> Pièces de monnaie et billets de banque mis à la disposition des numismates  </A></SPAN>
+
+            
+          </div>
+
+          
+
+        </div>
+                                        
+                                        <!--<a href="#" class="more">+ d'info</a>!-->
+                                  </div>
+                               
+                                
+                                <div class="module">
+                                  <h3 class="bct-mod-hdr" id="4">liens utiles</h3>
+                                  <div class="content bct-mod-content-4">
+                                     <!--   <span><a href="http://www.bawaba.gov.tn/">Le Portail de l'Administration Tunisienne (bawaba)</a></span>-->
+                                      <!--  <span><a href="http://www.finances.gov.tn/">Ministère de l'économie et des Finances</a></span>-->
+                                     <!--   <span><a href="http://www.ins.tn/">Institut National de la Statistique (INS)</a></span>-->
+                                      <!--  <span><a href="https://ctaf.gov.tn/?lang=fr">La Commission  Tunisienne des Analyses Financières</a></span>-->
+                                       <!-- <span><a href="https://oif.bct.gov.tn/">Observatoire de l’Inclusion Financière</a></span>-->
+                                       <!-- <span><a href="http://www.bvmt.com.tn/">Bourse des Valeurs Mobilières de Tunis (BVMT)</a></span>-->
+                                        
+                                    
+                                        <span><a href="http://fr.tunisie.gov.tn/">Le Portail du gouvernement Tunisien</a></span>
+                                        <span><a href="http://www.finances.gov.tn/fr/">Ministère des Finances</a></span>
+                                        <span><a href="http://www.ins.tn/">Institut National de la Statistique (INS)</a></span>
+                                        <span><a href="https://ctaf.gov.tn/?lang=fr">La Commission Tunisienne des Analyses Financières</a></span>
+                                        <span><a href="https://oif.bct.gov.tn/">Observatoire de l’Inclusion Financière</a></span>
+                                         <span><a href="https://www.fgdb.gov.tn/fr">Fonds de Garantie des Dépôts Bancaires</a></span>
+                                        <span><a href="http://www.bvmt.com.tn/">Bourse des Valeurs Mobilières de Tunis (BVMT)</a></span>
+                                                                    
+                                        <!--<a href="#" class="more">+ d'info</a>!-->
+                                         <!--<a href="liens_utiles.jsp" class="pirobox_gall1" rel="inline1200-600" title="info">+ d'info</a><br>!-->
+                                         <div style="cursor: pointer;
+color: #067eca!important;
+display: block;
+font-weight: bold;" onClick="liens_utiles('')">+ d'info</div>
+                                        
+                                  </div>
+                                </div>
+                                <div class="bct-modules">
+                                        <div class="module column">
+                                          <a class="top" href="#"><img alt="Ouverture de comptes ? l??tranger" src="images/ouverture-comptes-etranger.jpg"/></a>
+                                          <h3><center>Lignes de financement exterieures</center></h3>
+                                          <div class="content">
+                                                <p>Récapitulatif des lignes de crédits gérées par la BCT et mises à la disposition des opérateurs économiques .              <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;</p>
+                                                <a href="page.jsp?id=68" class="more">+ d'info</a>
+                                          </div>
+                                        </div>
+                                        <div class="module column">
+                                          <a class="top" href="#"><img alt="COMPTES DE RESIDENTS ET DE NON-RESIDENTS" src="images/comptes-residents-nonresidents.jpg"/></a>
+                                          <h3><center>COMPTES DE RESIDENTS ET DE NON-RESIDENTS</center></h3>
+                                          <div class="content">
+                                                <p>Ils sont ouverts, sur autorisation de la Banque Centrale de Tunisie, au nom de personnes physiques résidentes qui réalisent des bénéfices provenant d'opérations d'exportation de biens ou de services et/ou sont actionnaires ou associées dans des sociétés résidentes qui réalisent des bénéfices au titre d'opérations d'exportation de biens ou de services. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;</p>
+                                                <a href="page.jsp?id=67&idAccor=5" class="more">+ d'info</a>
+                                          </div>
+                                        </div>
+                                        <div class="module column last">
+                                          <a class="top" href="#"><img alt="PAIEMENTS COURANTS" src="images/paiements-courants.jpg"/></a>
+                                          <h3><center>PAIEMENTS COURANTS</center></h3>
+                                          <div class="content">
+                                                <p>Les transferts au titre d'opérations courantes sont libres (opérations commerciales, opérations liées à la production des entreprises, transports, assurances, revenus du capital, opérations relatives aux dépenses bancaires et financières, opérations ayant un caractère personnel, opérations du secteur public, opérations à caractère général tels que les abonnements, la publicité, et les contrats de spectacle et d'animation...).</p>
+                                                <a href="page.jsp?id=67&idAccor=4" class="more">+ d'info</a>
+                                          </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="column2">
+                                <!--<div class="module">
+                                  <h3>Informations pratiques</h3>
+                                  <div class="content">
+                                        <span><B><a href="cours.jsp">Cours Moyens Quotidiens de Devises</a></b></span>
+                                        <span><b><a href="indicateurs.jsp">Indicateurs Monétaires & Financiers Quotidiens</a></b></span>
+                                        <span><b><a href="page.jsp?id=163">Avis d'appel d'offres</a></b></span>
+                                        <span><b><a href="pnrd.jsp">Page Nationale Résumée des Données</a></b></span>
+                                        <!--<span><b><a href="#">Lignes de financement extérieures en faveur des entreprises Tunisiennes</a></b></span>
+                                        <span><b><a href="#">Liste des derniéres mises à jour</a></b></span>
+										
+                                        <b><a href="#" class="more">+ d'info</a></b>    !-->
+                                 <!-- </div>
+                                </div>  !-->
+								<div class="module">
+								 <a href="https://fiche-invest.bct.gov.tn/" title="Plateforme des Investissements des Non-Résidents en Tunisie" target="_blank">
+                                        <img alt="Plateforme des Investissements des Non-Résidents en Tunisie" src="images/BANNIERE_FICHEINVEST.jpg"/>
+                                  </a>
+                                </div>
+								
+								<div class="module">
+								 <a href="page.jsp?id=244" title="Compétences et formation" target="_blank">
+                                        <img alt="Compétences et formation" src="images/Banniere_espace_etudiant.jpg"/>
+                                  </a>
+                                </div>
+								<!--div class="module">-->
+								<!-- <a href="https://www.bct.gov.tn/bct/siteprod/actualites.jsp?id=884" title="Call for papers" target="_blank">-->
+                                     <!--   <img alt="Call for papers" src="images/callForPapers.png"/>-->
+                                <!--  </a>-->
+                              <!--  </div>-->
+								<div class="module">
+								 <a href="https://play.google.com/store/apps/details?id=com.DCX.Flouss" title="Application FLOUSS" target="_blank">
+                                        <img alt="Application FLOUSS" src="images/Banniere_FLOUS.jpg"/>
+                                  </a>
+                                </div>
+								<div class="module">
+								
+                                
+								   <a href="https://fintech.bct.gov.tn/" title="BCT FINTECH" target="_blank">  
+                                        <img alt="BCT FINTECH" src="images/Banniere_Fintech.jpg"/>
+                                  </a>
+                                </div>	
+		<div class="module">
+								
+                                  <a href="https://online.bct.gov.tn/scd/" title="service" target="_blank">
+                                        <img alt="service" src="images/service.jpg"/>
+                                  </a>
+                                </div>				
+
+<!--<div class="module">-->
+                            <!--    <a href="page.jsp?id=235" title="ibct">-->
+                                 <!-- <a href="#" title="BCT third banner">!-->
+                                  <!--      <img alt="Fiche Investissement" src="images/Banniere_TRE.jpg"/>-->
+                          <!--        </a>-->
+                      <!--          </div>-->
+
+
+		
+								<div class="module">
+                                <a href="page.jsp?id=220" title="ibct">    
+                                 <!-- <a href="#" title="BCT third banner">!-->
+                                        <img alt="Musée de la monnaie" src="images/ibct1.jpg"/>
+                                  </a>
+                                </div> 
+								<div class="module">
+                                <a href="page.jsp?id=240" title="ibct">    
+                                 <!-- <a href="#" title="BCT third banner">!-->
+                                        <img alt="Etudes et Recherches de la BCT" src="images/ibctr2.jpg"/>
+                                  </a>
+                                </div> 
+                                <div class="module">
+                                  <a href="https://ctaf.gov.tn/?lang=fr" title="CTAF" target=_blank>
+                                        <img alt="Banner1" src="images/banner1.jpg"/>
+                                  </a>
+                                </div>
+                                <div class="module">
+                                  <a href="https://oif.bct.gov.tn/" title="OSB" target=_blank>
+                                        <img alt="Banner2" src="images/banner2.jpg"/>
+                                  </a>
+                                </div>
+                                <div class="module">
+                                <a href="https://musee.bct.gov.tn/fr" title="Musée de la monnaie">    
+                                 <!-- <a href="#" title="BCT third banner">!-->
+                                        <img alt="Musée de la monnaie" src="images/banner3.jpg"/>
+                                  </a>
+                                </div> 
+							<!--	<div class="module">
+									<a href="actualites.jsp?id=485" title="ibct">    
+											<img alt="AFRICA BLOCKCHAIN SUMMIT" src="images/actu/ABS2018_Logo.jpg" style="width:  231px;height: 150px;">
+									</a>
+								</div>-->
+                                <div class="module">
+                                  <h3 style="background: #277cb2;">
+                                    Suggestions
+                                  </h3>
+                                  <div style="background: #fff;padding: 20px;">
+                                     <center>Envoyez vos suggestions à: <br/>
+                                        <a href="mailto:webmaster@bct.gov.tn" title="Message">webmaster@bct.gov.tn</a>
+                                     </center>
+                                   </div>
+                                  
+                                </div>
+							<!--	<div class="module">-->
+                               <!--   <h3 style="background: #277cb2;">-->
+                               <!--     <br>-->
+                               <!--   </h3>-->
+                               <!--   <div style="background: #fff;padding: 20px;">-->
+                                 <!--    <center>Pour s’informer sur les opérations de change et de commerce extérieur <br><br>-->
+                                 <!--       <a href="mailto:op.changes@bct.gov.tn" title="Message">op.changes@bct.gov.tn</a><br><br>-->
+								<!--		<img alt="Numéro vert" src="images/201812_Numero_vert.gif" >-->
+                              <!--       </center>-->
+                             <!--      </div>-->
+                                  
+                             <!--   </div>-->
+							<!--	<div class="module">-->
+                              <!--    <h3 style="background: #277cb2;">-->
+                                 <!--   <br>-->
+                                <!--  </h3>-->
+                                <!--  <div style="background: #fff;padding: 20px;">-->
+                                 <!--    <center>-->
+                                 <!--       <a href="https://www.bct.gov.tn/bct/siteprod/actualites.jsp?id=568"</a>Questions fréquemment posées sur la règlementation des changes <br><br></center> -->
+								<!--	<center>	<a href="https://www.bct.gov.tn/bct/siteprod/actualites.jsp?id=567"</a>Documents nécessaires pour le traitement des différentes demandes d'autorisation adressées à la Direction des opérations en capital </a>-->
+                                 <!--    </center>-->
+								<!--		</div>-->
+										
+                                  
+                             <!--   </div>-->
+								
+                        </div>
+                </div>
+        </div>  
+        
+        <!--fin version française!--> 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--version anglaise!--> 
+           
+        <!--fin version anglaise!-->
+        </div>  
+        <!-- end main body -->
+        
+        <!-- footer -->
+        
+
+
+
+
+<div style="clear:both "></div>
+<div id="bct-footer" style="position:relative ">
+	  <div class="bct-content">
+		<div class="sitemap">
+                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=plan_site3.jsp?id=45 title='La BCT'>La BCT</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                                    
+                                                    <a href=plan_site3.jsp?id=46 title='Gouvernance'>
+                                                            Gouvernance<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=plan_site3.jsp?id=50 title='Conseil d'administration'>
+                                                            Conseil d'administration<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=209 title='Etats financiers'>
+                                                            Etats financiers<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=54 title='Risque Pays'>
+                                                            Risque Pays<br>
+                                                     </a> 
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=plan_site3.jsp?id=55 title='Missions'>Missions</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                                    
+                                                    <a href=plan_site3.jsp?id=56 title='Politique Monétaire'>
+                                                            Politique Monétaire<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=59 title='Supervision Bancaire'>
+                                                            Supervision Bancaire<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=plan_site3.jsp?id=58 title='Systèmes et moyens de paiement'>
+                                                            Systèmes et moyens de paiement<br>
+                                                     </a> 
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=plan_site3.jsp?id=65 title='Réglementation'>Réglementation</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=227 title='Loi portant statut <br>de la BCT & loi bancaire'>
+                                                            Loi portant statut <br>de la BCT & loi bancaire<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=229 title='Réglementation régissant l'octroi<br>et le retrait d'agréments'>
+                                                            Réglementation régissant l'octroi<br>et le retrait d'agréments<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=226 title='Circulaires & Notes'>
+                                                            Circulaires & Notes<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=66 title='Réglementation bancaire'>
+                                                            Réglementation bancaire<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=67 title='Réglementation des changes'>
+                                                            Réglementation des changes<br>
+                                                     </a> 
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                                         <div class="column">
+                                             
+                                            <h2><a href=stat_index.jsp title='Statistiques'>Statistiques</a></h2>
+                                       </div>
+                                        
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=plan_site3.jsp?id=75 title='Publications'>Publications</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=76 title='catalogue'>
+                                                            catalogue<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=77 title='Archives'>
+                                                            Archives<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=78 title='S'abonner'>
+                                                            S'abonner<br>
+                                                     </a> 
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=page.jsp?id=244 title='Espace Etudiant'>Espace Etudiant</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=page.jsp?id=241 title='RECRUTEMENT'>RECRUTEMENT</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=page.jsp?id=236 title='Accès à l'information'>Accès à l'information</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                           <h2><a title="Services" style="cursor: pointer;" onclick="contact('')">Contact</a></h2>
+                           <div class="links">
+                                 <a title="" style="cursor: pointer;" onclick="contact('')">
+                                       Contactez-Nous
+                                 </a>   
+                           </div>
+                        </div>
+                                               
+                </div>
+		<div class="copyright">
+			<a class="left" target="_blanc" href="documents/termes.pdf" title="Mentions légales">Mentions légales</a>
+			<span>Email :</span> <a href="mailto:webmaster@bct.gov.tn">webmaster@bct.gov.tn</a>
+			<span class="right">BANQUE CENTRALE DE TUNISIE - 2014</span>
+		</div>
+	  </div>	
+	</div>
+       
+        <!-- end footer -->
+  <script type="text/javascript">
+        $(document).ready(function(){
+            $('#actualite').slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+            });
+        });
+    </script>
+<script>
+  $(document).ready(function(){
+    // Initialisation seulement pour le premier bloc visible (#bloc-1)
+    $('#bloc-0 .slick-slider-actualite').slick({
+      dots: false,
+      arrows: true,
+      infinite: true,
+      speed: 500,
+      fade: false,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 4000,
+      prevArrow: '<button type="button" class="slick-custom-prev"><</button>',
+      nextArrow: '<button type="button" class="slick-custom-next">></button>'
+    });
+  });
+
+  function afficherBloc(id) {
+    // Trouver le bloc visible actuel
+    const blocs = document.querySelectorAll(".bloc-activite");
+    let blocActuel = null;
+    blocs.forEach(bloc => {
+      if (bloc.style.display === 'block') {
+        blocActuel = bloc;
+      }
+      bloc.style.display = 'none';
+    });
+
+    // Désinitialiser slick sur le slider du bloc visible avant changement
+    if (blocActuel) {
+      const sliderActuel = $(blocActuel).find('.slick-slider-actualite');
+      if (sliderActuel.hasClass('slick-initialized')) {
+        sliderActuel.slick('unslick');
+      }
+    }
+
+    // Afficher le nouveau bloc
+    const nouveauBloc = document.getElementById(id);
+    nouveauBloc.style.display = 'block';
+
+    // Initialiser slick sur le slider du nouveau bloc
+    const nouveauSlider = $(nouveauBloc).find('.slick-slider-actualite');
+    if (!nouveauSlider.hasClass('slick-initialized')) {
+      nouveauSlider.slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        fade: false,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 4000,
+        prevArrow: '<button type="button" class="slick-custom-prev"><</button>',
+        nextArrow: '<button type="button" class="slick-custom-next">></button>'
+      });
+    }
+  }
+</script>
+
+
+</body>
+
+</html>
+ 
+
+
+

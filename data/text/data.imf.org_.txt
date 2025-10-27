@@ -1,0 +1,125 @@
+Data Home
+Skip to main menu
+Skip to main content
+Access to the retiring system at
+legacydata.imf.org
+has been extended until August 31, 2025. Questions?
+datahelp@imf.org
+. Share your Portal feedback
+here
+.
+IMF DATA
+SIGN IN
+Help
+ACCESS TO ECONOMIC AND FINANCIAL DATA
+Popular search requests:
+Latest Updates
+Aug
+DATA BRIEF
+IMF Data Brief: Quarterly Gross Domestic Product
+World GDP Growth Slowed in 2025Q1 While Economy-wide Prices Increased
+Jul
+NEWS
+ISORA 2024 Data Now Available
+FY2023 data from 164 tax administrations now available, with insights on revenue, operations, services, and compliance strategies for tax systems globally.
+Jun
+NEWS
+13th Statistical Forum
+Measuring Cross-Border Economic and Financial Linkages in a Dynamic World
+May
+NEWS
+Regional Economic Outlook for the Middle East and Central Asia, May 2025
+Charting a Path through the Haze
+Apr
+NEWS
+Fiscal Monitor, April 2025
+Fiscal Policy under Uncertainty
+Apr
+NEWS
+World Economic Outlook, April 2025
+Global growth is expected to decline and downside risks to intensify as major policy shifts unfold
+Mar
+NEWS
+New Global Standards for Macroeconomic Statistics
+The International Monetary Fund (IMF) has released the seventh edition of the Integrated Balance of Payments and International Investment Position Manual (BPM7, the Manual)
+Feb
+NEWS
+Macroeconomic Statistics Training
+Discover our full curriculum of free and open trainings on macroeconomics and financial data.
+Feb
+NEWS
+IMF Data Standards Initiatives
+The IMF Data Standards Initiatives encourage countries to publish key economic data in a timely and disciplined manner.
+Popular Datasets
+Datasets
+World Economic Outlook (WEO)
+The World Economic Outlook (WEO) database is created during the biannual WEO exercise, which begins in January and June of each year and results in the April and September/October WEO publication. Selected series from the publication are available in a database format.
+View Data
+Fiscal Monitor (FM)
+The Fiscal Monitor surveys and analyzes the latest public finance developments. It updates fiscal implications of the crisis and medium-term fiscal projections, and assesses policies to put public finances on a sustainable footing.
+Country-specific data and projections for key fiscal variables are based on the April 2025 World Economic Outlook database, unless indicated otherwise, and compiled by the IMF staff. Historical data and projections are based on the information gathered by IMF country desk officers in the context of their missions and through their ongoing analysis of the evolving situation in each country. They are updated on a continual basis as more information becomes available. Structural breaks in data may be adjusted to produce smooth series through splicing and other techniques. IMF staff estimates serve as proxies when complete information is unavailable. As a result, Fiscal Monitor data can differ from official data in other sources, including the IMF’s International Financial Statistics.
+The country classification in the Fiscal Monitor divides the world into three major groups: 41 advanced economies, 96 emerging market and middle-income economies, and 58 low-income developing countries. Country groupings have been revised to broaden country coverage. The seven largest advanced economies in terms of GDP (Canada, France, Germany, Italy, Japan, the United Kingdom, and the United States) constitute the subgroup of major advanced economies, often referred to as the Group of Seven (G7). The members of the euro area are also distinguished as a subgroup. Composite data shown in the tables for the euro area cover the current members for all years, even though the membership has increased over time. The low-income developing countries are countries that were designated Poverty Reduction and Growth Trust (PRGT)–eligible in the 2013 PRGT-eligible review and had a level of per capita gross national income with less than the PRGT income graduation threshold for non-small states—that is, twice the International Development Association operational threshold, or $2,390 in 2011, as measured by the World Bank’s Atlas method, Zimbabwe is included in the group. The emerging market and middle-income economies include all those that are not classified as advanced economies or LIDCs. See “Economy Groupings” for more details.
+All fiscal data refer to the general government where available and to calendar years, except for Bahamas, Bangladesh, Barbados, Bhutan, Botswana, Dominica, Egypt, Eswatini, Ethiopia, Fiji, Haiti, Hong Kong Special Administrative Region, India, the Islamic Republic of Iran, Jamaica, Lesotho, Malawi, the Marshall Islands, Mauritius, Micronesia, Myanmar, Namibia, Nauru, Nepal, Pakistan, Palau, Puerto Rico, Rwanda, St. Lucia, Samoa, Singapore, Thailand, Tonga, and Trinidad and Tobago, for which they refer to the fiscal year.
+Composite data for country groups are weighted averages of individual-country data, unless otherwise specified. Data are weighted by annual nominal GDP converted to U.S. dollars at average market exchange rates as a share of the group GDP.
+For most countries, fiscal data follow the IMF’s Government Finance Statistics Manual 2014. The overall fiscal balance refers to net lending (+)/borrowing (–) of the general government. In some cases, however, the overall balance refers to total revenue and grants minus total expenditure and net lending.
+View Data
+Currency Composition of Official Foreign Exchange Reserves (COFER)
+The COFER data for Q1 2025 released on July 9, 2025 have been revised to address reporting errors mostly involving the Australian dollar and the Swiss franc. The revisions have only marginal impact on total reserves.
+The Currency Composition of Official Foreign Exchange Reserves (COFER) dataset includes official foreign exchange reserves by currency.  The currencies identified in the COFER dataset are: U.S. dollar, Pound sterling, Japanese yen, Swiss francs, Canadian dollar, Australian dollar, Chinese renminbi, and Euro.  All other currencies are included in the category of “other currencies.”  Prior to the introduction of the Euro in 1999, several European currencies were separately identified in COFER: European Currency Unit, Deutsche mark, French franc, and the Netherlands guilder.
+COFER data are reported to the IMF on a voluntary and confidential basis by central banks from over 140 economies. COFER data for individual countries are strictly confidential. At present there are 149 reporters, consisting of the monetary authorities of IMF member countries and non-IMF member countries/economies; and of other foreign exchange reserves holding entities. COFER includes a list of the participating economies that agreed to disclose their names. SDDS Plus adherents are required to participate in the COFER database and to disclose their participation. The data published on this website are aggregates for each currency for the world, advanced economies, and emerging markets and developing economies. Starting 2015Q2, the IMF decided to cease the publication of the latter two geographical breakdowns to avoid possible residual disclosure of individual data with the release of the list of countries who have agreed to publish their names as COFER reporters.   Estimates of Official Foreign Exchange Reserves are critical for the smooth functioning of national and international financial systems.
+Foreign Exchange Reserves (FXR) data reported to COFER are consistent with the "other reserve assets" classification of reserve assets as outlined in the sixth edition of the IMF's Balance of Payments and International Investment Position Manual (BPM6). They are reserve assets other than monetary gold, SDRs, and reserve position in the IMF; and consist of the monetary authorities' claims on nonresidents in the form of: Currency and deposits, Securities, Financial derivatives, and Other claims.
+Allocated Foreign Exchange Reserves: in the context of COFER, Allocated FXR is the COFER category in which reporting countries identify and report the currency of denomination of their FXR.
+Unallocated Foreign Exchange Reserves: in the context of COFER, Unallocated FXR is a residual COFER category consisting of the difference between total FXR sourced from the International Financial Statistics (IFS) and the total allocated reserves in COFER. It has two components: (i) the total FXR of nonreporting countries; and (ii) the discrepancy (if any) between the IFS total FXR of COFER-reporting countries and the total allocated FXR in COFER.
+View Data
+Consumer Price Index (CPI)
+The Consumer Price Index (CPI) dataset includes the national consumer price indexes by economy. In addition to the all items, headline index, detailed indexes by Division (e.g. Food and Non-alcoholic beverages, Clothing, etc.), their associated weights, and contributions to national annual inflation are published where available. In addition to the national CPIs, the CPI dataset includes the Harmonised Indices of Consumer Prices (HICPs) compiled by Eurostat for Europe. Consumer price indexes measure the relative changes over time in the prices of goods and services purchased by households, which households use directly, or indirectly, to satisfy their own needs and wants.
+View Data
+Labor Statistics (LS)
+Labor Force Statistics provide information on various aspects of labor markets including employment rates, unemployment rates, labor force participation. Data are obtained from national statistical organizations.  The data are used by policymakers, researchers, and analysts to understand labor market conditions, identifying trends, and making informed decisions related to economic development, social policies, and labor force planning.
+View Data
+Tax and Benefits Analysis Tool (TAXFIT)
+TaxFit is a microsimulation model that computes taxes and benefits— including income taxes, social security contributions, social assistance, care, family, and in-work-benefits — for households whose characteristics are defined by user provided information about gross incomes and family structures. Users can compare the burden and generosity of the tax and benefits systems across 16 Emerging Market and Developing Economies, as well as indicators of policy-induced (dis)incentives to formal work, which have a gender focus.
+View Data
+Crypto-based Parallel Exchange Rates [WP-CPER]
+This dataset provides a cross-country indicator of parallel exchange rates based on crypto markets. Parallel exchange rates are measured as the price of bitcoin on the local market relative to the U.S. market.
+Suggested citation
+: Graf von Luckner, C., Koepke, R., & Sgherri, S. (2024). “Crypto as a Marketplace for Capital Flight.” IMF Working Paper No. 2024/133. International Monetary Fund.
+View Data
+Data Resources
+API
+Excel Add-in
+Release Calendar
+Datasets
+Tables
+Dashboards
+Documents
+Videos
+News
+IMF Finances
+Additional Data Resources
+International Data Resources
+About
+Research
+Countries
+Capacity Development
+News
+Events
+Videos
+Data
+Publications
+Social Media Hub
+Annual Report
+Copyright and Usage
+Privacy Policy
+Contact Us
+Careers
+Glossary
+Scam Alert
+IMF Brand
+عربي
+中文
+FRANÇAIS
+日本語
+Русский
+Español
+© 2025 INTERNATIONAL MONETARY FUND. ALL RIGHTS RESERVED.
