@@ -1,0 +1,2782 @@
+{
+  "% y e inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "(cpi": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "(d/gdp": {
+    "canonical": "(d/gdp",
+    "category": "National Accounts"
+  },
+  "(gdp": {
+    "canonical": "(gdp",
+    "category": "National Accounts"
+  },
+  "-1.1 -1.1 -1.0 -1.2 curr current ac ent acccount balanc ount balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "-1.4 curr current ac ent acccount balanc ount balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "-4.0 curr current ac ent acccount balanc ount balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "-4.4 balanc balance": {
+    "canonical": "Current Account Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "-7.6 -7.1 -7.0 balanc balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "0.5 1.3 2.0 2.2 1.8 2.0 gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "1.3 2.0 nominal gdp nominal": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "1.4 1.6 1.7 1.7 1.8 1.8 balanc balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "1.8%  cpi inflation rate": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "1.9 1.8 1.9 2.1 2.3 2.5 balanc balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "10 gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "10 lower food inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "104.7 114.6 nominal gdp nominal gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "12 gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "12.67 12.76 12.85 12.94 unemplo unemployment": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "129.0 140.7 m2": {
+    "canonical": "129.0 140.7 M2",
+    "category": "Other"
+  },
+  "13.32 unemplo unemployment": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "15-08-2022 press release real gdp": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "15-08-2023 press release real gdp": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "15-11-2022 press release real gdp": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "16.5 15.3 16.0 16.0 15.5 15.0 consumer pric consumer price inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "2.1 2.1 2.1 2.2 2.2 gdp": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "2.5 0.5 1.3 2.0 2.2 1.8 gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "2.75 2.75 ecb refinancing rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "2.8 2.7 consumer inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "2.9 2.7 2.5 2.4 2.3 budget balanc budget balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "2023  2024    2025   2026   2027  real gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "2024 global  nominal dm gdp growth & em exports": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "2024 selected european economies - real gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "2027  real gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "208.3 227.3 rreal gdp gr eal gdp groowth": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "24 monetary policy outlook slower inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "25 slower inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "27 inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "28.2 28.5 28.4 29.6 30.7 33.9 balanc balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "3.6 3.3 3.1 3.1 3.1 2.9 budget balanc budget balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "31 monetary policy framework tunisian inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "34.3 37.8 41.6 45.9 49.2 balanc balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "4,663 4,912 5,487 gdp": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "4.9%  average exchange rate depreciation": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "46.2 50.7 54.0 56.0 consumer pric consumer price inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "54 inflation expectations": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "54.0 56.0 59.5 63.1 71.0 73.5 82.6 92.9 104.7 114.6 rreal gdp gr eal gdp groowth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "63.1 71.0 nominal gdp nominal gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "7.3 7.3 7.3 centr central bank policy r al bank policy rate": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "7.4%  7.9%  cpi inflation rate": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "7.5 7.5 7.5 7.5 m2": {
+    "canonical": "7.5 7.5 7.5 7.5 M2",
+    "category": "Other"
+  },
+  "a 0.3% annual rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "a budgetary balance": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "a communication strategy": {
+    "canonical": "A Communication Strategy",
+    "category": "Other"
+  },
+  "a flexible exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "a gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "a growth rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "a la production des entreprises": {
+    "canonical": "Services Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "a moderate rise": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "a more  balanced structure": {
+    "canonical": "A More Balanced Structure",
+    "category": "Other"
+  },
+  "a much smaller deficit": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "a negative interest rate differential": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "a positive primary balance": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "a purely accounting perspective": {
+    "canonical": "A Purely Accounting Perspective",
+    "category": "Other"
+  },
+  "a rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "a sluggish growth rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "a spot rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "a strategic vision": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "a stubbornly high unemployment rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "a well-calibrated package": {
+    "canonical": "A Well-calibrated Package",
+    "category": "Other"
+  },
+  "above-average inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "acccount balanc ount balance": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "accelerated execution": {
+    "canonical": "− Accelerated Execution",
+    "category": "Other"
+  },
+  "account": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "accountability": {
+    "canonical": "Accountability",
+    "category": "Other"
+  },
+  "acute inflationary pressure": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "acute inflationary pressures": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "administration publique": {
+    "canonical": "Public Administration",
+    "category": "Finance"
+  },
+  "aggregate exports": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "aggregate gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "aggregate real gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "agricultural production": {
+    "canonical": "Agricultural Production",
+    "category": "Other"
+  },
+  "agriculture (% gdp)": {
+    "canonical": "Agriculture, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "agriculture sector share": {
+    "canonical": "Agriculture, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "agriculture, value added (% of gdp)": {
+    "canonical": "Agriculture, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "allocated foreign exchange reserves": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "already-high unemployment": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "an annual rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "an average poverty rate": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "an average rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "an interest rate corridor": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "an optimal  balance": {
+    "canonical": "Current Account Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "annual gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "annual nominal gdp": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "another supply-side rise": {
+    "canonical": "Another Supply-side Rise",
+    "category": "Other"
+  },
+  "arabic monthly nation account": {
+    "canonical": "Arabic Monthly Nation Account",
+    "category": "Other"
+  },
+  "authorities support algeria - exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "average household size": {
+    "canonical": "Average Household Size",
+    "category": "Households"
+  },
+  "average inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "average market exchange rates": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "average wage": {
+    "canonical": "Average Wage (monthly)",
+    "category": "Other"
+  },
+  "average wage (monthly)": {
+    "canonical": "Average Wage (monthly)",
+    "category": "Other"
+  },
+  "balanc balance": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "balance commerciale": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "balance des services": {
+    "canonical": "Services Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "balance du compte courant": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "balance du compte courant (% pib)": {
+    "canonical": "Current Account Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "balance of current account": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "banks": {
+    "canonical": "Financial Institutions",
+    "category": "Other"
+  },
+  "below-average agricultural production": {
+    "canonical": "Below-average Agricultural Production",
+    "category": "Other"
+  },
+  "bmi balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "bmi easing food inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "bmi fiscal deficit": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "bmi net exports outlook": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "budget": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "budget balanc budget balance": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "budget balance": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "budget deficits": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "cab": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "cab (% gdp)": {
+    "canonical": "Current Account Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "capital investment": {
+    "canonical": "Gross Fixed Capital Formation",
+    "category": "Investment"
+  },
+  "central bank policy r al bank policy rate": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "china dm asia - real gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "china's real gdp data": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "chomage": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "chomage des femmes": {
+    "canonical": "Female Unemployment Rate (%)",
+    "category": "Employment"
+  },
+  "chomage des jeunes": {
+    "canonical": "Youth Unemployment Rate (%)",
+    "category": "Employment"
+  },
+  "coefficient de gini": {
+    "canonical": "Gini Index",
+    "category": "Other"
+  },
+  "compliance strategies": {
+    "canonical": "Compliance Strategies",
+    "category": "Other"
+  },
+  "compte courant": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "compte courant du tresor": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "consommation finale": {
+    "canonical": "Final Consumption",
+    "category": "Expenditure"
+  },
+  "consumer inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "consumer pric consumer price inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "consumer price index": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "consumer price indexes": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "consumption totale": {
+    "canonical": "Final Consumption",
+    "category": "Expenditure"
+  },
+  "core cpi": {
+    "canonical": "Core Inflation (%)",
+    "category": "Prices"
+  },
+  "core inflation (%)": {
+    "canonical": "Core Inflation (%)",
+    "category": "Prices"
+  },
+  "cpi": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "cpi yoy": {
+    "canonical": "Core Inflation (%)",
+    "category": "Prices"
+  },
+  "credit au secteur prive": {
+    "canonical": "Credit To Private Sector (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "credit to private sector (% of gdp)": {
+    "canonical": "Credit To Private Sector (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "croissance demographique": {
+    "canonical": "Population Growth Rate (%)",
+    "category": "Demographics"
+  },
+  "croissance economique": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "crypto-based parallel exchange rates": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "curr current ac ent acccount balanc ount balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "current  account balance": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "current account": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "current account balance": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "current account balance (% of gdp)": {
+    "canonical": "Current Account Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "current account deficit": {
+    "canonical": "Gross Disposable Income Per Household (current Dinars)",
+    "category": "Households"
+  },
+  "d'inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "de la balance commerciale": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "de la balance commerciale hors energie se reduit a": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "de la balance energetique setablit a (-9812 md": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "debt management strategies": {
+    "canonical": "Debt Service (% Of Revenue)",
+    "category": "Finance"
+  },
+  "debt service": {
+    "canonical": "Debt Service (% Of Revenue)",
+    "category": "Finance"
+  },
+  "debt service (% of revenue)": {
+    "canonical": "Debt Service (% Of Revenue)",
+    "category": "Finance"
+  },
+  "declining food inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "declining investment  rates": {
+    "canonical": "Gross Fixed Capital Formation",
+    "category": "Investment"
+  },
+  "deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "deficit budgetaire": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "deficit commercial": {
+    "canonical": "Deficit Commercial",
+    "category": "Finance"
+  },
+  "deflateur du pib": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "dependance energetique": {
+    "canonical": "Energy Import Dependence (%)",
+    "category": "Other"
+  },
+  "dependency ratio": {
+    "canonical": "Dependency Ratio (%)",
+    "category": "Other"
+  },
+  "dependency ratio (%)": {
+    "canonical": "Dependency Ratio (%)",
+    "category": "Other"
+  },
+  "depenses publiques": {
+    "canonical": "Government Expenditure (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "detailed indexes": {
+    "canonical": "Detailed Indexes",
+    "category": "Other"
+  },
+  "dette de l'etat": {
+    "canonical": "Public Debt (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "dette publique": {
+    "canonical": "Public Debt (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "developed market exchange rates": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "dinflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "domestic interest rates": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "easing supply chain disruptions": {
+    "canonical": "Money Supply (m2)",
+    "category": "Other"
+  },
+  "economic imbalances": {
+    "canonical": "Economic Imbalances",
+    "category": "Other"
+  },
+  "either inflationary pressures": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "elevated inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "elevated unemployment": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "em exports": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "em inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "emerging market exchange rates": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "employment rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "employment rate (%)": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "employment rates": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "energy dependence": {
+    "canonical": "Energy Import Dependence (%)",
+    "category": "Other"
+  },
+  "energy import dependence (%)": {
+    "canonical": "Energy Import Dependence (%)",
+    "category": "Other"
+  },
+  "entreprises non financieres": {
+    "canonical": "Non-financial Corporations",
+    "category": "Other"
+  },
+  "eop) fed funds rate": {
+    "canonical": "Labor Force Participation Rate (%)",
+    "category": "Employment"
+  },
+  "epargne": {
+    "canonical": "Savings Rate",
+    "category": "Savings"
+  },
+  "epargne nationale brute": {
+    "canonical": "Savings Rate",
+    "category": "Savings"
+  },
+  "epargne nationale nette": {
+    "canonical": "Savings Rate",
+    "category": "Savings"
+  },
+  "es imports": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "eur gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "eurbn 46.9 49.1 50.0 53.1 56.4 63.4 rreal gdp gr eal gdp groowth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "eurbn 65.6 73.7 83.0 93.5 102.4 rreal gdp gr eal gdp groowth": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "eurostat french others corporate": {
+    "canonical": "Eurostat French Others Corporate",
+    "category": "Other"
+  },
+  "even this narrower deficit": {
+    "canonical": "Even This Narrower Deficit",
+    "category": "Finance"
+  },
+  "ex exchange r change rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "exchange rate (tnd per usd)": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "exchange rate vs usd": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "export volume": {
+    "canonical": "Export Volume Index",
+    "category": "Other"
+  },
+  "export volume index": {
+    "canonical": "Export Volume Index",
+    "category": "Other"
+  },
+  "exportations": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "exports": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "external risks remains significant despite smaller deficits": {
+    "canonical": "External Risks Remains Significant Despite Smaller Deficits",
+    "category": "National Accounts"
+  },
+  "external risks remains significant despite smaller deficits key view": {
+    "canonical": "External Risks Remains Significant Despite Smaller Deficits Key View •",
+    "category": "National Accounts"
+  },
+  "falling imports": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "falling oil production": {
+    "canonical": "Falling Oil Production",
+    "category": "Other"
+  },
+  "falling reserves": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "fdi inflows": {
+    "canonical": "Foreign Direct Investment, Net Inflows (current Usd)",
+    "category": "Investment"
+  },
+  "fed funds rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "female unemployment": {
+    "canonical": "Female Unemployment Rate (%)",
+    "category": "Employment"
+  },
+  "female unemployment rate (%)": {
+    "canonical": "Female Unemployment Rate (%)",
+    "category": "Employment"
+  },
+  "fertility death rates": {
+    "canonical": "Fertility Death Rates",
+    "category": "Demographics"
+  },
+  "final consumption": {
+    "canonical": "Final Consumption",
+    "category": "Expenditure"
+  },
+  "final consumption (% of gdp)": {
+    "canonical": "Final Consumption (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "final consumption expenditure": {
+    "canonical": "Final Consumption",
+    "category": "Expenditure"
+  },
+  "final use": {
+    "canonical": "Final Consumption",
+    "category": "Expenditure"
+  },
+  "financial balances": {
+    "canonical": "Financial Balances",
+    "category": "Other"
+  },
+  "financial institutions": {
+    "canonical": "Financial Institutions",
+    "category": "Other"
+  },
+  "financing imports": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "fiscal balance": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "fiscal deficit": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "food inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "forecast 2023e 2024f notes rreal gdp eal gdp gr groowth": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "foreign  exchange reserves": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "foreign direct investment, net inflows (current usd)": {
+    "canonical": "Foreign Direct Investment, Net Inflows (current Usd)",
+    "category": "Investment"
+  },
+  "foreign exchange rates": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "foreign exchange reserves": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "foreign exchange reserves (fxr) data": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "foreign interest rates": {
+    "canonical": "Foreign Direct Investment, Net Inflows (current Usd)",
+    "category": "Investment"
+  },
+  "formation brute de capital": {
+    "canonical": "Gross Capital Formation (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "formation brute de capital fixe": {
+    "canonical": "Gross Fixed Capital Formation",
+    "category": "Investment"
+  },
+  "freight rates": {
+    "canonical": "Freight Rates",
+    "category": "Other"
+  },
+  "fx reserves": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "gcf (% gdp)": {
+    "canonical": "Gross Capital Formation (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "gdp": {
+    "canonical": "Agriculture, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "gdp  -2.7": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp  -3.9%  -3.4": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp  -5.3%": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp  -6.5": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp -2.0 -2.0 -1.7": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "gdp -2.4 -2.0 -2.0 -1.7": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "gdp -4.6 -4.5": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "gdp -6.8 -6.7 -6.5 -6.4 -6.3 -6.1 balanc balance": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp -7.5 -7.0 -5.3": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "gdp -8.6 -2.4 -2.0 -2.0 e/f = bmi estimate/forecast": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp at market prices": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "gdp deflator": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "gdp e": {
+    "canonical": "Agriculture, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "gdp ernment debt": {
+    "canonical": "Debt Service (% Of Revenue)",
+    "category": "Finance"
+  },
+  "gdp es": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp growth (annual %)": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp onsumption": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp ormation": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "gdp ount": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp pc (current)": {
+    "canonical": "Gdp Per Capita (current Usd)",
+    "category": "National Accounts"
+  },
+  "gdp pc (ppp)": {
+    "canonical": "Gdp Per Capita, Ppp (current International $)",
+    "category": "National Accounts"
+  },
+  "gdp per capita": {
+    "canonical": "Gdp Per Capita (current Usd)",
+    "category": "National Accounts"
+  },
+  "gdp per capita (current usd)": {
+    "canonical": "Gdp Per Capita (current Usd)",
+    "category": "National Accounts"
+  },
+  "gdp per capita ppp": {
+    "canonical": "Gdp Per Capita, Ppp (current International $)",
+    "category": "National Accounts"
+  },
+  "gdp per capita, ppp (current international $)": {
+    "canonical": "Gdp Per Capita, Ppp (current International $)",
+    "category": "National Accounts"
+  },
+  "gdp per head": {
+    "canonical": "Gdp Per Capita (current Usd)",
+    "category": "National Accounts"
+  },
+  "gdp per worker": {
+    "canonical": "Labor Productivity (gdp Per Worker)",
+    "category": "National Accounts"
+  },
+  "gdp posts": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gdp price deflator": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "gdp shortfall consensus forecast": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "gfcf": {
+    "canonical": "Gross Fixed Capital Formation",
+    "category": "Investment"
+  },
+  "gini": {
+    "canonical": "Gini Index",
+    "category": "Other"
+  },
+  "gini index": {
+    "canonical": "Gini Index",
+    "category": "Other"
+  },
+  "gni": {
+    "canonical": "Gross National Income (gni)",
+    "category": "National Accounts"
+  },
+  "gni per capita": {
+    "canonical": "Gni Per Capita (current Usd)",
+    "category": "National Accounts"
+  },
+  "gni per capita (current usd)": {
+    "canonical": "Gni Per Capita (current Usd)",
+    "category": "National Accounts"
+  },
+  "goods and services exports": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "goods and services exports tunisia - exports destination": {
+    "canonical": "Services Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "goods exported": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "goods imported": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "government": {
+    "canonical": "Public Administration",
+    "category": "Finance"
+  },
+  "government budget balance (% of gdp)": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "government consumption": {
+    "canonical": "Final Consumption",
+    "category": "Expenditure"
+  },
+  "government debt": {
+    "canonical": "Public Debt (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "government deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "government expenditure": {
+    "canonical": "Government Expenditure (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "government expenditure (% of gdp)": {
+    "canonical": "Government Expenditure (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "government revenue": {
+    "canonical": "Government Revenue (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "government revenue (% of gdp)": {
+    "canonical": "Government Revenue (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "government sector": {
+    "canonical": "Public Administration",
+    "category": "Finance"
+  },
+  "governorates": {
+    "canonical": "National Income",
+    "category": "National Accounts"
+  },
+  "gradual deceleration tunisia - consumer price inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "grain imports": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "greater imports": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "green hydrogen production": {
+    "canonical": "Green Hydrogen Production",
+    "category": "Other"
+  },
+  "gross capital formation": {
+    "canonical": "Gross Capital Formation (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "gross capital formation (% of gdp)": {
+    "canonical": "Gross Capital Formation (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "gross disposable income of households": {
+    "canonical": "Gross Disposable Income Of Households",
+    "category": "Households"
+  },
+  "gross disposable income per household (2015 dinars)": {
+    "canonical": "Gross Disposable Income Per Household (2015 Dinars)",
+    "category": "Households"
+  },
+  "gross disposable income per household (constant prices)": {
+    "canonical": "Gross Disposable Income Per Household (constant Prices)",
+    "category": "Households"
+  },
+  "gross disposable income per household (current dinars)": {
+    "canonical": "Gross Disposable Income Per Household (current Dinars)",
+    "category": "Households"
+  },
+  "gross disposable income per household in 2015 dinars": {
+    "canonical": "Gross Disposable Income Per Household (2015 Dinars)",
+    "category": "Households"
+  },
+  "gross disposable income per household in constant dinars": {
+    "canonical": "Gross Disposable Income Per Household (constant Prices)",
+    "category": "Households"
+  },
+  "gross disposable income per household in current dinars": {
+    "canonical": "Gross Disposable Income Per Household (current Dinars)",
+    "category": "Households"
+  },
+  "gross domestic product": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "gross domestic product (gdp) at market prices": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "gross fixed capital": {
+    "canonical": "Gross Fixed Capital Formation",
+    "category": "Investment"
+  },
+  "gross fixed capital formation": {
+    "canonical": "Gross Fixed Capital Formation",
+    "category": "Investment"
+  },
+  "gross national disposable income": {
+    "canonical": "Gross National Disposable Income",
+    "category": "Households"
+  },
+  "gross national income (gni)": {
+    "canonical": "Gross National Income (gni)",
+    "category": "National Accounts"
+  },
+  "gross national saving": {
+    "canonical": "Gross National Saving (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "gross national saving (% of gdp)": {
+    "canonical": "Gross National Saving (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "gross savings": {
+    "canonical": "Savings Rate (% Of Gni)",
+    "category": "National Accounts"
+  },
+  "gross savings rate": {
+    "canonical": "Savings Rate",
+    "category": "Savings"
+  },
+  "headline index": {
+    "canonical": "Producer Price Index (ppi)",
+    "category": "Prices"
+  },
+  "headline inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "high delinquency rates": {
+    "canonical": "High Delinquency Rates",
+    "category": "Other"
+  },
+  "high interest rates": {
+    "canonical": "High Interest Rates",
+    "category": "Other"
+  },
+  "high unemployment rate": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "household consumption": {
+    "canonical": "Final Consumption",
+    "category": "Expenditure"
+  },
+  "householders": {
+    "canonical": "Householders (housing)",
+    "category": "Households"
+  },
+  "householders (housing)": {
+    "canonical": "Householders (housing)",
+    "category": "Households"
+  },
+  "households": {
+    "canonical": "Householders (housing)",
+    "category": "Households"
+  },
+  "households (housing)": {
+    "canonical": "Households (housing)",
+    "category": "Households"
+  },
+  "hydrogen production": {
+    "canonical": "Producer Price Index (ppi)",
+    "category": "Prices"
+  },
+  "ide entrants": {
+    "canonical": "Foreign Direct Investment, Net Inflows (current Usd)",
+    "category": "Investment"
+  },
+  "import volume": {
+    "canonical": "Import Volume Index",
+    "category": "Other"
+  },
+  "import volume index": {
+    "canonical": "Import Volume Index",
+    "category": "Other"
+  },
+  "importations": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "imports": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "imports cost tunisia": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "increasing inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "indicator 2022 2023e 2024f 2025f 2026f 2027f nominal gdp nominal gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "indicator 2023e 2024f 2025f 2026f 2027f 2028f nominal gdp nominal gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "indice des prix": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "indice des prix a la consommation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "indice des prix a la production": {
+    "canonical": "Producer Price Index (ppi)",
+    "category": "Prices"
+  },
+  "indice volume des exportations": {
+    "canonical": "Export Volume Index",
+    "category": "Other"
+  },
+  "indice volume des importations": {
+    "canonical": "Import Volume Index",
+    "category": "Other"
+  },
+  "industrial sector share": {
+    "canonical": "Industry, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "industry (% gdp)": {
+    "canonical": "Industry, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "industry, value added (% of gdp)": {
+    "canonical": "Industry, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "inflation algeria - inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "inflation decelerate": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "inflation rate": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "inflation slower": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "inflation sous-jacente": {
+    "canonical": "Core Inflation (%)",
+    "category": "Prices"
+  },
+  "inflation us expectations": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "inflationary drift": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "inflationary pressures": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "inflationary surges": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "informality": {
+    "canonical": "Informality Rate (%)",
+    "category": "Other"
+  },
+  "informality rate (%)": {
+    "canonical": "Informality Rate (%)",
+    "category": "Other"
+  },
+  "institutions financieres": {
+    "canonical": "Financial Institutions",
+    "category": "Other"
+  },
+  "interest rate": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "interest rate and growth rate differential": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "interest rate hikes": {
+    "canonical": "Labor Force Participation Rate (%)",
+    "category": "Employment"
+  },
+  "interest rates": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "international commodity price swings tunisia - consumer price index weights": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "investment formation": {
+    "canonical": "Gross Fixed Capital Formation",
+    "category": "Investment"
+  },
+  "investment rates": {
+    "canonical": "Investment Rates",
+    "category": "Investment"
+  },
+  "ipc": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "its current account deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "its governorates": {
+    "canonical": "Its Governorates",
+    "category": "Other"
+  },
+  "its key rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "its policy rate": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "its primary deficit": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "its rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "its spot rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "its twin deficits": {
+    "canonical": "Its Twin Deficits",
+    "category": "Finance"
+  },
+  "labor force participation": {
+    "canonical": "Labor Force Participation Rate (%)",
+    "category": "Employment"
+  },
+  "labor force participation rate (%)": {
+    "canonical": "Labor Force Participation Rate (%)",
+    "category": "Employment"
+  },
+  "labor productivity (gdp per worker)": {
+    "canonical": "Labor Productivity (gdp Per Worker)",
+    "category": "National Accounts"
+  },
+  "large fiscal imbalances": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "late 2023 ems - aggregate exports": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "le taux de chomage diminue pour atteindre": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "le taux dinflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "long-term bond market interest rates": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "low growth rates": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "lower food inflation will support household consumption tunisia": {
+    "canonical": "Final Consumption",
+    "category": "Expenditure"
+  },
+  "lower inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "markets - r ets - real gdp gr eal gdp groowth f wth": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "masse monetaire m2": {
+    "canonical": "Money Supply (m2)",
+    "category": "Other"
+  },
+  "menages": {
+    "canonical": "Householders (housing)",
+    "category": "Households"
+  },
+  "merchandise exports": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "merchandise exports (current usd)": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "merchandise imports": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "merchandise imports (current usd)": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "minimum wage": {
+    "canonical": "Minimum Wage",
+    "category": "Other"
+  },
+  "mn 12.56 12.67 12.76 12.85 12.94 13.02 13.10 13.18 13.25 13.32 gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "money market  rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "money supply": {
+    "canonical": "Money Supply (m2)",
+    "category": "Other"
+  },
+  "money supply (m2)": {
+    "canonical": "Money Supply (m2)",
+    "category": "Other"
+  },
+  "money supply growth": {
+    "canonical": "Money Supply (m2)",
+    "category": "Other"
+  },
+  "more eurostat french others corporate document": {
+    "canonical": "More Eurostat French Others Corporate Document",
+    "category": "Other"
+  },
+  "morocco - exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "most importantly a weaker exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "narrower deficit": {
+    "canonical": "Narrower Deficit",
+    "category": "Finance"
+  },
+  "nation account": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "national accounts": {
+    "canonical": "Gross National Disposable Income",
+    "category": "Households"
+  },
+  "national annual inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "national income": {
+    "canonical": "National Income",
+    "category": "National Accounts"
+  },
+  "net exports": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "net factor income from abroad": {
+    "canonical": "Net Factor Income From Abroad",
+    "category": "Other"
+  },
+  "net national income": {
+    "canonical": "National Income",
+    "category": "National Accounts"
+  },
+  "nfc": {
+    "canonical": "Non-financial Corporations",
+    "category": "Other"
+  },
+  "nombre de menage": {
+    "canonical": "Number Of Households",
+    "category": "Households"
+  },
+  "nominal dm gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "nominal gdp nominal": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "nominal gdp nominal gdp": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "non financial corporations": {
+    "canonical": "Non-financial Corporations",
+    "category": "Other"
+  },
+  "non-financial corporations": {
+    "canonical": "Non-financial Corporations",
+    "category": "Other"
+  },
+  "non-financial firms": {
+    "canonical": "Non-financial Corporations",
+    "category": "Other"
+  },
+  "north african markets north africa - inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "number of households": {
+    "canonical": "Number Of Households",
+    "category": "Households"
+  },
+  "official foreign exchange reserves": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "official foreign exchange reserves (current usd)": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "official gdp figures": {
+    "canonical": "Gdp Deflator",
+    "category": "National Accounts"
+  },
+  "oil production": {
+    "canonical": "Producer Price Index (ppi)",
+    "category": "Prices"
+  },
+  "ome balance": {
+    "canonical": "Primary Income Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "openness ratio": {
+    "canonical": "Openness Ratio ((x+m)/gdp)",
+    "category": "National Accounts"
+  },
+  "openness ratio ((x+m)/gdp)": {
+    "canonical": "Openness Ratio ((x+m)/gdp)",
+    "category": "National Accounts"
+  },
+  "other foreign exchange reserves": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "our 2023 real gdp growth estimate": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "our inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "our inflation forecast": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "our inflation forecasts": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "overall fiscal balance  %": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "parallel exchange rates": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "persistent current account deficits": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "persistent inflationary pressures": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "pib": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "pib par habitant": {
+    "canonical": "Gdp Per Capita (current Usd)",
+    "category": "National Accounts"
+  },
+  "pib par habitant ppa": {
+    "canonical": "Gdp Per Capita, Ppp (current International $)",
+    "category": "National Accounts"
+  },
+  "pib reel": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "policy interest rate": {
+    "canonical": "Policy Interest Rate",
+    "category": "Other"
+  },
+  "policy interest rate (%)": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "policy rate": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "policy rates": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "population": {
+    "canonical": "Population",
+    "category": "Demographics"
+  },
+  "population (en milliers)": {
+    "canonical": "Population",
+    "category": "Demographics"
+  },
+  "population growth": {
+    "canonical": "Population Growth Rate (%)",
+    "category": "Demographics"
+  },
+  "population growth rate (%)": {
+    "canonical": "Population Growth Rate (%)",
+    "category": "Demographics"
+  },
+  "positive interest rate-growth rate differential": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "positive primary balance": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "potential deficit monetisation": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "potential gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "poverty headcount ratio (%)": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "poverty rate": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "poverty rates": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "ppi": {
+    "canonical": "Producer Price Index (ppi)",
+    "category": "Prices"
+  },
+  "price inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "primary  balance": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "primary balance": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "primary fiscal balance": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "primary fiscal balance  %": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "primary fiscal balance (% of gdp)": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "primary income balance": {
+    "canonical": "Primary Income Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "primary income balance (% of gdp)": {
+    "canonical": "Primary Income Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "private sector credit": {
+    "canonical": "Credit To Private Sector (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "producer price index (ppi)": {
+    "canonical": "Producer Price Index (ppi)",
+    "category": "Prices"
+  },
+  "production": {
+    "canonical": "Producer Price Index (ppi)",
+    "category": "Prices"
+  },
+  "productivite du travail": {
+    "canonical": "Labor Productivity (gdp Per Worker)",
+    "category": "National Accounts"
+  },
+  "produit interieur brut": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "public admin": {
+    "canonical": "Public Administration",
+    "category": "Finance"
+  },
+  "public administration": {
+    "canonical": "Public Administration",
+    "category": "Finance"
+  },
+  "public debt": {
+    "canonical": "Public Debt (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "public debt % gdp": {
+    "canonical": "Public Debt (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "public debt (% of gdp)": {
+    "canonical": "Public Debt (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "public finances": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "public sector administration": {
+    "canonical": "Public Administration",
+    "category": "Finance"
+  },
+  "q124 tunisia - exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "quarterly gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "quarterly gross domestic product": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "rate cuts": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "rate of inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "rates": {
+    "canonical": "Rates",
+    "category": "Other"
+  },
+  "ratio de dependance": {
+    "canonical": "Dependency Ratio (%)",
+    "category": "Other"
+  },
+  "real gdp": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "real gdp (constant prices)": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "real gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "recettes publiques": {
+    "canonical": "Government Revenue (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "recettes touristiques": {
+    "canonical": "Tourism Receipts (current Usd)",
+    "category": "Other"
+  },
+  "remittances": {
+    "canonical": "Remittances, Personal (current Usd)",
+    "category": "Other"
+  },
+  "remittances, personal (current usd)": {
+    "canonical": "Remittances, Personal (current Usd)",
+    "category": "Other"
+  },
+  "remunerateurs": {
+    "canonical": "Rémunérateurs",
+    "category": "Other"
+  },
+  "reserves (cofer) dataset includes official foreign": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "reserves (which currently stand at usd8.2bn (117 days of import cover), to meet a large part of the usd1.7bn fx": {
+    "canonical": "Agriculture, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "reserves and a depreciation of around 5.7% in the dinar as foreign": {
+    "canonical": "Agriculture, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "reserves and foreign": {
+    "canonical": "Foreign Direct Investment, Net Inflows (current Usd)",
+    "category": "Investment"
+  },
+  "reserves de change": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "reserves to meet around usd2.8bn in fx": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "reserves to meet fx": {
+    "canonical": "Credit To Private Sector (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "retail sales index": {
+    "canonical": "Retail Sales Index",
+    "category": "Other"
+  },
+  "revenu disponible brut des menages": {
+    "canonical": "Gross Disposable Income Of Households",
+    "category": "Households"
+  },
+  "revenu disponible brut par menage en dinars courants": {
+    "canonical": "Gross Disposable Income Per Household (current Dinars)",
+    "category": "Households"
+  },
+  "revenu disponible brut par menage en dinars de 2015": {
+    "canonical": "Gross Disposable Income Per Household (2015 Dinars)",
+    "category": "Households"
+  },
+  "revenu national": {
+    "canonical": "National Income",
+    "category": "National Accounts"
+  },
+  "revenu national disponible brut": {
+    "canonical": "Gross National Disposable Income",
+    "category": "Households"
+  },
+  "revenu national par habitant": {
+    "canonical": "Gni Per Capita (current Usd)",
+    "category": "National Accounts"
+  },
+  "revenus des facteurs recus de l'exterieur nets": {
+    "canonical": "Net Factor Income From Abroad",
+    "category": "Other"
+  },
+  "revenus primaires": {
+    "canonical": "Primary Income Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "rising oil production": {
+    "canonical": "Rising Oil Production",
+    "category": "Other"
+  },
+  "rn": {
+    "canonical": "National Income",
+    "category": "National Accounts"
+  },
+  "rndb": {
+    "canonical": "Gross National Disposable Income",
+    "category": "Households"
+  },
+  "salaire minimum": {
+    "canonical": "Minimum Wage",
+    "category": "Other"
+  },
+  "salaire moyen": {
+    "canonical": "Average Wage (monthly)",
+    "category": "Other"
+  },
+  "saudi oil production": {
+    "canonical": "Producer Price Index (ppi)",
+    "category": "Prices"
+  },
+  "saving rate": {
+    "canonical": "Savings Rate",
+    "category": "Savings"
+  },
+  "savings as % of gni": {
+    "canonical": "Savings Rate",
+    "category": "Savings"
+  },
+  "savings rate": {
+    "canonical": "Savings Rate",
+    "category": "Savings"
+  },
+  "savings rate (% of gni)": {
+    "canonical": "Savings Rate (% Of Gni)",
+    "category": "National Accounts"
+  },
+  "second quarter 2024 16-08-2024 press release gross domestic product gdp": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "service de la dette": {
+    "canonical": "Debt Service (% Of Revenue)",
+    "category": "Finance"
+  },
+  "services (% gdp)": {
+    "canonical": "Services, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "services balance": {
+    "canonical": "Services Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "services balance (% of gdp)": {
+    "canonical": "Services Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "services sector share": {
+    "canonical": "Services, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "services, value added (% of gdp)": {
+    "canonical": "Services, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "short-term balance": {
+    "canonical": "Current Account Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "significant tunisia - current account balance": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "smag": {
+    "canonical": "Minimum Wage",
+    "category": "Other"
+  },
+  "smaller deficits key view": {
+    "canonical": "Smaller Deficits Key View",
+    "category": "Finance"
+  },
+  "smig": {
+    "canonical": "Minimum Wage",
+    "category": "Other"
+  },
+  "societes non financieres": {
+    "canonical": "Non-financial Corporations",
+    "category": "Other"
+  },
+  "solde primaire": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "some inflationary pressures": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "statistics english corporate document": {
+    "canonical": "Statistics English Corporate Document",
+    "category": "Other"
+  },
+  "statistics french corporate document education": {
+    "canonical": "Statistics French Corporate Document Education",
+    "category": "Other"
+  },
+  "sticky morocco - inflation &": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "sticky morocco - inflation & policy rate": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "structural unemployment": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "subsequent inflationary pressures": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "supply constraints": {
+    "canonical": "Money Supply (m2)",
+    "category": "Other"
+  },
+  "taille moyenne d'un menage": {
+    "canonical": "Average Household Size",
+    "category": "Households"
+  },
+  "taux  de chomage": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "taux d'activite": {
+    "canonical": "Labor Force Participation Rate (%)",
+    "category": "Employment"
+  },
+  "taux d'emploi": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "taux d'epargne": {
+    "canonical": "Savings Rate",
+    "category": "Savings"
+  },
+  "taux d'epargne par agent": {
+    "canonical": "Savings Rate",
+    "category": "Savings"
+  },
+  "taux d'informalite": {
+    "canonical": "Informality Rate (%)",
+    "category": "Other"
+  },
+  "taux d'ouverture": {
+    "canonical": "Openness Ratio ((x+m)/gdp)",
+    "category": "National Accounts"
+  },
+  "taux de   chomage": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "taux de change": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "taux de chomage": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "taux de croissance du pib": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "taux de pauvrete": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "taux directeur": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "termes de l'echange": {
+    "canonical": "Terms Of Trade (index)",
+    "category": "Other"
+  },
+  "terms of trade": {
+    "canonical": "Terms Of Trade (index)",
+    "category": "Other"
+  },
+  "terms of trade (index)": {
+    "canonical": "Terms Of Trade (index)",
+    "category": "Other"
+  },
+  "the  average poverty rate": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "the  domestic interest rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "the  governorate": {
+    "canonical": "The Governorate",
+    "category": "Other"
+  },
+  "the  lowest poverty rates": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "the  widening current account deficit": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "the accounting approach": {
+    "canonical": "The “accounting Approach",
+    "category": "Other"
+  },
+  "the atlanta fed nowcast gdp model": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "the average annual growth  rate": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "the average interest rate": {
+    "canonical": "Average Wage (monthly)",
+    "category": "Other"
+  },
+  "the average poverty rate": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "the average rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "the balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the benchmark policy rates": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "the budget deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the budget deficits": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the cbe target egypt - inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the communication strategy": {
+    "canonical": "The Communication Strategy",
+    "category": "Other"
+  },
+  "the consumer price index basket": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the corporate sector": {
+    "canonical": "Credit To Private Sector (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the cpi basket": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the cpi dataset": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the currency composition of official foreign exchange reserves": {
+    "canonical": "Agriculture, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the current account deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the deficits": {
+    "canonical": "The Deficits",
+    "category": "Finance"
+  },
+  "the eurozone and supply chain disruptions": {
+    "canonical": "Money Supply (m2)",
+    "category": "Other"
+  },
+  "the exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "the exchange rate  depreciation": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "the financial accounts": {
+    "canonical": "The Financial Accounts",
+    "category": "Other"
+  },
+  "the fiscal deficit": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the fx reserves": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "the governments primary deficit": {
+    "canonical": "Public Administration",
+    "category": "Finance"
+  },
+  "the governorates": {
+    "canonical": "The Governorates",
+    "category": "Other"
+  },
+  "the group gdp": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "the growing  trade imbalance": {
+    "canonical": "Terms Of Trade (index)",
+    "category": "Other"
+  },
+  "the growth rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "the imf's balance": {
+    "canonical": "Current Account Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the increasing primary deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the inflation forecast": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the inflation rate": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the inflation trend": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the inflationary push": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the integrated balance": {
+    "canonical": "Current Account Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the latter two geographical breakdowns": {
+    "canonical": "The Latter Two Geographical Breakdowns",
+    "category": "Other"
+  },
+  "the lowest  poverty rates": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "the lowest poverty rate": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "the lowest poverty rates": {
+    "canonical": "Poverty Headcount Ratio (%)",
+    "category": "Other"
+  },
+  "the main accounts": {
+    "canonical": "The Main Accounts",
+    "category": "Other"
+  },
+  "the major  macroeconomic balances": {
+    "canonical": "The Major Macroeconomic Balances",
+    "category": "Other"
+  },
+  "the national consumer price indexes": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the national cpis": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "the national income accounting": {
+    "canonical": "National Income",
+    "category": "National Accounts"
+  },
+  "the nominal exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "the overall balance": {
+    "canonical": "Current Account Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the overall fiscal balance": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the overnight deposit and lending rates": {
+    "canonical": "The Overnight Deposit And Lending Rates",
+    "category": "Other"
+  },
+  "the parallel market rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "the policy rate": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "the post-revolution current account deficit": {
+    "canonical": "Current Account Balance",
+    "category": "Trade"
+  },
+  "the primary balance": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the primary budget deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the primary deficit": {
+    "canonical": "Primary Fiscal Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the production": {
+    "canonical": "Producer Price Index (ppi)",
+    "category": "Prices"
+  },
+  "the public debt deficit": {
+    "canonical": "Public Debt (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the rate": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "the real effective exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "the real gross domestic product gdp": {
+    "canonical": "Gross Domestic Product (gdp) At Market Prices",
+    "category": "National Accounts"
+  },
+  "the real interest rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "the smaller deficits": {
+    "canonical": "The Smaller Deficits",
+    "category": "Finance"
+  },
+  "the total allocated reserves": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "the trade  balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the trade  deficit": {
+    "canonical": "The Trade Deficit",
+    "category": "Finance"
+  },
+  "the trade balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "the trade deficit": {
+    "canonical": "The Trade Deficit",
+    "category": "Finance"
+  },
+  "the unemployment curve": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "the unemployment rate": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "the unemployment trend": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "the wci container freight index": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "their current account deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "their fx reserves": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "their interest rate cutting cycle": {
+    "canonical": "Employment Rate (%)",
+    "category": "Employment"
+  },
+  "these governorates": {
+    "canonical": "These Governorates",
+    "category": "Other"
+  },
+  "this deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "three governorates": {
+    "canonical": "Three Governorates",
+    "category": "Other"
+  },
+  "tnd gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "tnd/usd & us dollar index": {
+    "canonical": "Gini Index",
+    "category": "Other"
+  },
+  "total consumption": {
+    "canonical": "Final Consumption",
+    "category": "Expenditure"
+  },
+  "total exports": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "total exports frfranc": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "total imports": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "total imports italy italy": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "total population": {
+    "canonical": "Population",
+    "category": "Demographics"
+  },
+  "total reserves": {
+    "canonical": "Official Foreign Exchange Reserves (current Usd)",
+    "category": "Other"
+  },
+  "tourism receipts": {
+    "canonical": "Tourism Receipts (current Usd)",
+    "category": "Other"
+  },
+  "tourism receipts (current usd)": {
+    "canonical": "Tourism Receipts (current Usd)",
+    "category": "Other"
+  },
+  "trade balance": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "trade balance (% of gdp)": {
+    "canonical": "Trade Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "transferts personnels": {
+    "canonical": "Remittances, Personal (current Usd)",
+    "category": "Other"
+  },
+  "tunisia - inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "tunisia retail trade turnover index (ica) yoy, latest month": {
+    "canonical": "Tunisia Retail Trade Turnover Index (ica) Yoy, Latest Month",
+    "category": "Other"
+  },
+  "tunisia retail trade turnover index ica yoy latest month": {
+    "canonical": "Tunisia Retail Trade Turnover Index Ica Yoy Latest Month",
+    "category": "Other"
+  },
+  "tunisia's average growth rate": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "tunisias current account": {
+    "canonical": "Gross Disposable Income Per Household (current Dinars)",
+    "category": "Households"
+  },
+  "tunisias current account deficit": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "tunisias imports": {
+    "canonical": "Merchandise Imports (current Usd)",
+    "category": "Trade"
+  },
+  "tunisias real gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "tunisis retail trade turnover index (ica) yoy, latest month": {
+    "canonical": "Tunisis Retail Trade Turnover Index (ica) Yoy, Latest Month",
+    "category": "Other"
+  },
+  "uk selected dms - real gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "un, bmi net exports outlook": {
+    "canonical": "Merchandise Exports (current Usd)",
+    "category": "Trade"
+  },
+  "unallocated foreign exchange reserves": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "unemplo unemployment": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "unemployed": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "unemployment": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "unemployment levels": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "unemployment rate": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "unemployment rates": {
+    "canonical": "Unemployment Rate",
+    "category": "Employment"
+  },
+  "upward inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "us dollar index": {
+    "canonical": "Gini Index",
+    "category": "Other"
+  },
+  "us dollar index f = bmi forecast": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "us dollar morocco - exchange rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  },
+  "usd 5,640 6,301 7,051 7,904 8,608 gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "usd gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "valeur ajoutee agriculture": {
+    "canonical": "Agriculture, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "valeur ajoutee industrie": {
+    "canonical": "Industry, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "valeur ajoutee services": {
+    "canonical": "Services, Value Added (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "volume gdp": {
+    "canonical": "Real Gdp (constant Prices)",
+    "category": "National Accounts"
+  },
+  "weakens tunisia - inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "while growth decelerates egypt - auction yields": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "wider deficit": {
+    "canonical": "Wider Deficit",
+    "category": "Finance"
+  },
+  "wider trade deficit": {
+    "canonical": "Wider Trade Deficit",
+    "category": "Finance"
+  },
+  "world 3.9 8.0 6.0 4.8 3.1 2.9 2.8 2.8 interest rates": {
+    "canonical": "Policy Interest Rate (%)",
+    "category": "Other"
+  },
+  "world 6.0 3.0 2.5 2.1 2.5 2.9 2.8 2.7 consumer inflation": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "world container index": {
+    "canonical": "Gini Index",
+    "category": "Other"
+  },
+  "world gdp growth": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "y income balanc ome balance": {
+    "canonical": "Government Budget Balance (% Of Gdp)",
+    "category": "National Accounts"
+  },
+  "y-o-y -o-y 2.0 2.1 2.1 2.1 2.2 2.2 gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "y-o-y -o-y 2.5 0.5 1.3 2.0 nominal gdp nominal gdp": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "yields spiking while growth decelerates egypt - auction yields": {
+    "canonical": "Gdp Growth (annual %)",
+    "category": "National Accounts"
+  },
+  "youth unemployment": {
+    "canonical": "Youth Unemployment Rate (%)",
+    "category": "Employment"
+  },
+  "youth unemployment rate (%)": {
+    "canonical": "Youth Unemployment Rate (%)",
+    "category": "Employment"
+  },
+  "| cpi inflation rate": {
+    "canonical": "Inflation",
+    "category": "Prices"
+  },
+  "| fed funds rate": {
+    "canonical": "Exchange Rate (tnd Per Usd)",
+    "category": "Other"
+  }
+}
