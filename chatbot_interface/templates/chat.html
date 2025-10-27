@@ -1,0 +1,357 @@
+<!-- templates/chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Agentic Economic Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --bg: #0b0f1a;
+        --panel: #101826;
+        --muted: #a6b0c2;
+        --text: #e8ecf3;
+        --accent: #6ea8ff;
+        --accent-2: #00e0a4;
+        --chip: #1a2333;
+        --user: #2a3a55;
+        --bot: #162238;
+        --border: #1f2a3a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+          Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        height: 100dvh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+      }
+      header {
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--border);
+        background: var(--panel);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      header h1 {
+        font-size: 16px;
+        margin: 0;
+        letter-spacing: 0.2px;
+      }
+      .chip {
+        font-size: 12px;
+        padding: 4px 8px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--chip);
+        color: var(--muted);
+      }
+      main {
+        overflow: auto;
+      }
+      #chat {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px 16px 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .msg {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .msg .bubble {
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        max-width: 80%;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        line-height: 1.35;
+      }
+      .msg.user {
+        justify-content: flex-end;
+      }
+      .msg.user .bubble {
+        background: var(--user);
+      }
+      .msg.bot .bubble {
+        background: var(--bot);
+      }
+      .avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 12px;
+        color: #fff;
+        flex: 0 0 28px;
+      }
+      .avatar.user {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      }
+      .avatar.bot {
+        background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+      }
+      footer {
+        position: sticky;
+        bottom: 0;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(0, 0, 0, 0.35) 20%,
+          var(--panel) 50%
+        );
+        padding: 16px 10px 18px;
+        border-top: 1px solid var(--border);
+      }
+      .composer {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+      }
+      textarea {
+        width: 100%;
+        resize: none;
+        height: 52px;
+        background: transparent;
+        color: var(--text);
+        border: none;
+        outline: none;
+        font-size: 15px;
+        line-height: 1.4;
+      }
+      button {
+        background: var(--accent);
+        color: #071222;
+        border: none;
+        border-radius: 10px;
+        padding: 0 16px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .hint {
+        text-align: center;
+        color: var(--muted);
+        font-size: 12px;
+        margin-top: 6px;
+      }
+      .toolbar {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 8px auto 0;
+        color: var(--muted);
+      }
+      .toolbar .left {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .pill {
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--chip);
+      }
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      .fade {
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="avatar bot">AI</div>
+      <h1>Agentic Economic Chat</h1>
+      <span class="chip">/agent/chat</span>
+      <span class="chip fade">INS · BCT · IMF · WB</span>
+    </header>
+
+    <main>
+      <div id="chat"></div>
+    </main>
+
+    <footer>
+      <div class="composer">
+        <textarea
+          id="input"
+          placeholder="Ask anything (e.g., “Central Bank of Tunisia policy rate — latest update?”). Shift+Enter for newline."
+        ></textarea>
+        <button id="send">Send</button>
+      </div>
+      <div class="toolbar">
+        <div class="left">
+          <button id="clear" class="pill">Clear</button>
+          <span class="pill mono" id="status">idle</span>
+        </div>
+        <div class="hint">
+          Answers come from your Agent (vector → hybrid ingest) via
+          <span class="mono">/agent/chat</span>.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const chatEl = document.getElementById("chat");
+      const inputEl = document.getElementById("input");
+      const sendBtn = document.getElementById("send");
+      const clearBtn = document.getElementById("clear");
+      const statusEl = document.getElementById("status");
+
+      // Keep a simple local history; mark some messages as local-only (not sent to backend)
+      // Each item: {role:'user'|'assistant', content:'...', local?:true}
+      let turns = [];
+
+      function scrollToBottom() {
+        window.requestAnimationFrame(() =>
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+          })
+        );
+      }
+
+      function addMsg(role, text, opts = {}) {
+        const row = document.createElement("div");
+        row.className = `msg ${role}`;
+        const avatar = document.createElement("div");
+        avatar.className = `avatar ${role}`;
+        avatar.textContent = role === "user" ? "U" : "AI";
+
+        const bubble = document.createElement("div");
+        bubble.className = "bubble";
+        bubble.textContent = text;
+
+        if (role === "user") {
+          row.appendChild(bubble);
+          row.appendChild(avatar);
+        } else {
+          row.appendChild(avatar);
+          row.appendChild(bubble);
+        }
+        chatEl.appendChild(row);
+        turns.push({ role, content: text, local: !!opts.local });
+        scrollToBottom();
+      }
+
+      // Convert to list of dicts the backend expects (skip local-only messages)
+      // Use 'human'/'ai' roles to match LangChain's MessagesPlaceholder expectations.
+      function buildChatHistory(history) {
+        const out = [];
+        for (const t of history) {
+          if (t.local) continue; // don't send greeting or UI-only messages
+          if (!t.content || !t.content.trim()) continue;
+          const role = t.role === "user" ? "human" : "ai";
+          out.push({ role, content: t.content });
+        }
+        return out;
+      }
+
+      async function send() {
+        const q = inputEl.value.trim();
+        if (!q) return;
+        inputEl.value = "";
+        inputEl.style.height = "52px";
+        addMsg("user", q);
+
+        statusEl.textContent = "thinking…";
+        sendBtn.disabled = true;
+
+        let payload = { query: q };
+        const historyDicts = buildChatHistory(turns);
+        if (historyDicts.length) payload.chat_history = historyDicts;
+
+        try {
+          const res = await fetch("/agent/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+
+          let answerText = "";
+          const ct = res.headers.get("content-type") || "";
+          if (ct.includes("application/json")) {
+            const data = await res.json();
+            answerText =
+              (data &&
+                (data.answer || data.output || data.result || data.text)) ||
+              JSON.stringify(data);
+          } else {
+            answerText = await res.text();
+            try {
+              const maybe = JSON.parse(answerText);
+              if (maybe && maybe.answer) answerText = maybe.answer;
+            } catch (_) {}
+          }
+
+          addMsg(
+            "assistant",
+            answerText || "Sorry, I couldn’t produce an answer."
+          );
+        } catch (e) {
+          addMsg("assistant", "⚠️ Network error talking to /agent/chat:\n" + e);
+        } finally {
+          statusEl.textContent = "idle";
+          sendBtn.disabled = false;
+        }
+      }
+
+      // UX niceties
+      inputEl.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          send();
+        }
+      });
+      inputEl.addEventListener("input", () => {
+        inputEl.style.height = "52px";
+        inputEl.style.height = Math.min(160, inputEl.scrollHeight) + "px";
+      });
+      sendBtn.addEventListener("click", send);
+      clearBtn.addEventListener("click", () => {
+        turns = [];
+        chatEl.innerHTML = "";
+        inputEl.value = "";
+        statusEl.textContent = "idle";
+        // Re-add greeting locally
+        addMsg(
+          "assistant",
+          "Hi! Ask me about Tunisia’s economic indicators. I’ll use vector search and, if needed, fetch & extract fresh data automatically.",
+          { local: true }
+        );
+      });
+
+      // Local-only greeting (NOT sent to backend)
+      addMsg(
+        "assistant",
+        "Hi! Ask me about Tunisia’s economic indicators. I’ll use vector search and, if needed, fetch & extract fresh data automatically.",
+        { local: true }
+      );
+    </script>
+  </body>
+</html>

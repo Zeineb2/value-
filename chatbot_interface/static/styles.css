@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+.chat-container {
+  background: white;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+.chat-bubble {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.user {
+  background: #e0f7fa;
+}
+.bot {
+  background: #fff9c4;
+}
+input[type="text"] {
+  width: 80%;
+  padding: 8px;
+}
+button {
+  padding: 8px 16px;
+}
