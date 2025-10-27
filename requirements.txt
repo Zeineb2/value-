@@ -1,0 +1,11 @@
+langchain
+faiss-cpu
+openai
+tiktoken
+pymupdf 
+pdfplumber
+fastapi
+uvicorn
+langchain-huggingface
+sentence-transformers
+neo4j
