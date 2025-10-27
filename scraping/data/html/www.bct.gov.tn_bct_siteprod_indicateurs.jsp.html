@@ -1,0 +1,1759 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<!--ajouter par le site !-->
+
+
+
+
+
+
+
+
+ 
+ <!-- main header -->
+    
+
+<html> 
+<head>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" href="css/template.css"/>
+        <!--[if lt IE 8]><link rel="stylesheet" href="css/ie.css" /><![endif]-->
+        <script src="js/jquery.min.js" type="text/javascript" language="JavaScript"></script>
+        <script src='js/stuHover.js' type="text/javascript" language="JavaScript"></script>
+        <script src='js/bjqs-1.3.min.js' type="text/javascript" language="JavaScript"></script>
+        <script src="js/bct.js" type="text/javascript" language="JavaScript"></script>
+        <script src="js/highcharts.js" type="text/javascript"></script>
+        <script src="js/modules/exporting.js" type="text/javascript" language="JavaScript"></script>
+        <script src="js/bct-charts.js" type="text/javascript" language="JavaScript"></script>
+        
+        <title>Statistique - Indicateurs</title>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $('#call').click(function ()
+            {
+                $.ajax({
+                    type: "post",
+                    url: "chercher.jsp", //this is my servlet
+                    data: "input=" +$('#textValue').val()+"&langue="+$('#langue').val(),
+                    success: function(msg){      
+                        //$('#recherche').append("<a href=''>R?sultat de la recherche");
+                        //$('#output').append(msg);
+                        $('#recherche').html("<a href=''>R?sultat de la recherche</a>");
+                            
+                            $('#output').html(msg);
+                    }
+                });
+            });
+
+        });
+    </script>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49548874-1', 'bct.gov.tn');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body id="bct">
+        
+        <!-- Version2: Search detail-->
+        <div class="bct-search-region">
+                <div class="bct-content">
+                        <form action="/recherche/search/search.php" method="GET" class="form-search" target="_blank">
+                                <input type="text" id="query" name="query" onFocus="if(this.value=='Tapez votre texte ici...')this.value=''" onBlur="if(this.value=='')this.value='Tapez votre texte ici...'" value="Tapez votre texte ici..."/>
+                                <input type="submit" value="RECHERCHE" class="button1"/>
+                               <input type="hidden" name="search" value="1">
+                                <input type="hidden" value='' id="langue"/>
+                        </form>
+                </div>
+        </div>  
+        <!-- end Search detail -->
+        <!-- Version2: Language detail-->
+        <div class="bct-lg-region">
+                <div class="bct-content">
+                        <div class="link-lg">
+                                <span>Choisir une autre langue :</span>
+                                <a href="#">Anglais</a>
+                                <span class="separator">|</span>
+                                <a href="#">Arabe</a>
+                        </div>
+                </div>
+        </div>  
+        <!-- end Language detail -->
+        <!-- top region -->
+        <div class="bct-top">
+                <div class="bct-content">
+                        <div class="top-menu">
+                           <a class="home" href="index.jsp" title="Accueil"></a>
+                           <span></span>
+                           <a class="message" href="mailto:bct@bct.gov.tn" title="Message"></a>
+                           <span></span>
+                           <a class="sitemap" href="plan_site3.jsp" title="Plan du site"></a>
+                           <span></span>
+                           <a class="rss" href="flux_rss.jsp" title="Rss"></a>
+                        </div>
+                        <div class="top-right">
+                 <div class="lang">
+                       <a href="/bct/siteprod/indicateurs.jsp?la=AN" style="background:none;padding-right:5px ">English</a> | <a href="arabe/statistiques/indicateurs.jsp" style="background:none;padding-right:5px ">&#1593;&#1585;&#1576;&#1610;</a>
+                      <span class="lang-fr" style=""></span>
+                 </div>
+                 <div class="search">
+                      <a href="#"></a>
+                 </div>
+           </div>
+                </div>  
+        </div>
+        <!-- end top region -->
+        <!-- Logo
+        <div class="bct-content bct-logo">
+           <a href="index.jsp" title="BCT"><img alt="BCT" src="images/logo.jpg"/></a>
+        </div>
+        <!-- end logo  -->
+ <!-- main header -->
+ 
+<div id="bct-header"  style="height:228px ">
+                <div class="mainmenu">
+                        <!-- Version2: Main menu -->
+                        <div class="bct-menu-content bct-menu" >
+                                <ul id="nav">
+                               
+                                        <li class="top">
+                                                <a href="#" class="top_link">Monnaie</a>
+                                                <ul  class="sub">
+                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Statistiques Monétaires - Nouvelle méthodologie </a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL203273' >
+                                                                                        Situation mensuelle de la BCT
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL203274' >
+                                                                                        Situation mensuelle des autres institutions de dépôts (AID)
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL203275' >
+                                                                                        Situation mensuelle des institutions de dépôts (SID)
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL203276' >
+                                                                                        Agrégats de monnaie et leurs contreparties
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/documents/2025_Situation_Mensuelle_Leasing_fr.pdf' >
+                                                                                        Situation mensuelle des organismes de leasing
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL203278' >
+                                                                                        Situation mensuelle des banques offshore
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/documents/202405_NOTE_METHODOLOGIQUE_MONETAIRE_FR.pdf' >
+                                                                                        Notes méthodologiques 
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Statistiques Monétaires - Ancienne Méthodologie</a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL203010' >
+                                                                                        Situation mensuelle de la BCT 
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_mens_n.jsp?params=PL120110,PL203020' >
+                                                                                        Autres statistiques de la BCT
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL203030' >
+                                                                                        Situation mensuelle des banques
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL203040' >
+                                                                                        Situation mensuelle des organismes de leasing
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL203050' >
+                                                                                        Situation mensuelle des banques off-shore
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL030010' >
+                                                                                        Secteur monétaire
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_mens_n.jsp?params=PL203060,PL203070' >
+                                                                                        Secteur Financier
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_n.jsp?params=PL050010,PL050020,PL050030,PL050040'  class="fly">Evolution des crédits à l'économie</a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_statistique_q.jsp?params=PL203080'  class="fly">Opérations de politique monétaire</a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Encours Bons du Trésor </a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique_q.jsp?params=PL203120' >
+                                                                                        Bons du Trésor 
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='stat_page.jsp?id=136' >
+                                                                                        Achats fermes des Bons du Trésor
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                   </li>
+                                                    </ul>
+                                        </li>
+                                        
+                                        <li class="top">
+                                                <a href="#" class="top_link">Taux d'interêt</a>
+                                                <ul  class="sub">
+                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='stat_page.jsp?id=129'  class="fly">Principaux taux d'intérêt</a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_statistique_a.jsp?params=PL203260'  class="fly">Taux d'intérêt directeur de la BCT</a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_statistique_a.jsp?params=PL203250'  class="fly">Taux de rémunération de l'Epargne (TRE)</a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_statistique_a.jsp?params=PL203105'  class="fly">Taux moyen du marché monétaire (TMM)</a>     
+                                                                        
+                                                                   </li>
+                                                    </ul>
+                                        </li>
+                                        
+                                        <li class="top">
+                                                <a href="#" class="top_link">moyens de paiement</a>
+                                                <ul  class="sub">
+                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_statistique.jsp?params=PL202010'  class="fly">Volume des transactions </a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_statistique.jsp?params=PL202020'  class="fly">Nombre des transactions </a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_statistique.jsp?params=PL202050'  class="fly">Système des Virements de Gros Montants (SGMT)</a>     
+                                                                        
+                                                                   </li>
+                                                    </ul>
+                                        </li>
+                                        
+                                        <li class="top">
+                                                <a href="#" class="top_link">Change</a>
+                                                <ul  class="sub">
+                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Données quotidiennes</a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='change_q.jsp' >
+                                                                                        Volume des transactions des opérations devise contre dinar
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='change_q.jsp' >
+                                                                                        Marché des changes Devise-Devise
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique_q.jsp?params=PL203130' >
+                                                                                        Cours quotidiens des principales monnaies cotées
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='stat_page.jsp?id=182' >
+                                                                                        Historique du marché de change
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Données Mensuelles</a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique.jsp?params=PL140060' >
+                                                                                        Transactions de change au comptant
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='change_m.jsp?params=PL140010' >
+                                                                                        Répartition par devise des transactions (opérations en compte et au comptant)
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique.jsp?params=PL140020' >
+                                                                                        Evolution des transactions  sur le marché des changes au comptant
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='change_m.jsp?params=PL140040' >
+                                                                                        Opérations devises/devises
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique.jsp?params=PL213010' >
+                                                                                        Moyenne des cours du marché interbancaire 
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Données Annuelles</a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique_a.jsp?params=PL212010' >
+                                                                                        Moyennes des cours du marché interbancaire
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                   </li>
+                                                    </ul>
+                                        </li>
+                                        
+                                        <li class="top">
+                                                <a href="#" class="top_link">Secteur Exterieur</a>
+                                                <ul  class="sub">
+                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Paiements Extérieurs - 6ème édition </a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tab_trimestriel.jsp?params=PL231010,PL231020,PL231030' >
+                                                                                        Balance des paiements 
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/PEG.jsp?params=PL238010' >
+                                                                                        Position Extérieure Globale
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL237010' >
+                                                                                        Principaux indicateurs de paiements extérieurs
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_n_ne.jsp?params=PL232010,PL232020,PL233010,PL233020' >
+                                                                                        Autres indicateurs du secteur extérieur
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/documents/202405_NOTE_METHODOLOGIQUE_SXIEME_EDITION_FR.pdf' >
+                                                                                        Notes Méthodologiques
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Paiements Extérieurs - 5ème édition</a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tab_trimestriel.jsp?params=PL120010,PL120020,PL120030&cal=t&page=P120&tab=040&pos=3' >
+                                                                                        Balance de paiements
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique_a.jsp?params=PL120090&cal=t&page=P120&tab=100&pos=1' >
+                                                                                        Position exérieure globale
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique.jsp?params=PL120130' >
+                                                                                        Principaux indicateurs de paiements extérieurs
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_n.jsp?params=PL120150,PL120140,PL120160,PL120170,PL120180' >
+                                                                                        Autres indicateurs du secteur extérieur
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Commerce Exterieur</a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique_a.jsp?params=PL203190' >
+                                                                                        Exportations (FOB)
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='tableau_statistique_a.jsp?params=PL203200' >
+                                                                                        Importations (CAF)
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='#'  class="fly">Dette Exterieure</a>     
+                                                                        
+                                                                            <ul>
+                                                                            
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_statistique.jsp?params=PL130200' >
+                                                                                        Position de la dette extérieure brute
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_n_ne.jsp?params=PL234010,PL234020,PL234030' >
+                                                                                        Structure du service de la dette extérieure 
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_n_ne.jsp?params=PL236010' >
+                                                                                        Structure de la dette extérieure par monnaie de règlement
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                                <li class="top">
+                                                                                
+                                                                                    <a href='https://www.bct.gov.tn/bct/siteprod/tableau_n_ne.jsp?params=PL235010' >
+                                                                                        Principaux paramètres de la dette extérieure
+                                                                                    </a>
+                                                                                </li>   
+                                                                             
+                                                                         </ul>
+                                                                         
+                                                                   </li>
+                                                    </ul>
+                                        </li>
+                                        
+                                        <li class="top">
+                                                <a href="#" class="top_link">Economie générale</a>
+                                                <ul  class="sub">
+                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_mens_n.jsp?params=PL203140,PL203145,PL203272'  class="fly">Statistiques économiques générales(Prix)</a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_n.jsp?params=PL203150,PL203160'  class="fly">Produit intérieur brut (PIB)</a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_statistique_a.jsp?params=PL203180'  class="fly">Emplois imputés au produit intérieur brut</a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_mens_n.jsp?params=PL203175,PL203177'  class="fly">Indice de la production industrielle </a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_n.jsp?params=PL150010,PL150020,PL150030,PL150040'  class="fly">Comptes de la nation</a>     
+                                                                        
+                                                                  <li class="top">
+                                                                  
+                                                                 <a href='tableau_n.jsp?params=PL060010,PL060020'  class="fly">Endettement total</a>     
+                                                                        
+                                                                   </li>
+                                                    </ul>
+                                        </li>
+                                        
+                                        
+                                </ul>
+                        </div>
+                        <!-- end Main menu -->
+                </div>
+           <!-- Slide show -->
+		      <div class="slideshow" style='background:url("images/banner-main1.png") no-repeat scroll center center rgba(0, 0, 0, 0);height:187px '>
+			  <div style="width:1005px;margin:0 auto;padding:15px 0 0; ">
+			  		 
+                     <h2 style="float: left; color: rgb(19, 38, 94); font-variant: small-caps; font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Statistiques Mon&eacute;taires, &Eacute;conomiques <br>&nbsp;&nbsp;&nbsp;&nbsp;et Financi&egrave;res</h2>              
+					 
+			  <img src="images/logo.png" style="float:right;width:400px;">
+			  </div>
+			<!-- end Slider -->
+		</div>
+		<!-- end Slide show -->
+	</div>	
+        
+        <!-- end main header -->
+    
+ 
+  <link rel="stylesheet" href="selectbox/chosen.css">
+<link href="css_pirobox/style_1/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
+<script type="text/javascript" src="js/pirobox_extended.js"></script>
+<script type="text/javascript" src="js/calendar/calendar.js"></script>
+    <script type="text/javascript" src="js/calendar/calendar-setup.js"></script>
+    <script type="text/javascript" src="js/calendar/lang/calendar-fr.js"></script>
+     <style type="text/css"> @import url("css/calendar/calendar-blue.css"); </style>
+
+                                  <script type="text/javascript">
+        $(document).ready(function() {
+            $('#call1').click(function ()
+            {
+                $.ajax({
+                    type: "post",
+                    url: "cours_archiv.jsp", //this is my servlet
+                    data: "input=" +$('#f_date_c').val()+"&langue="+$('#langue').val(),
+                    success: function(msg){      
+                        //$('#recherche').append("<a href=''>Résultat de la recherche");
+                        //$('#output').append(msg);
+                        
+                            $('#cours_archiv').html(msg);
+                    }
+                });
+            });
+            }
+ 
+      
+    </script>
+    <script type="text/javascript">
+$(document).ready(function() {
+	$().piroBox_ext({
+	piro_speed : 700,
+		bg_alpha : 0.5,
+		piro_scroll : false // pirobox always positioned at the center of the page
+	});
+});
+</script>
+
+  
+  <a href="#inline" rel="inline-1200-500"  class="pirobox_gall1" title="Inline content" id="box">	
+                                         </a>
+  	
+<!-- end main header -->
+    <div id="inline" style="display:none; background:white;">
+                                            
+                                            
+                                         </div>
+        <!-- modules -->
+         <div class="bct-content" id="recherche">
+                <a href="stat_index.jsp"> <font color="#101080"><h2 align="center">Statistiques</h2></font></a>
+
+                
+         
+        </div>
+        <!-- end modules  -->
+        
+        
+        <!-- main body -->
+        <div id="bct-body">
+                <div class="bct-content">
+                        <div>
+                                <div id="output" class="bct-page">
+                                      
+       
+                                        
+                                        <div class="column1" style="width:100%;padding:0">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <div>
+                                               <div class="bct-page">
+                                               <br><br>
+                                                    <!-- table 2 with scroll -->
+                                       <br><br>
+<p ><h2 align="center">Indicateurs monétaires et financiers quotidiens</h2></p>
+<p align="center"><strong>Mis à jour le </strong>&nbsp;&nbsp;<span><strong>19/08/2025</strong></span></p>
+
+        <h4 align="right" style="width:810px;"></br>          (En MDT sauf indications contraires)</h4>
+    
+<TABLE align="center" cellspacing="2">
+<thead>
+<TR>
+<TD width="200" ROWSPAN="3" nowrap></td>
+<TD COLSPAN="3" align="center"><strong>2025</strong></TD>
+<TD WIDTH="60" align="center"><strong>2024</strong></TD>
+<TD COLSPAN="2" align="center"><strong>Variations</strong></TD>
+</TR>
+<TR class="hdr2 last">
+<TD COLSPAN="2">Jour J</TD>
+<TD WIDTH="55" ROWSPAN="2">Jour j-1<br>(C)</TD>
+<TD WIDTH="60" ROWSPAN="2">Jour j<br>(D)</TD>
+<TD WIDTH="53" VALIGN="TOP" ROWSPAN="2">(B/D)</TD>
+<TD WIDTH="49" VALIGN="TOP" ROWSPAN="2">(B/C)</TD>
+</TR>
+<TR class="hdr2 last">
+<TD WIDTH="51" height="38">Date<BR>(A)</TD>
+<TD WIDTH="56">Donnée<BR>(B)</TD>
+</TR>
+</thead>
+
+        <tbody class="bct-mod-hdr" id='1'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left"> I- SOLDE DU COMPTE COURANT DU TRESOR</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-1">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>&nbsp;</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right"> 1094,1   </div></td>
+    <td><div align="right">     937,9</div></td>
+    <td><div align="right">    1329,8</div></td>
+    <td><div align="right">  -235,7</div></td>
+    <td><div align="right">   156,2</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='2'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left">  II- SOLDE DU COMPTE COURANT ORDINAIRE DES BANQUES </div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-2">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>&nbsp;</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  490,5   </div></td>
+    <td><div align="right">     416,1</div></td>
+    <td><div align="right">     369,9</div></td>
+    <td><div align="right">   120,6</div></td>
+    <td><div align="right">    74,4</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='3'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left"> III- BILLETS ET MONNAIES EN CIRCULATION</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-3">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>&nbsp;</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  25864   </div></td>
+    <td><div align="right">     25883</div></td>
+    <td><div align="right">     22546</div></td>
+    <td><div align="right">    3318</div></td>
+    <td><div align="right">     -19</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='4'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left">IV- MARCHE MONETAIRE</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Appel d'offres de la BCT</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  6900,0  </div></td>
+    <td><div align="right">    6900,0</div></td>
+    <td><div align="right">    4600,0</div></td>
+    <td><div align="right">  2300,0</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Opération de refinancement à plus long terme (1 mois)</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">     563,0</div></td>
+    <td><div align="right">  -563,0</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Opération de refinancement à plus long terme (ORPLT6m)</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  2971,0  </div></td>
+    <td><div align="right">    2971,0</div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">  2971,0</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Opération de refinancement à plus long terme (6 mois)</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right"> - </div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Opération d'open market(encours) </td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  3327,0  </div></td>
+    <td><div align="right">    3327,0</div></td>
+    <td><div align="right">    8311,9</div></td>
+    <td><div align="right"> -4984,9</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Pension livrée(encours)</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right"> - </div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Facilité permanente de dépôt à 24h</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right"> -1572,0  </div></td>
+    <td><div align="right">   -1416,0</div></td>
+    <td><div align="right">    -651,0</div></td>
+    <td><div align="right">  -921,0</div></td>
+    <td><div align="right">  -156,0</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Facilité permanente de prêt à 24h</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  1200,0  </div></td>
+    <td><div align="right">    1330,0</div></td>
+    <td><div align="right">     520,0</div></td>
+    <td><div align="right">   680,0</div></td>
+    <td><div align="right">  -130,0</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Opérations de réglage fin / injection</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right"> - </div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Opérations de réglage fin / ponction</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right"> - </div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Swap de change</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">       - </div></td>
+    <td><div align="right">      37,1</div></td>
+    <td><div align="right">   -37,1</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Volume global du refinancement</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right"> 12826,0  </div></td>
+    <td><div align="right">   13112,0</div></td>
+    <td><div align="right">   13380,9</div></td>
+    <td><div align="right">  -554,9</div></td>
+    <td><div align="right">  -286,0</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Taux d'intérêt directeur  (en %)</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  7,50000 </div></td>
+    <td><div align="right">   7,50000</div></td>
+    <td><div align="right">   8,00000</div></td>
+    <td><div align="right">   -0,50</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Taux du marche monètaire (TM) (en %)</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  7,50000 </div></td>
+    <td><div align="right">   7,50000</div></td>
+    <td><div align="right">   7,99000</div></td>
+    <td><div align="right">   -0,49</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Total des transactions interbancaires</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  3164,6  </div></td>
+    <td><div align="right">    3183,6</div></td>
+    <td><div align="right">    2638,9</div></td>
+    <td><div align="right">   525,7</div></td>
+    <td><div align="right">   -19,0</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>&nbsp;&nbsp;A vue</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">  2447,7  </div></td>
+    <td><div align="right">    2466,7</div></td>
+    <td><div align="right">    2185,5</div></td>
+    <td><div align="right">   262,2</div></td>
+    <td><div align="right">   -19,0</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-4">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>&nbsp;&nbsp;A terme</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">   716,9  </div></td>
+    <td><div align="right">     716,9</div></td>
+    <td><div align="right">     453,4</div></td>
+    <td><div align="right">   263,5</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='5'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left">   V- BONS DU TRESOR</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-5">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Encours Bons du Trésor à court terme</td>
+    <td><div align="center">18/08</div></td>
+    <td><div align="right">  3644,1  </div></td>
+    <td><div align="right">    3644,1</div></td>
+    <td><div align="right">   10529,0</div></td>
+    <td><div align="right"> -6884,9</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-5">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Encours Bons du Trésor Assimilables</td>
+    <td><div align="center">18/08</div></td>
+    <td><div align="right"> 26497,5  </div></td>
+    <td><div align="right">   26497,5</div></td>
+    <td><div align="right">   16181,4</div></td>
+    <td><div align="right"> 10316,1</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='6'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left">  VI- RECETTES TOURISTIQUES CUMULEES    (1)</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-6">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>&nbsp;</td>
+    <td><div align="center">10/08</div></td>
+    <td><div align="right">  4688,4  </div></td>
+    <td><div align="right">    4246,9</div></td>
+    <td><div align="right">    4320,8</div></td>
+    <td><div align="right">   367,6</div></td>
+    <td><div align="right">   441,5</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='7'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left"> VII- REVENUS DU TRAVAIL CUMULES (en especes) (1)</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-7">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>&nbsp;</td>
+    <td><div align="center">10/08</div></td>
+    <td><div align="right">  5232,3  </div></td>
+    <td><div align="right">    5002,5</div></td>
+    <td><div align="right">    4837,9</div></td>
+    <td><div align="right">   394,4</div></td>
+    <td><div align="right">   229,8</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='8'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left">VIII- SERVICE DE LA DETTE EXTERIEURE CUMULES</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-8">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>&nbsp;</td>
+    <td><div align="center">10/08</div></td>
+    <td><div align="right">  9279,3  </div></td>
+    <td><div align="right">    9114,5</div></td>
+    <td><div align="right">    9925,2</div></td>
+    <td><div align="right">  -645,9</div></td>
+    <td><div align="right">   164,8</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='9'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left">IX- AVOIRS NETS EN DEVISES DE LA BCT (Données provisoires pour le jour J)</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-9">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>En valeur</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right"> 24348,5  </div></td>
+    <td><div align="right">   24233,6</div></td>
+    <td><div align="right">   24834,7</div></td>
+    <td><div align="right">  -486,2</div></td>
+    <td><div align="right">   114,9</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-9">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>En nombre de jours d'importation</td>
+    <td><div align="center">19/08</div></td>
+    <td><div align="right">    105   </div></td>
+    <td><div align="right">       105</div></td>
+    <td><div align="right">       113</div></td>
+    <td><div align="right">      -8</div></td>
+    <td><div align="right"> - </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='10'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left">  X- TAUX DE CHANGE DU DINAR (cours moyens interbancaires) (en %)</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-10">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>1 dollar US</td>
+    <td><div align="center">18/08</div></td>
+    <td><div align="right">   2,89930</div></td>
+    <td><div align="right">   2,90574</div></td>
+    <td><div align="right">   3,07409</div></td>
+    <td><div align="right">   -5,69</div></td>
+    <td><div align="right">   -0,22</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-10">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>1 euro</td>
+    <td><div align="center">18/08</div></td>
+    <td><div align="right">   3,35164</div></td>
+    <td><div align="right">   3,35310</div></td>
+    <td><div align="right">   3,37104</div></td>
+    <td><div align="right">   -0,58</div></td>
+    <td><div align="right">   -0,04</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-10">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>1000 yens Japonais</td>
+    <td><div align="center">18/08</div></td>
+    <td><div align="right">  19,81940</div></td>
+    <td><div align="right">  19,87430</div></td>
+    <td><div align="right">  20,75680</div></td>
+    <td><div align="right">   -4,52</div></td>
+    <td><div align="right">   -0,28</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-10">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>10 dirhams Marocains</td>
+    <td><div align="center">18/08</div></td>
+    <td><div align="right">   3,24040</div></td>
+    <td><div align="right">   3,23960</div></td>
+    <td><div align="right">   3,14500</div></td>
+    <td><div align="right">    3,03</div></td>
+    <td><div align="right">    0,02</div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+        <tbody class="bct-mod-hdr" id='11'>
+        <tr>
+ <!--   <td class="style1"><font color="#FFFFFF">1</font></td>
+   !-->
+
+  
+	<td colspan="7" class="last"><div align="left">XI- INDICE BOURSIER (en points)</div></td>
+   
+
+        
+</tr>
+               
+        </tbody>
+        
+            <tbody class="bct-mod-content-11">
+       
+  <tr>
+  <!--  <td class="style1"><font color="#FFFFFF"></font></td>
+   !-->
+
+    
+<td width="200" nowrap>Indice TUNINDEX(base 1000 le 31/12/1997)</td>
+    <td><div align="center">   </div></td>
+    <td><div align="right">       </div></td>
+    <td><div align="right">       </div></td>
+    <td><div align="right">       </div></td>
+    <td><div align="right">       </div></td>
+    <td><div align="right">       </div></td>
+   <!-- <td width="20" ><font color="#FFFFFF" face="Arial, Helvetica, sans-serif"></font></td>
+   !-->
+
+</tr>
+               
+        </tbody>
+        
+<tr>
+  <td colspan="7"><p> <span dir="RTL"> <a href="http://fr.global-rates.com/taux-de-interets/libor/libor.aspx" target = "blank"> LIBOR & EURIBOR</a></span></td></tr>
+  
+  <tr><td colspan="7"><a href="Tunibor_archive.jsp" target="_blank">TUNIBOR</a></td></tr>
+<tr><td colspan="7"><a href="http://www.ins.tn/fr/themes/prix#2848" target="_blank">TAUX D&rsquo;INFLATION</a></td></tr>
+ 
+  
+  </TABLE>
+  
+        <p><h4>(1) Situation décadaire.<br>
+(2) Niveau mensuel moyen.</h4></p>
+    
+      </div>
+      </div>
+      </div>
+                                        
+                                        <br><br>
+                                        
+                                                   
+                                        </div>
+                                        
+                                     </div>
+                        </div>
+                </div><br>
+        </div>          
+        <!-- end main body -->
+         <!-- footer -->
+        
+
+
+
+
+<div style="clear:both "></div>
+<div id="bct-footer" style="position:relative ">
+	  <div class="bct-content">
+		<div class="sitemap">
+                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=plan_site3.jsp?id=45null title='La BCT'>La BCT</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                                    
+                                                    <a href=plan_site3.jsp?id=46null title='Gouvernance'>
+                                                            Gouvernance<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=plan_site3.jsp?id=50null title='Conseil d'administration'>
+                                                            Conseil d'administration<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=209null title='Etats financiers'>
+                                                            Etats financiers<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=54null title='Risque Pays'>
+                                                            Risque Pays<br>
+                                                     </a> 
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=plan_site3.jsp?id=55null title='Missions'>Missions</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                                    
+                                                    <a href=plan_site3.jsp?id=56null title='Politique Monétaire'>
+                                                            Politique Monétaire<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=59null title='Supervision Bancaire'>
+                                                            Supervision Bancaire<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=plan_site3.jsp?id=58null title='Systèmes et moyens de paiement'>
+                                                            Systèmes et moyens de paiement<br>
+                                                     </a> 
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=plan_site3.jsp?id=65null title='Réglementation'>Réglementation</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=227null title='Loi portant statut <br>de la BCT & loi bancaire'>
+                                                            Loi portant statut <br>de la BCT & loi bancaire<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=229null title='Réglementation régissant l'octroi<br>et le retrait d'agréments'>
+                                                            Réglementation régissant l'octroi<br>et le retrait d'agréments<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=226null title='Circulaires & Notes'>
+                                                            Circulaires & Notes<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=66null title='Réglementation bancaire'>
+                                                            Réglementation bancaire<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=67null title='Réglementation des changes'>
+                                                            Réglementation des changes<br>
+                                                     </a> 
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                                         <div class="column">
+                                             
+                                            <h2><a href=stat_index.jspnull title='Statistiques'>Statistiques</a></h2>
+                                       </div>
+                                        
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=plan_site3.jsp?id=75null title='Publications'>Publications</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=76null title='catalogue'>
+                                                            catalogue<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=77null title='Archives'>
+                                                            Archives<br>
+                                                     </a> 
+                                                     
+                                                    
+                                                    <a href=page.jsp?id=78null title='S'abonner'>
+                                                            S'abonner<br>
+                                                     </a> 
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=page.jsp?id=244null title='Espace Etudiant'>Espace Etudiant</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=page.jsp?id=241null title='RECRUTEMENT'>RECRUTEMENT</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                                                                                                        
+                                        <h2><a href=page.jsp?id=236null title='Accès à l'information'>Accès à l'information</a></h2>
+                                       
+                                                <div class="links">
+                                                     
+                                               </div>
+                                            
+                                    </div>
+                                    
+                        <div class="column">
+                           <h2><a title="Services" style="cursor: pointer;" onclick="contact('')">Contact</a></h2>
+                           <div class="links">
+                                 <a title="" style="cursor: pointer;" onclick="contact('')">
+                                       Contactez-Nous
+                                 </a>   
+                           </div>
+                        </div>
+                                               
+                </div>
+		<div class="copyright">
+			<a class="left" target="_blanc" href="documents/termes.pdf" title="Mentions légales">Mentions légales</a>
+			<span>Email :</span> <a href="mailto:webmaster@bct.gov.tn">webmaster@bct.gov.tn</a>
+			<span class="right">BANQUE CENTRALE DE TUNISIE - 2014</span>
+		</div>
+	  </div>	
+	</div>
+       
+        <!-- end footer -->      
+</body>
+</html>

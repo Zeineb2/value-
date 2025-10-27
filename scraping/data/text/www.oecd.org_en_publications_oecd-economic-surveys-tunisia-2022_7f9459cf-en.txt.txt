@@ -1,0 +1,146 @@
+OECD Economic Surveys: Tunisia 2022 | OECD
+Skip to main content
+OECD Economic Surveys: Tunisia 2022
+Report
+More info
+More info
+Close
+DOI
+https://doi.org/10.1787/7f9459cf-en
+Authors
+OECD
+Tags
+OECD Economic Surveys
+4 April 2022
+Download PDF
+Cite this publication
+OECD (2022),
+OECD Economic Surveys: Tunisia 2022
+, OECD Publishing, Paris,
+https://doi.org/10.1787/7f9459cf-en
+.
+Share
+Facebook
+Twitter
+LinkedIn
+Abstract
+Tunisians are facing the worst crisis in a generation, as COVID-19 hit an economy that was already slowing down. Macroeconomic policy through fiscal stimulus and monetary easing limited the depth and severity of the recession, but the pandemic has exacerbated structural weaknesses, in particular low investment and job creation, high unemployment and informality, mismatch between skills demand and supply, and outward migration of high-skilled professionals. Children who have been deprived of school for a long period will face severe challenges in resuming normal life. The second OECD Economic Survey takes stock of progress made since 2018 and makes recommendations in key policy areas such as public spending, state-owned enterprises, employment, education, vocational training, trade, taxation and the business environment. Implementing such reforms would produce a large growth dividend and put public debt on a more sustainable path. But unless bold action is taken soon, the crisis will have a lasting effect on the potential of Tunisia to resume its income convergence process.
+SPECIAL FEATURES: EMPLOYMENT AND SKILLS
+Read the report
+Executive summary
+The deep COVID-19 recession is laying bare various vulnerabilities
+The pandemic hit an economy that was already suffering from low growth (
+Figure 1
+). In 2020, activity experienced a severe contraction, despite swift policy interventions, and poverty has increased. The recovery will be sluggish as global growth slows down, domestic demand remains subdued and uncertainty concerning the functioning of political institutions persists. High public debt requires reducing current government spending and complicates monetary policy.
+The recession was unprecedented.
+Most sectors contracted, especially tourism and other labour-intensive services, which were particularly affected by containment measures. Investment plummeted and private consumption shrunk due to income losses. Strong foreign demand for ICT and medical goods and olive oil and rising construction activity only partially compensated. Although tourism receipts plummeted, the current account deficit narrowed thanks to weak import demand and rising remittances from Tunisians living abroad.
+The healthcare system is under duress.
+The COVID-19 outbreak was intense, but vaccination is progressing and the health situation is slowly improving. Migration of health professionals increased and is a cause of concern.
+The social fallout is severe.
+Unemployment has risen from already high levels, with youth disproportionally hit. In the informal sector, workers suffered a severe income shock. School closure and rudimentary distance learning penalised children from low-income households. The number of migrants started growing again.
+The recovery will be slow (
+Table 1
+), with considerable downside risks.
+Mobility restrictions hold back the tourism revival and weigh on labour-intensive services. High unemployment dampens private consumption, political uncertainty weighs on the implementation of reforms and investment and weakening external demand holds off the recovery in manufacturing. On the other hand, the commissioning of new fields gives a short-term boost to energy production. Inflation resumed in 2021 and could rise further due to the spike in global commodity prices caused by the Ukraine war. It is crucial to minimise the risk of a price/wage spiral. High commodity prices weigh on the current account and the fiscal deficit, as Tunisia is a net importer of hydrocarbons and cereals and energy subsidies are still high.
+Figure 1. A growth slowdown followed by a deep recession
+Real GDP growth, y-o-y % changes
+expand
+Note: Benchmark countries include Chile, Colombia, Costa Rica, Czech Republic, Estonia, Hungary, Latvia, Lithuania, Mexico, Poland, Slovakia, Slovenia and Turkey.
+Source: OECD Economic Outlook, No. 110, database.
+Statlink
+Table 1. The recovery will be slow
+expand
+===TABLE_START===
+(annual growth rates, unless specified) | 2021 | 2022 | 2023
+Gross domestic product (GDP) | 2.9 | 3.2 | 3.0
+Private consumption | 2.6 | 2.4 | 3.3
+Government consumption | -0.9 | 0.4 | -1.2
+Gross fixed capital formation | -5.3 | 5.0 | 7.6
+Exports of goods and services | 8.2 | 7.3 | 6.7
+Imports of goods and services | 6.8 | 5.5 | 5.9
+Unemployment rate (% of labour force) | 17.7 | 17.0 | 16.4
+Consumer price index | 5.6 | 6.3 | 5.8
+Fiscal balance (% of GDP) | -8.2 | -6.0 | -5.3
+Current account (% of GDP) | --6.1 | -6.4 | -6.3
+===TABLE_END===
+Source: OECD Economic Outlook, No. 110 (the cut-off date for information used in the projections is 25 November 2021).
+The room for fiscal support and much-needed infrastructure investment is constrained by high fiscal deficit and public debt, partly reflecting a large and expanding public wage bill.
+The deficit-to-GDP ratio has receded slightly from 10.2% in 2020 to 8.2% in 2021. Protecting the most vulnerable and investing in social and physical infrastructures will depend on rebalancing budget outlays and increasing public spending efficiency. Priorities include reining in staffing and pay levels in the public administration, gradually replacing regressive and inefficient energy subsidies with targeted income support for the poor, widening the tax base by eliminating exemptions and special regimes, and improving tax enforcement.
+Monetary policy should be on watch to maintain inflation moderate.
+The central bank cut its policy rate by 150 basis points in 2020 while also injecting liquidity into the money market. It was requested to intervene in support of deficit financing but, going forward, it is important to respect clear boundaries between fiscal and monetary policy.
+Public and external debt are high and exacerbate vulnerabilities.
+Financial stability is put at risk by high public debt in foreign currency. Risk spreads signal a deterioration of creditworthiness. Investor sentiment remains fickle and any sudden deterioration may rapidly trigger a vicious currency depreciation and inflation cycle.
+Poverty is rising again
+. Prior to the COVID crisis, poverty was declining and a sizeable middle class had emerged. Some of these advances have been reverted, as jobs were lost and living conditions deteriorated. Social policies have contained the damage and should be further improved and better targeted, including through the use of digital tools and linking administrative data sources.
+Substantial gains can be expected from structural reforms.
+Model-based simulations show that in a reform scenario – which includes lowering regulatory barriers, raising the quality of institutions and reducing corruption, improving education outcomes and reducing the tax burden on labour – income per capita after 15 years would be 15% higher than in a no-reform scenario. A structural reform plan should be adopted rapidly and be accompanied by an implementation monitoring mechanism.
+State-owned enterprises and barriers to competition limit business dynamism
+There are numerous obstacles to competition, due to market reserves for public enterprises, authorisation regimes and tariff and non-tariff barriers that hurt imports, including of capital goods.
+SOE reform should be a top priority.
+The state’s dominant role in many sectors is meant to favour productive transformation, but inefficiencies and high costs mar these efforts. SOEs enjoy market power and favourable financing, but their performance is poor, requiring capital injections and government guarantees on their rising debt that represent a fiscal risk. The creation of a government shareholding agency would bring benefits, provided clear guidelines are established on the scope of state intervention in the economy. Corporate governance should be improved and competitive competence-based procedures be adopted for board and management appointments.
+Some progress has been made in removing obstacles to domestic competition, but extra efforts are needed.
+Authorisation regimes for market entry and a complex tax system discourage entrepreneurship and investment. In the banking sector, low competition and the rising share of loans to the public sector reduce access to finance for private businesses, in particular smaller firms. Competition enforcement should be reinforced. Sectoral regulation is still incomplete and more ambitious anti-graft policies are needed to enhance business integrity.
+There is considerable unexploited trade potential.
+Tunisia has a special regime for export-processing firms. This offshore sector is well-integrated into global value chains and operates in promising sectors, but has few linkages with the domestic economy. Other (onshore) firms are less efficient. Lowering tariffs and non-tariff barriers, especially on inputs and capital goods, would reduce their production costs, facilitate technology adoption and raise productivity and exports.
+Comprehensive trade agreements can open new opportunities.
+Preferential market access is a potential boon for exporters that must be complemented by progress in customs procedures and product quality. More competition from imports can reduce the market power of incumbent firms, lower prices and benefit consumers, particularly poorer ones.
+Infrastructures have deteriorated due to insufficient investment, hampering domestic and international market integration.
+Firms see ports as poor and sea transport as unreliable. Digital infrastructure is relatively weak, in particular in interior regions. Filling infrastructure gaps requires significant financial resources that could be sought from private investors. Air transport is crucial to the development of tourism and existing limitations on the operations of low-cost carriers should be removed.
+Protecting the environment to the benefit of all
+Abating greenhouse gas emissions and improving waste management are pressing issues
+. Greenhouse gas emissions increased in the past decade. Renewables still account for a marginal share of electricity generation. Air pollution is a major concern. In view of the importance of tourism and the country's rich natural assets, bolder actions are needed to protect the environment and promote investment in clean energy.
+Improving skills and employment opportunities
+Despite progress in educational attainment, graduates lack the skills demanded by firms and labour market policies complicate the matching process in the labour market.
+Unemployment rates have been persistently high, particularly for youth.
+Rising access to education has increased the supply of high-skilled labour, but the private sector has mainly created jobs in low-skill intensive and low-productivity activities. Unemployment rates are high among tertiary graduates, particularly for women.
+Many firms do not find workers with the skills they need (
+Figure 2
+).
+This is due to the low quality of education and training systems and their weak responsiveness to the skills needs of the private sector. Other factors relate to regional concentration of economic activities combined with low interregional labour mobility, as well as high reservation wages of tertiary graduates who prefer to remain unemployed and wait for better-paid public sector jobs.
+Barriers to firm entry and growth discourage the creation of more and better jobs
+. Raising productivity and formal job creation requires lowering entry barriers and reducing the administrative burden related to authorisation regimes and complex tax incentive and subsidy regimes. Reducing the income tax rate for the lowest-income bracket and allowing for more flexibility in wage setting for smaller firms would raise formalisation.
+Figure 2. High unemployment coincides with skills shortages
+expand
+Note: Passively unemployed do not regularly visit the public employment agency ANETI, as active job seekers do.
+Source: ANETI and Labour Force Survey Tunisia (INS).
+Statlink
+Although education spending is high, outcomes are relatively poor
+. Improving teaching quality requires enhancing teacher selection, evaluation and training, providing high-quality language teaching from an early age, and focusing on soft skills. The rising wage bill has reduced resources for investments in education infrastructures. Expanding access to early-childhood education, particularly for low-income and single-parent families, would reduce inequality in opportunities.
+Governance of active labour market policies (ALMPs) is highly fragmented, targeting is weak and labour mobility is low.
+Training subsidies go to firms and only reach formal workers. Wage subsidies reach mainly tertiary graduates. It is key to centralise governance, conduct impact evaluations and extend the coverage of ALMPs to all unemployed and disadvantaged workers. To increase labour mobility and allow for better labour market matching, it is crucial to improve public employment services by allocating more resources to personal counselling services, training counsellors, combining counselling with targeted training support, and allowing for more competition from private providers.
+expand
+===TABLE_START===
+MAIN FINDINGS | RECOMMENDATIONS
+Achieving a sustainable recovery through macroeconomic policies
+Despite the summer acceleration, the vaccination rate remains lower than in OECD countries. Access to certain activities is subject to the presentation of a health pass or a negative test. | Consider extending the health pass to most activities and the exercise of some professions. Intensify efforts to better cover rural areas, notably through mobile vaccination centres and the engagement of local actors.
+A relapse cannot be ruled out and other considerable risks surround the outlook. | Continue to provide fiscal support to the most vulnerable households and economic sectors until the economic recovery is well underway.
+Consumer price inflation is likely to increase in the short term due to high global price for commodities and remaining supply chain bottlenecks. | Maintain moderate inflation by consolidating central bank independence and avoiding monetisation of the fiscal deficit.
+Explicit inflation targeting would allow the central bank to maintain price growth at low, stable and predictable levels and favour better coordination between monetary and fiscal policies. | In order to adopt an inflation target policy, follow a roadmap that includes transparent and credible communication, the ability to produce inflation forecasts based on a variety of indicators, including regular inflation expectation surveys, and a forward-looking operational approach for conducting monetary policy.
+High debt levels make it a priority to launch a comprehensive package of measures to raise revenue, curb spending and reduce the debt-to-GDP ratio to sustainable levels. | Design, announce and carry out a medium-term fiscal plan that will make it possible to reduce current spending, while building fiscal space to address contingencies and increase public investment in infrastructure bottlenecks.
+The tax system is complex, with many special regimes and tax exemptions; the collection rate is low and tax evasion is rife, notably for the régime forfaitaire , which leads to inequalities among taxpayers. | Reduce special regimes and VAT exemptions, better control the régime forfaitaire , enhance tax enforcement and draft a comprehensive general tax code.
+Public sector employment and the wage bill are very high by international standards. | Limit new hiring and internal promotion in the public sector; facilitate voluntary exit; and make any wage adjustment conditional on the achievement of productivity improvements.
+The protection of creditors and minority investors is weak due to lengthy insolvency procedures, which reduces access to finance for many firms. | Speed up corporate and debt restructuring procedures through out-of-court insolvency schemes and the establishment of dedicated tribunal chambers tasked with corporate cases.
+Opening the economy and strengthening competition
+Rules and regulatory procedures are complex, have potential economic impacts, including on competition, and may contribute to corruption. | Introduce the obligation of carrying out ex ante (and if possible ex post ) economic impact evaluation of any new regulation.
+High import barriers reduce access to high-quality inputs and capital goods for onshore firms and raise consumer prices. | Reduce tariffs and non-tariff barriers for onshore enterprises, starting with capital goods and intermediate inputs.
+Infrastructure gaps remain huge and custom procedures are long and expensive. | Improve the investment framework for infrastructure and accelerate digitalisation and simplification of custom procedures, including through the introduction of automatic import and export licenses combined with risk-based ex-post controls.
+Reforming state-owned enterprises (SOEs) and upholding public sector integrity
+SOEs generate fiscal and financial risks, the operational and financial performance of many SOEs is poor, the quality of their services is low and prices are high. | Establish a state shareholdings agency, provided with sufficient resources, to evaluate financial performance and restructuring options, including privatisation, and strengthen performance targets.
+The anti-corruption authority (INLUCC) has unearthed cases at all levels but is under-financed and under-staffed. | Preserve independence of the anti-corruption authority and provide it with the necessary resources.
+Realising the green transition
+The electricity generation mix is dominated by natural gas and the share of renewables is modest. | Promote the ecological transition and renewable energy sources by encouraging investment and private-public partnerships; adjusting the regulatory framework and carbon taxation; trimming energy subsidies; and increasing direct transfers to needy households.
+Promote the creation of more and better jobs
+In the onshore sector, authorisation regimes for entering a new market or offering a new product or service are numerous and involve opaque and lengthy procedures, discouraging entrepreneurship and investment. | Reduce prior authorisation for market entry and investment while maintaining transparent ex-post controls to ensure regulatory compliance. Apply silence-is-consent rules and introduce one-stop shops whenever possible.
+Overly-complex tax incentive and subsidy regimes increase administrative burden, particularly for small firms, and hinder market entry and formalisation. | Conduct a comprehensive review and impact evaluation of existing subsidies and tax incentives and simplify the tax system.
+Improving skills and labour market policies
+Access to early-childhood education and child-care is low, particularly for low-income households and in interior regions, which hinders skills development and reduces labour market participation of women. | Raise spending efficiency in other parts of the education system to finance the expansion of early childhood education, prioritising access for low-income and single-parent families.
+Many newly-employed teachers lack a formal pedagogical education. The quality of initial and continuous teacher training is low due to a lack of teacher instructors and outdated curricula. | Improve selection as well as initial and continuous teacher training in basic education and VET, with a special focus on pedagogical skills.
+Although spending on active labour market policies is relatively high, their governance is highly fragmented, targeting is weak and results are modest. | Centralise the governance of active labour market programmes, including public works and entrepreneurship support, increase spending efficiency by better targeting towards individuals most in need and improve impact evaluation.
+More than 80% of the unemployed are not registered at the public employment agency, due to severe capacity constraints, and mainly use personal contacts for searching a job. However, private job placement services face legal difficulties to operate. | Allow for more competition from private employment service providers and consider outsourcing certain tasks to private providers using performance-based incentive contracts.
+===TABLE_END===
+In the same series
+See all publications
+Related publications
+See all publications
+Related topics
+Go to top

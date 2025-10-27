@@ -1,0 +1,201 @@
+[ Aller au contenu principal ](https://www.ins.tn/#main-content)
+## menu header
+  * [Accès à l'information](https://www.ins.tn/acces-information)
+  * [Contact](https://www.ins.tn/contact)
+
+
+Switch Language
+FRToggle Dropdown
+  * FR
+  * [EN](https://www.ins.tn/en)
+  * [AR](https://www.ins.tn/ar)
+
+
+  * [ ](https://www.facebook.com/ins.tunisie24)
+
+
+[ ![Accueil](https://www.ins.tn/sites/default/files-ftp3/files/Logo_INS_RGPH.png) ](https://www.ins.tn/ "Accueil") [INS](https://www.ins.tn/ "Accueil")
+Search
+  * [Accueil](https://www.ins.tn/)
+  * A propos »
+    * [Présentation de l'INS](https://www.ins.tn/presentation-ins)
+    * [Textes juridiques](https://www.ins.tn/textes-juridiques)
+  * Actualités »
+    * [Communiqués de presse](https://www.ins.tn/communique-de-presse)
+    * [Evènements](https://www.ins.tn/evenements)
+    * [Calendrier de diffusion](https://www.ins.tn/calendar)
+  * Statistiques »
+    * [Statistiques par thèmes](https://www.ins.tn/statistiques/45)
+    * [Commerce extérieur](http://apps.ins.tn/comex/fr/index.php)
+    * Banque des données
+    * [Recherche](http://dataportal.ins.tn/)
+    * [Analyse de Données](http://dataportal.ins.tn/fr/DataAnalysis)
+    * [Cartes](http://dataportal.ins.tn/fr/Map)
+    * [Requête de données](http://dataportal.ins.tn/fr/DataQuery)
+    * [Tableaux de bord](http://dataportal.ins.tn/fr/Dashboards)
+    * [API](http://dataportal.ins.tn/fr/API)
+    * [Centre de Ressources](http://dataportal.ins.tn/fr/ResourceCenter)
+  * [Publications](https://www.ins.tn/publication)
+  * Methodologies »
+    * [Méthodes](https://www.ins.tn/methodes)
+    * [Nomenclatures](https://www.ins.tn/nomenclatures)
+  * [Enquêtes](https://www.ins.tn/enquetes)
+  * annonces »
+    * [Appels d'offres](https://www.ins.tn/appel-d-offre)
+    * [Offres d'emploi](https://www.ins.tn/offre-d-emploi)
+  * [RGPH 2024](https://www.ins.tn/enquetes/recensement-general-de-la-population-et-de-lhabitat-2024)
+
+
+[ ![](https://www.ins.tn/sites/default/files-ftp3/files/2025-06/FR_Slide_0.jpg) ](https://www.ins.tn/publication/commerce-exterieur-aux-prix-courants-mai-2025)
+[ ![](https://www.ins.tn/sites/default/files-ftp3/files/2025-06/FR_Slide.jpg) ](https://www.ins.tn/publication/indice-des-prix-la-consommation-mai-2025)
+[ ![](https://www.ins.tn/sites/default/files-ftp3/files/2025-05/Slide%20RGPH.jpg) ](https://www.ins.tn/event_rgph2024)
+[ ![](https://www.ins.tn/sites/default/files-ftp3/files/2025-05/FR_Slide_2.jpg) ](https://www.ins.tn/publication/indicateurs-de-lemploi-et-du-chomage-premier-trimestre-2025)
+[ ![](https://www.ins.tn/sites/default/files-ftp3/files/2025-05/FR_Slide_1.jpg) ](https://www.ins.tn/publication/la-croissance-economique-au-premier-trimestre-2025)
+  * 0
+  * 1
+  * 2
+  * 3
+  * 4
+
+
+# Bienvenue sur INS
+Aucun contenu de page d'accueil n'a été créé pour l'instant. Suivre le [Guide utilisateur](https://www.drupal.org/fr/docs/user_guide/fr/index.html) pour démarrer la construction de votre site. 
+[ S'abonner à ](http://www.ins.tn/rss.xml)
+![النمو الاقتصادي](https://www.ins.tn/sites/default/files-ftp3/files/2023-11/croissance.png)
+1,6%
+[CROISSANCE](https://www.ins.tn/statistiques/72)
+T1 2025
+![البطالة](https://www.ins.tn/sites/default/files-ftp3/files/2021-01/chomage.png)
+15,7%
+[CHÔMAGE](https://www.ins.tn/statistiques/153)
+T1 2025
+![](https://www.ins.tn/sites/default/files-ftp3/files/2025-05/Logo.png)
+11 972 169
+[POPULATION](https://www.ins.tn/statistiques/111)
+2024
+![BALANCE COMMERCIALE](https://www.ins.tn/sites/default/files-ftp3/files/2023-02/balance.png)
+-1073,1 MD
+[BALANCE COMMERCIALE](https://www.ins.tn/statistiques/50)
+Mai 2025
+![INFLATION](https://www.ins.tn/sites/default/files-ftp3/files/2020-11/INFLATION.png)
+5,4%
+[INFLATION](https://www.ins.tn/statistiques/90)
+Mai 2025
+## Indicateurs clés
+1620305724linechartTAUX D'INFLATION
+1684150984linechartTAUX DE CROISSANCE ÉCONOMIQUEInstitut National de la statistique
+1611322839chartTAUX DE CHÔMAGE
+1616749209columnchartPOPULATION AU 1ER JANVIER
+1637313917columnchartGLISSEMENT ANNUEL DES INDICES DES PRIX DE L'IMMOBILIER
+1675780959linechartBALANCE COMMERCIALE
+[TAUX D'INFLATION](https://www.ins.tn/#graph-0)
+[TAUX DE CROISSANCE ÉCONOMIQUE](https://www.ins.tn/#graph-1)
+[TAUX DE CHÔMAGE](https://www.ins.tn/#graph-2)
+[POPULATION AU 1ER JANVIER](https://www.ins.tn/#graph-3)
+[GLISSEMENT ANNUEL DES INDICES DES PRIX DE L'IMMOBILIER](https://www.ins.tn/#graph-4)
+[BALANCE COMMERCIALE](https://www.ins.tn/#graph-5)
+[TAUX D'INFLATION](https://www.ins.tn/desktop-stat01)
+[TAUX DE CROISSANCE ÉCONOMIQUE](https://www.ins.tn/desktop-stat11)
+[TAUX DE CHÔMAGE](https://www.ins.tn/desktop-stat21)
+[POPULATION AU 1ER JANVIER](https://www.ins.tn/desktop-stat31)
+[GLISSEMENT ANNUEL DES INDICES DES PRIX DE L'IMMOBILIER](https://www.ins.tn/desktop-stat41)
+[BALANCE COMMERCIALE](https://www.ins.tn/desktop-stat51)
+OFFRES D'EMPLOI
+Rejoignez notre équipe INS
+## Communiqués de presse
+12-06-2025 | Commerce Exterieur
+[Commerce Extérieur aux prix courants, Mai 2025](https://www.ins.tn/publication/commerce-exterieur-aux-prix-courants-mai-2025)
+Durant les cinq premiers mois de l’année 2025, Les échanges commerciaux ont atteint le niveau de 26831,5 MD à l’exportation et 35198,7 MD à l’importation.
+05-06-2025 | Indices des Prix à la Consommation familiale, IPC
+[Indice des prix à la consommation, Mai 2025](https://www.ins.tn/publication/indice-des-prix-la-consommation-mai-2025)
+Au mois de mai 2025, le taux d’inflation a atteint 5,4% et l'inflation sous-jacente le taux de 5,5%.
+15-05-2025 | Emploi
+[Indicateurs de l’emploi et du chômage, premier trimestre 2025](https://www.ins.tn/publication/indicateurs-de-lemploi-et-du-chomage-premier-trimestre-2025)
+Au premier trimestre de l’année 2025, le taux de chômage diminue pour atteindre 15,7 %.
+15-05-2025 | Compte de la nation
+[La croissance économique au premier trimestre 2025](https://www.ins.tn/publication/la-croissance-economique-au-premier-trimestre-2025)
+Une croissance au taux de 1.6% sur un an au cours du premier trimestre de l'année 2025. 
+[Voir Tous](https://www.ins.tn/communique-de-presse)
+## Evènements 
+Assister à nos événements à venir
+  * 0
+  * 1
+  * 2
+  * 3
+
+
+![](https://www.ins.tn/sites/default/files-ftp3/files/styles/large/public/actualites/event.jpeg?itok=UF6L22r4)
+Conférence de presse
+17-05-2025
+Publication des résultats du Recensement Général de la Population et de l’Habitat 2024.
+A l'hotel el mechtel, tunis
+![](https://www.ins.tn/sites/default/files-ftp3/files/styles/large/public/actualites/3.JPG?itok=X3rvlRkY)
+Réunion
+17/05/2024
+Première réunion du Comité National du Recensement 2024, annonçant officiellement le lancement des…
+A l'hotel el mechtel, tunis
+![](https://www.ins.tn/sites/default/files-ftp3/files/styles/large/public/actualites/7.png?itok=sratMLUD)
+Résultats
+12/02/2024
+Les résultats de l’enquête nationale par grappes à indicateurs multiples (MICS) réalisée en 2023. 
+A l'hotel el mechtel, tunis
+![](https://www.ins.tn/sites/default/files-ftp3/files/styles/large/public/actualites/IMG_7317.JPG?itok=9Zx-qaTn)
+Atelier
+19/10/2023
+La mesure de la pauvreté en Tunisie : approches et concepts pour une mesure exhaustive des…
+A l'hotel el mechtel, tunis
+[Voir Tous](https://www.ins.tn/evenements)
+## EVÈNEMENTS
+Assister à nos événements à venir
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/event.jpeg)Conférence de presse17-05-2025Publication des résultats du Recensement Général de la Population et de l’Habitat 2024.Hôte l'acropole lac1 Tunis](https://www.ins.tn/event_rgph2024)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/3.JPG)Réunion17/05/2024Première réunion du Comité National du Recensement 2024, annonçant officiellement le lancement des travaux de terrain de cette opération nationale importante.](https://www.ins.tn/evenements/premiere-reunion-du-comite-national-du-recensement-2024-annoncant-officiellement-le)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/7.png)Résultats12/02/2024Les résultats de l’enquête nationale par grappes à indicateurs multiples (MICS) réalisée en 2023. ](https://www.ins.tn/evenements/atelier-pour-la-diffusion-des-resultats-de-lenquete-mics)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/IMG_7317.JPG)Atelier19/10/2023La mesure de la pauvreté en Tunisie : approches et concepts pour une mesure exhaustive des privations monétaires et non monétaires. Mövenpick Hôtel Lac 1 Tunis](https://www.ins.tn/evenements/la-mesure-de-la-pauvrete-en-tunisie)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/Poster%20ASD%202022_EN.jpg)SéminaireLa Journée africaine de la statistique est un événement annuel, ; célébré le 18 novembre, pour sensibiliser le public à l’importance des statistiques dans tous les aspects de la vie sociale et économique.](https://www.ins.tn/evenements/la-journee-africaine-de-la-statistique-2022)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/EN-%20Media%20advisory%20icon.PNG)Notice10-08-2022Avis aux médias sur la Journée africaine de l’enregistrement des faits d’état civil et des statistiques de l’état civil.](https://www.ins.tn/evenements/la-journee-africaine-de-lenregistrement-des-faits-detat-civil-et-des-statistiques-de)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/IMG_6417.JPG)SéminaireSéminaire de lancement du projet « l'application du degré d'urbanisation (DEGURBA) en Tunisie pour générer des données urbaines comparables»](https://www.ins.tn/evenements/seminaire-de-lancement-du-projet-lapplication-du-degre-durbanisation-degurba-en-tunisie)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/jas_0.jpg)SéminaireLa Journée africaine de la statistique est un événement annuel, ; célébré le 18 novembre, pour sensibiliser le public à l’importance des statistiques dans tous les aspects de la vie sociale et économique.](https://www.ins.tn/evenements/la-journee-africaine-de-la-statistique-2020)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/IMG-20200715-WA0028.jpg)Atelier15 juillet 2020Workshop sur Implémentation de la Nomenclature d’Activités Tunisienne (NAT 2009), Hôtel Laico Tunis ; Mercredi 15 Juillet 2020.Hôtel Laico – Tunis 1002 Tunisie.](https://www.ins.tn/evenements/workshop-sur-implementation-de-la-nomenclature-dactivites-tunisienne-nat-2009)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/FOND_ISI-01_7_2_0.jpg)Réunion22 novembre 2019Réunion de Haut Niveau ISI IFC sur la gouvernance des données.Ramada Plaza hôtel-Tunis.](https://www.ins.tn/evenements/reunion-de-haut-niveau-isi-ifc-sur-la-gouvernance-des-donnees)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/IMG_1406-min_0_0.jpg)Réunion19 novembre 2019La treizième session du Comité des Directeurs Généraux (CoDG) des Instituts Nationaux de Statistique.Hôtel Ramada Plaza, Tunis.](https://www.ins.tn/evenements/la-treizieme-session-du-comite-des-directeurs-generaux-codg-des-instituts-nationaux-de)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/JAS2019.png)Séminaire18/11/2019Tout le monde compte: des statistiques de qualité pour une meilleure gestion des déplacements forcés en Afrique. ](https://www.ins.tn/evenements/journee-africaine-de-la-statistique-2019)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/Logo-Tunisia-Hims.jpg)Atelier10/10/2019L'ONM et l'INS, avec l’appui de l'ICMPD ; organisent un atelier de lancement de l’enquête TUNISIA-HIMS, le jeudi 10 octobre 2019 à l’hôtel Mövenpick - Les Berges du Lac.](https://www.ins.tn/evenements/atelier-de-lancement-de-lenquete-tunisia-hims)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/nejib2_0.jpg)Séminaire08/07/2019L’Institut national de la statistique INS a reçu le prix « Special Achievement in GIS Award » pour l’année 2019.San Diego Californie, USA](https://www.ins.tn/evenements/projet-air-stat-lins-recoit-le-prix-sig-special-achievement-gis-lors-de-la-conference)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/1_2%20%281%29.jpg)Atelier23/07/2019Atelier régional sur la mesure de la pauvreté dans les pays arabes.](https://www.ins.tn/evenements/atelier-regional-sur-la-mesure-de-la-pauvrete-dans-les-pays-arabes)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/66505423_2329604197161012_1628970371115909120_n.jpg)Atelier11/07/2019les Indicateurs des Objectifs de Développement Durable (ODD) en lien avec la Conférence Internationale sur la Population et le Développement (CIPD).](https://www.ins.tn/evenements/les-indicateurs-des-objectifs-de-developpement-durable-odd-en-lien-avec-la-conference)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/IMG_0461%20%281%29.jpg)Atelier08/07/2019Cet atelier s’inscrit dans le cadre du Pan African Statistics programme (PAS) – Projet financé par l’Union Européenne.](https://www.ins.tn/evenements/atelier-sur-lelaboration-des-comptes-nationaux-trimestriels)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/IMG_0250_0.jpg)RésultatsLancement des résultats de l’enquête par grappes à indicateurs multiples sur la situation de la mère et de l’enfant en Tunisie.](https://www.ins.tn/evenements/lancement-des-resultats-de-lenquete-par-grappes-indicateurs-multiples-sur-la-situation)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/groupe.jpg)Atelier25/06/2019Atelier sur la Norme d’Echange de Données et de Métadonnées Statistique SDMX.](https://www.ins.tn/evenements/atelier-sur-la-norme-dechange-de-donnees-et-de-metadonnees-statistique-sdmx)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/IMG_0193_0.jpg)RéunionRéunion d'étudie pour le développement des travaux statistiques Maghrébins.](https://www.ins.tn/evenements/reunion-du-comite-statistique-du-maghreb-sur-le-renforcement-de-la-coordination-et-de-la)
+[![](https://www.ins.tn/sites/default/files-ftp3/files/actualites/IMG_0016_0.jpg)Atelier10/06/2019Atelier de réflexion autour des défis et perspectives de mise en place de la plateforme d’indicateurs de suivi des objectifs de développement durable.](https://www.ins.tn/evenements/mise-en-place-de-la-plateforme-dindicateurs-de-suivi-des-objectifs-de-developpement)
+[Voir Tous](https://www.ins.tn/evenements)
+## SERVICES
+  * [Accès à l'information](https://www.ins.tn/acces-information)
+  * [Plan d'accès](https://www.ins.tn/sitemap)
+  * [Liens utiles](http://www.ins.tn/liens-utiles)
+  * [Contact](http://www.ins.tn/contact)
+
+
+## OUTILS
+  * [Banque de données en ligne](http://dataportal.ins.tn/)
+  * [ Recensement 2024](https://www.ins.tn/enquetes/recensement-general-de-la-population-et-de-lhabitat-2024)
+  * [Consommation 2021](https://www.ins.tn/enquetes/enquete-nationale-sur-le-budget-la-consommation-et-le-niveau-de-vie-des-menages-2021)
+  * [Commerce extérieur](http://apps.ins.tn/comex/fr/index.php "Commerce extérieur 1999-2019")
+
+
+## ACCÈS RAPIDE
+  * [Actualités](https://www.ins.tn/evenements)
+  * [Publications](https://www.ins.tn/publication)
+  * [Statistiques](https://www.ins.tn/statistiques/45)
+  * [Methodologies](https://www.ins.tn/methodes)
+
+
+## Lettre d'information
+## menu footer bas
+  * [Conditions d'utilisation](https://www.ins.tn/conditions-utilisation)
+
+
+  * [ ](https://www.facebook.com/ins.tunis)
+
+
+Copyright © 2025 Statistiques Tunisie

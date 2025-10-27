@@ -1,0 +1,1440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" class="dxChrome dxWindowsPlatform dxWebKitFamily dxBrowserVersion-136"><head class="at-element-marker"><link rel="stylesheet" type="text/css" href="/DXR.axd?r=1_68,1_210,1_209-ZiHLr"><link rel="stylesheet" type="text/css" href="../../../views/App_Themes/GridTheme/GridDefaultTheme.css">
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://cdn.appdynamics.com/adrum-ext.1ad6f7ca4d96e75e9ff37bb1b3973ecc.js"></script><script src="https://connect.facebook.net/en_US/sdk.js?hash=dcdd7c0ba2884c474dcca2bd5aac26cf" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.6"></script><script type="text/javascript" charset="UTF-8" src="/js/appdynamics.js">
+    </script><script src="https://cdn.appdynamics.com/adrum/adrum-4.3.2.0.js" type="text/javascript" charset="UTF-8"></script>
+    <meta name="referrer" content="no-referrer">
+    <title>Tunisia | Education Statistics - All Indicators</title>
+    <meta name="title" content="Tunisia">
+    <meta property="og:title" content="Tunisia">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0058/1350.js" async="async"></script>
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="/views/styles/layout.css">
+    <link rel="stylesheet" href="/views/styles/StyleChart.css">
+    <script src="/views/scripts/jquery-1.7.min.js" type="text/javascript"></script>
+
+   <script src="/views/scripts/jquery-ui.min.js" type="text/javascript"></script>
+   <script src="/views/scripts/jpicker.min.js" type="text/javascript"></script>
+   <link rel="stylesheet" href="/views/styles/jquery-ui.css">
+   <link rel="stylesheet" href="/views/styles/style.css">
+   <link rel="stylesheet" href="/views/styles/jpicker-dialog.css">
+
+    <script src="/views/scripts/jquery.layout.js" type="text/javascript"></script>
+    <script src="/views/scripts/jquery.poshytip.min.js" type="text/javascript"></script>
+    <script src="/views/scripts/jquery-ui-1.8.24.custom.min.js" type="text/javascript"></script>
+    <script src="/views/scripts/jquery-ui.selectmenu.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/views/styles/jpicker.css">
+    <script src="/views/scripts/script.js" type="text/javascript"></script>
+
+
+    <link href="/views/styles/chosen.css" rel="stylesheet" type="text/css">
+
+    <link href="/views/styles/embedStyles.css" rel="stylesheet" type="text/css">
+    <script src="/views/scripts/chosen.jquery.js" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+        var gbl_common_internal = false;
+        var gbl_common_FullURL = 'https://databank.worldbank.org';
+    </script>
+
+    <script type="text/javascript">
+    //            Shaheer Oct 31st 2012
+    //            Showing selected zoom level *****************Start
+    window.onload = function () {
+        if (document.getElementById('mapId') != null) {
+            var mapId = eval(document.getElementById('mapId').value);
+            if (mapId != null) {
+                var map = mapId.GetOpenLayersMap();
+
+                var lonlat = mapId.GetCenter();
+
+                if (document.getElementById('hdnZoomLevel').value != "") {
+                    if (document.getElementById('hdnZoomLevel').value != "2") {
+
+
+                        map.zoom = parseInt(document.getElementById('hdnZoomLevel').value, 10) - 1;
+
+
+                        var latitude = document.getElementById('hdnLatitude').value;
+                        var longitude = document.getElementById('hdnLongitude').value;
+
+                        if (map.zoom != 2) {
+                            if (latitude != "")
+                                lonlat.lat = latitude;
+
+                            if (longitude != "")
+                                lonlat.lon = longitude;
+
+
+                            updateImages(map);
+                            updateLegend();
+                            map.setCenter(lonlat, map.zoom, map.dragging, true);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //            Showing selected zoom level *****************End
+
+    $(function () {
+        
+    });
+
+    function Widgettwitter() {
+        var twitterurl = getUrl();
+        window.open('http://twitter.com/share?url=' + encodeURIComponent(twitterurl)
+            + '&text=' + encodeURIComponent(document.getElementById("hdnReportDisplayName").value), '_new');
+    }
+
+    function Widgetfacebook() {
+        var facebookurl = getUrl();
+        window.open('http://www.facebook.com/share.php?u=' + encodeURIComponent(facebookurl)
+            + '&t=' + encodeURIComponent(document.getElementById("hdnReportDisplayName").value), '_new');
+    }
+
+    function SetMetadataIconStyle()
+    {
+        $('.widget-maintable div#REPORT_PREVIEW_divdropdown a[title="Click here to view metadata"]').css("pointer-events", "none");
+        $('td.dxgvHeader_GridDefaultTheme img[title = "Click here to view metadata"]').css("pointer-events", "none");
+        $('table.dxgvTable_GridDefaultTheme td[title = "Click here to view metadata"]').css("pointer-events", "none");
+        $('div#divreportcontent a#fullScreen').css("pointer-events", "none");
+    }
+
+
+    function WidgetEmail() {
+        var myForm = document.createElement("form");
+        myForm.method = "post";
+        myForm.target = "emailpopup";
+        myForm.action = 'http://web.worldbank.org/external/default/main?pagePK=7846481&piPK=7846484&theSitePK=523679';
+        var myInput = document.createElement("input") ;
+        myInput.setAttribute("type","hidden");
+        myInput.setAttribute("name","reftitle");
+        myInput.setAttribute("value","Databank"); 
+        myForm.appendChild(myInput);
+        var myInput1 = document.createElement("input") ;
+        myInput1.setAttribute("type","hidden");
+        myInput1.setAttribute("name","reflink");
+        myInput1.setAttribute("value", encodeURIComponent(location.href));
+        myForm.appendChild(myInput1);   
+        document.body.appendChild(myForm);   
+        emailpopup = window.open('', 'emailpopup', 'scrollbars=no,resizable=yes,width=350,height=510');
+        myForm.submit();
+        document.body.removeChild(myForm);  
+    }
+
+    function WidgetGooglePlus() {
+        var googleurl = getUrl();
+        window.open('http://plus.google.com/share?url=' + encodeURIComponent(googleurl)
+            + '&title=' + encodeURIComponent(document.getElementById("hdnReportDisplayName").value), '_new');
+    }
+
+    function getUrl() {
+        //oct12 deepak
+        var embedurl = 'https://databank.worldbank.org/embed/Tunisia/id/b3585a5f/wd/0/ht/0/tbar//dd/';
+        return embedurl;
+    }
+
+    //Dhanya Dec 28 2011 - For Social Media - End
+    function getWidgetWidth() {
+        var widgQryWd = getParameterByName('wd');
+        var widgWd = document.documentElement.clientWidth;
+        if (widgQryWd != '') widgWd = parseInt(widgQryWd, 10);
+
+        var extrapadding = 0;
+        if ($('#hdnReportType').val().toUpperCase() == 'MAP') extrapadding = 5;
+
+        return widgWd - extrapadding; //padding
+    }
+
+    function getWidgetHeight() {
+        var widgQryHt = getParameterByName('ht');
+        var widgHt = document.documentElement.clientHeight;
+        if (widgQryHt != '') widgHt = parseInt(widgQryHt, 10);
+
+        var extrapadding = 0;
+        if ($('#hdnReportType').val().toUpperCase() == 'MAP') extrapadding = 2;
+
+        return widgHt - extrapadding; //padding
+    }
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function getContentWidth() {
+        var widgetTotWidth = getWidgetWidth();
+
+        var widgetContWidth = widgetTotWidth - 12; //12 - left & right padding 6 each
+
+        return widgetContWidth;
+    }
+
+    function getToolBarHeight() {
+        var varHeight = 0;
+        if (document.getElementById("divtoolbar") != null) varHeight += document.getElementById("divtoolbar").offsetHeight;
+        return varHeight;
+    }
+
+    function HasDisclaimer()
+    {
+        if (document.getElementById("widget-table-disclaimer") == null) return false;
+        if ($.trim($('#REPORT_PREVIEW_bDisclaimer').text()) == '' && $.trim($('#REPORT_PREVIEW_sDisclaimerMsg').text()) == '') return false;
+
+        return true;
+    }
+
+    function getDisplayElemHeight() {
+        var varHeight = 12; //padding
+
+        varHeight += getToolBarHeight();
+        if (document.getElementById("widget-table-dropdowns") != null) varHeight += (document.getElementById("widget-table-dropdowns").offsetHeight);
+        if (document.getElementById("widget-table-header") != null) varHeight += (document.getElementById("widget-table-header").offsetHeight);
+        if (document.getElementById("widget-table-footer") != null) varHeight += (document.getElementById("widget-table-footer").offsetHeight);
+        if (document.getElementById("widget-table-source") != null) varHeight += (document.getElementById("widget-table-source").offsetHeight);
+
+        if (HasDisclaimer()) varHeight += (document.getElementById("widget-table-disclaimer").offsetHeight);
+
+        varHeight += getHeaderDescHeight();
+        //varHeight += $('#widget').height();
+
+        return varHeight;
+    }
+
+    function getHeaderDescHeight()
+    {
+        var varHeight = 0;
+        if ($('#widgetTitle').is(':visible')) varHeight += $('#widgetTitle').outerHeight(true);//which includes margin, padding and borders as well
+        if ($('#widgetDesc').is(':visible')) varHeight += $('#widgetDesc').outerHeight(true);
+        return varHeight;
+    }
+
+    function getContentHeight() {
+        var widgetTotHeight = getWidgetHeight();
+
+        var widgetContHeight = widgetTotHeight - getDisplayElemHeight();
+
+        return widgetContHeight;
+    }
+
+    function resizeTableFromPreview() {
+        SynhronizeMyGridHeight();
+    }
+
+</script> 
+
+<style type="text/css">
+    .page-meta-icon {
+        vertical-align: super;
+        cursor: pointer;
+        position: relative;
+        top: 8px;
+        left: 2px;
+    }
+</style>
+
+
+    <style type="text/css">
+        .loading {
+        -moz-border-radius: 5px 5px 5px 5px;
+        display: none;
+        height: 50px;
+        opacity: 0.9;
+        padding: 2px;
+        position: absolute;
+        text-align: center;
+        width: 100px;
+        z-index: 100000;
+    }
+    .widget-maintable
+    {
+        border: 0px !important; 
+        padding: 0px;
+    }
+    .widget-maintable-row
+    {
+        padding: 0px;
+        border: 0px !important;
+    }
+    .widget-maintable-cell-disclaimer
+    {
+        padding: 10px 0 0 0;        
+        border: 0px !important;
+    }
+    .widget-maintable-cell
+    {
+        padding: 0px;
+        border: 0px !important;
+    }
+    </style>
+
+
+    <script type="text/javascript">
+
+        function showLinkContent(e, obj) {
+            $(".embedLinkDesc").hide();
+            
+            var linkanchor=$(obj).find("a").attr("id");
+            var contentDiv=$("#" + $(obj).find("a").attr("id") + "Desc");
+            var widgetWd = getWidgetWidth();
+
+            contentDiv.css("width","");
+            contentDiv.find("h4").css("width","");
+            
+            switch (linkanchor)
+            {
+            case "downloadLink":
+                 if(widgetWd<350)
+                    {
+                      var offset=350-widgetWd;
+                      var contentWd=292-offset;
+                      var contentHeaderWd=contentWd-10;
+                      contentDiv.css("width",contentWd+"px");
+                      contentDiv.find("h4").css("width",contentHeaderWd+"px");
+                    }
+                break;
+                
+            case "shareLink":
+             if(widgetWd<390)
+                    {
+                      var offset=390-widgetWd;
+                      var contentWd=292-offset;
+                      var contentHeaderWd=contentWd-10;
+                      contentDiv.css("width",contentWd+"px");
+                      contentDiv.find("h4").css("width",contentHeaderWd+"px");
+                     }
+                 break;
+            case "infoLink":
+                 if(widgetWd<295)
+                    {
+                      var offset=295-widgetWd;
+                      var contentWd=292-offset;
+                      var contentHeaderWd=contentWd-10;
+                      contentDiv.css("width",contentWd+"px");
+                      contentDiv.find("h4").css("width",contentHeaderWd+"px");
+                     }
+                 break;
+                       
+            }
+         
+            $("#" + $(obj).find("a").attr("id") + "Desc").show();
+            e.stopPropagation();
+
+        }
+
+        function fileDownloadClick(downloadid) {
+            $(downloadid).trigger('click');
+        }
+
+        function setHdrProps(prop, ctl) {
+            var strProps = getParameterByName(prop);
+            if (strProps != '') {
+                strProps = strProps.split(';');
+                if (strProps.length > 0) $(ctl).css('font-family', strProps[0]);
+                if (strProps.length > 1) $(ctl).css('font-size', strProps[1]);
+                if (strProps.length > 2) $(ctl).css('font-weight', (strProps[2].toLowerCase() == 'true' ? 'bold' : 'normal'));
+                if (strProps.length > 3) $(ctl).css('font-style', (strProps[3].toLowerCase() == 'true' ? 'italic' : 'normal'));
+                if (strProps.length > 4) $(ctl).css("color", strProps[4]);
+                if (strProps.length > 5) $(ctl).css("text-align", strProps[5]);
+            }
+        }
+
+
+        $(function () {
+
+            var allbuttonshidden = false;
+            if (getParameterByName('ti').toLowerCase() == 'n') 
+                $('#widgetTitle').hide();
+            else 
+                $('#widgetTitle').show();
+            if (getParameterByName('ds').toLowerCase() == 'y') 
+                $('#widgetDesc').show();
+            else
+                $('#widgetDesc').hide();
+            if (getParameterByName('tb').toLowerCase() == 'n' || getParameterByName('tbar').toLowerCase() == 'n') 
+            {
+                allbuttonshidden = true;
+                $("#embedLinks").hide();
+            }
+            else
+            {
+                allbuttonshidden = true;
+                if (getParameterByName('sh').toLowerCase() == 'n') 
+                    $("#shareLink").hide();
+                else
+                    allbuttonshidden = false;
+                if (getParameterByName('dw').toLowerCase() == 'n') 
+                    $("#downloadLink").hide();
+                else
+                    allbuttonshidden = false;
+                var printreq = 'N';
+                printreq = (printreq == "Y");
+                if (!printreq || getParameterByName('pr').toLowerCase() == 'n') 
+                    $("#printLink").hide();
+                else
+                    allbuttonshidden = false;
+                if (getParameterByName('inf').toLowerCase() == 'n') 
+                    $("#infoLink").hide();
+                else
+                    allbuttonshidden = false;
+            }
+            if (getParameterByName('dd').toLowerCase() == 'n') 
+            {
+                $("#REPORT_PREVIEW_divdropdown").hide();
+            }
+            if (getParameterByName('md').toLowerCase() == 'n' && $('#hdnReportType').val() == 'METADATA') {
+                $(".metadata-tools").hide();
+            }
+             if(getParameterByName('source').toLowerCase()=='n')
+            {
+            $("#widget-table-source").hide();
+            }
+            if (!allbuttonshidden)
+            {
+
+                if ($('#widget-table-dropdowns').height() < 24) $('#widget-table-dropdowns').height(24);
+
+            }
+            var exporttypes = getParameterByName('exptypes');
+            exporttypes = $.trim(exporttypes);
+            if (exporttypes != '') {
+                exporttypes = exporttypes.split(",");
+                $('li.downloadExcel').hide();
+                $('li.downloadCSV').hide();
+                $('li.downloadTAB').hide();
+                $('li.downloadPNG').hide();
+                $('li.downloadJPEG').hide();
+                $('li.downloadSVG').hide();
+                $('li.downloadPDF').hide();
+                $.each(exporttypes, function(ind, val) {
+                    val = val.toLowerCase();
+                    switch(val) {
+                        case 'excel':
+                            $('li.downloadExcel').show();
+                            break;
+                        case 'csv':
+                            $('li.downloadCSV').show();
+                            break;
+                        case 'tab':
+                            $('li.downloadTAB').show();
+                            break;
+                        case 'png':
+                            $('li.downloadPNG').show();
+                            break;
+                        case 'jpeg':
+                            $('li.downloadJPEG').show();
+                            break;
+                        case 'svg':
+                            $('li.downloadSVG').show();
+                            break;
+                        case 'pdf':
+                            $('li.downloadPDF').show();
+                            break;
+                    }
+                });
+            }
+
+            var selectedTheme = getParameterByName('theme');
+            $("#embedLinkList li").addClass(selectedTheme);
+            $("#infoLinkDesc,#downloadLinkDesc,#shareLinkDesc").addClass("embedLinkDesc").addClass(selectedTheme);
+
+            var strBdrClr = getParameterByName('bdrClr'), strBdrStyle = getParameterByName('bdrStyle'), strBdrWd = getParameterByName('bdrWidth');
+            $("#widgetpreview").css("border-width", strBdrWd);
+            $("#widgetpreview").css("border-style", strBdrStyle);
+            $("#widgetpreview").css("border-color", strBdrClr);
+
+            setHdrProps('title', '#widgetTitle');
+            setHdrProps('desc', '#widgetDesc');
+            $("#embedLinkList li").click(function (e) { showLinkContent(e, this); });
+            $(".closeToolTip").click(function (e) { $(".embedLinkDesc").hide(); e.stopPropagation(); });
+
+
+
+
+            if (getParameterByName('zm').toLowerCase() != 'n') 
+            {
+                $("#widgetpreview").mouseover(function () {
+                    $("#fullScreen").show();
+                });
+
+                $("#widgetpreview").mouseleave(function () {
+                    $("#fullScreen").hide();
+                });
+                 $("#fullScreen").click(function () {
+                    var availWidth = screen.availWidth + "px";
+                    var availHeight = screen.availHeight + "px";
+                    var strHasPort = 'Y';
+                    strHasPort = (strHasPort == "Y");
+                    
+//                    var currentqryparams = '?ti=n&ds=n&zm=n';
+//                    currentqryparams += '&dd=' + (getParameterByName('dd').toLowerCase() == 'n' ? 'n' : 'y');
+//                    currentqryparams += '&tb=' + (getParameterByName('tb').toLowerCase() == 'n' || getParameterByName('tbar').toLowerCase() == 'n' ? 'n' : 'y');
+//                    if (selectedTheme != '') currentqryparams += '&theme=' + selectedTheme;
+//                    if (getParameterByName('country') != '') currentqryparams += '&country=' + getParameterByName('country');
+                    var currentqryparams = '?review=y&zm=n';
+
+                    var embedurl = '';
+                    if (strHasPort) {
+                        embedurl = 'https://databank.worldbank.org:443/embed/Tunisia/id/b3585a5f' + currentqryparams;
+                    }
+                    else {
+                        embedurl = 'https://databank.worldbank.org/embed/Tunisia/id/b3585a5f' + currentqryparams;
+                    }
+
+                    window.open(embedurl, "_blank", "toolbar=yes, location=yes, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=yes, width=" + availWidth + ", height=" + availHeight + "");
+                });
+            }
+
+
+            setWidgetDisplaySize();
+            
+
+            $('#divtoolbar').hide();
+            $("#widget-table-dropdowns select").chosen();
+            $('#page-select-download-links select').chosen();
+            $('.chosen-container').width('auto');
+
+        });
+
+        function setWidgetDisplaySize() {
+            var widgWd = getWidgetWidth();
+
+
+            var widgHt = getWidgetHeight();
+
+            //$("#widgetpreviewcontent").width(widgWd);
+            $("#widgetpreviewcontent").height(widgHt - getHeaderDescHeight() - 10);
+
+            $("#divreportcontent").width(widgWd);
+            $("#divreportcontent").height(widgHt);
+
+
+        }
+    </script>
+
+
+    <style type="text/css">
+        html{ overflow-y:auto} 
+    </style>
+
+
+    <script type="text/JavaScript">
+        var wbgData = wbgData || {};        
+        wbgData.page = {
+            pageInfo: {
+                pageName: "en:wb:reports:/widgets",
+                pageCategory: "content page",
+                pageUid: "databank-widgets", // format to be discussed
+                pageFirstPub: "01-01-2015", // format will be mm-dd-yyyy
+                pageLastMod: "01-01-2016", // format will be mm-dd-yyyy
+                contentType: "Other",
+                channel: "DEC Databank EXT"
+            },
+            sectionInfo: {
+                siteSection: "databank/widgets",
+                subsectionP2: ""
+            }
+        },
+        wbgData.site = {
+            siteInfo: {
+                siteLanguage: "en", // format should be en,fr etc.
+                siteCountry: "usa", // format should be usa, ind etc.
+                siteEnv: "prod", // format should be prod,stg,uat etc.
+                siteType: "developmentdata"
+            },
+            techInfo: {
+                cmsType: "sharepoint",
+                bussVPUnit: "DEC",
+                bussUnit: "DECDG",
+                bussUserGroup: "external",
+                bussAgency: "ibrd"
+            }
+
+        },
+        wbgData.misc = {
+            dataFilters: "Database:Education Statistics - All Indicators;Country:Tunisia;Series:Government expenditure on primary education as % of GDP (%);Time:1975;Time:1976;Time:1977;Time:1978;Time:1979;Time:1980;Time:1981;Time:1982;Time:1983;Time:1984;Time:1985;Time:1986;Time:1987;Time:1988;Time:1989;Time:1990;Time:1991;Time:1992;Time:1993;Time:1994;Time:1995;Time:1996;Time:1997;Time:1998;Time:1999;Time:2000;Time:2001;Time:2002;Time:2003;Time:2004;Time:2005;Time:2006;Time:2007;Time:2008;Time:2009;Time:2010;Time:2011;Time:2012;Time:2013;Time:2014;Time:2015"
+        }
+    </script>
+
+    <script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/launch-7bc0cdc67098.min.js"> async</script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/EXd03e8106d1f243db980e918be6e67c79-libraryCode_source.min.js" async=""></script>
+
+
+<style id="at-makers-style" class="at-flicker-control">
+.mboxDefault {visibility: hidden;}
+</style><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RCb3929508fb31432496e845f770d4d38f-source.min.js" async=""></script><style type="text/css" id="REPORT_PREVIEW_grdTablePopupView_RowHeights">#REPORT_PREVIEW_grdTablePopupView_DXDataRow0 > td.dxgvHEC { height:18px } #REPORT_PREVIEW_grdTablePopupView_DXHeadersRow0 > td.dxgvHEC { height:20px } </style><style id="poshytip-css-tips-more-info" type="text/css">div.tips-more-info{visibility:hidden;position:absolute;top:0;left:0;}div.tips-more-info table, div.tips-more-info td{margin:0;font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;font-variant:inherit;}div.tips-more-info td.tip-bg-image span{display:block;font:1px/1px sans-serif;height:10px;width:10px;overflow:hidden;}div.tips-more-info td.tip-right{background-position:100% 0;}div.tips-more-info td.tip-bottom{background-position:100% 100%;}div.tips-more-info td.tip-left{background-position:0 100%;}div.tips-more-info div.tip-inner{background-position:-10px -10px;}div.tips-more-info div.tip-arrow{visibility:hidden;position:absolute;overflow:hidden;font:1px/1px sans-serif;}</style><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RC5bee9bde6f5c406c948030bdb0554466-source.min.js" async=""></script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RCb453f6bd4b6b4056a53aa2926bf43934-source.min.js" async=""></script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RC52892eadc2a84ac4841473647ded54cf-source.min.js" async=""></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RC94eebad5fb634dd2a222999f3d321efd-source.min.js" async=""></script></head>
+<body>        
+    <form method="post" action="/embed/Tunisia/id/b3585a5f?review=y" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTg1MDc0MzYwNQ9kFgICAQ8WAh4GYWN0aW9uBSMvZW1iZWQvVHVuaXNpYS9pZC9iMzU4NWE1Zj9yZXZpZXc9eRYYZg8WAh4JaW5uZXJodG1sZWQCAQ8WAh8BBQRkYXRhZAICD2QWBgIDDxYCHgV0aXRsZQURQWJvdXQgdGhpcyByZXBvcnRkAgUPFgIfAgUSRG93bmxvYWQgdGhpcyBkYXRhZAIHDxYCHwIFEFNoYXJlIHRoaXMgcXVlcnlkAgMPFgIfAQUFRXhjZWxkAgQPFgIfAQUDQ1NWZAIFDxYCHwEFClRhYmJlZCBUWFRkAgYPFgIfAQUHVHdpdHRlcmQCBw8WAh8BBQhGYWNlYm9va2QCCA8WAh8BBQhHb29nbGUgK2QCCQ8WAh8BBQVFbWFpbGQCCg8WAh8BBcIBPGRsIGNsYXNzPSJ3aWRnZXQtZGVzYyI+PGR0PkNyZWF0ZWQgYnk8L2R0PjxkZD5GYXRpbWEgWmFocmFlIEhhZGRhZGlhPC9kZD48ZHQ+RGVzY3JpcHRpb248L2R0PjxkZD5kYXRhPC9kZD48ZHQ+VGFnczwvZHQ+PGRkPkVkdWNhdGlvbjwvZGQ+PGR0Pkxhc3QgVXBkYXRlZDwvZHQ+PGRkPjEwLzEvMjAyNCAxMjozNTozNSBQTTwvZGQ+PC9kbD5kAgsPZBYCZg9kFgYCAQ9kFgICAQ9kFgJmD2QWAmYPZBYCZg9kFgRmDxBkZBYBZmQCAQ8PFgYeCENzc0NsYXNzBQ5wYWdlLW1ldGEtaWNvbh4HVG9vbFRpcAUbQ2xpY2sgaGVyZSB0byB2aWV3IG1ldGFkYXRhHgRfIVNCAgIWAh4Hb25jbGljawUnbG9hZE1ldGFEYXRhV2lkZ2V0KCdUdW5pc2lhJywnVFVOJywnQycpZAIFDxYCHwEFDUNyZWF0ZWQgZnJvbTpkAgYPDxYCHgRUZXh0BTFXb3JsZCBCYW5rLCBFZHVjYXRpb24gU3RhdGlzdGljcyAtIEFsbCBJbmRpY2F0b3JzFgIeBGhyZWYFKmphdmFzY3JpcHQ6U2hhcmVkKCcvVHVuaXNpYS9pZC9iMzU4NWE1ZicpO2QYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFIFJFUE9SVF9QUkVWSUVXJGdyZFRhYmxlUG9wdXBWaWV3HGmPj9bU1YkBLYOY+ND4SBRmSUm8GI86xbeXW0qvhy8=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=393I9IlCM-ogyKs8Hd44dV1rcqpxUnf5H44tKzwISJGiDKh0ditDkmXtgCEO2EBjYC1NHStZFDv6PBmomMymBjZskflkGRAIGbp5gmBilds1&amp;t=638562563416868089" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=AALOUbU4Dy97IA6xs5Hcw4X_3p0ibfav5J8GkqLh6BbzPzvXiBAnsgNZA1RrvIy3Cq24Vv0mT4-0kFgmLmvABOnhUI0YWIq1ZhBpByOsfO1tbR7qzitMMnOOu-sS2aCfvrYTNmI24HhiFUf2YM3cd2wojXk4geRddjzgVXBu4qHNnssTgxV-lcjShS7DKY_50&amp;t=583299c4" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=4P9Uvi0O8EDMt76T88pXW8vg_c1ZTEFN6M0EjArAsjwpjR1CWOdErMSvNQXCR7Z-hH8RCLJlBUcy6rv1dztwjrXUezATyvBQersA_tcP-cth8l5bdDE4Rb0VUJb4WWEC5d0FV4pzcpnGgnH1-5uHOd32fp56pvSu_dMCRszGj5viffOTZAf7-j-vfr4wyIjd0&amp;t=583299c4" type="text/javascript"></script>
+    <div id="widgetTitle" style=""></div>
+        <div class="clrBoth"></div>
+        <div id="widgetDesc" style="display: none;">data</div>
+
+        <div id="widgetpreview" title="" style="font-size:11px;">
+     <div id="widgetpreviewcontent" class="clearfix" style="height: 700px;">
+                
+    <div id="divtoolbar" class="widget-options clearfix" style="display: none;">
+      <h2><span id="lblTitle">&nbsp;</span> </h2>
+      <ul class="widgetPills">
+        <li><a href="../../../views/reports/#widget-description-panel" id="aAboutReport" data-customlink="nl:header" data-text="About" class="w-description help-tips" title="About this report"> <span class="icon"></span> </a></li>
+        <li><a href="../../../views/reports/#widget-download-panel" id="aDownloadData" data-customlink="nl:header" data-text="Download" class="w-download help-tips" title="Download this data"> <span class="icon"></span> </a></li>
+        <li><a href="../../../views/reports/#widget-share-panel" id="aShareQuery" data-customlink="nl:header" data-text="Share" class="w-share help-tips" title="Share this query"> <span class="icon"></span> </a></li>
+      </ul>
+    </div>
+    <div class="widget-option-panel clearfix" style="display:none;">
+      <div id="widget-description-panel" class="opt-panel hide clearfix">
+        
+        
+      </div>
+      <div id="widget-download-panel" class="opt-panel hide clearfix"> Download this dataset as:
+        <ul>
+          <li class="file-excel"><a data-trackaction="Excel" data-text="Excel" href="#"><span class="icon"></span><span id="sExcel">Excel</span></a></li>
+          <li class="file-csv"><a data-trackaction="CSV" data-text="CSV" href="#"><span class="icon"></span><span id="sCSV">CSV</span></a></li>
+          <li class="file-tab"><a data-trackaction="Tabbed Text" data-text="Tabbed Text" href="#"><span class="icon"></span><span id="sTabbedTXT">Tabbed TXT</span></a></li>
+        </ul>
+      </div>
+      <div id="widget-share-panel" class="opt-panel hide clearfix"> Share this query via:
+        <ul>
+          <li class="share-twitter"><a data-text="Twitter" data-trackaction="share twitter" href="Javascript:Widgettwitter();"><span class="icon"></span><span id="sTwitter">Twitter</span></a></li>
+          <li class="share-facebook"><a data-text="Facebook" data-trackaction="share facebook" href="Javascript:Widgetfacebook();"><span class="icon"></span><span id="sFaceBook">Facebook</span></a></li>
+          <li class="share-delicious"><a data-text="Google Plus" data-trackaction="share Google Plus" href="Javascript:WidgetGooglePlus();"><span class="icon"></span><span id="sGooglePlus">Google +</span></a></li>
+          <li class="share-email"><a data-text="Email" data-trackaction="share Email" href="Javascript:WidgetEmail();"><span class="icon"></span><span id="sEmail">Email</span></a> </li>
+        </ul>
+      </div>
+    </div>
+     <div id="divreportcontent" style="width: 1280px; height: 720px;">
+        <div id="widget">
+                    <div id="widgetOptions">
+                        <div id="embedLinks">
+                            <ul id="embedLinkList">
+                                <li class="darkGrey">
+                                    <a href="javascript:void(0)" class="" id="shareLink"><span class="linkIcon"></span></a>
+                                    <div id="shareLinkDesc" class="darkGrey embedLinkDesc">
+                                        <div class="content">
+                                            <h4>Share<span class="closeToolTip"></span></h4>
+                                            <p>Share this query via:</p>
+                                            <ul class="shareLinks">
+                                                <li><a data-text="Twitter" data-trackaction="share twitter" href="Javascript:Widgettwitter()">Twitter</a></li>
+                                                <li><a data-text="Facebook" data-trackaction="share facebook" href="Javascript:Widgetfacebook();">Facebook</a></li>
+                                                <li><a data-text="Google Plus" data-trackaction="share GooglePlus" href="Javascript:WidgetGooglePlus();">Google +</a></li>
+                                                <li><a data-text="Email" data-trackaction="share Email" href="Javascript:WidgetEmail();">Email</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="darkGrey">
+                                    <a href="javascript:void(0)" id="downloadLink"><span class="linkIcon"></span></a>
+                                    <div id="downloadLinkDesc" class="darkGrey embedLinkDesc">
+                                        <div class="content">
+                                            <h4>Download<span class="closeToolTip"></span></h4>
+                                            <p>Download this dataset as:</p>
+                                            <ul class="shareLinks">
+
+                                                <li data-text="Excel" class="downloadlnk downloadExcel"><a data-trackaction="Excel" href="javascript:fileDownloadClick('.file-excel')">Excel</a></li>
+                                                <li data-text="CSV" class="downloadlnk downloadCSV"><a data-trackaction="CSV" href="javascript:fileDownloadClick('.file-csv')">CSV</a></li>
+                                                <li data-text="Tabbed Text" class="downloadlnk downloadTAB"><a data-trackaction="Tabbed Text" href="javascript:fileDownloadClick('.file-tab')">Tabbed TXT</a></li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="darkGrey">
+
+                                    <a data-customlink="pr:header" data-text="Print" href="javascript:exportReport('print')" id="printLink" style="display: none;"><span class="linkIcon"></span></a>
+
+                                </li>
+                                <li class="darkGrey">
+                                    <a data-customlink="nl:header" data-text="Information" href="javascript:void(0)" id="infoLink"><span class="linkIcon"></span></a>
+                                    <div id="infoLinkDesc" class="darkGrey embedLinkDesc">
+                                        <div class="content">
+                                            <h4>INFORMATION <span class="closeToolTip"></span></h4>
+                                            <div id="reportDescription" class="panel-explore"><dl class="widget-desc"><dt>Created by</dt><dd>Fatima Zahrae Haddadia</dd><dt>Description</dt><dd>data</dd><dt>Tags</dt><dd>Education</dd><dt>Last Updated</dt><dd>10/1/2024 12:35:35 PM</dd></dl></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a data-customlink="nl:header" data-text="Full Screen" href="javascript:void(0)" id="fullScreen" title="Fullscreen"></a>
+                </div>
+
+        
+    
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<style type="text/css">
+    body
+    {
+        border: medium none;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        background: none repeat scroll 0 0 #FFFFFF;
+    }
+    .main-body
+    {
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .filter-results
+    {
+        color: #000000;
+        font-size: 11px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .select-assist
+    {
+        margin-bottom: 10px;
+    }
+    .main-body .btn-link
+    {
+        line-height: 19px;
+        margin: 0 10px;
+    }
+    .jPicker
+    {
+        top: 120px !important;
+        z-index: 100000 !important;
+    }
+    .rollover-cell
+    {
+        font-style: italic;
+        font-weight: bold;
+    }
+</style>
+
+<script type="text/javascript">
+    function pageDropdownSelected() {
+    }
+
+    var compDropdownChange = 0;
+    function compDropdownSelected(obj) {
+        compDropdownChange++;
+        var ctlid = obj.id;
+
+        compDropdownSelectedInterval(ctlid, compDropdownChange);
+    }
+
+    function compDropdownSelectedInterval(ctlid, lastvalue) {
+        setTimeout(function () {
+            if (lastvalue == compDropdownChange) {
+                if ($('#' + ctlid + '_chosen').hasClass('chosen-with-drop'))
+                    compDropdownSelectedInterval(ctlid, lastvalue)
+                else
+                    __doPostBack(ctlid.replace('REPORT_PREVIEW_', 'REPORT_PREVIEW$'), '');
+            }
+        }, 2000);
+    }
+    
+    function loadMetaDataWidget(Name, Code, Type) { //Atsushi 11/30/2011 - to display metadata popup from column header, use same function name
+       var ReportID = $("#hdnReportID").val();
+       var ReportType = $("#hdnReportType").val();
+       var ddlSelected = $("#REPORT_PREVIEW_cmbWidgetPage_1 option:selected").val();
+       var ddlSelectedValue = "";
+       if (ddlSelected != null) {
+           ddlSelected = ddlSelected.split('&');
+           ddlSelectedValue = ddlSelected[1].replace('[', '').replace(']', '');
+       }
+       var strURL = '/Views/Metadata/MetadataWidget.aspx' + "?Name=" + Name.replace(/\&#39;/g, "%27") + "&Code=" + Code + "&Type=" + Type + "&ReqType=Metadata&ddlSelectedValue=" + ddlSelectedValue;
+       if (ReportID != null && ReportID != '' && ReportType != null && ReportType != '')
+            strURL += '&ReportID=' + ReportID + '&ReportType=' + ReportType;
+	   var sFeatures = 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=800,height=400,left=200,top=200';
+	   window.open(strURL, 'Metadata', sFeatures);
+    }
+
+    function loadLeastSquareNote() {
+        document.getElementById("divMetaData-rpt").innerHTML = "";
+        $("#divMetaData-rpt").attr('title', 'Metadata')
+        var btnCancel = document.getElementById('hdnCancel').value;
+        var lsqrNote = document.getElementById('hdnLsqrNote').value;
+        var dialogbtns = {};
+        document.getElementById("divMetaData-rpt").innerHTML = lsqrNote;
+        dialogbtns[btnCancel] = function () {
+            $(this).dialog("close");
+        }
+
+        $("#divMetaData-rpt").dialog({ minWidth: 300, modal: true, close: function (event, ui) { $(this).dialog("destroy"); document.getElementById("divMetaData-rpt").innerHTML = ""; }, buttons: dialogbtns });
+        $("#divMetaData-rpt").dialog("open");
+    }
+
+    function loadFootNotesWidget(Code, MRVYearValue) { //Atsushi 11/30/2011 - to display footnote popup from data cell => just changed the function name to make it consistent with the function for metadata
+        var ReportID = $("#hdnReportID").val();
+        var ReportType = $("#hdnReportType").val();
+        var strURL = '/Views/Metadata/MetadataWidget.aspx' + '?Code=' + Code + '&ReqType=Footnote';
+        if (ReportID != null && ReportID != '' && ReportType != null && ReportType != '')
+            strURL += '&ReportID=' + ReportID + '&ReportType=' + ReportType;
+        if (MRVYearValue != '')
+            strURL += '&MRVYearValue=' + MRVYearValue;
+	    var sFeatures = "toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=800,height=200,left=200,top=200";
+	    window.open(strURL, "Footnote", sFeatures);
+
+      }
+
+      //Deepak Nov 21 -332 - Begin
+      function Shared(strURL) {
+          
+          //nov22 deepak added properties for popup
+          var params = 'width=' + screen.width;
+          params += ', height=' + screen.height;
+          params += ', top=0, left=0';
+          params += ', directories=no';
+          params += ', location=yes';
+          params += ', menubar=yes';
+          params += ', resizable=yes';
+          params += ', scrollbars=yes';
+          params += ', status=yes';
+          params += ', toolbar=yes';
+          window.open(strURL, '', params);
+          //window.open(strURL, '', "status=1, width='" + screen.width - 5 + "', height='" + screen.height - 5);
+      }
+      //Deepak Nov 21 -332 - End
+
+      function gridRenderingSettings() {
+
+          $(".dxgvTable_GridDefaultTheme tr:first-child").show();
+
+
+              $(".dxgvFCSD").scrollLeft($(".dxgvFCSD div").width());
+
+       
+
+      }
+
+</script>
+
+<script type="text/javascript">
+
+    $(function () {
+        setReportColumnWidth();
+        doCustomizations('REPORT_PREVIEW_grdTablePopupView');
+        resetTable();
+    });
+
+    function setReportColumnWidth() {
+        var totwidth = getWidgetWidth();
+        var iRowHeaderColPercent = (totwidth * 35 / 100);
+        var widthhdrmin = $('#hdnRowHdrMinMax').val().split('~')[0];
+        var widthhdrmax = $('#hdnRowHdrMinMax').val().split('~')[1];
+        var iRowHeaderWidth = (iRowHeaderColPercent < widthhdrmin ? widthhdrmin : (iRowHeaderColPercent > widthhdrmax ? widthhdrmax : iRowHeaderColPercent));
+        $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable td:eq(0)').width(iRowHeaderWidth);
+        if ($('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable').length > 0)
+            $('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable td:eq(0)').width(iRowHeaderWidth);
+    }
+
+    function resetTable() {
+        setTimeout(function () {
+
+            //var rootTable = grid.GetRootTable();
+            //var scrollDiv = grid.getScrollableControl();
+            var w = getContentWidth(); //only 2 padding for table
+            var h = getContentHeight();
+            //if (document.getElementById("REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv") != null) h -= (document.getElementById("REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv").offsetHeight);
+            if (document.getElementById("REPORT_PREVIEW_grdTablePopupView_DXPagerBottom") != null) h -= ((document.getElementById("REPORT_PREVIEW_grdTablePopupView_DXPagerBottom").offsetHeight) + 5);
+
+            //grid.SetWidth(w);
+            grid.SetHeight(h);
+            
+            $('#REPORT_PREVIEW_grdTablePopupView').width(w);
+            $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent().width(w);
+
+            var w = $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent().width() - 18;
+            $('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable').parent().width(w).parent().width(w);
+            $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').width(w);
+
+            var noverticalscroll = $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent()[0].scrollHeight == $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent()[0].clientHeight;
+            var headerpadding = 0;
+            if (noverticalscroll)
+            {
+                $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent().css('overflow-y','hidden');
+                if ($('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').length>0) $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').width(w + 18);
+            }
+            else
+            {
+                headerpadding = -18;
+            }
+            if ($('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable').length>0) $('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable').parent().width($('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent().width()+headerpadding);
+
+            if ($('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').length>0)
+            {
+                var nohorizontalscroll = $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv')[0].scrollWidth == $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv')[0].clientWidth;
+                if (nohorizontalscroll)
+                {
+                    $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').css('overflow-x','hidden');
+                }
+                else
+                {
+                    $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').css('overflow-x','scroll');
+                }
+            }
+        }, 50);
+    }
+
+    $(window).resize(function () { //Recall Freeze Header Function on Window Resize 
+        if ($('#widgetpreviewcontent').html() != '') resetTable();
+    });
+
+    function SynhronizeMyGridHeight() {
+        resetTable();
+    }
+</script>
+
+    <script type="text/javascript" language="javascript" src="/views/scripts/scriptinternaltable.js"></script>
+
+    <style id="customstyles" type="text/css">
+    .custom-cell-selection
+    {
+        color: black !important;
+        background-color: #E6E6E6 !important;
+    }
+    </style>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('REPORT_PREVIEW$ScriptManager1', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+<table class="widget-maintable" style="width: 100%" cellpadding="0" cellspacing="0">
+    <tbody><tr id="widget-table-dropdowns" class="widget-maintable-row"><td class="widget-maintable-cell">
+        <div id="REPORT_PREVIEW_divdropdown" class="rtldirection">
+        <table border="0" class="table_ddpage">
+	<tbody><tr>
+		<td class="table_ddpage"><select name="REPORT_PREVIEW$cmbWidgetPage_1" onchange="pageDropdownSelected();setTimeout('__doPostBack(\'REPORT_PREVIEW$cmbWidgetPage_1\',\'\')', 0)" id="REPORT_PREVIEW_cmbWidgetPage_1" selectctlname="ddp-Stat_Ctry_Ext" style="width: 220px; display: none;">
+			<option selected="selected" value="[Stat_Ctry_Ext].[List].&amp;[TUN]">Tunisia</option>
+
+		</select><div class="chosen-container chosen-container-single" style="width: auto;" title="" id="REPORT_PREVIEW_cmbWidgetPage_1_chosen"><a class="chosen-single" tabindex="-1"><span>Tunisia</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div><a id="REPORT_PREVIEW_hplPageMetadata1" title="Click here to view metadata" class="page-meta-icon" onclick="loadMetaDataWidget('Tunisia','TUN','C')"><span><span title="Click here to view metadata" class="metaDataIcon sprite icon-info"></span></span></a></td>
+	</tr>
+</tbody></table>
+
+        </div>
+    </td></tr>
+    <tr id="widget-table-header" class="widget-maintable-row"><td class="widget-maintable-cell">
+    </td></tr>
+    <tr id="widget-table-content" class="widget-maintable-row"><td class="widget-maintable-cell" style="border: 0px !important; direction:ltr">
+        <script id="dxis_182217727" src="/DXR.axd?r=1_11,1_12,1_252,1_23,1_64,1_13,1_14,1_16,1_19,1_213,1_224,1_225,1_212,1_214,1_222,1_223,1_211,1_227,1_236,1_238,1_239,1_226,1_231,1_233,1_215,1_228,1_230,1_234,1_240,1_183,1_184-ZiHLr" type="text/javascript"></script><table class="dxgvControl_GridDefaultTheme dxgv" cellspacing="0" cellpadding="0" dir="ltr" id="REPORT_PREVIEW_grdTablePopupView" style="width: 100%; border-collapse: separate;">
+	<tbody><tr>
+		<td><div class="dxgvHSDC" style="width: 1250px; padding-right: 0px;">
+			<div style="overflow: hidden; width: 1280px;">
+				<table id="REPORT_PREVIEW_grdTablePopupView_DXHeaderTable" class="dxgvTable_GridDefaultTheme dxgvHHEC" cellspacing="0" cellpadding="0" oncontextmenu="return ASPx.GVContextMenu('REPORT_PREVIEW_grdTablePopupView',event);" style="width:100%;border-collapse:collapse;empty-cells:show;table-layout:fixed;overflow:hidden;text-overflow:ellipsis;">
+					<tbody><tr class="dxgvArm" style="height: 0px; padding: 0px 2px;">
+						<td style="width: 300px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="height: 0px; padding: 0px 2px;"></td>
+					</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXHeadersRow0" style="height: auto;">
+						<td id="REPORT_PREVIEW_grdTablePopupView_col0" class="dxgvHeader_GridDefaultTheme" style="font-size: 7pt; font-weight: normal; font-style: italic; text-align: left; border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader0" style="font-size: 7pt; font-weight: normal; font-style: italic; text-align: left; height: auto;"><span customid="D1"> </span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col2" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader2" class="dx-wrap" style="height: auto;"><span customid="C1">1975</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col3" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader3" class="dx-wrap" style="height: auto;"><span customid="C2">1976</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col4" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader4" class="dx-wrap" style="height: auto;"><span customid="C3">1977</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col5" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader5" class="dx-wrap" style="height: auto;"><span customid="C4">1978</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col6" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader6" class="dx-wrap" style="height: auto;"><span customid="C5">1979</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col7" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader7" class="dx-wrap" style="height: auto;"><span customid="C6">1980</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col8" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader8" class="dx-wrap" style="height: auto;"><span customid="C7">1981</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col9" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader9" class="dx-wrap" style="height: auto;"><span customid="C8">1982</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col10" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader10" class="dx-wrap" style="height: auto;"><span customid="C9">1983</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col11" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader11" class="dx-wrap" style="height: auto;"><span customid="C10">1984</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col12" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader12" class="dx-wrap" style="height: auto;"><span customid="C11">1985</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col13" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader13" class="dx-wrap" style="height: auto;"><span customid="C12">1986</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col14" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader14" class="dx-wrap" style="height: auto;"><span customid="C13">1987</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col15" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader15" class="dx-wrap" style="height: auto;"><span customid="C14">1988</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col16" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader16" class="dx-wrap" style="height: auto;"><span customid="C15">1989</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col17" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader17" class="dx-wrap" style="height: auto;"><span customid="C16">1990</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col18" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader18" class="dx-wrap" style="height: auto;"><span customid="C17">1991</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col19" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader19" class="dx-wrap" style="height: auto;"><span customid="C18">1992</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col20" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader20" class="dx-wrap" style="height: auto;"><span customid="C19">1993</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col21" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader21" class="dx-wrap" style="height: auto;"><span customid="C20">1994</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col22" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader22" class="dx-wrap" style="height: auto;"><span customid="C21">1995</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col23" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader23" class="dx-wrap" style="height: auto;"><span customid="C22">1996</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col24" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader24" class="dx-wrap" style="height: auto;"><span customid="C23">1997</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col25" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader25" class="dx-wrap" style="height: auto;"><span customid="C24">1998</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col26" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader26" class="dx-wrap" style="height: auto;"><span customid="C25">1999</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col27" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader27" class="dx-wrap" style="height: auto;"><span customid="C26">2000</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col28" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader28" class="dx-wrap" style="height: auto;"><span customid="C27">2001</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col29" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader29" class="dx-wrap" style="height: auto;"><span customid="C28">2002</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col30" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader30" class="dx-wrap" style="height: auto;"><span customid="C29">2003</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col31" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader31" class="dx-wrap" style="height: auto;"><span customid="C30">2004</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col32" class="dxgvHeader_GridDefaultTheme even dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader32" class="dx-wrap" style="height: auto;"><span customid="C31">2005</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col33" class="dxgvHeader_GridDefaultTheme odd dx-wrap dxgvHFC" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader33" class="dx-wrap" style="height: auto;"><span customid="C32">2006</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col34" class="dxgvHeader_GridDefaultTheme even dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader34" class="dx-wrap" style="height: auto;"><span customid="C33">2007</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col35" class="dxgvHeader_GridDefaultTheme odd dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader35" class="dx-wrap" style="height: auto;"><span customid="C34">2008</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col36" class="dxgvHeader_GridDefaultTheme even dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader36" class="dx-wrap" style="height: auto;"><span customid="C35">2009</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col37" class="dxgvHeader_GridDefaultTheme odd dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader37" class="dx-wrap" style="height: auto;"><span customid="C36">2010</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col38" class="dxgvHeader_GridDefaultTheme even dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader38" class="dx-wrap" style="height: auto;"><span customid="C37">2011</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col39" class="dxgvHeader_GridDefaultTheme odd dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader39" class="dx-wrap" style="height: auto;"><span customid="C38">2012</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col40" class="dxgvHeader_GridDefaultTheme even dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader40" class="dx-wrap" style="height: auto;"><span customid="C39">2013</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col41" class="dxgvHeader_GridDefaultTheme odd dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader41" class="dx-wrap" style="height: auto;"><span customid="C40">2014</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col42" class="dxgvPHEC dxgvHeader_GridDefaultTheme even dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader42" class="dx-wrap" style="height: auto;"><span customid="C41">2015</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td class="dxgvHEC" style="height: auto;"></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div><div class="dxgvCSD" style="height: 606px; overflow: hidden; width: 1280px;">
+			<table id="REPORT_PREVIEW_grdTablePopupView_DXMainTable" class="dxgvTable_GridDefaultTheme dxgvRBB dxgvHHEC" cellspacing="0" cellpadding="0" oncontextmenu="return ASPx.GVContextMenu('REPORT_PREVIEW_grdTablePopupView',event);" style="width:100%;border-collapse:collapse;empty-cells:show;table-layout:fixed;overflow:hidden;text-overflow:ellipsis;">
+				<tbody><tr class="dxgvArm" style="height: 0px; padding: 0px 2px;">
+					<td style="width: 300px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;" class="dxgvHFC"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="height: 0px; padding: 0px 2px;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow0" class="dxgvDataRow_GridDefaultTheme dxgvLVR" customid="R1" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R1" onclick="loadMetaDataWidget('Government expenditure on primary education as % of GDP (%)','UIS.XGDP.1.FSGOV','S')" style="height: auto;">Government expenditure on primary education as % of GDP (%)</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C1" style="height: auto;">..</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C2" style="height: auto;">..</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C3" style="height: auto;">..</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C4" style="height: auto;">..</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C5" style="height: auto;">..</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C6" style="height: auto;">2.0</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C7" style="height: auto;">1.9</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C8" style="height: auto;">2.1</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C9" style="height: auto;">2.1</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C10" style="height: auto;">2.2</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C11" style="height: auto;">2.3</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C12" style="height: auto;">2.5</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C13" style="height: auto;">..</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C14" style="height: auto;">..</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C15" style="height: auto;">..</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C16" style="height: auto;">..</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C17" style="height: auto;">..</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C18" style="height: auto;">..</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C19" style="height: auto;">2.7</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C20" style="height: auto;">2.8</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C21" style="height: auto;">..</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C22" style="height: auto;">2.5</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C23" style="height: auto;">2.3</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C24" style="height: auto;">..</td><td class="even curr dir-en dxgv dxgvHFC" align="right" customid="R1C25" style="height: auto;">2.2</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C26" style="height: auto;">2.1</td><td title="Click here to view metadata" class="even curr dir-en dxgv mv dxgvHFC" align="right" customid="R1C27" onclick="loadFootNotesWidget('TUN~UIS.XGDP.1.FSGOV~YR2001', '')" style="height: auto;">2.1</td><td title="Click here to view metadata" class="odd curr dir-en dxgv mv dxgvHFC" align="right" customid="R1C28" onclick="loadFootNotesWidget('TUN~UIS.XGDP.1.FSGOV~YR2002', '')" style="height: auto;">1.9</td><td title="Click here to view metadata" class="even curr dir-en dxgv mv dxgvHFC" align="right" customid="R1C29" onclick="loadFootNotesWidget('TUN~UIS.XGDP.1.FSGOV~YR2003', '')" style="height: auto;">2.4</td><td title="Click here to view metadata" class="odd curr dir-en dxgv mv dxgvHFC" align="right" customid="R1C30" onclick="loadFootNotesWidget('TUN~UIS.XGDP.1.FSGOV~YR2004', '')" style="height: auto;">2.4</td><td title="Click here to view metadata" class="even curr dir-en dxgv mv dxgvHFC" align="right" customid="R1C31" onclick="loadFootNotesWidget('TUN~UIS.XGDP.1.FSGOV~YR2005', '')" style="height: auto;">2.2</td><td class="odd curr dir-en dxgv dxgvHFC" align="right" customid="R1C32" style="height: auto;">..</td><td class="even curr dir-en dxgv" align="right" customid="R1C33" style="height: auto;">..</td><td class="odd curr dir-en dxgv" align="right" customid="R1C34" style="height: auto;">1.7</td><td class="even curr dir-en dxgv" align="right" customid="R1C35" style="height: auto;">..</td><td class="odd curr dir-en dxgv" align="right" customid="R1C36" style="height: auto;">..</td><td class="even curr dir-en dxgv" align="right" customid="R1C37" style="height: auto;">..</td><td class="odd curr dir-en dxgv" align="right" customid="R1C38" style="height: auto;">..</td><td class="even curr dir-en dxgv" align="right" customid="R1C39" style="height: auto;">..</td><td class="odd curr dir-en dxgv" align="right" customid="R1C40" style="height: auto;">..</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R1C41" style="height: auto;">..</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr>
+			</tbody></table>
+		</div><div id="REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv" class="dxgvFCSD" style="height: 1px; width: 1280px; overflow: scroll hidden;">
+			<div id="REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsContentDiv" style="height: 1px; width: 4400px;">
+
+			</div>
+		</div><table id="REPORT_PREVIEW_grdTablePopupView_LP" class="dxgvLoadingPanel_GridDefaultTheme" cellspacing="0" cellpadding="0" style="border-collapse:collapse;left:0px;top:0px;z-index:30000;display:none;">
+			<tbody><tr>
+				<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_89-ZiHLr" alt="" align="middle"></td><td class="dx" style="padding-left:0px;"><span id="REPORT_PREVIEW_grdTablePopupView_TL">Loading...</span></td>
+			</tr>
+		</tbody></table><div id="REPORT_PREVIEW_grdTablePopupView_LD" class="dxgvLoadingDiv_GridDefaultTheme" style="display:none;z-index:29999;position:absolute;">
+
+		</div><img id="REPORT_PREVIEW_grdTablePopupView_IADD" class="dxGridView_gvDragAndDropArrowDown_GridDefaultTheme" src="/DXR.axd?r=1_89-ZiHLr" alt="Down Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="REPORT_PREVIEW_grdTablePopupView_IADU" class="dxGridView_gvDragAndDropArrowUp_GridDefaultTheme" src="/DXR.axd?r=1_89-ZiHLr" alt="Up Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="REPORT_PREVIEW_grdTablePopupView_IADL" class="dxGridView_gvDragAndDropArrowLeft_GridDefaultTheme" src="/DXR.axd?r=1_89-ZiHLr" alt="Left Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="REPORT_PREVIEW_grdTablePopupView_IADR" class="dxGridView_gvDragAndDropArrowRight_GridDefaultTheme" src="/DXR.axd?r=1_89-ZiHLr" alt="Right Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="REPORT_PREVIEW_grdTablePopupView_IDHF" class="dxGridView_gvDragAndDropHideColumn_GridDefaultTheme" src="/DXR.axd?r=1_89-ZiHLr" alt="Hide" style="position:absolute;visibility:hidden;top:-100px;"></td>
+	</tr>
+</tbody></table><script id="dxss_808086141" type="text/javascript" data-executed="true">
+<!--
+ASPx.createControl(ASPxClientGridView,'REPORT_PREVIEW_grdTablePopupView','grid',{'callBack':function(arg) { WebForm_DoCallback('REPORT_PREVIEW$grdTablePopupView',arg,ASPx.Callback,'REPORT_PREVIEW_grdTablePopupView',ASPx.CallbackError,true); },'disableSwipeGestures':true,'uniqueID':'REPORT_PREVIEW$grdTablePopupView','stateObject':{'keys':['UIS.XGDP.1.FSGOV'],'resizingState':'','callbackState':'jqb38cwRW2av7IKjgzz1E+axi5uNbQsho/dOsmeObyA7MoGls4NVjz4Uh4+mxvYdZ54gdbt1PkDytrBR3HogYK4Q1d4XEoXMWNkN4n8/nTq29LW387Z1m2LsK38TXkjZujZ7pDtv8wotPcMI2PC1b4vE7aKpuhOfDlV40R34ahMc0FXx0N1APw5Zbjyy1jDWoF+nAr93gKHLlbKxuvMXybots0AlCEw2/O3WqyphB2YDJtabYCDbI6p7IKD1RGOdWImPHUBMgxsvJB+hMiVupHRiIYaH+7Xmg7nIVSBFcpUkB1HVfTiFU3rmV+g0Rp7cNHEhijHwlbL7rlAXP4Epdzej5+eTiGX3Mz9y/lOcPIUszUFx3PkszKx1jSSOSl0iKymVWjhEHaLziIoUA2imW+eEiMGtC7+tehmX73ZqESOajXq2m5wgb4zdznHKuKKCQYszya/TVI1VwBsQYazHHX4R6Z8yk4cEmu09c2SfjGNGrmdwR79TmKYsyjrWOnLjxTYE4AOW7zW39zM106d3N5x8s++xcYP6CmWs/JCEfBUVA98r38VBeRXQSAaovzo1Wnyj+WTG+KEGwUhMiou2vi+l18AZZvSqsIcxu8ermPMjTsaCEjIbeYGN3PEXfaXJKgICYH005BMmLig8LzF7aqs997fiDIE2W0B5vYobVMRsJhydvoK3ISRrtALW8ZCVuD1TXZis7D3fcnB0hcaeNYh2NB7NBcezgwn+n8TR8ajjHOLjXpm5oVXiTvEgOmGbNDjFlzc0c+cCaWYtrHGE07U0DMMUWrgtGv95FQ7J7Jj2MNc0wBh6wJZybEhCO3nCHJ9KkoYYzaZ6hTmniN5INYUOXtbqAR66BaNmoKzIsDThKkH4EkR1Om7WZisV6TJ9a6xX1mYM24PQYG0yhPa6X6zL4aCiGKYXncvcIbiyf11uGS8hTrWbOS7KrAXKgX6nO3J2FFd8PMU4SNaPxOchqM6FEL9OH2KFVZ+wg8UiXq3LIbH+9ivAg/E/KygXqwYI5Cc4c69/JPfnTZ6H7qZX0bxRbteMvnNX8e5AqZGSM37U0owB+y/YQokfsDUvrk2pluD0Aj22IOz6eYpB4gDoBLXoMwVbWhLZMibDa6O6ILQnG1Lx2NCmpepsptG+wTkNEUKcOC4+GyfR3OsNYzI6hBbc0yfenUgxhDeCgxak9p5LhcQi6vsMFY2/HwzFndLrqf1KMsCcEsswUNDYiNcB0kyikClUpptrQyX7QAc5WE+zKjeA9Hq3Ky4P+AYQti8armgx6/VgVXM2h6qKsp65DzeakCX80sooNu8NRoMvDtm8pIPG0gP2e+xPZuPzXxBOLcOd4fnExBhWAUzln6MXyCa+iL1c+hMAfV/0dNup0f4cGqUJaoHkUF2rmIudhsZd8SnuoSf/jw75REfv3A/BuYtR6LZN2yny0H3GQ/T2Yhe9dvajWw8nonigznsX22CCHkKdjDJlrSslj+ETVAj06Km7ozKao8tEUUZdcEovxVD5VpIWz7wSVMTMq76JtAZoJtN2wt9Tkxn57cmoEroWWdejC2GYlbjsCN6AzHtjPBAwnOEmhz/sXMDVbXWOGMzIGIj3C1npM7OixKc47pt8QvngcpnstIEThvQzCXbRGzdRiWl/Q6lXMmMDLvrAp7dNuJaO1TPRrf1lmGDOhTJeos4aQ0/R8ouqX7gxNr8qHWvIpCbOk9fsx1eQcsKYqW7SFaF6NseC1bQx1tr6ppns39AGakB1UDdaKn299HA/qElEq1yn/N6oPj1+AIk78DLb1hWmF3h3Ax9DaJMBN/vjNU4ryzlgXw2Av1z2tnWuPCCQjZd3Gjm3WpBSslYzebPyZJm82YLgEiJ7tGG+HUUwUIUTCK2qOdxee0obl6uFItSyhltYZGVTGnWCU6a9tEe958+51HSm/zIPI8m1KN19WaSl6QEzhVeNEw0RaznNo2Rw/3OVgbi+rk/dthvIw90GhKp+Mhw8iRHwY4fNStHeEjrqJgwyhqqZq4VTy08yLAfa+wEaWgqC+50iyz6hMBX8eGzRemqxQgwLvfsXaZvxUP++RvjrufMoBcOEXIxYhCJh+Bi1NKGvOaNqUN/62pyM99XEk9J//gzralUxr7F5utnSAEK3qITS7qGKPEJUN8HQYCzYfXAb25W4KE5bF1TWhGO9tJNmoBX9RpZarmL2d05yULoLopBG85rASr0npnbg/lE/e1/MT2Qt5rRhxrTtzWGl358UtsPY0PhoC3UcUnm9DZcjgJNcxwKGYe+imLvMWAoxTnP87E+LIgg1skf/Ss2eaIP9T/AaE6QASC7wIErtTViUTgbeCKi0YaLcJQtmuhU1jP6/PtaeEtBU6J00Ap2lS1hqV6mySqocdibpL7z1sBnspni7iWMKGugH/XyINHS6Ad6ZxOBwcAWkkfHhX5A2Zv3Y7r16g38JX8gRM12ns9uJrdxQUd3wZu8YVgqrp0MMWVZnOEN+jJeiRgwTeeHutcsWk4EzRfoh2+3vYn44EiHE7OzpE8P3JZWuECAqO7LHBVvOfX8rKN06zwabQD/imgzR5rbsWNsHFIiOV33VTZAZdPHuYn/cq7cTn9lJK6dw+mboVEr5jKHEPXwqfnkwx9FsI6oEFAgYkERiUFv58dpUQsXqs8zNhwcqNfDB8pVHIo51IGUUoTntPySnOPY+spuaFe8IJoCFlXT2Qcz5VqRCyi5qKtLlrxc8kzBM67hFLKCcxY705UNC9L1eLNIfcBY6pg7dzXOWlVf2mj4ykHUqTn9qOyDljB1+5FcUjoSaAuY/BiLVZzwCFxttNMkhcGmLMyq7u3vk/HATaTZDH3kfkGFhq+weY3+Scc+M5Tem9zyBdR225ClpKWAlafXAcb+1SOjXygx9sRgLK93j7/2WO6O1jc4mlbEPemDN4e/NS1/E2wI+RmffxxHMsl3gCVlNnHbzKsEVXkHOj5cOcn0rsYGzIcC5Fg33ihQRRrpWRt3IH8S7lFHXHvw9UgX+qo4qt+HM7ADYyOIELDPQji0WaxxWrQa80304jQF7vGJi322nxPgCRUj+B1tx78edfhAHZq5SFocEI+ckm4nQtFHS2H3pZ6XeQnj7zRvWWBwcqBcNJt6z+g9nW2ss5FZ0q1NmdBNfcmwAwVeiVSo2BAhV42bfMzu9hRkK6SrEEf6VD5reOQMzflpOpyZSK0iCZmTrjslJ5D64SB0tmw==','groupLevelState':{},'scrollState':null,'selection':''},'callBacksEnabled':true,'pageRowCount':1,'pageRowSize':50,'pageIndex':0,'pageCount':1,'selectedWithoutPageRowCount':0,'visibleStartIndex':0,'focusedRowIndex':-1,'allowFocusedRow':false,'allowSelectByItemClick':false,'allowSelectSingleRowOnly':false,'horzScroll':1,'vertScroll':1,'callbackOnFocusedRowChanged':false,'callbackOnSelectionChanged':false,'editState':0,'editItemVisibleIndex':-1,'searchPanelFilter':'','allowDelete':true,'allowEdit':true,'allowInsert':true,'columnProp':[[0,,,'STATS Series Ext DIM',,,,,0,,,,1],[1,0,,'STATS Series Ext DIMCode',,,,,,,,,1,,,,1],[2,,,'1975',,,,,1],[3,,,'1976',,,,,2],[4,,,'1977',,,,,3],[5,,,'1978',,,,,4],[6,,,'1979',,,,,5],[7,,,'1980',,,,,6],[8,,,'1981',,,,,7],[9,,,'1982',,,,,8],[10,,,'1983',,,,,9],[11,,,'1984',,,,,10],[12,,,'1985',,,,,11],[13,,,'1986',,,,,12],[14,,,'1987',,,,,13],[15,,,'1988',,,,,14],[16,,,'1989',,,,,15],[17,,,'1990',,,,,16],[18,,,'1991',,,,,17],[19,,,'1992',,,,,18],[20,,,'1993',,,,,19],[21,,,'1994',,,,,20],[22,,,'1995',,,,,21],[23,,,'1996',,,,,22],[24,,,'1997',,,,,23],[25,,,'1998',,,,,24],[26,,,'1999',,,,,25],[27,,,'2000',,,,,26],[28,,,'2001',,,,,27],[29,,,'2002',,,,,28],[30,,,'2003',,,,,29],[31,,,'2004',,,,,30],[32,,,'2005',,,,,31],[33,,,'2006',,,,,32],[34,,,'2007',,,,,33],[35,,,'2008',,,,,34],[36,,,'2009',,,,,35],[37,,,'2010',,,,,36],[38,,,'2011',,,,,37],[39,,,'2012',,,,,38],[40,,,'2013',,,,,39],[41,,,'2014',,,,,40],[42,,,'2015',,,,,41]],'shouldScrollToNewRow':false,'editMode':2,'indentColumnCount':0,'allowChangeColumnHierarchy':false,'allowMultiColumnAutoFilter':false,'columnResizeMode':1,'fixedColumnCount':1,'showGroupButton':false},{'Init':function(s, e) { 
+        gridRenderingSettings();
+            SynhronizeMyGridHeight();
+            doSetRowHeight('REPORT_PREVIEW_grdTablePopupView'); 
+                },'EndCallback':function(s, e) { 
+                setReportColumnWidth();
+                SynhronizeMyGridHeight();
+                doCustomizations('REPORT_PREVIEW_grdTablePopupView');
+            },'ColumnSorting':function(s, e) { 
+                	if (event.srcElement.tagName.toLowerCase() == 'img') e.cancel = true;
+                    return true;
+                },'ColumnResized':function(s, e) { 
+                SynhronizeMyGridHeight();
+            }});
+ASPxClientGridBase.PostponeInitialize('REPORT_PREVIEW_grdTablePopupView',({'commandButtonIDs':[],'styleInfo':{'ei':'<tr class="dxgvEditingErrorRow_GridDefaultTheme">\r\n\t<td class="dxgvPHEC dxgv" data-colSpan="42"></td><td class="dxgvHEC"></td>\r\n</tr>','fc':{'className':'dxgvFocusedCell_GridDefaultTheme'},'bec':{'className':'dxgvBatchEditCell_GridDefaultTheme dxgv'},'bemc':{'className':'dxgvBatchEditModifiedCell_GridDefaultTheme dxgv'},'bemergmc':{'className':'dxgvBatchEditModifiedCell_GridDefaultTheme dxgvBatchEditCell_GridDefaultTheme dxgv'},'bedi':{'className':'dxgvBatchEditDeletedItem_GridDefaultTheme dxgv'},'sel':{'className':'dxgvSelectedRow_GridDefaultTheme'},'fi':{'className':'dxgvFocusedRow_GridDefaultTheme'},'fgi':{'className':'dxgvFocusedGroupRow_GridDefaultTheme'},'beni':{'className':'dxgvBatchEditNewItem_GridDefaultTheme dxgv'}}}));
+
+//-->
+</script>
+    </td></tr>
+    <tr id="widget-table-footer" class="widget-maintable-row"><td class="widget-maintable-cell">
+        
+
+        <br>
+        
+
+    </td></tr>
+    <tr id="widget-table-source" class="widget-maintable-row"><td class="widget-maintable-cell">
+    <span id="REPORT_PREVIEW_sReportSource" class="reportSourceLink">Created from:</span>
+        <a id="REPORT_PREVIEW_hplDatabaseName" class="reportSourceLink-widget" href="javascript:Shared('/Tunisia/id/b3585a5f');">World Bank, Education Statistics - All Indicators</a>
+        <br>
+
+          
+
+    </td></tr>
+    <tr id="widget-table-disclaimer" class="widget-maintable-row"><td class="widget-maintable-cell-disclaimer">
+       <b id="REPORT_PREVIEW_bDisclaimer" class="disclaimer-widget"></b>
+        <span id="REPORT_PREVIEW_sDisclaimerMsg" class="disclaimer-widget"> </span>
+    </td></tr>
+</tbody></table>
+<input name="REPORT_PREVIEW$hdnLsqrNote" type="hidden" id="hdnLsqrNote" value="Growth rate calculated for less than the full period.">
+
+    <input name="REPORT_PREVIEW$hdnTableFormatStyles" type="hidden" id="hdnTableFormatStyles">
+    <input name="REPORT_PREVIEW$hdnTableFormatRows" type="hidden" id="hdnTableFormatRows">
+    <input name="REPORT_PREVIEW$hdnTotalRows" type="hidden" id="hdnTotalRows" value="1">
+    <input name="REPORT_PREVIEW$hdnRowHdrMinMax" type="hidden" id="hdnRowHdrMinMax" value="100~300">
+
+ <div id="divMetaData-rpt">
+    
+</div>
+
+
+    
+    
+
+    </div>
+    </div>
+    <div id="file-loading-widget-preview" class="loading">
+        <img src="/images/ajax-loader.gif" width="32" height="32" alt=""><br><strong>Loading...</strong>
+    </div>
+    <iframe id="dl-iframe-widget-preview" style="display:none;"></iframe>
+    <iframe id="dl-iframe-widget-preview-omni" style="display:none;"></iframe>
+    </div>
+    <input name="hdnReportID" type="hidden" id="hdnReportID" value="156261">
+    <input name="hdnReportType" type="hidden" id="hdnReportType" value="Table">
+    <input name="hdnLanguage" type="hidden" id="hdnLanguage" value="en">
+    <input id="hdnPublishedReport" type="hidden" value="n">
+    
+    
+    <input type="hidden" name="hdnCubeDisplayName" id="hdnCubeDisplayName" value="Education Statistics - All Indicators">
+    <input type="hidden" name="hdnReportName" id="hdnReportName" value="Tunisia">
+    <input type="hidden" name="hdnIsWidget" id="hdnIsWidget" value="true">
+    <input type="hidden" name="hdnReportDisplayName" id="hdnReportDisplayName" value="Tunisia">
+    <input type="hidden" name="hdnReportwithCustomTheme" id="hdnReportwithCustomTheme" value="0">   
+
+    <input name="hdnCubeId" type="hidden" id="hdnCubeId">
+    <input name="hdnDownload" type="hidden" id="hdnDownload" value="Download">
+    <input name="hdnCancel" type="hidden" id="hdnCancel" value="Cancel">
+    <input name="hdnLoading" type="hidden" id="hdnLoading" value="Loading...">
+        <!-- Shaheer Oct 31st 2012 -->
+    <input type="hidden" name="hdnZoomLevel" id="hdnZoomLevel">
+    <input type="hidden" name="hdnLatitude" id="hdnLatitude">
+    <input type="hidden" name="hdnLongitude" id="hdnLongitude">
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A65B525F">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABgAxzhVgvTrwoZNXz22+rV8w3uGie5SxYylH3rIFXwD48IDiUeE9p2gumpAL7C+JxiEnCUhsHnnrlZGzrH9ezQpPFd4GSihSIZ4ALiHBaSEwJJ++OVtCb7+HZU/n9e79hUtuZbyMBV6sXnkyxyA8EUyf+y1yafd2BtBcQio3ltF9Hr4S2WsXIFF1efO1sZ3mL99H4bXMTJzeoZMbUh4MfBAPJ7TrLn3ydMlAnvKcRDiYm8xiNfd/uBtyPYWIhyFYchzLrx+nitzfEDfwoleT7S88YZrQ5tKaabpp98XTGwF4yidwY26yBS0RAJ9RPunvfz+Tb8B0wNAg9hABGF37BHqAHyaWTmkpHyWafvkWdhmAAMyIdJaRkeIY2fYt1l9gdyLcniTQuUsVlSksVwb2kTu+pp5n5hF3bDA3rwYTkTt7wMs6+00mlTY9OPCRuZbbShrEDyfk4nIP4zVGF2L0tRR+h4INNyRloyYp+Aox2TmDBs7wF5larrPCuDt9nz+oXivL1hu8ZieP3RSyPM3H2p2ljFL9UaNywz2XntQNK4VoQ==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=_XN1TibxYXFEkyd-NIeA4E6EW-kG4ZyZ7q7cX9_cdDCoOivQktYvv7eO7KbxoHnpxkx2E8Oy9Z5hAqZwyzDDI774ZQA7C6BuFCgMY56--8M1&t=638562563416868089';
+WebForm_InitCallback();//]]>
+</script>
+<input type="hidden" name="DXScript" value="1_11,1_12,1_252,1_23,1_64,1_13,1_14,1_16,1_19,1_213,1_224,1_225,1_212,1_214,1_222,1_223,1_211,1_227,1_236,1_238,1_239,1_226,1_231,1_233,1_215,1_228,1_230,1_234,1_240,1_183,1_184"><input type="hidden" name="DXCss" value="1_68,1_210,1_209"></form>
+
+
+    <div style="display: none">
+        <form id="dl-metadata-form" action="">
+        <input id="meta-down-radio" type="radio" name="meta-down-radio" value="meta-all" checked="checked">
+        <input type="hidden" name="DXScript" value="1_11,1_12,1_252,1_23,1_64,1_13,1_14,1_16,1_19,1_213,1_224,1_225,1_212,1_214,1_222,1_223,1_211,1_227,1_236,1_238,1_239,1_226,1_231,1_233,1_215,1_228,1_230,1_234,1_240,1_183,1_184"><input type="hidden" name="DXCss" value="1_68,1_210,1_209"></form>
+    </div>
+
+    <script type="text/JavaScript">
+        /*_satellite.pageBottom();*/
+
+        function AnalyticsControlClick(clickdetails, params) {            
+            wbgData.page.sectionInfo.siteSection = 'databank/' + clickdetails;
+            wbgData.page.sectionInfo.subsectionP2 = params;
+
+            _satellite.track("dynamicdata");
+        }
+    </script>
+
+
+
+<script>_satellite["_runScript1"](function(event, target, Promise) {
+ // Check if the 'typeofUser' cookie exists
+ var typeofUserCookie = _satellite.cookie.get('typeofUser');
+
+ // If the cookie exists and has a value, set the user type from the cookie
+ if (typeofUserCookie) {
+   wbgData.typeofUser = typeofUserCookie;
+ } else {
+   //If the cookie doesn't exist, make an HTTP call to determine the user type
+   var xhr = new XMLHttpRequest();
+   xhr.open("GET", "https://ibrdtf.worldbank.org/portal/tfsearch", true);
+   
+   xhr.timeout =2000;
+   xhr.onreadystatechange = function() {
+     if (xhr.readyState === XMLHttpRequest.DONE) {
+       if (xhr.status === 200) {
+         var response = xhr.responseText;
+         _satellite.cookie.set('typeofUser', 'internal', {
+           expires: 730
+         });
+
+       } else if (xhr.status === 400) {
+         // Handle 400 response
+         _satellite.cookie.set('typeofUser', 'external', {
+           expires: 730
+         });
+         
+       } else {
+         // Handle other response statuses
+         _satellite.cookie.set('typeofUser', 'external', {
+           expires: 730
+         });
+
+       }
+     }
+   }; 
+
+   xhr.ontimeout = function() {
+     // Handle timeout
+   };
+
+   xhr.onerror = function() {
+     // Handle error
+   };
+
+   xhr.send();
+ }
+
+ // Function to get cookie value by name
+ function getCookie(name) {
+   var cookieName = _satellite.cookie.get('typeofUser');
+   var cookies = cookieName.split(';');
+   for (var i = 0; i < cookies.length; i++) {
+     var cookie = cookies[i].trim();
+     if (cookie.startsWith(name + '=')) {
+       return cookie.substring(name.length + 1);
+     }
+   }
+   return null;
+ }
+});</script><script>_satellite["_runScript2"](function(event, target, Promise) {
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+});</script><script>_satellite["_runScript3"](function(event, target, Promise) {
+if (typeof kWidget !== "undefined") {
+	kWidget.addReadyCallback(function (playerId) {
+	var kdp = document.getElementById(playerId);
+
+	//console.log("player "+kdp);
+	//console.log("Name "+kdp.evaluate('{mediaProxy.entry.name}'));
+	//console.log("Duration "+kdp.evaluate('{duration}'));
+	//console.log("Current Time "+kdp.evaluate('{video.player.currentTime}'));
+	/*
+	kdp.kBind('playerStateChange', function (event) {
+		console.log("event "+event);
+		kulturaPlayerHandler("playing", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});*/
+	kdp.kBind("playerPlayed", function (MediaPlayerState) {
+			kulturaPlayerHandler("playing", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("seek", function (MediaPlayerState) {
+			kulturaPlayerHandler("seeking", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("seeked", function (MediaPlayerState) {
+			kulturaPlayerHandler("seeked", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("playerPaused", function (MediaPlayerState) {
+			kulturaPlayerHandler("paused", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("playerPlayEnd", function (MediaPlayerState) {
+			kulturaPlayerHandler("ended", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+	});
+}
+
+function kulturaPlayerHandler(playerState,mediaName,videoDuration,videoCurrentTime){
+	var videoPlayer = "Kaltura";
+	var mediaOffset = videoCurrentTime>0?Math.floor(videoCurrentTime):0;
+	var mediaLength = Math.floor(videoDuration);
+
+	s.Media.playerName = videoPlayer;
+
+	//console.log("mediaOffset - "+mediaOffset);
+	//console.log("mediaLength - "+mediaLength);
+	//console.log("playerState - "+playerState);
+
+	if(playerState == "playing" && mediaLength == 0){
+	videoContentType = "live:kaltura video";
+	s.Media.trackSeconds = 60;
+	s.Media.open(mediaName, mediaLength, videoPlayer);
+	//s.Media.play(mediaName, mediaOffset);*/
+	}
+
+	if(playerState == "playing"){
+		if (mediaOffset == 0 && mediaLength > 0){
+			videoContentType = "replay:kaltura video";
+			s.Media.segmentByMilestones = true;
+			s.Media.trackMilestones = '25,50,75';
+			//console.log("milestone tracking set");
+			s.Media.open(mediaName, mediaLength, videoPlayer);
+			s.Media.play(mediaName, mediaOffset);
+			_satellite.getVar('FBPixelVideoReplay');
+      _satellite.getVar('TwitterPixelVideoReplay');
+      _satellite.getVar('GAdwordsTagVideoReplay');
+		}else{
+			s.Media.play(mediaName, mediaOffset);
+		}
+	}else if(playerState == "seeking"){
+		s.Media.stop(mediaName, mediaOffset);
+	}else if(playerState == "seeked"){
+		s.Media.play(mediaName, mediaOffset);
+	}else if(playerState == "paused"){
+		s.Media.stop(mediaName, mediaOffset);
+	}else if(playerState == "ended"){
+		s.Media.stop(mediaName, mediaOffset);
+		s.Media.close(mediaName);
+		mediaOffset = 0;
+	}
+}
+});</script><div class="tips-more-info"><div class="tip-inner tip-bg-image"></div><div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div></div><div class="tips-more-info"><div class="tip-inner tip-bg-image"></div><div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div></div><div class="tips-more-info"><div class="tip-inner tip-bg-image"></div><div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div></div><script>_satellite["_runScript4"](function(event, target, Promise) {
+var n=0;if("undefined"!=typeof JQuery)jQuery("iframe").each((function(){var e=jQuery(this).attr("src");e&&e.indexOf("youtube.com")>-1&&(e.indexOf("?")>-1?-1==e.indexOf("enablejsapi")&&(e+="&enablejsapi=1"):e+="?enablejsapi=1",jQuery(this).attr("src",e),jQuery(this).attr("id","ytplayer"+n),n++)}));else{var iFrames=document.getElementsByTagName("iframe");for(i=0;i<iFrames.length;i++){var src=iFrames[i].getAttribute("src");src&&src.indexOf("youtube.com")>-1&&(src.indexOf("?")>-1?-1==src.indexOf("enablejsapi")&&(src+="&enablejsapi=1"):src+="?enablejsapi=1",iFrames[i].setAttribute("src",src),iFrames[i].setAttribute("id","ytplayer"+n),n++)}}if(n>0){var tag=document.createElement("script");tag.src="https://www.youtube.com/iframe_api";var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(tag,firstScriptTag);var playerInfoList=new Array;if(document.getElementsByTagName("iframe"))for(i=0;i<document.getElementsByTagName("iframe").length;i++)document.getElementsByTagName("iframe")[i].id.indexOf("ytplayer")>-1&&playerInfoList.push(document.getElementsByTagName("iframe")[i]);var players=new Array;function onPlayerStateChange(e){var a="YouTube",t=Math.floor(e.target.getCurrentTime()),i=Math.floor(e.target.getDuration());console.log("event: "+e.data),console.log("YT.PlayerState.PLAYING: "+YT.PlayerState.PLAYING),console.log("YT.PlayerState.PAUSED: "+YT.PlayerState.PAUSED),console.log("mediaOffset: "+t),console.log("media length: "+i);var r=e.target.getVideoData().title;3==e.data&&0==t&&0==i&&(videoContentType="live:youtube video",s.Media.trackSeconds=60,s.Media.open(r,i,a),s.Media.play(r,t),_satellite.getVar("FBPixelVideoLive")),e.data==YT.PlayerState.PLAYING?0==t&&i>0?(videoContentType="replay:youtube video",s.Media.segmentByMilestones=!0,s.Media.trackMilestones="25,50,75",s.Media.open(r,i,a),s.Media.play(r,t),_satellite.getVar("FBPixelVideoReplay"),_satellite.getVar("TwitterPixelVideoReplay"),_satellite.getVar("GAdwordsTagVideoReplay")):s.Media.play(r,t):e.data==YT.PlayerState.PAUSED||e.data==YT.PlayerState.BUFFERING?s.Media.stop(r,t):e.data==YT.PlayerState.ENDED&&(s.Media.stop(r,t),s.Media.close(r),t=0)}window.playersaem=players,window.onYouTubeIframeAPIReady=function(){for(x=0;x<playerInfoList.length;x++)players[x]=new YT.Player(playerInfoList[x],{events:{onStateChange:onPlayerStateChange}})}}
+});</script><!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+<script type="text/javascript">
+(function(){var g=function(e,h,f,g){
+this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
+this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
+this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};
+this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g+ "&t=" + (new Date()).getTime();document.body&&document.body.appendChild(a)}};
+this.start=function(){var a=this;window.addEventListener?window.addEventListener("load",function(){a.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){a.go()})}};
+try{(new g(100,"r","QSI_S_ZN_ahoepSezTqpB2GV","https://znahoepseztqpb2gv-wbgwebvisitor.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_ahoepSezTqpB2GV")).start()}catch(i){}})();
+</script><div id="ZN_ahoepSezTqpB2GV"><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+<!--END WEBSITE FEEDBACK SNIPPET--><script>_satellite["_runScript5"](function(event, target, Promise) {
+var n=0;if("undefined"!=typeof JQuery)jQuery("iframe").each((function(){var e=jQuery(this).attr("src");e&&(e.indexOf("video.ibm.com")>-1||e.indexOf("ustream.tv")>-1)&&(jQuery(this).attr("src",e),jQuery(this).attr("id","UstreamIframe"+n),n++)}));else{var iFrames=document.getElementsByTagName("iframe");for(i=0;i<iFrames.length;i++){var src=iFrames[i].getAttribute("src");src&&(src.indexOf("video.ibm.com")>-1||src.indexOf("ustream.tv")>-1)&&(iFrames[i].setAttribute("src",src),iFrames[i].setAttribute("id","UstreamIframe"+n),n++)}}if(n>0){var UstreamEmbed=function(){function e(e){return t(e)}function t(e){var t=i(e),l=function(e){function t(t){if("socialstream"!==t){if(!w)return M||(M=[]),void M.push(arguments);var n=d(arguments).slice(1);n[0]&&"function"==typeof n[0]&&(b[t]||(b[t]=[]),b[t].push(n[0])),o(e,h,{cmd:t,args:n})}else if(f(window,"message",m),T=i(arguments[1]),E=s(T.getAttribute("src")),O=!0,x.length)for(var r=0,v=x.length;v>r;r++)a(x[r])}function l(){if(M){for(;M.length;)t.apply(this,M.shift());M=null}}function m(e){var t=T;(t&&t.contentWindow&&t.contentWindow===e.source||e.source===T.id)&&g.onmessage(e)}function u(e){var i,n=JSON.parse(e.data);return n.cmd&&"ready"==n.cmd?void o(T,E,{cmd:"ready"}):(i=(i=[n.cmd]).concat(n.args),void t.apply(this,i))}function p(){w=!0,l()}function y(){t.apply(this,arguments)}var g,h,E,T,w=!1,O=!1,M=[],b={},L={},x=[];return h=s(e.getAttribute("src")),g={host:h,callMethod:y,getProperty:function(){y.apply(this,arguments)},addListener:function(e,t){L[e]||(L[e]=[]),L[e].push(t)},removeListener:function(e,t){if(t)for(var i=0,n=L[e].length;n>i;i++)L[e][i]===t&&L[e].splice(i,1);else L[e]=null},onmessage:function(e){var t;if(h||E||x.push({origin:e.origin,data:e.data}),e.origin==h){try{t=JSON.parse(e.data)}catch(e){return}if(t.sstream)return void u(e);if(t.event&&t.event.ready&&(p(),n(L,"ready")),t.event&&!0===t.event.live)return void n(L,"live");if(t.event&&!1===t.event.live)return void n(L,"offline");if(t.event&&!t.event.ready)if(v)Object.keys(t.event).forEach((function(e){n(L,e,t.event[e])}));else for(var i in t.event)t.event.hasOwnProperty(i)&&n(L,i,t.event[i]);if(t.property)if(v)Object.keys(t.property).forEach((function(e){r(b,e,t.property[e])}));else for(var i in t.property)t.property.hasOwnProperty(i)&&r(b,i,t.property[i])}else if(O&&e.origin==E)return void u(e)},destroy:function(){w=!1,h="",O=!1,E="",T=null,M=[],b={},L={},x=[],c[e.id]&&(c[e.id]=null),e=null}}}(t);return t.id||(t.id="UstreamEmbed"+Math.ceil(1e5*Math.random())),l.id=t.id,c[t.id]=l,l}function i(e){return"string"==typeof e&&(e=document.getElementById(e)),e}function n(e,t,i){for(var n in e[t])e[t].hasOwnProperty(n)&&e[t][n].call(window,t,i)}function r(e,t,i){if(e[t]){for(var n in e[t])e[t].hasOwnProperty(n)&&e[t][n].call(window,i);e[t]=null,delete e[t]}}function a(e){var t,i;for(t in c)c.hasOwnProperty(t)&&c[t]&&((i=document.getElementById(t))&&i.contentWindow?i.contentWindow===e.source&&c[t].onmessage(e):"string"==typeof e.source&&e.source==t&&c[t].onmessage(e))}function o(e,t,i){e.contentWindow.postMessage(JSON.stringify(i),t)}function s(e){return e.indexOf("http")<0&&(e=location.protocol+e),e.match(l)[1].toString()}function d(e){return Array.prototype.slice.call(e,0)}function f(e,t,i){e.addEventListener?e.addEventListener(t,i,!1):e.attachEvent("on"+t,i)}var v=void 0!==Object.keys,c={},l=new RegExp("^(http(?:s)?://[^/]+)","im");return f(window,"message",a),window.UstreamEmbed=e}();if(document.getElementsByTagName("iframe"))for(i=0;i<document.getElementsByTagName("iframe").length;i++)if(document.getElementsByTagName("iframe")[i].id.indexOf("UstreamIframe")>-1){var videoTitle,mediaLength,iFrame=document.getElementsByTagName("iframe")[i].id,viewer=UstreamEmbed(document.getElementsByTagName("iframe")[i].id),videoType="channels",mediaOffset=0;viewer.getProperty("content",(function(e){"recorded"===e[0]?videoType="videos":"channels"===e[0]&&(videoType="channels");var t=e[1];videoTitle=getVideoTitle(t,videoType)[0],mediaLength=getVideoTitle(t,videoType)[1]})),viewer.addListener("playing",onEmbedEvent),viewer.addListener("finished",onEmbedEvent),viewer.addListener("offline",onEmbedEvent)}var prevEvent="",startTime=0;function onEmbedEvent(e,t){var i="ustream tv";t&&"playing"===e&&prevEvent!=e?("paused"!==prevEvent?("channels"===videoType?(videoContentType="live:ustream video",s.Media.trackSeconds=150,_satellite.getVar("FBPixelVideoLive")):"videos"===videoType&&(videoContentType="replay:ustream video",s.Media.segmentByMilestones=!0,s.Media.trackMilestones="25,50,75",_satellite.getVar("FBPixelVideoReplay"),_satellite.getVar("TwitterPixelVideoReplay"),_satellite.getVar("GAdwordsTagVideoReplay")),s.Media.open(videoTitle,mediaLength,i),s.Media.play(videoTitle,mediaOffset),startTime=new Date):"paused"===prevEvent&&(s.Media.play(videoTitle,mediaOffset),startTime=new Date),prevEvent=e):t||"playing"!==e||"paused"==prevEvent?!t||"finished"!==e&&"offline"!==e||(mediaOffset+=Math.round((new Date-startTime)/1e3),s.Media.stop(videoTitle,mediaOffset),s.Media.close(videoTitle),mediaOffset=0,prevEvent=e):(mediaOffset+=Math.round((new Date-startTime)/1e3),s.Media.stop(videoTitle,mediaOffset),prevEvent="paused")}function getVideoTitle(e,t){var i=e,n=0,r=new XMLHttpRequest;return r.onreadystatechange=function(){if(4==this.readyState&&200==this.status){var e=JSON.parse(r.responseText);"videos"===t?(i=e.video.title,n=Math.round(e.video.length)):"channels"===t&&(i=e.channel.title)}},r.open("GET","https://api.ustream.tv/"+t+"/"+e+".json",!0),r.send(),[i,n]}}
+});</script><script type="text/javascript" src="https://znahoepseztqpb2gv-wbgwebvisitor.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_ahoepSezTqpB2GV&amp;t=1755017031128"></script><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div><script>_satellite["_runScript6"](function(event, target, Promise) {
+!function(e,t,n,c,o,a,f){e.fbq||(o=e.fbq=function(){o.callMethod?o.callMethod.apply(o,arguments):o.queue.push(arguments)},e._fbq||(e._fbq=o),o.push=o,o.loaded=!0,o.version="2.0",o.queue=[],(a=t.createElement(n)).async=!0,a.src=c,(f=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,f))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js"),fbq("init","1458892451075570"),fbq("track","PageView"),fbq("track","ViewContent");
+});</script></body></html>

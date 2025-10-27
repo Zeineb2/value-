@@ -1,0 +1,466 @@
+[
+  {
+    "Canonical Name": "Gross Domestic Product (GDP) at market prices",
+    "Aliases": [
+      "GDP at market prices",
+      "Produit Intérieur Brut",
+      "PIB",
+      "Gross Domestic Product"
+    ]
+  },
+  {
+    "Canonical Name": "National Income",
+    "Aliases": [
+      "Revenu National",
+      "National Income",
+      "Net National Income",
+      "RN"
+    ]
+  },
+  {
+    "Canonical Name": "Gross National Disposable Income",
+    "Aliases": [
+      "Revenu national disponible brut",
+      "Gross National Disposable Income",
+      "RNDB"
+    ]
+  },
+  {
+    "Canonical Name": "Inflation",
+    "Aliases": [
+      "CPI",
+      "Consumer Price Index",
+      "IPC",
+      "Indice des prix à la consommation",
+      "Inflation",
+      "indice des prix",
+      "inflation rate",
+      "price inflation",
+      "rate of inflation"
+    ]
+  },
+  {
+    "Canonical Name": "Population",
+    "Aliases": ["Population", "Population (en milliers)", "Total Population"]
+  },
+  {
+    "Canonical Name": "Gross Fixed Capital Formation",
+    "Aliases": [
+      "Formation brute de capital fixe",
+      "GFCF",
+      "Gross Fixed Capital Formation",
+      "capital investment",
+      "formation brute de capital fixe",
+      "gross fixed capital",
+      "investment formation"
+    ]
+  },
+  {
+    "Canonical Name": "Net Factor Income from Abroad",
+    "Aliases": [
+      "Revenus des facteurs reçus de l'extérieur nets",
+      "Net factor income from abroad"
+    ]
+  },
+  {
+    "Canonical Name": "Final Consumption",
+    "Aliases": [
+      "Consommation Finale",
+      "Final Consumption",
+      "Government consumption",
+      "Household consumption",
+      "consumption totale",
+      "final consumption expenditure",
+      "final use",
+      "total consumption"
+    ]
+  },
+  {
+    "Canonical Name": "Savings Rate",
+    "Aliases": [
+      "Epargne nationale brute",
+      "Epargne nationale nette",
+      "Saving Rate",
+      "Taux d'épargne",
+      "Taux d'épargne par agent",
+      "gross savings rate",
+      "savings as % of gni",
+      "savings rate",
+      "taux d'épargne",
+      "épargne"
+    ]
+  },
+  {
+    "Canonical Name": "Number of Households",
+    "Aliases": ["Nombre de ménage", "Number of Households"]
+  },
+  {
+    "Canonical Name": "Average Household Size",
+    "Aliases": ["Taille moyenne d'un ménage", "Average household size"]
+  },
+  {
+    "Canonical Name": "Gross Disposable Income of Households",
+    "Aliases": [
+      "Revenu disponible brut des ménages",
+      "Gross Disposable Income of Households"
+    ]
+  },
+  {
+    "Canonical Name": "Gross Disposable Income per Household (current dinars)",
+    "Aliases": [
+      "Revenu disponible brut par ménage en Dinars courants",
+      "Gross Disposable Income per Household in current Dinars"
+    ]
+  },
+  {
+    "Canonical Name": "Gross Disposable Income per Household (2015 dinars)",
+    "Aliases": [
+      "Revenu disponible brut par ménage en Dinars de 2015",
+      "Gross Disposable Income per Household in 2015 Dinars"
+    ]
+  },
+  {
+    "Canonical Name": "Householders (housing)",
+    "Aliases": [
+      "Householders",
+      "Households",
+      "Ménages",
+      "Householders (housing)"
+    ]
+  },
+  {
+    "Canonical Name": "Non-Financial Corporations",
+    "Aliases": [
+      "NFC",
+      "Non-Financial Corporations",
+      "Sociétés non financières",
+      "entreprises non financières",
+      "nfc",
+      "non financial corporations",
+      "non-financial firms"
+    ]
+  },
+  {
+    "Canonical Name": "Public Administration",
+    "Aliases": [
+      "Administration Publique",
+      "Government",
+      "Public Administration",
+      "government sector",
+      "public admin",
+      "public sector administration"
+    ]
+  },
+  {
+    "Canonical Name": "Financial Institutions",
+    "Aliases": ["Institutions financières", "Financial Institutions", "Banks"]
+  },
+  {
+    "Canonical Name": "Public Debt (% of GDP)",
+    "Aliases": [
+      "Public debt",
+      "dette publique",
+      "Government debt",
+      "dette de l'État"
+    ]
+  },
+  {
+    "Canonical Name": "Merchandise Exports (current USD)",
+    "Aliases": [
+      "Exports",
+      "Exportations",
+      "Merchandise exports",
+      "Goods exported"
+    ]
+  },
+  {
+    "Canonical Name": "Merchandise Imports (current USD)",
+    "Aliases": [
+      "Imports",
+      "Importations",
+      "Merchandise imports",
+      "Goods imported"
+    ]
+  },
+  {
+    "Canonical Name": "Households (housing)",
+    "Aliases": ["Householders", "Households", "Ménages"]
+  },
+  {
+    "Canonical Name": "Gross Disposable Income per Household (constant prices)",
+    "Aliases": [
+      "Revenu disponible brut par ménage en Dinars de 2015",
+      "Gross Disposable Income per Household in constant Dinars"
+    ]
+  },
+  {
+    "Canonical Name": "Savings Rate (% of GNI)",
+    "Aliases": [
+      "Taux d'épargne",
+      "Saving Rate",
+      "Gross savings",
+      "Épargne nationale brute",
+      "Épargne nationale nette"
+    ]
+  },
+  {
+    "Canonical Name": "Final Consumption (% of GDP)",
+    "Aliases": [
+      "Final Consumption",
+      "Household consumption",
+      "Government consumption",
+      "Consommation Finale"
+    ]
+  },
+  {
+    "Canonical Name": "Government Budget Balance (% of GDP)",
+    "Aliases": [
+      "Budget",
+      "Public finances",
+      "Government deficit",
+      "Déficit budgétaire",
+      "Fiscal balance"
+    ]
+  },
+  {
+    "Canonical Name": "Gross National Income (GNI)",
+    "Aliases": [
+      "Revenu National",
+      "National Income",
+      "Net National Income",
+      "GNI",
+      "RN"
+    ]
+  },
+  {
+    "Canonical Name": "Unemployment Rate",
+    "Aliases": [
+      "Unemployment",
+      "Unemployment rate",
+      "Chômage",
+      "Unemployed",
+      "Taux de chômage"
+    ]
+  },
+  {
+    "Canonical Name": "Current Account Balance",
+    "Aliases": [
+      "Current Account Balance",
+      "Balance du compte courant",
+      "Balance of current account",
+      "Compte courant",
+      "CAB"
+    ]
+  },
+  {
+    "Canonical Name": "GDP growth (annual %)",
+    "Aliases": [
+      "GDP growth",
+      "Real GDP growth",
+      "Annual GDP growth",
+      "Taux de croissance du PIB",
+      "Croissance économique"
+    ]
+  },
+  {
+    "Canonical Name": "GDP per capita (current USD)",
+    "Aliases": [
+      "GDP per capita",
+      "PIB par habitant",
+      "GDP pc (current)",
+      "GDP per head"
+    ]
+  },
+  {
+    "Canonical Name": "GDP per capita, PPP (current international $)",
+    "Aliases": ["GDP per capita PPP", "PIB par habitant PPA", "GDP pc (PPP)"]
+  },
+  {
+    "Canonical Name": "Real GDP (constant prices)",
+    "Aliases": ["Real GDP", "PIB réel", "volume GDP"]
+  },
+  {
+    "Canonical Name": "GDP deflator",
+    "Aliases": ["GDP price deflator", "Déflateur du PIB"]
+  },
+  {
+    "Canonical Name": "Agriculture, value added (% of GDP)",
+    "Aliases": [
+      "Valeur ajoutée agriculture",
+      "Agriculture (% GDP)",
+      "Agriculture sector share"
+    ]
+  },
+  {
+    "Canonical Name": "Industry, value added (% of GDP)",
+    "Aliases": [
+      "Valeur ajoutée industrie",
+      "Industry (% GDP)",
+      "Industrial sector share"
+    ]
+  },
+  {
+    "Canonical Name": "Services, value added (% of GDP)",
+    "Aliases": [
+      "Valeur ajoutée services",
+      "Services (% GDP)",
+      "Services sector share"
+    ]
+  },
+  {
+    "Canonical Name": "Gross capital formation (% of GDP)",
+    "Aliases": [
+      "Gross capital formation",
+      "formation brute de capital",
+      "GCF (% GDP)"
+    ]
+  },
+  {
+    "Canonical Name": "Gross national saving (% of GDP)",
+    "Aliases": ["Épargne nationale brute", "Gross national saving"]
+  },
+  {
+    "Canonical Name": "GNI per capita (current USD)",
+    "Aliases": ["Revenu national par habitant", "GNI per capita"]
+  },
+  {
+    "Canonical Name": "Terms of trade (index)",
+    "Aliases": ["Termes de l'échange", "terms of trade"]
+  },
+  {
+    "Canonical Name": "Trade balance (% of GDP)",
+    "Aliases": ["Balance commerciale", "Trade balance"]
+  },
+  {
+    "Canonical Name": "Services balance (% of GDP)",
+    "Aliases": ["Balance des services", "Services balance"]
+  },
+  {
+    "Canonical Name": "Primary income balance (% of GDP)",
+    "Aliases": ["Revenus primaires", "Primary income balance"]
+  },
+  {
+    "Canonical Name": "Remittances, personal (current USD)",
+    "Aliases": ["Transferts personnels", "Remittances"]
+  },
+  {
+    "Canonical Name": "Foreign direct investment, net inflows (current USD)",
+    "Aliases": ["IDE entrants", "FDI inflows"]
+  },
+  {
+    "Canonical Name": "Official foreign exchange reserves (current USD)",
+    "Aliases": ["Réserves de change", "FX reserves"]
+  },
+  {
+    "Canonical Name": "Exchange rate (TND per USD)",
+    "Aliases": ["Taux de change", "Exchange rate"]
+  },
+  {
+    "Canonical Name": "Current account balance (% of GDP)",
+    "Aliases": ["Balance du compte courant (% PIB)", "CAB (% GDP)"]
+  },
+  {
+    "Canonical Name": "Government revenue (% of GDP)",
+    "Aliases": ["Recettes publiques", "Government revenue"]
+  },
+  {
+    "Canonical Name": "Government expenditure (% of GDP)",
+    "Aliases": ["Dépenses publiques", "Government expenditure"]
+  },
+  {
+    "Canonical Name": "Primary fiscal balance (% of GDP)",
+    "Aliases": ["Solde primaire", "Primary balance"]
+  },
+  {
+    "Canonical Name": "Debt service (% of revenue)",
+    "Aliases": ["Service de la dette", "Debt service"]
+  },
+  {
+    "Canonical Name": "Policy interest rate (%)",
+    "Aliases": ["Taux directeur", "Policy rate"]
+  },
+  {
+    "Canonical Name": "Money supply (M2)",
+    "Aliases": ["Masse monétaire M2", "Money supply"]
+  },
+  {
+    "Canonical Name": "Credit to private sector (% of GDP)",
+    "Aliases": ["Crédit au secteur privé", "Private sector credit"]
+  },
+  {
+    "Canonical Name": "Core inflation (%)",
+    "Aliases": ["Inflation sous-jacente", "Core CPI", "CPI YoY"]
+  },
+  {
+    "Canonical Name": "Producer price index (PPI)",
+    "Aliases": ["Indice des prix à la production", "PPI"]
+  },
+  {
+    "Canonical Name": "Youth unemployment rate (%)",
+    "Aliases": ["Chômage des jeunes", "Youth unemployment"]
+  },
+  {
+    "Canonical Name": "Female unemployment rate (%)",
+    "Aliases": ["Chômage des femmes", "Female unemployment"]
+  },
+  {
+    "Canonical Name": "Employment rate (%)",
+    "Aliases": ["Taux d'emploi", "Employment rate"]
+  },
+  {
+    "Canonical Name": "Labor force participation rate (%)",
+    "Aliases": ["Taux d'activité", "Labor force participation"]
+  },
+  {
+    "Canonical Name": "Informality rate (%)",
+    "Aliases": ["Taux d'informalité", "Informality"]
+  },
+  {
+    "Canonical Name": "Poverty headcount ratio (%)",
+    "Aliases": ["Taux de pauvreté", "Poverty rate"]
+  },
+  {
+    "Canonical Name": "Gini index",
+    "Aliases": ["Coefficient de Gini", "Gini"]
+  },
+  {
+    "Canonical Name": "Labor productivity (GDP per worker)",
+    "Aliases": ["Productivité du travail", "GDP per worker"]
+  },
+  {
+    "Canonical Name": "Openness ratio ((X+M)/GDP)",
+    "Aliases": ["Taux d'ouverture", "Openness ratio"]
+  },
+  {
+    "Canonical Name": "Export volume index",
+    "Aliases": ["Indice volume des exportations", "Export volume"]
+  },
+  {
+    "Canonical Name": "Import volume index",
+    "Aliases": ["Indice volume des importations", "Import volume"]
+  },
+  {
+    "Canonical Name": "Tourism receipts (current USD)",
+    "Aliases": ["Recettes touristiques", "Tourism receipts"]
+  },
+  {
+    "Canonical Name": "Average wage (monthly)",
+    "Aliases": ["Salaire moyen", "Average wage"]
+  },
+  {
+    "Canonical Name": "Minimum wage",
+    "Aliases": ["SMIG", "SMAG", "Salaire minimum"]
+  },
+  {
+    "Canonical Name": "Energy import dependence (%)",
+    "Aliases": ["Dépendance énergétique", "Energy dependence"]
+  },
+  {
+    "Canonical Name": "Population growth rate (%)",
+    "Aliases": ["Croissance démographique", "Population growth"]
+  },
+  {
+    "Canonical Name": "Dependency ratio (%)",
+    "Aliases": ["Ratio de dépendance", "Dependency ratio"]
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "Taxonomy Mutations (this run)": 0,
+  "Total Extracted (this run)": 295,
+  "Previously Saved": 1284,
+  "Total After Merge": 1286,
+  "Top Indicators": [
+    [
+      "Gross Domestic Product (gdp) At Market Prices",
+      265
+    ],
+    [
+      "Population",
+      125
+    ],
+    [
+      "Inflation",
+      121
+    ],
+    [
+      "Current Account Balance",
+      84
+    ],
+    [
+      "Merchandise Exports (current Usd)",
+      76
+    ],
+    [
+      "Unemployment Rate",
+      72
+    ],
+    [
+      "Public Administration",
+      65
+    ],
+    [
+      "Merchandise Imports (current Usd)",
+      61
+    ],
+    [
+      "Gross Fixed Capital Formation",
+      39
+    ],
+    [
+      "Agriculture, Value Added (% Of Gdp)",
+      39
+    ]
+  ],
+  "Top Sources": [
+    [
+      "tunisia-article-iv-feb-2021.pdf",
+      123
+    ],
+    [
+      "7f9459cf-en.pdf",
+      107
+    ],
+    [
+      "http",
+      102
+    ],
+    [
+      "pd-tunisia-ici-dpf-board-package-052518-fin-06052018.pdf",
+      84
+    ],
+    [
+      "https://investintunisia.tn/wp-content/uploads/2024/02/Tunisia-CountryRiskReport.pdf",
+      80
+    ],
+    [
+      "worldbank.org",
+      66
+    ],
+    [
+      "tunisia-trade-fact-sheet.pdf",
+      47
+    ],
+    [
+      "d8a28bca-en.pdf",
+      39
+    ],
+    [
+      "emnes",
+      33
+    ],
+    [
+      "giz",
+      33
+    ]
+  ],
+  "Top Years": [
+    [
+      2022,
+      165
+    ],
+    [
+      2019,
+      135
+    ],
+    [
+      2023,
+      134
+    ],
+    [
+      2021,
+      132
+    ],
+    [
+      2020,
+      118
+    ],
+    [
+      2024,
+      88
+    ],
+    [
+      2018,
+      75
+    ],
+    [
+      2017,
+      65
+    ],
+    [
+      2015,
+      58
+    ],
+    [
+      2016,
+      53
+    ]
+  ]
+}

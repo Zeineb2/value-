@@ -1,0 +1,2080 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head class="at-element-marker">
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://cdn.appdynamics.com/adrum-ext.1ad6f7ca4d96e75e9ff37bb1b3973ecc.js"></script><script src="https://connect.facebook.net/en_US/sdk.js?hash=dcdd7c0ba2884c474dcca2bd5aac26cf" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.6"></script><script type="text/javascript" charset="UTF-8" src="/js/appdynamics.js">
+    </script><script src="https://cdn.appdynamics.com/adrum/adrum-4.3.2.0.js" type="text/javascript" charset="UTF-8"></script>
+    <meta name="referrer" content="no-referrer">
+    <title>Tunisia Reserves | Global Economic Monitor (GEM)</title>
+    <meta name="title" content="Tunisia Reserves">
+    <meta property="og:title" content="Tunisia Reserves">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0058/1350.js" async="async"></script>
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="/views/styles/layout.css">
+    <link rel="stylesheet" href="/views/styles/StyleChart.css">
+    <script src="/views/scripts/jquery-1.7.min.js" type="text/javascript"></script>
+
+   <script src="/views/scripts/jquery-ui.min.js" type="text/javascript"></script>
+   <script src="/views/scripts/jpicker.min.js" type="text/javascript"></script>
+   <link rel="stylesheet" href="/views/styles/jquery-ui.css">
+   <link rel="stylesheet" href="/views/styles/style.css">
+   <link rel="stylesheet" href="/views/styles/jpicker-dialog.css">
+
+    <script src="/views/scripts/jquery.layout.js" type="text/javascript"></script>
+    <script src="/views/scripts/jquery.poshytip.min.js" type="text/javascript"></script>
+    <script src="/views/scripts/jquery-ui-1.8.24.custom.min.js" type="text/javascript"></script>
+    <script src="/views/scripts/jquery-ui.selectmenu.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/views/styles/jpicker.css">
+    <script src="/views/scripts/script.js" type="text/javascript"></script>
+
+
+    <link href="/views/styles/chosen.css" rel="stylesheet" type="text/css">
+
+    <link href="/views/styles/embedStyles.css" rel="stylesheet" type="text/css">
+    <script src="/views/scripts/chosen.jquery.js" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+        var gbl_common_internal = false;
+        var gbl_common_FullURL = 'https://databank.worldbank.org';
+    </script>
+
+    <script type="text/javascript">
+    //            Shaheer Oct 31st 2012
+    //            Showing selected zoom level *****************Start
+    window.onload = function () {
+        if (document.getElementById('mapId') != null) {
+            var mapId = eval(document.getElementById('mapId').value);
+            if (mapId != null) {
+                var map = mapId.GetOpenLayersMap();
+
+                var lonlat = mapId.GetCenter();
+
+                if (document.getElementById('hdnZoomLevel').value != "") {
+                    if (document.getElementById('hdnZoomLevel').value != "2") {
+
+
+                        map.zoom = parseInt(document.getElementById('hdnZoomLevel').value, 10) - 1;
+
+
+                        var latitude = document.getElementById('hdnLatitude').value;
+                        var longitude = document.getElementById('hdnLongitude').value;
+
+                        if (map.zoom != 2) {
+                            if (latitude != "")
+                                lonlat.lat = latitude;
+
+                            if (longitude != "")
+                                lonlat.lon = longitude;
+
+
+                            updateImages(map);
+                            updateLegend();
+                            map.setCenter(lonlat, map.zoom, map.dragging, true);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //            Showing selected zoom level *****************End
+
+    $(function () {
+        
+    });
+
+    function Widgettwitter() {
+        var twitterurl = getUrl();
+        window.open('http://twitter.com/share?url=' + encodeURIComponent(twitterurl)
+            + '&text=' + encodeURIComponent(document.getElementById("hdnReportDisplayName").value), '_new');
+    }
+
+    function Widgetfacebook() {
+        var facebookurl = getUrl();
+        window.open('http://www.facebook.com/share.php?u=' + encodeURIComponent(facebookurl)
+            + '&t=' + encodeURIComponent(document.getElementById("hdnReportDisplayName").value), '_new');
+    }
+
+    function SetMetadataIconStyle()
+    {
+        $('.widget-maintable div#REPORT_PREVIEW_divdropdown a[title="Click here to view metadata"]').css("pointer-events", "none");
+        $('td.dxgvHeader_GridDefaultTheme img[title = "Click here to view metadata"]').css("pointer-events", "none");
+        $('table.dxgvTable_GridDefaultTheme td[title = "Click here to view metadata"]').css("pointer-events", "none");
+        $('div#divreportcontent a#fullScreen').css("pointer-events", "none");
+    }
+
+
+    function WidgetEmail() {
+        var myForm = document.createElement("form");
+        myForm.method = "post";
+        myForm.target = "emailpopup";
+        myForm.action = 'http://web.worldbank.org/external/default/main?pagePK=7846481&piPK=7846484&theSitePK=523679';
+        var myInput = document.createElement("input") ;
+        myInput.setAttribute("type","hidden");
+        myInput.setAttribute("name","reftitle");
+        myInput.setAttribute("value","Databank"); 
+        myForm.appendChild(myInput);
+        var myInput1 = document.createElement("input") ;
+        myInput1.setAttribute("type","hidden");
+        myInput1.setAttribute("name","reflink");
+        myInput1.setAttribute("value", encodeURIComponent(location.href));
+        myForm.appendChild(myInput1);   
+        document.body.appendChild(myForm);   
+        emailpopup = window.open('', 'emailpopup', 'scrollbars=no,resizable=yes,width=350,height=510');
+        myForm.submit();
+        document.body.removeChild(myForm);  
+    }
+
+    function WidgetGooglePlus() {
+        var googleurl = getUrl();
+        window.open('http://plus.google.com/share?url=' + encodeURIComponent(googleurl)
+            + '&title=' + encodeURIComponent(document.getElementById("hdnReportDisplayName").value), '_new');
+    }
+
+    function getUrl() {
+        //oct12 deepak
+        var embedurl = 'https://databank.worldbank.org/embed/Tunisia-Reserves/id/63aa7bae/wd/0/ht/0/tbar//dd/';
+        return embedurl;
+    }
+
+    //Dhanya Dec 28 2011 - For Social Media - End
+    function getWidgetWidth() {
+        var widgQryWd = getParameterByName('wd');
+        var widgWd = document.documentElement.clientWidth;
+        if (widgQryWd != '') widgWd = parseInt(widgQryWd, 10);
+
+        var extrapadding = 0;
+        if ($('#hdnReportType').val().toUpperCase() == 'MAP') extrapadding = 5;
+
+        return widgWd - extrapadding; //padding
+    }
+
+    function getWidgetHeight() {
+        var widgQryHt = getParameterByName('ht');
+        var widgHt = document.documentElement.clientHeight;
+        if (widgQryHt != '') widgHt = parseInt(widgQryHt, 10);
+
+        var extrapadding = 0;
+        if ($('#hdnReportType').val().toUpperCase() == 'MAP') extrapadding = 2;
+
+        return widgHt - extrapadding; //padding
+    }
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function getContentWidth() {
+        var widgetTotWidth = getWidgetWidth();
+
+        var widgetContWidth = widgetTotWidth - 12; //12 - left & right padding 6 each
+
+        return widgetContWidth;
+    }
+
+    function getToolBarHeight() {
+        var varHeight = 0;
+        if (document.getElementById("divtoolbar") != null) varHeight += document.getElementById("divtoolbar").offsetHeight;
+        return varHeight;
+    }
+
+    function HasDisclaimer()
+    {
+        if (document.getElementById("widget-table-disclaimer") == null) return false;
+        if ($.trim($('#REPORT_PREVIEW_bDisclaimer').text()) == '' && $.trim($('#REPORT_PREVIEW_sDisclaimerMsg').text()) == '') return false;
+
+        return true;
+    }
+
+    function getDisplayElemHeight() {
+        var varHeight = 12; //padding
+
+        varHeight += getToolBarHeight();
+        if (document.getElementById("widget-table-dropdowns") != null) varHeight += (document.getElementById("widget-table-dropdowns").offsetHeight);
+        if (document.getElementById("widget-table-header") != null) varHeight += (document.getElementById("widget-table-header").offsetHeight);
+        if (document.getElementById("widget-table-footer") != null) varHeight += (document.getElementById("widget-table-footer").offsetHeight);
+        if (document.getElementById("widget-table-source") != null) varHeight += (document.getElementById("widget-table-source").offsetHeight);
+
+        if (HasDisclaimer()) varHeight += (document.getElementById("widget-table-disclaimer").offsetHeight);
+
+        varHeight += getHeaderDescHeight();
+        //varHeight += $('#widget').height();
+
+        return varHeight;
+    }
+
+    function getHeaderDescHeight()
+    {
+        var varHeight = 0;
+        if ($('#widgetTitle').is(':visible')) varHeight += $('#widgetTitle').outerHeight(true);//which includes margin, padding and borders as well
+        if ($('#widgetDesc').is(':visible')) varHeight += $('#widgetDesc').outerHeight(true);
+        return varHeight;
+    }
+
+    function getContentHeight() {
+        var widgetTotHeight = getWidgetHeight();
+
+        var widgetContHeight = widgetTotHeight - getDisplayElemHeight();
+
+        return widgetContHeight;
+    }
+
+    function resizeTableFromPreview() {
+        SynhronizeMyGridHeight();
+    }
+
+</script> 
+
+<style type="text/css">
+    .page-meta-icon {
+        vertical-align: super;
+        cursor: pointer;
+        position: relative;
+        top: 8px;
+        left: 2px;
+    }
+</style>
+
+
+    <style type="text/css">
+        .loading {
+        -moz-border-radius: 5px 5px 5px 5px;
+        display: none;
+        height: 50px;
+        opacity: 0.9;
+        padding: 2px;
+        position: absolute;
+        text-align: center;
+        width: 100px;
+        z-index: 100000;
+    }
+    .widget-maintable
+    {
+        border: 0px !important; 
+        padding: 0px;
+    }
+    .widget-maintable-row
+    {
+        padding: 0px;
+        border: 0px !important;
+    }
+    .widget-maintable-cell-disclaimer
+    {
+        padding: 10px 0 0 0;        
+        border: 0px !important;
+    }
+    .widget-maintable-cell
+    {
+        padding: 0px;
+        border: 0px !important;
+    }
+    </style>
+
+
+    <script type="text/javascript">
+
+        function showLinkContent(e, obj) {
+            $(".embedLinkDesc").hide();
+            
+            var linkanchor=$(obj).find("a").attr("id");
+            var contentDiv=$("#" + $(obj).find("a").attr("id") + "Desc");
+            var widgetWd = getWidgetWidth();
+
+            contentDiv.css("width","");
+            contentDiv.find("h4").css("width","");
+            
+            switch (linkanchor)
+            {
+            case "downloadLink":
+                 if(widgetWd<350)
+                    {
+                      var offset=350-widgetWd;
+                      var contentWd=292-offset;
+                      var contentHeaderWd=contentWd-10;
+                      contentDiv.css("width",contentWd+"px");
+                      contentDiv.find("h4").css("width",contentHeaderWd+"px");
+                    }
+                break;
+                
+            case "shareLink":
+             if(widgetWd<390)
+                    {
+                      var offset=390-widgetWd;
+                      var contentWd=292-offset;
+                      var contentHeaderWd=contentWd-10;
+                      contentDiv.css("width",contentWd+"px");
+                      contentDiv.find("h4").css("width",contentHeaderWd+"px");
+                     }
+                 break;
+            case "infoLink":
+                 if(widgetWd<295)
+                    {
+                      var offset=295-widgetWd;
+                      var contentWd=292-offset;
+                      var contentHeaderWd=contentWd-10;
+                      contentDiv.css("width",contentWd+"px");
+                      contentDiv.find("h4").css("width",contentHeaderWd+"px");
+                     }
+                 break;
+                       
+            }
+         
+            $("#" + $(obj).find("a").attr("id") + "Desc").show();
+            e.stopPropagation();
+
+        }
+
+        function fileDownloadClick(downloadid) {
+            $(downloadid).trigger('click');
+        }
+
+        function setHdrProps(prop, ctl) {
+            var strProps = getParameterByName(prop);
+            if (strProps != '') {
+                strProps = strProps.split(';');
+                if (strProps.length > 0) $(ctl).css('font-family', strProps[0]);
+                if (strProps.length > 1) $(ctl).css('font-size', strProps[1]);
+                if (strProps.length > 2) $(ctl).css('font-weight', (strProps[2].toLowerCase() == 'true' ? 'bold' : 'normal'));
+                if (strProps.length > 3) $(ctl).css('font-style', (strProps[3].toLowerCase() == 'true' ? 'italic' : 'normal'));
+                if (strProps.length > 4) $(ctl).css("color", strProps[4]);
+                if (strProps.length > 5) $(ctl).css("text-align", strProps[5]);
+            }
+        }
+
+
+        $(function () {
+
+            var allbuttonshidden = false;
+            if (getParameterByName('ti').toLowerCase() == 'n') 
+                $('#widgetTitle').hide();
+            else 
+                $('#widgetTitle').show();
+            if (getParameterByName('ds').toLowerCase() == 'y') 
+                $('#widgetDesc').show();
+            else
+                $('#widgetDesc').hide();
+            if (getParameterByName('tb').toLowerCase() == 'n' || getParameterByName('tbar').toLowerCase() == 'n') 
+            {
+                allbuttonshidden = true;
+                $("#embedLinks").hide();
+            }
+            else
+            {
+                allbuttonshidden = true;
+                if (getParameterByName('sh').toLowerCase() == 'n') 
+                    $("#shareLink").hide();
+                else
+                    allbuttonshidden = false;
+                if (getParameterByName('dw').toLowerCase() == 'n') 
+                    $("#downloadLink").hide();
+                else
+                    allbuttonshidden = false;
+                var printreq = 'Y';
+                printreq = (printreq == "Y");
+                if (!printreq || getParameterByName('pr').toLowerCase() == 'n') 
+                    $("#printLink").hide();
+                else
+                    allbuttonshidden = false;
+                if (getParameterByName('inf').toLowerCase() == 'n') 
+                    $("#infoLink").hide();
+                else
+                    allbuttonshidden = false;
+            }
+            if (getParameterByName('dd').toLowerCase() == 'n') 
+            {
+                $("#REPORT_PREVIEW_divdropdown").hide();
+            }
+            if (getParameterByName('md').toLowerCase() == 'n' && $('#hdnReportType').val() == 'METADATA') {
+                $(".metadata-tools").hide();
+            }
+             if(getParameterByName('source').toLowerCase()=='n')
+            {
+            $("#widget-table-source").hide();
+            }
+            if (!allbuttonshidden)
+            {
+
+                if ($('#widget-table-dropdowns').height() < 24) $('#widget-table-dropdowns').height(24);
+
+            }
+            var exporttypes = getParameterByName('exptypes');
+            exporttypes = $.trim(exporttypes);
+            if (exporttypes != '') {
+                exporttypes = exporttypes.split(",");
+                $('li.downloadExcel').hide();
+                $('li.downloadCSV').hide();
+                $('li.downloadTAB').hide();
+                $('li.downloadPNG').hide();
+                $('li.downloadJPEG').hide();
+                $('li.downloadSVG').hide();
+                $('li.downloadPDF').hide();
+                $.each(exporttypes, function(ind, val) {
+                    val = val.toLowerCase();
+                    switch(val) {
+                        case 'excel':
+                            $('li.downloadExcel').show();
+                            break;
+                        case 'csv':
+                            $('li.downloadCSV').show();
+                            break;
+                        case 'tab':
+                            $('li.downloadTAB').show();
+                            break;
+                        case 'png':
+                            $('li.downloadPNG').show();
+                            break;
+                        case 'jpeg':
+                            $('li.downloadJPEG').show();
+                            break;
+                        case 'svg':
+                            $('li.downloadSVG').show();
+                            break;
+                        case 'pdf':
+                            $('li.downloadPDF').show();
+                            break;
+                    }
+                });
+            }
+
+            var selectedTheme = getParameterByName('theme');
+            $("#embedLinkList li").addClass(selectedTheme);
+            $("#infoLinkDesc,#downloadLinkDesc,#shareLinkDesc").addClass("embedLinkDesc").addClass(selectedTheme);
+
+            var strBdrClr = getParameterByName('bdrClr'), strBdrStyle = getParameterByName('bdrStyle'), strBdrWd = getParameterByName('bdrWidth');
+            $("#widgetpreview").css("border-width", strBdrWd);
+            $("#widgetpreview").css("border-style", strBdrStyle);
+            $("#widgetpreview").css("border-color", strBdrClr);
+
+            setHdrProps('title', '#widgetTitle');
+            setHdrProps('desc', '#widgetDesc');
+            $("#embedLinkList li").click(function (e) { showLinkContent(e, this); });
+            $(".closeToolTip").click(function (e) { $(".embedLinkDesc").hide(); e.stopPropagation(); });
+
+
+
+
+            if (getParameterByName('zm').toLowerCase() != 'n') 
+            {
+                $("#widgetpreview").mouseover(function () {
+                    $("#fullScreen").show();
+                });
+
+                $("#widgetpreview").mouseleave(function () {
+                    $("#fullScreen").hide();
+                });
+                 $("#fullScreen").click(function () {
+                    var availWidth = screen.availWidth + "px";
+                    var availHeight = screen.availHeight + "px";
+                    var strHasPort = 'Y';
+                    strHasPort = (strHasPort == "Y");
+                    
+//                    var currentqryparams = '?ti=n&ds=n&zm=n';
+//                    currentqryparams += '&dd=' + (getParameterByName('dd').toLowerCase() == 'n' ? 'n' : 'y');
+//                    currentqryparams += '&tb=' + (getParameterByName('tb').toLowerCase() == 'n' || getParameterByName('tbar').toLowerCase() == 'n' ? 'n' : 'y');
+//                    if (selectedTheme != '') currentqryparams += '&theme=' + selectedTheme;
+//                    if (getParameterByName('country') != '') currentqryparams += '&country=' + getParameterByName('country');
+                    var currentqryparams = '?zm=n';
+
+                    var embedurl = '';
+                    if (strHasPort) {
+                        embedurl = 'https://databank.worldbank.org:443/embed/Tunisia-Reserves/id/63aa7bae' + currentqryparams;
+                    }
+                    else {
+                        embedurl = 'https://databank.worldbank.org/embed/Tunisia-Reserves/id/63aa7bae' + currentqryparams;
+                    }
+
+                    window.open(embedurl, "_blank", "toolbar=yes, location=yes, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=yes, width=" + availWidth + ", height=" + availHeight + "");
+                });
+            }
+
+
+            setWidgetDisplaySize();
+            
+
+            $('#divtoolbar').hide();
+            $("#widget-table-dropdowns select").chosen();
+            $('#page-select-download-links select').chosen();
+            $('.chosen-container').width('auto');
+
+        });
+
+        function setWidgetDisplaySize() {
+            var widgWd = getWidgetWidth();
+
+
+            var widgHt = getWidgetHeight();
+
+            //$("#widgetpreviewcontent").width(widgWd);
+            $("#widgetpreviewcontent").height(widgHt - getHeaderDescHeight() - 10);
+
+            $("#divreportcontent").width(widgWd);
+            $("#divreportcontent").height(widgHt);
+
+
+        }
+    </script>
+
+
+    <style type="text/css">
+        html{ overflow-y:auto} 
+    </style>
+
+
+    <script type="text/JavaScript">
+        var wbgData = wbgData || {};        
+        wbgData.page = {
+            pageInfo: {
+                pageName: "en:wb:reports:/widgets",
+                pageCategory: "content page",
+                pageUid: "databank-widgets", // format to be discussed
+                pageFirstPub: "01-01-2015", // format will be mm-dd-yyyy
+                pageLastMod: "01-01-2016", // format will be mm-dd-yyyy
+                contentType: "Other",
+                channel: "DEC Databank EXT"
+            },
+            sectionInfo: {
+                siteSection: "databank/widgets",
+                subsectionP2: ""
+            }
+        },
+        wbgData.site = {
+            siteInfo: {
+                siteLanguage: "en", // format should be en,fr etc.
+                siteCountry: "usa", // format should be usa, ind etc.
+                siteEnv: "prod", // format should be prod,stg,uat etc.
+                siteType: "developmentdata"
+            },
+            techInfo: {
+                cmsType: "sharepoint",
+                bussVPUnit: "DEC",
+                bussUnit: "DECDG",
+                bussUserGroup: "external",
+                bussAgency: "ibrd"
+            }
+
+        },
+        wbgData.misc = {
+            dataFilters: "Database:Global Economic Monitor (GEM);Country:Tunisia;Time:1998;Time:2000;Time:2002;Time:2004;Time:2006;Time:2008;Time:2010;Time:2012;Time:2013;Time:2014;Time:2015;Time:2016;Time:2017;Time:2018;Time:2019;Time:2020;Series:Total Reserves,,,,"
+        }
+    </script>
+
+    <script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/launch-7bc0cdc67098.min.js"> async</script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/EXd03e8106d1f243db980e918be6e67c79-libraryCode_source.min.js" async=""></script>
+
+
+<style id="poshytip-css-tips-more-info" type="text/css">div.tips-more-info{visibility:hidden;position:absolute;top:0;left:0;}div.tips-more-info table, div.tips-more-info td{margin:0;font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;font-variant:inherit;}div.tips-more-info td.tip-bg-image span{display:block;font:1px/1px sans-serif;height:10px;width:10px;overflow:hidden;}div.tips-more-info td.tip-right{background-position:100% 0;}div.tips-more-info td.tip-bottom{background-position:100% 100%;}div.tips-more-info td.tip-left{background-position:0 100%;}div.tips-more-info div.tip-inner{background-position:-10px -10px;}div.tips-more-info div.tip-arrow{visibility:hidden;position:absolute;overflow:hidden;font:1px/1px sans-serif;}</style><style id="at-makers-style" class="at-flicker-control">
+.mboxDefault {visibility: hidden;}
+</style><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RCb3929508fb31432496e845f770d4d38f-source.min.js" async=""></script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RC5bee9bde6f5c406c948030bdb0554466-source.min.js" async=""></script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RCb453f6bd4b6b4056a53aa2926bf43934-source.min.js" async=""></script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RC52892eadc2a84ac4841473647ded54cf-source.min.js" async=""></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RC94eebad5fb634dd2a222999f3d321efd-source.min.js" async=""></script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RCcfa44cec514143fc9305ada243e8fe0d-source.min.js" async=""></script></head>
+<body>        
+    <form method="post" action="/embed/Tunisia-Reserves/id/63aa7bae" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTg1MDc0MzYwNQ9kFgICAQ8WAh4GYWN0aW9uBSMvZW1iZWQvVHVuaXNpYS1SZXNlcnZlcy9pZC82M2FhN2JhZRYYZg8WAh4JaW5uZXJodG1sZWQCAQ8WAh8BBZUBVG90YWwgcmVzZXJ2ZXMgY29tcHJpc2UgaG9sZGluZ3Mgb2YgbW9uZXRhcnkgZ29sZCwgc3BlY2lhbCBkcmF3aW5nIHJpZ2h0cywgcmVzZXJ2ZXMgb2YgSU1GIG1lbWJlcnMgaGVsZCBieSB0aGUgSU1GLCBhbmQgaG9sZGluZ3Mgb2YgZm9yZWlnbiBleGNoYW5nZS5kAgIPZBYGAgMPFgIeBXRpdGxlBRFBYm91dCB0aGlzIHJlcG9ydGQCBQ8WAh8CBRJEb3dubG9hZCB0aGlzIGRhdGFkAgcPFgIfAgUQU2hhcmUgdGhpcyBxdWVyeWQCAw8WAh8BBQVFeGNlbGQCBA8WAh8BBQNDU1ZkAgUPFgIfAQUKVGFiYmVkIFRYVGQCBg8WAh8BBQdUd2l0dGVyZAIHDxYCHwEFCEZhY2Vib29rZAIIDxYCHwEFCEdvb2dsZSArZAIJDxYCHwEFBUVtYWlsZAIKDxYCHwEF+wI8ZGwgY2xhc3M9IndpZGdldC1kZXNjIj48ZHQ+Q3JlYXRlZCBieTwvZHQ+PGRkPkxvdGhhciBXw7ZsZmVsPC9kZD48ZHQ+RGVzY3JpcHRpb248L2R0PjxkZD5Ub3RhbCByZXNlcnZlcyBjb21wcmlzZSBob2xkaW5ncyBvZiBtb25ldGFyeSBnb2xkLCBzcGVjaWFsIGRyYXdpbmcgcmlnaHRzLCByZXNlcnZlcyBvZiBJTUYgbWVtYmVycyBoZWxkIGJ5IHRoZSBJTUYsIGFuZCBob2xkaW5ncyBvZiBmb3JlaWduIGV4Y2hhbmdlLjwvZGQ+PGR0PlRhZ3M8L2R0PjxkZD5FeGNoYW5nZSByYXRlcywgRXF1aXR5IG1hcmtldHMsIEludGVyZXN0IHJhdGVzbSBib25kIGluaWNlczwvZGQ+PGR0Pkxhc3QgVXBkYXRlZDwvZHQ+PGRkPjQvOS8yMDIyIDE6MTM6MDMgUE08L2RkPjwvZGw+ZAILD2QWAmYPZBYGZg9kFgICAQ9kFgJmD2QWAmYPZBYCAgEPZBYCZg8QZGQWAWZkAgMPFgIfAQUNQ3JlYXRlZCBmcm9tOmQCBA8PFgIeBFRleHQFKVdvcmxkIEJhbmssIEdsb2JhbCBFY29ub21pYyBNb25pdG9yIChHRU0pZGRk3sM2FEq8aQD9OsAw9JCJTRm1g+OyYSO3UGNHb+DLrus=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+
+<script src="/Scripts/highcharts/highstock.js" type="text/javascript"></script>
+<script src="/Scripts/highcharts/modules/exporting.js" type="text/javascript"></script>
+<script src="/Scripts/highcharts/modules/exporting-old-look.src.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A65B525F">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABd+vc3wsfBJeXafWuYte2NI5FNx3dwSWeLiRyJD+v8+HurDpe+ntwypXjb6JY/7vWv5o7IjyMys/ySyfxfd2pJMD1cUkwDayN7hkF+0QvPuTZfW74MfyLYD5fzhHyZOc6UvUi7VFEoebAURdapTEdCKPFd4GSihSIZ4ALiHBaSEwH0fhtcxMnN6hkxtSHgx8EA8ntOsuffJ0yUCe8pxEOJibzGI193+4G3I9hYiHIVhyHMuvH6eK3N8QN/CiV5PtLzxhmtDm0pppumn3xdMbAXjKJ3BjbrIFLREAn1E+6e9/P5NvwHTA0CD2EAEYXfsEeoAfJpZOaSkfJZp++RZ2GYAAzIh0lpGR4hjZ9i3WX2B3ItyeJNC5SxWVKSxXBvaRO76mnmfmEXdsMDevBhORO3vAyzr7TSaVNj048JG5lttKGsQPJ+Ticg/jNUYXYvS1FH6Hgg03JGWjJin4CjHZOYMGzvAXmVqus8K4O32fP6heFv4iq+WYlU/HBqog0KOs2ccNxxZ24t9KYqzxd85gz+c">
+</div>
+    <div id="widgetTitle" style=""></div>
+        <div class="clrBoth"></div>
+        <div id="widgetDesc" style="display: none;">Total reserves comprise holdings of monetary gold, special drawing rights, reserves of IMF members held by the IMF, and holdings of foreign exchange.</div>
+
+        <div id="widgetpreview" title="" style="font-size:11px;">
+     <div id="widgetpreviewcontent" class="clearfix" style="height: 700px;">
+                
+    <div id="divtoolbar" class="widget-options clearfix" style="display: none;">
+      <h2><span id="lblTitle">&nbsp;</span> </h2>
+      <ul class="widgetPills">
+        <li><a href="../../../views/reports/#widget-description-panel" id="aAboutReport" data-customlink="nl:header" data-text="About" class="w-description help-tips" title="About this report"> <span class="icon"></span> </a></li>
+        <li><a href="../../../views/reports/#widget-download-panel" id="aDownloadData" data-customlink="nl:header" data-text="Download" class="w-download help-tips" title="Download this data"> <span class="icon"></span> </a></li>
+        <li><a href="../../../views/reports/#widget-share-panel" id="aShareQuery" data-customlink="nl:header" data-text="Share" class="w-share help-tips" title="Share this query"> <span class="icon"></span> </a></li>
+      </ul>
+    </div>
+    <div class="widget-option-panel clearfix" style="display:none;">
+      <div id="widget-description-panel" class="opt-panel hide clearfix">
+        
+        
+      </div>
+      <div id="widget-download-panel" class="opt-panel hide clearfix"> Download this dataset as:
+        <ul>
+          <li class="file-excel"><a data-trackaction="Excel" data-text="Excel" href="#"><span class="icon"></span><span id="sExcel">Excel</span></a></li>
+          <li class="file-csv"><a data-trackaction="CSV" data-text="CSV" href="#"><span class="icon"></span><span id="sCSV">CSV</span></a></li>
+          <li class="file-tab"><a data-trackaction="Tabbed Text" data-text="Tabbed Text" href="#"><span class="icon"></span><span id="sTabbedTXT">Tabbed TXT</span></a></li>
+        </ul>
+      </div>
+      <div id="widget-share-panel" class="opt-panel hide clearfix"> Share this query via:
+        <ul>
+          <li class="share-twitter"><a data-text="Twitter" data-trackaction="share twitter" href="Javascript:Widgettwitter();"><span class="icon"></span><span id="sTwitter">Twitter</span></a></li>
+          <li class="share-facebook"><a data-text="Facebook" data-trackaction="share facebook" href="Javascript:Widgetfacebook();"><span class="icon"></span><span id="sFaceBook">Facebook</span></a></li>
+          <li class="share-delicious"><a data-text="Google Plus" data-trackaction="share Google Plus" href="Javascript:WidgetGooglePlus();"><span class="icon"></span><span id="sGooglePlus">Google +</span></a></li>
+          <li class="share-email"><a data-text="Email" data-trackaction="share Email" href="Javascript:WidgetEmail();"><span class="icon"></span><span id="sEmail">Email</span></a> </li>
+        </ul>
+      </div>
+    </div>
+     <div id="divreportcontent" style="width: 1280px; height: 720px;">
+        <div id="widget">
+                    <div id="widgetOptions">
+                        <div id="embedLinks">
+                            <ul id="embedLinkList">
+                                <li class="darkGrey">
+                                    <a href="javascript:void(0)" class="" id="shareLink"><span class="linkIcon"></span></a>
+                                    <div id="shareLinkDesc" class="darkGrey embedLinkDesc">
+                                        <div class="content">
+                                            <h4>Share<span class="closeToolTip"></span></h4>
+                                            <p>Share this query via:</p>
+                                            <ul class="shareLinks">
+                                                <li><a data-text="Twitter" data-trackaction="share twitter" href="Javascript:Widgettwitter()">Twitter</a></li>
+                                                <li><a data-text="Facebook" data-trackaction="share facebook" href="Javascript:Widgetfacebook();">Facebook</a></li>
+                                                <li><a data-text="Google Plus" data-trackaction="share GooglePlus" href="Javascript:WidgetGooglePlus();">Google +</a></li>
+                                                <li><a data-text="Email" data-trackaction="share Email" href="Javascript:WidgetEmail();">Email</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="darkGrey">
+                                    <a href="javascript:void(0)" id="downloadLink"><span class="linkIcon"></span></a>
+                                    <div id="downloadLinkDesc" class="darkGrey embedLinkDesc">
+                                        <div class="content">
+                                            <h4>Download<span class="closeToolTip"></span></h4>
+                                            <p>Download this dataset as:</p>
+                                            <ul class="shareLinks">
+
+                                                <li data-text="Excel" class="downloadlnk downloadExcel"><a data-trackaction="Excel" href="javascript:fileDownloadClick('.file-excel')">Excel</a></li>
+                                                <li data-text="CSV" class="downloadlnk downloadCSV"><a data-trackaction="CSV" href="javascript:fileDownloadClick('.file-csv')">CSV</a></li>
+                                                <li data-text="Tabbed Text" class="downloadlnk downloadTAB"><a data-trackaction="Tabbed Text" href="javascript:fileDownloadClick('.file-tab')">Tabbed TXT</a></li>
+
+                                                <li data-text="Chart - PNG" class="downloadlnk downloadPNG"><a data-trackaction="Chart-PNG" href="javascript:exportReport('png')">PNG</a></li>
+                                                <li data-text="Chart - JPEG" class="downloadlnk downloadJPEG"><a data-trackaction="Chart-JPEG" href="javascript:exportReport('jpeg')">JPEG</a></li>
+                                                <li data-text="Chart - SVG" class="downloadlnk downloadSVG"><a data-trackaction="Chart-SVG" href="javascript:exportReport('svg')">SVG</a></li>
+
+                                                <li data-text="Templates - PDF" class="downloadlnk downloadPDF"><a data-trackaction="PDF" href="javascript:exportReport('pdf')">PDF</a></li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="darkGrey">
+
+                                    <a data-customlink="pr:header" data-text="Print" href="javascript:exportReport('print')" id="printLink"><span class="linkIcon"></span></a>
+
+                                </li>
+                                <li class="darkGrey">
+                                    <a data-customlink="nl:header" data-text="Information" href="javascript:void(0)" id="infoLink"><span class="linkIcon"></span></a>
+                                    <div id="infoLinkDesc" class="darkGrey embedLinkDesc">
+                                        <div class="content">
+                                            <h4>INFORMATION <span class="closeToolTip"></span></h4>
+                                            <div id="reportDescription" class="panel-explore"><dl class="widget-desc"><dt>Created by</dt><dd>Lothar Wölfel</dd><dt>Description</dt><dd>Total reserves comprise holdings of monetary gold, special drawing rights, reserves of IMF members held by the IMF, and holdings of foreign exchange.</dd><dt>Tags</dt><dd>Exchange rates, Equity markets, Interest ratesm bond inices</dd><dt>Last Updated</dt><dd>4/9/2022 1:13:03 PM</dd></dl></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a data-customlink="nl:header" data-text="Full Screen" href="javascript:void(0)" id="fullScreen" title="Fullscreen"></a>
+                </div>
+
+        
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<script type="text/javascript" language="javascript">
+
+    var strlang = 'en';
+    var g_sort_index = '';
+    var g_sort_order = '1';
+    var g_array_book_attributes='';
+    if (g_array_book_attributes != null && g_array_book_attributes != "") 
+        g_array_book_attributes=eval('(' + '' + ')') ;
+    var g_HasIndicatorUnit = "N" == "Y";
+    var chart;
+    var dirperlang = "ltr";
+    var gbl_chart_revisions = "";
+
+    if (strlang != null && strlang != "") {
+        if (strlang == "ar") {
+            dirperlang = "rtl";
+        }
+    }
+    var escapetoxml = { '&amp;': '&', '&quot;': '"', '&lt;': '<', '&gt;': '>' };
+    function decodeXml(string) {
+        return string.replace(/(&quot;|&lt;|&gt;|&amp;)/g,
+       function (str, item)
+       { return escapetoxml[item]; });
+    }
+
+    $(function () {
+
+        loadChartLabelPreview();
+
+        
+       var scatterChart= 'line'
+       if(scatterChart=="scatter")
+       {
+        $("#REPORT_PREVIEW_cmbChartScatter_1").attr('previous', $('#REPORT_PREVIEW_cmbChartScatter_1').val());
+        $("#REPORT_PREVIEW_cmbChartScatter_2").attr('previous', $('#REPORT_PREVIEW_cmbChartScatter_2').val());
+        }
+
+    });
+
+    function loadMetaDataWidget(Name, Code, Type) { //Atsushi 11/30/2011 - to display metadata popup from column header, use same function name
+       var ReportID = $("#hdnReportID").val();
+       var ReportType = $("#hdnReportType").val();
+       var ddlSelected = $("#REPORT_PREVIEW_cmbChartPage_1 option:selected").val();
+       var ddlSelectedValue = "";
+       if (ddlSelected != null) {
+           ddlSelected = ddlSelected.split('&');
+           ddlSelectedValue = ddlSelected[1].replace('[', '').replace(']', '');
+       }
+       var strURL = '/Views/Metadata/MetadataWidget.aspx' + "?Name=" + Name.replace(/\&#39;/g, "%27") + "&Code=" + Code + "&Type=" + Type + "&ReqType=Metadata&ddlSelectedValue=" + ddlSelectedValue;
+       if (ReportID != null && ReportID != '' && ReportType != null && ReportType != '')
+            strURL += '&ReportID=' + ReportID + '&ReportType=' + ReportType;
+	   var sFeatures = 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=800,height=400,left=200,top=200';
+	   window.open(strURL, 'Metadata', sFeatures);
+    }
+
+    function Shared(strURL) {
+        //nov22 deepak added properties for popup
+        var params = 'width=' + screen.width;
+        params += ', height=' + screen.height;
+        params += ', top=0, left=0';
+        params += ', directories=no';
+        params += ', location=yes';
+        params += ', menubar=yes';
+        params += ', resizable=yes';
+        params += ', scrollbars=yes';
+        params += ', status=yes';
+        params += ', toolbar=yes';
+        window.open(strURL, '', params);
+        //window.open(strURL, '', "status=1, width='" + screen.width - 5 + "', height='" + screen.height - 5);
+    }
+
+    function validateScatter() 
+    {
+
+        var scatterXprevval = $('#REPORT_PREVIEW_cmbChartScatter_1').attr('previous');
+        var scatterYprevval = $('#REPORT_PREVIEW_cmbChartScatter_2').attr('previous');
+        var scatterXval = $('#REPORT_PREVIEW_cmbChartScatter_1').val();
+        var scatterYval = $('#REPORT_PREVIEW_cmbChartScatter_2').val();
+
+        if (scatterXval == scatterYval) {
+            alert('For scatter chart X and Y variables ,select different values');
+
+            $("#REPORT_PREVIEW_cmbChartScatter_1 option").each(function (i) {
+
+                if ($(this).val() == scatterXprevval) {
+                    $(this).attr("selected", "selected");
+                    return false;
+                }
+
+            });
+
+            $("#REPORT_PREVIEW_cmbChartScatter_2 option").each(function (i) {
+
+                if ($(this).val() == scatterYprevval) {
+                    $(this).attr("selected", "selected");
+                    return false;
+                }
+
+            });
+
+
+
+            return false;
+        }
+        else
+         {
+             $("#REPORT_PREVIEW_cmbChartScatter_1").attr('previous', scatterXval);
+             $("#REPORT_PREVIEW_cmbChartScatter_2").attr('previous', scatterYval);
+             return true; 
+                  
+         }
+
+    }
+
+    var compDropdownChange = 0;
+    function compDropdownSelected(obj) {
+        compDropdownChange++;
+        var ctlid = obj.id;
+
+        compDropdownSelectedInterval(ctlid, compDropdownChange);
+    }
+
+    function compDropdownSelectedInterval(ctlid, lastvalue) {
+        setTimeout(function () {
+            if (lastvalue == compDropdownChange) {
+                if ($('#' + ctlid + '_chosen').hasClass('chosen-with-drop'))
+                    compDropdownSelectedInterval(ctlid, lastvalue)
+                else
+                    __doPostBack('REPORT_PREVIEW$' + ctlid, '');
+            }
+        }, 2000);
+    }
+</script>
+
+<table class="widget-maintable" cellpadding="0" cellspacing="0">
+    <tbody><tr id="widget-table-dropdowns" class="widget-maintable-row" style="height: 24px;"><td class="widget-maintable-cell">
+        <div id="REPORT_PREVIEW_divdropdown" class="rtldirection">
+            <table border="0" class="table_ddpage" style="margin-top:2px;">
+	<tbody><tr>
+		<td id="REPORT_PREVIEW_rowCellPage_1" class="table_ddpage"><select name="REPORT_PREVIEW$cmbChartPage_1" onchange="javascript:setTimeout('__doPostBack(\'REPORT_PREVIEW$cmbChartPage_1\',\'\')', 0)" id="REPORT_PREVIEW_cmbChartPage_1" style="display: none;">
+			<option selected="selected" value="[MID_Cntry].[List].&amp;[TUN]">Tunisia</option>
+
+		</select><div class="chosen-container chosen-container-single" style="width: auto;" title="" id="REPORT_PREVIEW_cmbChartPage_1_chosen"><a class="chosen-single" tabindex="-1"><span>Tunisia</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div></td>
+	</tr>
+</tbody></table>
+
+        </div>
+    </td></tr>
+    <tr id="widget-table-header" class="widget-maintable-row"><td class="widget-maintable-cell">
+        
+    </td></tr>
+    <tr id="widget-table-content" class="widget-maintable-row"><td class="widget-maintable-cell">
+        <div id="container" dir="ltr" class="clearfix" data-highcharts-chart="0"><div class="highcharts-container" id="highcharts-0" style="position: relative; overflow: hidden; width: 1272px; height: 653px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" style="font-family:&quot;Open Sans&quot;, &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="1272" height="653"><desc>Created with Highstock 2.1.10</desc><defs><clipPath id="highcharts-1"><rect x="0" y="0" width="1226" height="548"></rect></clipPath><clipPath id="highcharts-2"><rect x="-99" y="-40" width="611.2608059999999" height="653"></rect></clipPath><clipPath id="highcharts-3"><rect x="0" y="0" width="512.2608059999999" height="548"></rect></clipPath></defs><rect x="0" y="0" width="1272" height="653" strokeWidth="0" fill="#F6F6F6" class=" highcharts-background"></rect><rect x="36" y="40" width="1226" height="548" fill="#FFFFFF"></rect><g class="highcharts-range-selector-buttons" transform="translate(0,5)"><text x="36" y="15" style="color:#666;visibility:hidden;fill:#666;">Zoom</text><g class="highcharts-button" zIndex="7" states="[object Object]" visibility="hidden" style="cursor:pointer;text-align:center;" transform="translate(74,0)"><rect x="0" y="0" width="32" height="22" strokeWidth="0" fill="#f7f7f7" rx="0" ry="0"></rect><text x="6.6015625" zIndex="1" style="font-weight:normal;color:#CCC;fill:#CCC;" y="14">1m</text></g><g class="highcharts-button" zIndex="7" states="[object Object]" visibility="hidden" style="cursor:pointer;text-align:center;" transform="translate(111,0)"><rect x="0" y="0" width="32" height="22" strokeWidth="0" fill="#f7f7f7" rx="0" ry="0"></rect><text x="6.6015625" zIndex="1" style="font-weight:normal;color:#CCC;fill:#CCC;" y="14">3m</text></g><g class="highcharts-button" zIndex="7" states="[object Object]" visibility="hidden" style="cursor:pointer;text-align:center;" transform="translate(148,0)"><rect x="0" y="0" width="32" height="22" strokeWidth="0" fill="#f7f7f7" rx="0" ry="0"></rect><text x="6.6015625" zIndex="1" style="font-weight:normal;color:#CCC;fill:#CCC;" y="14">6m</text></g><g class="highcharts-button" zIndex="7" states="[object Object]" visibility="hidden" style="cursor:pointer;text-align:center;" transform="translate(185,0)"><rect x="0" y="0" width="32" height="22" strokeWidth="0" fill="#f7f7f7" rx="0" ry="0"></rect><text x="3.96875" zIndex="1" style="font-weight:normal;color:#CCC;fill:#CCC;" y="14">YTD</text></g><g class="highcharts-button" zIndex="7" states="[object Object]" visibility="hidden" style="cursor:pointer;text-align:center;" transform="translate(222,0)"><rect x="0" y="0" width="32" height="22" strokeWidth="0" fill="#f7f7f7" rx="0" ry="0"></rect><text x="9.0703125" zIndex="1" style="font-weight:normal;color:#CCC;fill:#CCC;" y="14">1y</text></g><g class="highcharts-button" zIndex="7" states="[object Object]" visibility="hidden" style="cursor:pointer;text-align:center;" transform="translate(259,0)"><rect x="0" y="0" width="32" height="22" strokeWidth="0" fill="#f7f7f7" rx="0" ry="0"></rect><text x="8.390625" zIndex="1" style="font-weight:normal;color:#CCC;fill:#CCC;" y="14">All</text></g></g><g class="highcharts-grid" zIndex="1"></g><g class="highcharts-grid" zIndex="1"><path fill="none" d="M 36 588.5 L 1262 588.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path><path fill="none" d="M 36 533.5 L 1262 533.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path><path fill="none" d="M 36 478.5 L 1262 478.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path><path fill="none" d="M 36 422.5 L 1262 422.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path><path fill="none" d="M 36 367.5 L 1262 367.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path><path fill="none" d="M 36 312.5 L 1262 312.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path><path fill="none" d="M 36 257.5 L 1262 257.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path><path fill="none" d="M 36 201.5 L 1262 201.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path><path fill="none" d="M 36 146.5 L 1262 146.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path><path fill="none" d="M 36 91.5 L 1262 91.5" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="none" zIndex="1" opacity="1"></path></g><g class="highcharts-axis" zIndex="2"><path fill="none" d="M 73.5 588 L 73.5 598" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 303.5 588 L 303.5 598" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 533.5 588 L 533.5 598" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 763.5 588 L 763.5 598" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 993.5 588 L 993.5 598" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 1223.5 588 L 1223.5 598" stroke="#C0D0E0" stroke-width="1" opacity="1"></path><path fill="none" d="M 36 588.5 L 1262 588.5" stroke="#FFFFFF" stroke-width="1" zIndex="7"></path></g><g class="highcharts-axis" zIndex="2"></g><g class="highcharts-series-group" zIndex="3"><g class="highcharts-series highcharts-series-0" zIndex="0.1" transform="translate(36,40) scale(1 1)" clip-path="url(#highcharts-3)"><path fill="none" d="M 38.3125 443.3693614958023 L 114.9375 449.6170386062108 L 191.5625 421.65992644371966 L 268.1875 328.2320193099097 L 344.8125 173.443194985633 L 421.4375 66.34883942463404 L 498.0625 26.095238095238074 L 574.6875 72.9279582915629 L 651.3125 126.754099550467 L 727.9375 123.98103685424678 L 804.5625 138.24960447244763 L 881.1875 216.9173053825516 L 957.8125 242.2836478149087 L 1034.4375 258.6071543235357 L 1111.0625 143.07760605909402 L 1187.6875 44.0593812986408" stroke="#4572A7" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 28.3125 443.3693614958023 L 38.3125 443.3693614958023 L 114.9375 449.6170386062108 L 191.5625 421.65992644371966 L 268.1875 328.2320193099097 L 344.8125 173.443194985633 L 421.4375 66.34883942463404 L 498.0625 26.095238095238074 L 574.6875 72.9279582915629 L 651.3125 126.754099550467 L 727.9375 123.98103685424678 L 804.5625 138.24960447244763 L 881.1875 216.9173053825516 L 957.8125 242.2836478149087 L 1034.4375 258.6071543235357 L 1111.0625 143.07760605909402 L 1187.6875 44.0593812986408 L 1197.6875 44.0593812986408" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style="cursor:pointer;"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-tracker" zIndex="0.1" transform="translate(36,40) scale(1 1)" clip-path="url(#highcharts-2)" style="cursor:pointer;"></g></g><text x="0" text-anchor="start" class="highcharts-title" zIndex="4" style="color:#444444;font-size:9px;font-family:Open Sans;font-weight:normal;font-style:italic;fill:#444444;width:1208px;" y="30"></text><g class="highcharts-legend" zIndex="7" transform="translate(582,617)"><rect x="0" y="0" width="107" height="21" strokeWidth="0" fill="#F6F6F6" visibility="visible"></rect><g zIndex="1"><g><g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)"><path fill="none" d="M 0 8 L 16 8" stroke="#4572A7" stroke-width="2"></path><text x="21" style="color:#000000;font-size:8px;font-weight:normal;cursor:pointer;font-family:Verdana;font-style:normal;fill:#000000;" text-anchor="start" zIndex="2" y="11"><tspan>Total Reserves,,,,</tspan></text></g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels" zIndex="7"></g><g class="highcharts-axis-labels highcharts-yaxis-labels" zIndex="7"><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="593" opacity="1"><tspan>0 T</tspan></text><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="537" opacity="1"><tspan>1 T</tspan></text><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="482" opacity="1"><tspan>2 T</tspan></text><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="427" opacity="1"><tspan>3 T</tspan></text><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="372" opacity="1"><tspan>4 T</tspan></text><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="316" opacity="1"><tspan>5 T</tspan></text><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="261" opacity="1"><tspan>6 T</tspan></text><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="206" opacity="1"><tspan>7 T</tspan></text><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="151" opacity="1"><tspan>8 T</tspan></text><text x="21" style="color:#000000;cursor:default;font-size:8px;font-family:Open Sans;font-weight:normal;font-style:normal;fill:#000000;width:410px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="95" opacity="1"><tspan>9 T</tspan></text></g><g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;pointer-events:none;white-space:nowrap;" transform="translate(0,-9999)"><path fill="none" d="M 3.5 0.5 L 13.5 0.5 C 16.5 0.5 16.5 0.5 16.5 3.5 L 16.5 13.5 C 16.5 16.5 16.5 16.5 13.5 16.5 L 3.5 16.5 C 0.5 16.5 0.5 16.5 0.5 13.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></path><path fill="none" d="M 3.5 0.5 L 13.5 0.5 C 16.5 0.5 16.5 0.5 16.5 3.5 L 16.5 13.5 C 16.5 16.5 16.5 16.5 13.5 16.5 L 3.5 16.5 C 0.5 16.5 0.5 16.5 0.5 13.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></path><path fill="none" d="M 3.5 0.5 L 13.5 0.5 C 16.5 0.5 16.5 0.5 16.5 3.5 L 16.5 13.5 C 16.5 16.5 16.5 16.5 13.5 16.5 L 3.5 16.5 C 0.5 16.5 0.5 16.5 0.5 13.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></path><path fill="rgba(249, 249, 249, .85)" d="M 3.5 0.5 L 13.5 0.5 C 16.5 0.5 16.5 0.5 16.5 3.5 L 16.5 13.5 C 16.5 16.5 16.5 16.5 13.5 16.5 L 3.5 16.5 C 0.5 16.5 0.5 16.5 0.5 13.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"></path><text x="8" zIndex="1" style="font-size:12px;font-weight:normal;color:#333333;width:954px;fill:#333333;" y="20"></text></g></svg><div class="highcharts-axis-labels highcharts-xaxis-labels" style="position: absolute; left: 0px; top: 0px;"><span style="position: absolute; font-family: &quot;Open Sans&quot;; font-size: 8px; white-space: nowrap; color: rgb(0, 0, 0); cursor: default; font-weight: normal; font-style: normal; margin-left: 0px; margin-top: 0px; left: 66.3125px; top: 596px; transform: rotate(0deg); transform-origin: 50% 9px; text-overflow: clip;" transform="translate(0,0)" opacity="1">1998</span><span style="position: absolute; font-family: &quot;Open Sans&quot;; font-size: 8px; white-space: nowrap; color: rgb(0, 0, 0); cursor: default; font-weight: normal; font-style: normal; margin-left: 0px; margin-top: 0px; left: 296.188px; top: 596px; transform: rotate(0deg); transform-origin: 50% 9px; text-overflow: clip;" transform="translate(0,0)" opacity="1">2004</span><span style="position: absolute; font-family: &quot;Open Sans&quot;; font-size: 8px; white-space: nowrap; color: rgb(0, 0, 0); cursor: default; font-weight: normal; font-style: normal; margin-left: 0px; margin-top: 0px; left: 526.062px; top: 596px; transform: rotate(0deg); transform-origin: 50% 9px; text-overflow: clip;" transform="translate(0,0)" opacity="1">2010</span><span style="position: absolute; font-family: &quot;Open Sans&quot;; font-size: 8px; white-space: nowrap; color: rgb(0, 0, 0); cursor: default; font-weight: normal; font-style: normal; margin-left: 0px; margin-top: 0px; left: 755.938px; top: 596px; transform: rotate(0deg); transform-origin: 50% 9px; text-overflow: clip;" transform="translate(0,0)" opacity="1">2014</span><span style="position: absolute; font-family: &quot;Open Sans&quot;; font-size: 8px; white-space: nowrap; color: rgb(0, 0, 0); cursor: default; font-weight: normal; font-style: normal; margin-left: 0px; margin-top: 0px; left: 985.812px; top: 596px; transform: rotate(0deg); transform-origin: 50% 9px; text-overflow: clip;" transform="translate(0,0)" opacity="1">2017</span><span style="position: absolute; font-family: &quot;Open Sans&quot;; font-size: 8px; white-space: nowrap; color: rgb(0, 0, 0); cursor: default; font-weight: normal; font-style: normal; margin-left: 0px; margin-top: 0px; left: 1215.69px; top: 596px; transform: rotate(0deg); transform-origin: 50% 9px; text-overflow: clip;" transform="translate(0,0)" opacity="1">2020</span></div></div></div>
+    </td></tr>
+    <tr id="widget-table-footer" class="widget-maintable-row"><td class="widget-maintable-cell">
+        <span id="REPORT_PREVIEW_lblXAxis"></span>
+        
+       
+        
+
+    </td></tr>
+    <tr id="widget-table-source" class="widget-maintable-row"><td class="widget-maintable-cell">
+    <span id="REPORT_PREVIEW_sReportSource" class="reportSourceLink">Created from:</span>
+        <a id="REPORT_PREVIEW_hplDatabaseName" class="reportSourceLink-widget">World Bank, Global Economic Monitor (GEM)</a>
+    </td></tr>
+    <tr id="widget-table-disclaimer" class="widget-maintable-row"><td class="widget-maintable-cell-disclaimer">
+      <b id="REPORT_PREVIEW_bDisclaimer" class="disclaimer-widget"></b>
+        <span id="REPORT_PREVIEW_sDisclaimerMsg" class="disclaimer-widget"> </span>
+    </td></tr>
+</tbody></table>
+
+ <input type="hidden" name="REPORT_PREVIEW$hdnIsPortal" id="REPORT_PREVIEW_hdnIsPortal">
+ <input type="hidden" name="REPORT_PREVIEW$hdnHasData" id="hdnHasData" value="true">
+ <input name="REPORT_PREVIEW$hdnDimensionDetails" type="hidden" id="hdnDimensionDetails" value="Country : Tunisia">
+ <input name="REPORT_PREVIEW$hdnCreatedOn" type="hidden" id="hdnCreatedOn" value="Created on: 08/12/2025">
+    
+    <input name="REPORT_PREVIEW$hdnLsqrNote" type="hidden" id="hdnLsqrNote" value="Growth rate calculated for less than the full period.">
+    
+<div style="visibility: hidden">
+
+    <span class="file-excel-menu">Excel</span>
+    <div id="file-loading" class="loading"><img src="../../images/ajax-loader.gif" width="32" height="32" alt=""><br><strong>Loading...</strong></div>  
+</div>
+
+<script type="text/javascript">
+
+    function getNumberFormat(varValue) {
+        var strValue = (varValue == null ? '' : varValue.toString());
+        var dotValue = strValue.indexOf('.');
+        if (dotValue != -1) {
+            var DecCount = strValue.length - strValue.indexOf('.') - 1;
+            strValue = (DecCount > 0 ? Highcharts.numberFormat(varValue, DecCount, '.', ',') : Highcharts.numberFormat(varValue, 0, ',') );
+        }
+        return strValue;
+    }
+    
+
+    function getNumberFormatTooltip(varValue) {
+        var strValue = (varValue == null ? '' : varValue.toString());
+        var dotValue = strValue.indexOf('.');
+        if (dotValue != -1) {
+            var DecCount = strValue.length - strValue.indexOf('.') - 1;
+            strValue = (DecCount > 0 ? Highcharts.numberFormat(varValue, DecCount, '.', ',') : Highcharts.numberFormat(varValue, 0, ',') );
+        }
+        else
+        {        
+            strValue = Highcharts.numberFormat(varValue, 0, '.', ',');
+        }
+        
+        return strValue;
+     }
+
+
+
+
+
+    function getDefaultTooltip($this, options, CommaSeparator) {          
+        var strToolTip = '';
+        var strRevisionText = '';
+        var strBookUnitName = '';
+        var objBookAttribute;
+        var footNoteText = '';
+        if(g_HasIndicatorUnit)
+            objBookAttribute = $.grep(g_array_book_attributes, function (e) { return e.seriesId.split("&").pop().replace('[', '').replace(']', '') == $this.series.options.seriesuniquename; });
+        strToolTip += '<div style="font-weight: bold; font-family:Arial; line-height: normal;">';
+        if (options.chart.defaultSeriesType == "pie")
+        {
+            var pointname = $this.point.name;
+            if (isHTML(pointname)) {
+                pointname = $(pointname).first().text();
+               }
+
+            if (options.xAxis.type == 'datetime')
+                pointname = Highcharts.dateFormat(options.xAxis.dateTimeLabelFormats.day, pointname);
+            else
+            {
+                strRevisionText = gbl_chart_revisions[pointname];
+                if (objBookAttribute != null && objBookAttribute.length > 0)
+                    strBookUnitName = objBookAttribute[0].bookUnit;
+                }
+            strToolTip += pointname;
+        }
+        else
+        {
+            strToolTip += $this.series.name;
+            strRevisionText = $this.series.options.revisionstext;
+            if (objBookAttribute != null && objBookAttribute.length > 0)
+            strBookUnitName = objBookAttribute[0].bookUnit;
+        }
+        strToolTip += "</div>";
+
+        if (strRevisionText != null && strRevisionText != '') {
+            strToolTip += '<br/>';
+            strToolTip += '<div style="font-weight: normal;  font-family:Arial; line-height: normal; font-size:8px"><b>Last previous name:</b>' + strRevisionText + '</div>';
+        }
+
+        strToolTip += '<br/>';
+
+        strToolTip += '<div style="font-weight: normal; font-family:Arial; line-height: normal;">';
+        var varValueY = (options.chart.defaultSeriesType == "pie" ? $this.point.y : $this.y);
+        var varValueX = (options.chart.defaultSeriesType == "pie" ? '' : $this.x);
+        
+       if(isHTML(varValueX))
+        {
+            varValueX =  $(varValueX).first().text();
+        }
+       if (options.xAxis[0] != null && options.xAxis[0].isHighStock) {           
+           varValueX = Highcharts.dateFormat('%Y', $this.x);
+           var footPointYear;
+           var footPointcode;
+           for (var i = 0; i < $this.series.options.data.length; i++) {
+                if ($this.series.options.data[i].length == 4) {
+                    footPointYear = $this.series.options.data[i][0];
+                    footPointYear = Highcharts.dateFormat('%Y', footPointYear);                
+                
+                    if (footPointYear == varValueX) {                    
+                        footPointcode = $this.series.options.data[i][3];
+                        footNoteText = getFootNotes(footPointcode);                        
+                    }
+                }
+           }
+       }
+        if (options.chart.defaultSeriesType != "scatter" && varValueX != '' && options.xAxis.type == 'datetime') {
+            varValueX = Highcharts.dateFormat(options.xAxis.dateTimeLabelFormats.day, varValueX);
+        }
+
+        if (CommaSeparator != null && CommaSeparator != "") {
+            if (options.chart.defaultSeriesType == "pie") varValueY = $this.point.positive ? varValueY : varValueY * (-1);
+            varValueY = getNumberFormatTooltip(varValueY);
+
+            if (options.chart.defaultSeriesType == "scatter") varValueX = getNumberFormatTooltip(varValueX);
+        }
+
+        var strScatterVal = "";
+        if (options.chart.defaultSeriesType == "scatter") {
+            var sctname = $this.point.name;
+            varValueY = varValueY + "(" + sctname + ")";
+            strScatterVal = sctname;
+        }
+
+       if ($this.point.mrvyr != undefined && $this.point.mrvyr != 0)
+       {
+           
+            varValueY +=  "(" + $this.point.mrvyr +")";
+       }
+
+
+        if (options.chart.defaultSeriesType == "pie")
+            strToolTip +=  varValueY;
+        else
+            strToolTip +=  varValueX + ' : ' + varValueY;
+        strToolTip += "</div>";
+
+        if (gbl_chart_revisions != null) {
+            var strRevisionText = "";
+            if (options.chart.defaultSeriesType == "scatter")
+                strRevisionText = gbl_chart_revisions[strScatterVal];
+            else
+                strRevisionText = gbl_chart_revisions[varValueX];
+            if (strRevisionText != null && strRevisionText != '') {
+                strToolTip += '<br/>';
+                strToolTip += '<div style="font-weight: normal;  font-family:Arial; line-height: normal; font-size:8px"><b>Last previous name:</b>' + strRevisionText + '</div>';
+            }
+        }
+
+        
+        if (options.chart.defaultSeriesType != "pie" && options.chart.defaultSeriesType != "scatter") {
+            if ($this.point.note != null && $this.point.note != "N") {
+
+                
+                strToolTip += "<br/>";
+
+                if($this.point.note == "Q") {
+                    strToolTip += '<div style="font-weight: normal;  font-family:Arial; line-height: normal; font-size:10px;">'
+                    strToolTip += $("#hdnLsqrNote").val();
+                    strToolTip += "</div>"
+                }
+
+                else
+                {
+                    strToolTip += getFootNotesWidget($this.point.note);
+                }
+                
+            }
+        }
+        
+        if (strBookUnitName != null && strBookUnitName != '') {
+            strToolTip += '<br/>';
+            strToolTip += '<div style="font-weight: normal;  font-family:Arial; line-height: normal; font-size:12px">Units: ' + strBookUnitName + '</div>';
+        }
+
+        if (footNoteText != "")
+        {
+            strToolTip += '<br/>';
+            strToolTip += footNoteText;
+        }
+        return strToolTip;
+    }
+
+    function getExtendedTooltip($this, options, CommaSeparator) {
+        var strToolTip = ''; //'<span style="font-size-adjust: 0.6">'+ $this.x + '</span>';
+        var varValueX = $this.x;
+        if (options.xAxis[0] != null && options.xAxis[0].isHighStock)
+            varValueX = Highcharts.dateFormat('%Y', $this.x);
+        if (varValueX!='')
+       {
+            if($(varValueX).is("a"))
+            {
+                varValueX= $(varValueX).first().text();
+            }
+           else
+            {
+              varValueX= $this.x;
+            }
+
+       }
+
+        if (options.xAxis.type == 'datetime') {
+            varValueX = Highcharts.dateFormat(options.xAxis.dateTimeLabelFormats.day, varValueX);
+        }
+
+        strToolTip += '<div style="font-weight: bold; font-family:Arial; line-height: normal;">';
+        strToolTip += varValueX;
+        strToolTip += '</div>';
+
+        if (gbl_chart_revisions != null) {
+            var strRevisionText = gbl_chart_revisions[htmlDecode(varValueX)];
+            if (strRevisionText != null && strRevisionText != '') {
+                strToolTip += '<br/>';
+                strToolTip += '<div style="font-weight: normal;  font-family:Arial; line-height: normal; font-size:8px"><b>Last previous name:</b>' + strRevisionText + '</div>';
+            }
+        }
+
+        strToolTip += '<br/>';
+        
+        $.each($this.points, function(i, point)
+	    {
+            strToolTip += '<div style="font-weight: normal; font-family:Arial; line-height: normal; color:' + point.series.color + '">' + point.series.name + ' : ';
+            var varValueY = point.y;
+            if (CommaSeparator != null && CommaSeparator != "") {
+                varValueY = getNumberFormatTooltip(varValueY);
+            }
+            strToolTip +=  varValueY;
+            strToolTip += '</div>';
+
+            var strRevisionText = point.series.options.revisionstext;
+            var objBookAttribute;
+            var strBookUnitName = '';
+            if(g_HasIndicatorUnit)
+                objBookAttribute= $.grep(g_array_book_attributes, function (e) { return e.seriesId.split("&").pop().replace('[', '').replace(']', '') == point.series.options.seriesuniquename; });
+            if (objBookAttribute != null && objBookAttribute.length > 0)
+                strBookUnitName = objBookAttribute[0].bookUnit;
+            if (strRevisionText != null && strRevisionText != '') {
+                strToolTip += '<br/>';
+                strToolTip += '<div style="font-weight: normal;  font-family:Arial; line-height: normal; font-size:10px; color:' + point.series.color + '">Last previous name:' + strRevisionText + '</div>';
+            }
+            if (strBookUnitName != null && strBookUnitName != '') {
+                strToolTip += '<br/>';
+                strToolTip += '<div style="font-weight: normal;  font-family:Arial; line-height: normal; font-size:10px; color:' + point.series.color + '">Units: ' + strBookUnitName + '</div>';
+            }
+            strToolTip += '<br/>';
+	    });
+        //alert(strToolTip);
+        return strToolTip;
+    }
+
+
+
+    function sortChart(index)
+    {
+        if (g_sort_index != null) {
+            $("#labelid" + g_sort_index).children('img').first().removeClass('chart-sort-up').removeClass('chart-sort-down');
+        }
+
+        if (g_sort_index == index)
+            g_sort_order = -1 * g_sort_order;
+        else
+            g_sort_order = 1;
+
+        g_sort_index = index;
+        
+
+        var seriessort = chart.options.series.sort(function (o1, o2) {
+            var objSeriesArray1 = o1.data[index];
+            var objSeriesArray2 = o2.data[index];
+            var seriescomb;
+
+           if (objSeriesArray1 != null && 'undefined' !== typeof objSeriesArray1['mrvyr'] && objSeriesArray2 != null && 'undefined' !== typeof objSeriesArray2['mrvyr']) {
+                seriescomb = "bothmrv";
+            }
+            else if (objSeriesArray1 != null && 'undefined' !== typeof objSeriesArray1['mrvyr']) {
+                seriescomb = "firstmrv";
+
+            }
+            else if (objSeriesArray2 != null && 'undefined' !== typeof objSeriesArray2['mrvyr']) {
+                seriescomb = "secondmrv";
+
+            }
+          
+
+            switch (seriescomb)
+            {
+
+               case "bothmrv":
+                                if (o1.data[index].y == null && o2.data[index].y == null) return 0;
+                                if (o1.data[index].y == null) return g_sort_order * (0 - o2.data[index].y);
+                                if (o2.data[index].y == null) return g_sort_order * (o1.data[index].y);
+                                return (g_sort_order * (o1.data[index].y - o2.data[index].y));
+
+               case "secondmrv":
+                                if (o1.data[index] == null && o2.data[index].y == null) return 0;
+                                if (o1.data[index] == null) return g_sort_order * (0 - o2.data[index].y);
+                                if (o2.data[index].y == null) return g_sort_order * (o1.data[index]);
+                                return (g_sort_order * (o1.data[index] - o2.data[index].y));
+
+               case "firstmrv":
+                                if (o1.data[index].y == null && o2.data[index] == null) return 0;
+                                if (o1.data[index].y == null) return g_sort_order * (0 - o2.data[index]);
+                                if (o2.data[index] == null) return g_sort_order * (o1.data[index].y);
+                                return (g_sort_order * (o1.data[index].y - o2.data[index]));
+                     default:
+                                if (o1.data[index] == null && o2.data[index] == null) return 0;
+                                if (o1.data[index] == null) return g_sort_order * (0 - o2.data[index]);
+                                if (o2.data[index] == null) return g_sort_order * (o1.data[index]);
+                                return (g_sort_order * (o1.data[index] - o2.data[index]));
+            
+            }
+        });
+        chart.options.series = seriessort;
+              
+       chart.options.exporting.buttons.exportButton.enabled = false;//making all buttons as invisible to enable the print on top
+         chart.options.exporting.buttons.printButton.enabled = false;
+         if (options.xAxis.isHighStock)
+         {
+            var tickintervaltemp=options.xAxis.tickInterval;
+            if (options.series[0] != null && options.series[0].data.length > 6)
+            options.xAxis.minRange = 365 * 24 * 3600 * 1000;
+            options.xAxis.tickInterval = options.xAxis.tickInterval*31536000000;
+
+            options.xAxis.tickPositioner = function () {
+                //if the tickInterval is 1 no need to do anything
+                if (options.xAxis.tickInterval == 31536000000) return;
+
+                if (this.tickPositions != null && this.tickPositions.length > 0) {
+                    //to show the first label if its missing
+//                    if (this.tickPositions[0] < this.dataMin) {
+//                        this.tickPositions[0] = this.dataMin;
+//                    }
+//                    else if (this.tickPositions[0] > this.dataMin) {
+//                        this.tickPositions.unshift(this.dataMin);
+//                    }
+
+                    //to show the last label if its missing
+                    if (this.tickPositions[this.tickPositions.length - 1] > this.dataMax) {
+                        this.tickPositions[this.tickPositions.length - 1] = this.dataMax;
+                    }
+                    else if (this.tickPositions[this.tickPositions.length - 1] < this.dataMax) {
+                        this.tickPositions.push(this.dataMax);
+                    }
+                }
+
+                //to customize the entire tick positions
+                //******not working wrt label intervals
+                /*var allticks = [];
+                var currenttick = this.dataMin;
+                while (currenttick < this.dataMax) {
+                allticks.push(currenttick);
+
+                currenttick += this.tickInterval;
+                }
+                allticks.push(this.dataMax);
+
+                this.tickPositions = allticks;*/
+            };
+            chart = new Highcharts.StockChart(options);
+            options.xAxis.tickInterval = tickintervaltemp;
+        }
+        else
+            chart = new Highcharts.Chart(options);
+                
+        setSortIcon();
+
+    }
+
+
+    function setSortIcon()
+     {
+        if (g_sort_index >= 0)
+        {
+            if (g_sort_order == 1)
+                $("#labelid" + g_sort_index).children('img').first().addClass('chart-sort-up');
+            else
+                $("#labelid" + g_sort_index).children('img').first().addClass('chart-sort-down');
+        }
+    
+    }
+
+
+     function htmlDecode(value)
+     { 
+       if (value)
+           { 
+              return $('<div />').html(value).text();
+           } 
+           else
+            {
+              return ''; 
+            }
+     }
+
+     function SetChartOptions(prop, show)
+     {
+        switch(prop)
+        {
+            case 'xaxis':
+                if (show)
+                {
+                    chart.xAxis[0].labelGroup.show();
+                    chart.xAxis[0].axisGroup.show();
+                }
+                else
+                {
+                    chart.xAxis[0].labelGroup.hide();
+                    chart.xAxis[0].axisGroup.hide();
+                }
+                break;
+            case 'yaxis':
+                if (show)
+                {
+                    chart.yAxis[0].labelGroup.show();
+                    if (chart.yAxis.length > 1) chart.yAxis[1].labelGroup.show();
+                }
+                else
+                {
+                    chart.yAxis[0].labelGroup.hide();
+                    if (chart.yAxis.length > 1) chart.yAxis[1].labelGroup.hide();
+                }
+                break;
+            case 'legend':
+                if (show)
+                {
+                    chart.legend.group.show();
+                    chart.legend.box.show();
+                }
+                else
+                {
+                    chart.legend.group.hide();
+                    chart.legend.box.hide();
+                }
+                break;
+        }
+     }
+
+     function exportReport(exporttype)
+     {
+         var highchart_path ="";
+         highchart_path='/HighchartsExport.axd';
+         chart.options.exporting.url =highchart_path;
+         chart.options.exporting.filename=$('#hdnReportName').val();
+	     chart.options.exporting.width= 800;
+         var chartTitle = $("#widgetTitle").text();
+         var chartFooter = $("#REPORT_PREVIEW_lblFooter").text();
+         var chartSource = $("#REPORT_PREVIEW_sReportSource").text() + $("#REPORT_PREVIEW_hplDatabaseName").text();
+         var chartDimensionDtls = $("#hdnDimensionDetails").val();
+         var createdOn = $("#hdnCreatedOn").val();
+        switch(exporttype)
+        {
+            case 'print':
+                var elemTitle = chart.renderer.text(chartTitle, 20, 15)
+                                .attr({ rotation: 0 })
+                                .css({ color: '#000000', fontSize: '12px' })
+                                .add();
+            
+                var currentheight = $(chart.container).height();
+                var extrafooter = '<div id="highcharts-print-footer">' + chartFooter + '</div>';
+                extrafooter += '<div id="highcharts-print-source">' + chartSource + '</div>';
+                extrafooter += '<div id="highcharts-print-dimdetails">' + chartDimensionDtls + '</div>';
+                extrafooter += '<div id="highcharts-print-created">' + createdOn + '</div>';
+                $(chart.container).height(currentheight + 100).append(extrafooter);
+
+                chart.print();
+
+                $(chart.container).height(currentheight);
+                $('#highcharts-print-footer,#highcharts-print-source,#highcharts-print-dimdetails,#highcharts-print-created', chart.container).remove();
+                elemTitle.hide();
+
+                break;
+            case 'png':
+                chart.exportChart({ width: 750 },{chart:{ width:750, height:600, marginTop: 50, spacingBottom: 100, events: {
+                    load: function () {
+                        this.renderer.text(chartTitle, 20, 15)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+                                
+                            })
+                            .add();
+                        this.renderer.text(chartFooter, 20, 525)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+                               
+                            })
+                            .add();
+                        this.renderer.text(chartSource, 20, 565)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                        this.renderer.text(chartDimensionDtls, 20, 545)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                            this.renderer.text(createdOn, 20, 585)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                    }
+                }
+                } 
+                }, {tooltip: { enabled: false}} );
+                break;
+            case 'jpeg':
+                chart.exportChart({ type:'image/jpeg' },{chart:{ width:750, height:600, marginTop: 50, spacingBottom: 100, events: {
+                    load: function () {
+                        this.renderer.text(chartTitle, 20, 15)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+                                
+                            })
+                            .add();
+                        this.renderer.text(chartFooter, 20, 525)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+                               
+                            })
+                            .add();
+                        this.renderer.text(chartSource, 20, 565)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                        this.renderer.text(chartDimensionDtls, 20, 545)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                            this.renderer.text(createdOn, 20, 585)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                    }
+                }
+                }
+                }, {tooltip: { enabled: false}} );
+                break;
+            case 'pdf':
+                chart.exportChart({type: 'application/pdf'},{chart:{ width:750, height:600, marginTop: 50, spacingBottom: 100, events: {
+                    load: function () {
+                        this.renderer.text(chartTitle, 20, 15)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+                                
+                            })
+                            .add();
+                        this.renderer.text(chartFooter, 20, 525)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+                               
+                            })
+                            .add();
+                        this.renderer.text(chartSource, 20, 565)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                        this.renderer.text(chartDimensionDtls, 20, 545)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                            this.renderer.text(createdOn, 20, 585)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                    }
+                }
+                }
+                },{tooltip: { enabled: false}} );
+                break;
+            case 'svg':
+                chart.exportChart({ type: 'image/svg+xml'},{chart:{ width:750, height:600, marginTop: 50, spacingBottom: 100, events: {
+                    load: function () {
+                        this.renderer.text(chartTitle, 20, 15)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+                                
+                            })
+                            .add();
+                        this.renderer.text(chartFooter, 20, 525)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+                               
+                            })
+                            .add();
+                        this.renderer.text(chartSource, 20, 565)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                        this.renderer.text(chartDimensionDtls, 20, 545)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                            this.renderer.text(createdOn, 20, 585)
+                            .attr({
+                                rotation: 0
+                            })
+                            .css({
+                                color: '#000000',
+                                fontSize: '12px'
+
+                            })
+                            .add();
+                    }
+                }
+                }
+                },{tooltip: { enabled: false}} );
+                break;
+        }
+     }
+     
+    function loadChartLabelPreview() {
+
+        var chartWidth;
+        var chartHeight;
+        var CommaSeparator = ",";
+        var isPortal ="";
+        var highchart_path ="";
+
+        
+        chartWidth = getContentWidth() + 4; 
+        chartHeight = getContentHeight(); 
+        
+        chartHeight -= 6;//extra padding
+        if($('#widgetpreview').length > 0 && $('#widgetpreview').css('border-width') != null) chartHeight -= $('#widgetpreview').css('border-width').replace('px', '') * 2;
+        
+        CommaSeparator = ',';
+        isPortal=$('#REPORT_PREVIEW_hdnIsPortal').val();
+
+        var options = {"chart":{"renderTo":"container","plotBorderWidth":0,"alignTicks":false,"defaultSeriesType":"line","backgroundColor":"#F6F6F6","plotBackgroundColor":"#FFFFFF","plotBorderColor":"#000000","zoomType":"none","marginTop":5,"commaseparate":"YES","chartWidth":"1000","chartHeight":"400","chartAutoAdjustSize":true},"exporting":{"buttons":{"exportButton":{"enabled":true},"printButton":{"enabled":true,"x":-36}},"chartOptions":{"rangeSelector":{"enabled":false}}},"tooltip":{"shared":false,"enabled":true,"style":{"fontWeight":"normal","width":"100px"}},"title":{"align":"left","verticalalign":"top","x":-10,"y":20,"margin":10,"text":" ","style":{"color":"#444444","fontFamily":"Open Sans","fontSize":"9px","fontWeight":"normal","fontStyle":"italic"},"rotation":null},"plotOptions":{"series":{"stacking":"","groupPadding":0.05,"borderWidth":0,"shadow":false,"pointWidth":null,"cursor":"pointer","point":"","marker":{"enabled":false,"fillColor":"#FFFFFF","lineWidth":2,"radius":2,"symbol":"circle"},"dataLabels":{"enabled":false,"color":"#000000"}},"area":{"stacking":"","fillOpacity":0.5},"scatter":{"cursor":"pointer","dataLabels":{"enabled":false,"color":"#000000"}},"pie":{"allowPointSelect":true,"cursor":"pointer","dataLabels":{"enabled":true,"color":"#000000","connectorColor":"#000000"}}},"navigation":{"buttonOptions":{"align":"right"}},"legend":{"enabled":true,"rtl":false,"floating":false,"layout":"horizontal","align":"center","verticalAlign":"bottom","backgroundColor":"#F6F6F6","borderWidth":0,"borderColor":"#000000","x":0,"y":0,"itemStyle":{"color":"#000000","fontFamily":"Verdana","fontSize":"8px","fontWeight":"normal","fontStyle":"normal"}},"xAxis":{"title":{"text":"","style":{"color":"#000000","fontFamily":"Open Sans","fontSize":"8px","fontWeight":"normal","fontStyle":"normal"},"rotation":null},"gridLineWidth":null,"tickmarkPlacement":"on","startOnTick":false,"endOnTick":false,"tickInterval":3,"labels":{"enabled":true,"rotation":null,"step":null,"staggerLines":null,"style":{"color":"#000000","fontFamily":"Open Sans","fontSize":"8px","fontWeight":"normal","fontStyle":"normal"},"useHTML":true},"tickWidth":1,"lineWidth":1,"lineColor":"#FFFFFF","ordinal":false,"type":null,"isHighStock":false,"dateTimeLabelFormats":{"dateTimeLabelFormats":{"millisecond":"%H:%M:%S.%L","second":"%H:%M:%S","minute":"%H:%M","hour":"%H:%M","day":"%e. %b","week":"%e. %b","month":"%b \u0027%y","year":"%Y"}},"categories":["1998","2000","2002","2004","2006","2008","2010","2012","2013","2014","2015","2016","2017","2018","2019","2020"],"labelmapping":null},"rangeSelector":{"selected":16,"enabled":true,"inputEnabled":false,"buttonTheme":{"visibility":"hidden"},"labelStyle":{"visibility":"hidden"}},"navigator":{"height":20,"bottom":10,"series":{"color":"#4572A7"}},"yAxis":[{"title":{"text":"","style":{"color":"#000000","fontFamily":"Open Sans","fontSize":"8px","fontWeight":"normal","fontStyle":"normal"},"rotation":270},"gridLineWidth":1,"tickInterval":null,"startOnTick":false,"endOnTick":false,"min":"0","max":null,"opposite":false,"labels":{"enabled":true,"rotation":null,"step":1,"staggerLines":null,"style":{"color":"#000000","fontFamily":"Open Sans","fontSize":"8px","fontWeight":"normal","fontStyle":"normal"},"useHTML":false},"gridLineDashStyle":"Solid","lineWidth":0,"tickWidth":0,"lineColor":"#000000"}],"series":[{"data":[{"y":1894.1,"note":"N"},{"y":1781.0,"note":"N"},{"y":2287.1,"note":"N"},{"y":3978.4,"note":"N"},{"y":6780.5,"note":"N"},{"y":8719.2,"note":"N"},{"y":9447.9,"note":"N"},{"y":8600.1,"note":"N"},{"y":7625.7,"note":"N"},{"y":7675.9,"note":"N"},{"y":7417.6,"note":"N"},{"y":5993.5,"note":"N"},{"y":5534.3,"note":"N"},{"y":5238.8,"note":"N"},{"y":7330.2,"note":"N"},{"y":9122.7,"note":"N"}],"name":"Total Reserves,,,,","stacking":"","type":"line","yAxis":0,"color":"#4572A7","legendIndex":1,"index":2,"dataLabels":{"enabled":false},"marker":{"enabled":false,"lineColor":"#4572A7","fillColor":"#FFFFFF"},"revisionstext":null,"seriesdisplayname":"Total Reserves,,,,","seriesuniquename":"TOTRESV","seriesdimensiontype":"S","ismetadata":false}]};
+        gbl_chart_revisions = {};
+        $("#hdnHasData").val('true');
+        //Additional Properties Start
+        options.chart.width = chartWidth;
+        options.chart.height = chartHeight;
+        options.tooltip.style.width = (chartWidth * 0.75) + 'px';
+        
+        if (options.chart.defaultSeriesType != "pie" && options.chart.defaultSeriesType != "scatter") {
+            options.plotOptions.series.point = { events: { click: function (event) { if (this.series.options.ismetadata == true) { loadMetaDataWidget(this.series.options.seriesdisplayname, this.series.options.seriesuniquename, this.series.options.seriesdimensiontype); } } } };  
+        }
+        else {
+            options.plotOptions.series.point = { events: { click: function (event) {  } } };
+        }
+
+        if(isPortal=='y')
+        {
+            options.exporting.buttons.exportButton.symbol ='url(../../images/icon-excel.png)';
+             options.exporting.buttons.exportButton.symbolX=10.5;
+             options.exporting.buttons.exportButton.symbolY=10;
+        }
+        
+          
+       options.exporting.buttons.exportButton.menuItems = [
+            {
+                text: 'Download data as Excel', //'Download data as Excel',
+                onclick: function () { $(".file-excel-menu").click(); }
+            }, 
+            {
+                text: 'Download PNG image', //'Download PNG image',
+                onclick: function() { this.exportChart({ width: 750 }, { chart: { backgroundColor: '#FFFFFF'} },{tooltip: { enabled: false}} ); }
+            }, {
+                text: 'Download JPEG image',//'Download JPEG image',
+                onclick: function() { this.exportChart({ type:'image/jpeg' }, { chart: { backgroundColor: '#FFFFFF'} },{tooltip: { enabled: false}}); }
+            }, {
+                text: 'Download PDF image',//'Download PDF document',
+                onclick: function() { this.exportChart({type: 'application/pdf'},{tooltip: { enabled: false}} ); }
+            }, {
+                text: 'Download SVG vector image',//'Download SVG vector image',
+                onclick: function() { this.exportChart({ type: 'image/svg+xml'} ,{tooltip: { enabled: false}} ); }
+            }
+        ];
+        
+       
+
+        
+//        options.plotOptions.scatter.dataLabels.formatter = function () {
+//            
+//            var varValueX = this.x;
+//            var varValueY = this.y;
+//            if (CommaSeparator != null && CommaSeparator != "") {
+//                varValueX = getNumberFormat(varValueX);
+//                varValueY = getNumberFormat(varValueY);
+//            }
+//            
+//            return varValueX + ' : ' + varValueY;
+//        }
+
+
+
+        options.plotOptions.pie.dataLabels.formatter = function () {
+            
+            var strPieLabel = this.point.name;
+            var varValueY = this.y;
+            
+            if (CommaSeparator != null && CommaSeparator != "" && varValueY !=null) {
+                varValueY = this.point.positive ? varValueY : varValueY * (-1);
+                varValueY = getNumberFormatTooltip(varValueY);
+            }
+
+            if (options.xAxis.type == 'datetime') {
+                strPieLabel = Highcharts.dateFormat(options.xAxis.dateTimeLabelFormats.day, strPieLabel);
+            }
+
+             return '<b>' + htmlDecode(strPieLabel) + '</b>: ' + varValueY;
+        }
+
+
+
+        options.tooltip.formatter = function () {
+            if (options.tooltip.shared)
+            {                
+                return getExtendedTooltip(this, options, CommaSeparator);
+            }
+            else
+            {                
+                return getDefaultTooltip(this, options, CommaSeparator);
+            }
+        }
+
+         if(options.xAxis.isHighStock)
+            options.xAxis.labels.formatter = function () {
+                return '<span>' + Highcharts.dateFormat('%Y', this.value) + '</span>';
+            }
+   
+
+        //Additional Properties End
+        
+//         $(xml).find('chart').each(function () {
+//            CommaSeparator = $(this).attr("inThousandSeparator");
+//            //Dhanya Dec 15 2011 - DDPUI 421 - Begin
+//            $(xml).find('categories').each(function () {
+//                $(this).find('category').each(function () {
+//                    labelInterval = labelInterval + 1;
+//                });
+//            });
+//            if (labelInterval > 5) {
+//                options.xAxis.tickInterval = parseInt(Math.abs(labelInterval / 5));
+//            }
+//            //Dhanya Dec 15 2011 - DDPUI 421 - End
+//        });
+
+        if (strlang != null && strlang != "") {
+        if (strlang == "ar") {
+            options.title.align="right";
+            options.navigation.buttonOptions.align = "left";
+            options.navigation.buttonOptions.y = 10;
+            options.exporting.buttons.exportButton.x = 10;
+            options.exporting.buttons.printButton.x = 36;
+            }
+        }
+
+             Highcharts.setOptions({
+                             lang: {
+                                  exportButtonTitle: 'Export chart image',
+                                 printButtonTitle:'Print the chart',
+                                 numericSymbols: [' T', ' M', ' B']
+                                   }
+                });
+       
+         options.exporting.buttons.exportButton.enabled = false;//making all buttons as invisible to enable the print on top
+         options.exporting.buttons.printButton.enabled = false;
+         
+        if (options.xAxis.isHighStock)
+        {
+            var tickintervaltemp=options.xAxis.tickInterval;
+            if (options.series[0] != null && options.series[0].data.length > 6)
+            options.xAxis.minRange = 365 * 24 * 3600 * 1000;
+            options.xAxis.tickInterval = options.xAxis.tickInterval*31536000000
+            chart = new Highcharts.StockChart(options);
+            options.xAxis.tickInterval = tickintervaltemp;
+        }
+        else
+            chart = new Highcharts.Chart(options);
+         setSortIcon();
+
+
+              
+              var hasData;
+              hasData = $("#hdnHasData").val();
+              if ($('#container').hasClass('nodatacontainer')) 
+               {
+                   $('#container').removeClass("nodatacontainer");
+                   $("#nodata").remove();
+               }
+              if (hasData == "false")
+                {
+                    var msgMarginleft,msgMargintop;
+                    if ($('#nodata').length == 0)
+                       {
+                            $('#container').prepend('<div id="nodata">No data available</div>');
+                            $("#container").addClass("nodatacontainer");
+                            msgMarginleft =options.chart.width / 2;
+                            msgMargintop = options.chart.height * 0.4;
+                            $('#nodata').css('margin-left', msgMarginleft);
+                            $('#nodata').css('margin-top', msgMargintop);
+                        }
+               
+               }
+
+        
+    }
+
+    
+    function getFootNotesWidget(Code) {        
+        var footNote = "";
+        var ReportID = $("#hdnReportID").val();
+        var ReportType = $("#hdnReportType").val();
+        var isInternal = "N";        
+        var cubeId = 1179;        
+        var isMRV = false;
+        var MRVYearValue = "";
+        var isFootNoteExist = true;    
+        if (Code != null)
+        {
+            var codeList = Code.split('|');
+            if (codeList.length > 2 && codeList[2] == 'MRV') {
+                isMRV = true;
+                MRVYearValue = codeList[1];
+                Code = codeList[0];
+                if (codeList[0] == "N")
+                    isFootNoteExist = false;
+            }   
+            else if (codeList.length > 1)
+            {
+                Code = codeList[0];
+            }
+        }
+
+        if (isFootNoteExist) {
+            $.ajax({
+                type: "POST",
+                async: false,
+                //            url: "/AjaxServices/AjaxServiceTemplate.asmx/PopulateFootNotesJson",
+                url: "/AjaxServices/AjaxServiceMethods.asmx/PopulateFootNotesJson",
+                contentType: "application/json; charset=utf-8",
+                data: "{Code:'" + Code + "',ReportID:'" + ReportID + "',ReportType:'" + ReportType + "',lang:'" + strlang + "',rptInternal:'" + isInternal + "'}",
+                //            data: "{Code:'" + Code + "',CubeId:'" + cubeId + "'}",
+                dataType: "json",
+                success: function (data) {                    
+                    footNote = data.d;
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    window.location.href = "ddperror.aspx";
+                }
+            });
+
+            var xml = $.parseXML(footNote),
+                newHTML = "";
+
+            if (footNote != null && footNote.length > 0) {
+
+                $(xml).find("tr").each(function () {
+
+                    newHTML += '<div style="font-weight: normal;  font-family:Arial; line-height: normal; font-size:10px;">';
+
+                    $(this).find("td").each(function () {
+
+                        if ($(this).hasClass("meta-data-label") && $(this).text() != null && $(this).text().trim() == "FootNote") {
+                            $(this).text("Note: ");
+                        }
+                        newHTML += $(this).text();                        
+                    });
+
+                    newHTML += "</div><br/>" 
+                    if (MRVYearValue != "") {
+                        newHTML = newHTML + 'Data are for : ' + MRVYearValue;
+                    }
+                });
+            }
+        }
+        else {
+            newHTML = 'Data are for : ' + MRVYearValue;
+        }       
+            
+
+        return newHTML;
+    }
+
+    
+</script>
+
+
+    </div>
+    </div>
+    <div id="file-loading-widget-preview" class="loading">
+        <img src="/images/ajax-loader.gif" width="32" height="32" alt=""><br><strong>Loading...</strong>
+    </div>
+    <iframe id="dl-iframe-widget-preview" style="display:none;"></iframe>
+    <iframe id="dl-iframe-widget-preview-omni" style="display:none;"></iframe>
+    </div>
+    <input name="hdnReportID" type="hidden" id="hdnReportID" value="16589">
+    <input name="hdnReportType" type="hidden" id="hdnReportType" value="Chart">
+    <input name="hdnLanguage" type="hidden" id="hdnLanguage" value="en">
+    <input id="hdnPublishedReport" type="hidden" value="n">
+    
+    
+    <input type="hidden" name="hdnCubeDisplayName" id="hdnCubeDisplayName" value="Global Economic Monitor (GEM)">
+    <input type="hidden" name="hdnReportName" id="hdnReportName" value="Tunisia-Reserves">
+    <input type="hidden" name="hdnIsWidget" id="hdnIsWidget" value="true">
+    <input type="hidden" name="hdnReportDisplayName" id="hdnReportDisplayName" value="Tunisia Reserves">
+    <input type="hidden" name="hdnReportwithCustomTheme" id="hdnReportwithCustomTheme" value="0">   
+
+    <input name="hdnCubeId" type="hidden" id="hdnCubeId">
+    <input name="hdnDownload" type="hidden" id="hdnDownload" value="Download">
+    <input name="hdnCancel" type="hidden" id="hdnCancel" value="Cancel">
+    <input name="hdnLoading" type="hidden" id="hdnLoading" value="Loading...">
+        <!-- Shaheer Oct 31st 2012 -->
+    <input type="hidden" name="hdnZoomLevel" id="hdnZoomLevel">
+    <input type="hidden" name="hdnLatitude" id="hdnLatitude">
+    <input type="hidden" name="hdnLongitude" id="hdnLongitude">
+    </form>
+
+
+    <div style="display: none">
+        <form id="dl-metadata-form" action="">
+        <input id="meta-down-radio" type="radio" name="meta-down-radio" value="meta-all" checked="checked">
+        </form>
+    </div>
+
+    <script type="text/JavaScript">
+        /*_satellite.pageBottom();*/
+
+        function AnalyticsControlClick(clickdetails, params) {            
+            wbgData.page.sectionInfo.siteSection = 'databank/' + clickdetails;
+            wbgData.page.sectionInfo.subsectionP2 = params;
+
+            _satellite.track("dynamicdata");
+        }
+    </script>
+
+
+
+<div class="tips-more-info"><div class="tip-inner tip-bg-image"></div><div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div></div><div class="tips-more-info"><div class="tip-inner tip-bg-image"></div><div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div></div><div class="tips-more-info"><div class="tip-inner tip-bg-image"></div><div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div></div><script>_satellite["_runScript1"](function(event, target, Promise) {
+ // Check if the 'typeofUser' cookie exists
+ var typeofUserCookie = _satellite.cookie.get('typeofUser');
+
+ // If the cookie exists and has a value, set the user type from the cookie
+ if (typeofUserCookie) {
+   wbgData.typeofUser = typeofUserCookie;
+ } else {
+   //If the cookie doesn't exist, make an HTTP call to determine the user type
+   var xhr = new XMLHttpRequest();
+   xhr.open("GET", "https://ibrdtf.worldbank.org/portal/tfsearch", true);
+   
+   xhr.timeout =2000;
+   xhr.onreadystatechange = function() {
+     if (xhr.readyState === XMLHttpRequest.DONE) {
+       if (xhr.status === 200) {
+         var response = xhr.responseText;
+         _satellite.cookie.set('typeofUser', 'internal', {
+           expires: 730
+         });
+
+       } else if (xhr.status === 400) {
+         // Handle 400 response
+         _satellite.cookie.set('typeofUser', 'external', {
+           expires: 730
+         });
+         
+       } else {
+         // Handle other response statuses
+         _satellite.cookie.set('typeofUser', 'external', {
+           expires: 730
+         });
+
+       }
+     }
+   }; 
+
+   xhr.ontimeout = function() {
+     // Handle timeout
+   };
+
+   xhr.onerror = function() {
+     // Handle error
+   };
+
+   xhr.send();
+ }
+
+ // Function to get cookie value by name
+ function getCookie(name) {
+   var cookieName = _satellite.cookie.get('typeofUser');
+   var cookies = cookieName.split(';');
+   for (var i = 0; i < cookies.length; i++) {
+     var cookie = cookies[i].trim();
+     if (cookie.startsWith(name + '=')) {
+       return cookie.substring(name.length + 1);
+     }
+   }
+   return null;
+ }
+});</script><script>_satellite["_runScript2"](function(event, target, Promise) {
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+});</script><script>_satellite["_runScript3"](function(event, target, Promise) {
+if (typeof kWidget !== "undefined") {
+	kWidget.addReadyCallback(function (playerId) {
+	var kdp = document.getElementById(playerId);
+
+	//console.log("player "+kdp);
+	//console.log("Name "+kdp.evaluate('{mediaProxy.entry.name}'));
+	//console.log("Duration "+kdp.evaluate('{duration}'));
+	//console.log("Current Time "+kdp.evaluate('{video.player.currentTime}'));
+	/*
+	kdp.kBind('playerStateChange', function (event) {
+		console.log("event "+event);
+		kulturaPlayerHandler("playing", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});*/
+	kdp.kBind("playerPlayed", function (MediaPlayerState) {
+			kulturaPlayerHandler("playing", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("seek", function (MediaPlayerState) {
+			kulturaPlayerHandler("seeking", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("seeked", function (MediaPlayerState) {
+			kulturaPlayerHandler("seeked", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("playerPaused", function (MediaPlayerState) {
+			kulturaPlayerHandler("paused", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("playerPlayEnd", function (MediaPlayerState) {
+			kulturaPlayerHandler("ended", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+	});
+}
+
+function kulturaPlayerHandler(playerState,mediaName,videoDuration,videoCurrentTime){
+	var videoPlayer = "Kaltura";
+	var mediaOffset = videoCurrentTime>0?Math.floor(videoCurrentTime):0;
+	var mediaLength = Math.floor(videoDuration);
+
+	s.Media.playerName = videoPlayer;
+
+	//console.log("mediaOffset - "+mediaOffset);
+	//console.log("mediaLength - "+mediaLength);
+	//console.log("playerState - "+playerState);
+
+	if(playerState == "playing" && mediaLength == 0){
+	videoContentType = "live:kaltura video";
+	s.Media.trackSeconds = 60;
+	s.Media.open(mediaName, mediaLength, videoPlayer);
+	//s.Media.play(mediaName, mediaOffset);*/
+	}
+
+	if(playerState == "playing"){
+		if (mediaOffset == 0 && mediaLength > 0){
+			videoContentType = "replay:kaltura video";
+			s.Media.segmentByMilestones = true;
+			s.Media.trackMilestones = '25,50,75';
+			//console.log("milestone tracking set");
+			s.Media.open(mediaName, mediaLength, videoPlayer);
+			s.Media.play(mediaName, mediaOffset);
+			_satellite.getVar('FBPixelVideoReplay');
+      _satellite.getVar('TwitterPixelVideoReplay');
+      _satellite.getVar('GAdwordsTagVideoReplay');
+		}else{
+			s.Media.play(mediaName, mediaOffset);
+		}
+	}else if(playerState == "seeking"){
+		s.Media.stop(mediaName, mediaOffset);
+	}else if(playerState == "seeked"){
+		s.Media.play(mediaName, mediaOffset);
+	}else if(playerState == "paused"){
+		s.Media.stop(mediaName, mediaOffset);
+	}else if(playerState == "ended"){
+		s.Media.stop(mediaName, mediaOffset);
+		s.Media.close(mediaName);
+		mediaOffset = 0;
+	}
+}
+});</script><script>_satellite["_runScript4"](function(event, target, Promise) {
+var n=0;if("undefined"!=typeof JQuery)jQuery("iframe").each((function(){var e=jQuery(this).attr("src");e&&e.indexOf("youtube.com")>-1&&(e.indexOf("?")>-1?-1==e.indexOf("enablejsapi")&&(e+="&enablejsapi=1"):e+="?enablejsapi=1",jQuery(this).attr("src",e),jQuery(this).attr("id","ytplayer"+n),n++)}));else{var iFrames=document.getElementsByTagName("iframe");for(i=0;i<iFrames.length;i++){var src=iFrames[i].getAttribute("src");src&&src.indexOf("youtube.com")>-1&&(src.indexOf("?")>-1?-1==src.indexOf("enablejsapi")&&(src+="&enablejsapi=1"):src+="?enablejsapi=1",iFrames[i].setAttribute("src",src),iFrames[i].setAttribute("id","ytplayer"+n),n++)}}if(n>0){var tag=document.createElement("script");tag.src="https://www.youtube.com/iframe_api";var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(tag,firstScriptTag);var playerInfoList=new Array;if(document.getElementsByTagName("iframe"))for(i=0;i<document.getElementsByTagName("iframe").length;i++)document.getElementsByTagName("iframe")[i].id.indexOf("ytplayer")>-1&&playerInfoList.push(document.getElementsByTagName("iframe")[i]);var players=new Array;function onPlayerStateChange(e){var a="YouTube",t=Math.floor(e.target.getCurrentTime()),i=Math.floor(e.target.getDuration());console.log("event: "+e.data),console.log("YT.PlayerState.PLAYING: "+YT.PlayerState.PLAYING),console.log("YT.PlayerState.PAUSED: "+YT.PlayerState.PAUSED),console.log("mediaOffset: "+t),console.log("media length: "+i);var r=e.target.getVideoData().title;3==e.data&&0==t&&0==i&&(videoContentType="live:youtube video",s.Media.trackSeconds=60,s.Media.open(r,i,a),s.Media.play(r,t),_satellite.getVar("FBPixelVideoLive")),e.data==YT.PlayerState.PLAYING?0==t&&i>0?(videoContentType="replay:youtube video",s.Media.segmentByMilestones=!0,s.Media.trackMilestones="25,50,75",s.Media.open(r,i,a),s.Media.play(r,t),_satellite.getVar("FBPixelVideoReplay"),_satellite.getVar("TwitterPixelVideoReplay"),_satellite.getVar("GAdwordsTagVideoReplay")):s.Media.play(r,t):e.data==YT.PlayerState.PAUSED||e.data==YT.PlayerState.BUFFERING?s.Media.stop(r,t):e.data==YT.PlayerState.ENDED&&(s.Media.stop(r,t),s.Media.close(r),t=0)}window.playersaem=players,window.onYouTubeIframeAPIReady=function(){for(x=0;x<playerInfoList.length;x++)players[x]=new YT.Player(playerInfoList[x],{events:{onStateChange:onPlayerStateChange}})}}
+});</script><!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+<script type="text/javascript">
+(function(){var g=function(e,h,f,g){
+this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
+this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
+this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};
+this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g+ "&t=" + (new Date()).getTime();document.body&&document.body.appendChild(a)}};
+this.start=function(){var a=this;window.addEventListener?window.addEventListener("load",function(){a.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){a.go()})}};
+try{(new g(100,"r","QSI_S_ZN_ahoepSezTqpB2GV","https://znahoepseztqpb2gv-wbgwebvisitor.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_ahoepSezTqpB2GV")).start()}catch(i){}})();
+</script><div id="ZN_ahoepSezTqpB2GV"><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+<!--END WEBSITE FEEDBACK SNIPPET--><script>_satellite["_runScript5"](function(event, target, Promise) {
+var n=0;if("undefined"!=typeof JQuery)jQuery("iframe").each((function(){var e=jQuery(this).attr("src");e&&(e.indexOf("video.ibm.com")>-1||e.indexOf("ustream.tv")>-1)&&(jQuery(this).attr("src",e),jQuery(this).attr("id","UstreamIframe"+n),n++)}));else{var iFrames=document.getElementsByTagName("iframe");for(i=0;i<iFrames.length;i++){var src=iFrames[i].getAttribute("src");src&&(src.indexOf("video.ibm.com")>-1||src.indexOf("ustream.tv")>-1)&&(iFrames[i].setAttribute("src",src),iFrames[i].setAttribute("id","UstreamIframe"+n),n++)}}if(n>0){var UstreamEmbed=function(){function e(e){return t(e)}function t(e){var t=i(e),l=function(e){function t(t){if("socialstream"!==t){if(!w)return M||(M=[]),void M.push(arguments);var n=d(arguments).slice(1);n[0]&&"function"==typeof n[0]&&(b[t]||(b[t]=[]),b[t].push(n[0])),o(e,h,{cmd:t,args:n})}else if(f(window,"message",m),T=i(arguments[1]),E=s(T.getAttribute("src")),O=!0,x.length)for(var r=0,v=x.length;v>r;r++)a(x[r])}function l(){if(M){for(;M.length;)t.apply(this,M.shift());M=null}}function m(e){var t=T;(t&&t.contentWindow&&t.contentWindow===e.source||e.source===T.id)&&g.onmessage(e)}function u(e){var i,n=JSON.parse(e.data);return n.cmd&&"ready"==n.cmd?void o(T,E,{cmd:"ready"}):(i=(i=[n.cmd]).concat(n.args),void t.apply(this,i))}function p(){w=!0,l()}function y(){t.apply(this,arguments)}var g,h,E,T,w=!1,O=!1,M=[],b={},L={},x=[];return h=s(e.getAttribute("src")),g={host:h,callMethod:y,getProperty:function(){y.apply(this,arguments)},addListener:function(e,t){L[e]||(L[e]=[]),L[e].push(t)},removeListener:function(e,t){if(t)for(var i=0,n=L[e].length;n>i;i++)L[e][i]===t&&L[e].splice(i,1);else L[e]=null},onmessage:function(e){var t;if(h||E||x.push({origin:e.origin,data:e.data}),e.origin==h){try{t=JSON.parse(e.data)}catch(e){return}if(t.sstream)return void u(e);if(t.event&&t.event.ready&&(p(),n(L,"ready")),t.event&&!0===t.event.live)return void n(L,"live");if(t.event&&!1===t.event.live)return void n(L,"offline");if(t.event&&!t.event.ready)if(v)Object.keys(t.event).forEach((function(e){n(L,e,t.event[e])}));else for(var i in t.event)t.event.hasOwnProperty(i)&&n(L,i,t.event[i]);if(t.property)if(v)Object.keys(t.property).forEach((function(e){r(b,e,t.property[e])}));else for(var i in t.property)t.property.hasOwnProperty(i)&&r(b,i,t.property[i])}else if(O&&e.origin==E)return void u(e)},destroy:function(){w=!1,h="",O=!1,E="",T=null,M=[],b={},L={},x=[],c[e.id]&&(c[e.id]=null),e=null}}}(t);return t.id||(t.id="UstreamEmbed"+Math.ceil(1e5*Math.random())),l.id=t.id,c[t.id]=l,l}function i(e){return"string"==typeof e&&(e=document.getElementById(e)),e}function n(e,t,i){for(var n in e[t])e[t].hasOwnProperty(n)&&e[t][n].call(window,t,i)}function r(e,t,i){if(e[t]){for(var n in e[t])e[t].hasOwnProperty(n)&&e[t][n].call(window,i);e[t]=null,delete e[t]}}function a(e){var t,i;for(t in c)c.hasOwnProperty(t)&&c[t]&&((i=document.getElementById(t))&&i.contentWindow?i.contentWindow===e.source&&c[t].onmessage(e):"string"==typeof e.source&&e.source==t&&c[t].onmessage(e))}function o(e,t,i){e.contentWindow.postMessage(JSON.stringify(i),t)}function s(e){return e.indexOf("http")<0&&(e=location.protocol+e),e.match(l)[1].toString()}function d(e){return Array.prototype.slice.call(e,0)}function f(e,t,i){e.addEventListener?e.addEventListener(t,i,!1):e.attachEvent("on"+t,i)}var v=void 0!==Object.keys,c={},l=new RegExp("^(http(?:s)?://[^/]+)","im");return f(window,"message",a),window.UstreamEmbed=e}();if(document.getElementsByTagName("iframe"))for(i=0;i<document.getElementsByTagName("iframe").length;i++)if(document.getElementsByTagName("iframe")[i].id.indexOf("UstreamIframe")>-1){var videoTitle,mediaLength,iFrame=document.getElementsByTagName("iframe")[i].id,viewer=UstreamEmbed(document.getElementsByTagName("iframe")[i].id),videoType="channels",mediaOffset=0;viewer.getProperty("content",(function(e){"recorded"===e[0]?videoType="videos":"channels"===e[0]&&(videoType="channels");var t=e[1];videoTitle=getVideoTitle(t,videoType)[0],mediaLength=getVideoTitle(t,videoType)[1]})),viewer.addListener("playing",onEmbedEvent),viewer.addListener("finished",onEmbedEvent),viewer.addListener("offline",onEmbedEvent)}var prevEvent="",startTime=0;function onEmbedEvent(e,t){var i="ustream tv";t&&"playing"===e&&prevEvent!=e?("paused"!==prevEvent?("channels"===videoType?(videoContentType="live:ustream video",s.Media.trackSeconds=150,_satellite.getVar("FBPixelVideoLive")):"videos"===videoType&&(videoContentType="replay:ustream video",s.Media.segmentByMilestones=!0,s.Media.trackMilestones="25,50,75",_satellite.getVar("FBPixelVideoReplay"),_satellite.getVar("TwitterPixelVideoReplay"),_satellite.getVar("GAdwordsTagVideoReplay")),s.Media.open(videoTitle,mediaLength,i),s.Media.play(videoTitle,mediaOffset),startTime=new Date):"paused"===prevEvent&&(s.Media.play(videoTitle,mediaOffset),startTime=new Date),prevEvent=e):t||"playing"!==e||"paused"==prevEvent?!t||"finished"!==e&&"offline"!==e||(mediaOffset+=Math.round((new Date-startTime)/1e3),s.Media.stop(videoTitle,mediaOffset),s.Media.close(videoTitle),mediaOffset=0,prevEvent=e):(mediaOffset+=Math.round((new Date-startTime)/1e3),s.Media.stop(videoTitle,mediaOffset),prevEvent="paused")}function getVideoTitle(e,t){var i=e,n=0,r=new XMLHttpRequest;return r.onreadystatechange=function(){if(4==this.readyState&&200==this.status){var e=JSON.parse(r.responseText);"videos"===t?(i=e.video.title,n=Math.round(e.video.length)):"channels"===t&&(i=e.channel.title)}},r.open("GET","https://api.ustream.tv/"+t+"/"+e+".json",!0),r.send(),[i,n]}}
+});</script><script type="text/javascript" src="https://znahoepseztqpb2gv-wbgwebvisitor.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_ahoepSezTqpB2GV&amp;t=1755017039241"></script><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div><script>_satellite["_runScript6"](function(event, target, Promise) {
+!function(e,t,n,c,o,a,f){e.fbq||(o=e.fbq=function(){o.callMethod?o.callMethod.apply(o,arguments):o.queue.push(arguments)},e._fbq||(e._fbq=o),o.push=o,o.loaded=!0,o.version="2.0",o.queue=[],(a=t.createElement(n)).async=!0,a.src=c,(f=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,f))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js"),fbq("init","1458892451075570"),fbq("track","PageView"),fbq("track","ViewContent");
+});</script><noscript></noscript></body></html>

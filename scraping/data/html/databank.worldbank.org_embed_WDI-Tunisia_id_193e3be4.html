@@ -1,0 +1,1332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" class="dxChrome dxWindowsPlatform dxWebKitFamily dxBrowserVersion-136"><head class="at-element-marker"><link rel="stylesheet" type="text/css" href="/DXR.axd?r=1_68,1_210,1_209-8QKZt"><link rel="stylesheet" type="text/css" href="../../../views/App_Themes/GridTheme/GridDefaultTheme.css">
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://cdn.appdynamics.com/adrum-ext.1ad6f7ca4d96e75e9ff37bb1b3973ecc.js"></script><script src="https://connect.facebook.net/en_US/sdk.js?hash=dcdd7c0ba2884c474dcca2bd5aac26cf" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.6"></script><script type="text/javascript" charset="UTF-8" src="/js/appdynamics.js">
+    </script><script src="https://cdn.appdynamics.com/adrum/adrum-4.3.2.0.js" type="text/javascript" charset="UTF-8"></script>
+    <meta name="referrer" content="no-referrer">
+    <title>WDI Tunisia | World Development Indicators</title>
+    <meta name="title" content="WDI Tunisia">
+    <meta property="og:title" content="WDI Tunisia">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0058/1350.js" async="async"></script>
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="/views/styles/layout.css">
+    <link rel="stylesheet" href="/views/styles/StyleChart.css">
+    <script src="/views/scripts/jquery-1.7.min.js" type="text/javascript"></script>
+
+   <script src="/views/scripts/jquery-ui.min.js" type="text/javascript"></script>
+   <script src="/views/scripts/jpicker.min.js" type="text/javascript"></script>
+   <link rel="stylesheet" href="/views/styles/jquery-ui.css">
+   <link rel="stylesheet" href="/views/styles/style.css">
+   <link rel="stylesheet" href="/views/styles/jpicker-dialog.css">
+
+    <script src="/views/scripts/jquery.layout.js" type="text/javascript"></script>
+    <script src="/views/scripts/jquery.poshytip.min.js" type="text/javascript"></script>
+    <script src="/views/scripts/jquery-ui-1.8.24.custom.min.js" type="text/javascript"></script>
+    <script src="/views/scripts/jquery-ui.selectmenu.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/views/styles/jpicker.css">
+    <script src="/views/scripts/script.js" type="text/javascript"></script>
+
+
+    <link href="/views/styles/chosen.css" rel="stylesheet" type="text/css">
+
+    <link href="/views/styles/embedStyles.css" rel="stylesheet" type="text/css">
+    <script src="/views/scripts/chosen.jquery.js" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+        var gbl_common_internal = false;
+        var gbl_common_FullURL = 'https://databank.worldbank.org';
+    </script>
+
+    <script type="text/javascript">
+    //            Shaheer Oct 31st 2012
+    //            Showing selected zoom level *****************Start
+    window.onload = function () {
+        if (document.getElementById('mapId') != null) {
+            var mapId = eval(document.getElementById('mapId').value);
+            if (mapId != null) {
+                var map = mapId.GetOpenLayersMap();
+
+                var lonlat = mapId.GetCenter();
+
+                if (document.getElementById('hdnZoomLevel').value != "") {
+                    if (document.getElementById('hdnZoomLevel').value != "2") {
+
+
+                        map.zoom = parseInt(document.getElementById('hdnZoomLevel').value, 10) - 1;
+
+
+                        var latitude = document.getElementById('hdnLatitude').value;
+                        var longitude = document.getElementById('hdnLongitude').value;
+
+                        if (map.zoom != 2) {
+                            if (latitude != "")
+                                lonlat.lat = latitude;
+
+                            if (longitude != "")
+                                lonlat.lon = longitude;
+
+
+                            updateImages(map);
+                            updateLegend();
+                            map.setCenter(lonlat, map.zoom, map.dragging, true);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //            Showing selected zoom level *****************End
+
+    $(function () {
+        
+    });
+
+    function Widgettwitter() {
+        var twitterurl = getUrl();
+        window.open('http://twitter.com/share?url=' + encodeURIComponent(twitterurl)
+            + '&text=' + encodeURIComponent(document.getElementById("hdnReportDisplayName").value), '_new');
+    }
+
+    function Widgetfacebook() {
+        var facebookurl = getUrl();
+        window.open('http://www.facebook.com/share.php?u=' + encodeURIComponent(facebookurl)
+            + '&t=' + encodeURIComponent(document.getElementById("hdnReportDisplayName").value), '_new');
+    }
+
+    function SetMetadataIconStyle()
+    {
+        $('.widget-maintable div#REPORT_PREVIEW_divdropdown a[title="Click here to view metadata"]').css("pointer-events", "none");
+        $('td.dxgvHeader_GridDefaultTheme img[title = "Click here to view metadata"]').css("pointer-events", "none");
+        $('table.dxgvTable_GridDefaultTheme td[title = "Click here to view metadata"]').css("pointer-events", "none");
+        $('div#divreportcontent a#fullScreen').css("pointer-events", "none");
+    }
+
+
+    function WidgetEmail() {
+        var myForm = document.createElement("form");
+        myForm.method = "post";
+        myForm.target = "emailpopup";
+        myForm.action = 'http://web.worldbank.org/external/default/main?pagePK=7846481&piPK=7846484&theSitePK=523679';
+        var myInput = document.createElement("input") ;
+        myInput.setAttribute("type","hidden");
+        myInput.setAttribute("name","reftitle");
+        myInput.setAttribute("value","Databank"); 
+        myForm.appendChild(myInput);
+        var myInput1 = document.createElement("input") ;
+        myInput1.setAttribute("type","hidden");
+        myInput1.setAttribute("name","reflink");
+        myInput1.setAttribute("value", encodeURIComponent(location.href));
+        myForm.appendChild(myInput1);   
+        document.body.appendChild(myForm);   
+        emailpopup = window.open('', 'emailpopup', 'scrollbars=no,resizable=yes,width=350,height=510');
+        myForm.submit();
+        document.body.removeChild(myForm);  
+    }
+
+    function WidgetGooglePlus() {
+        var googleurl = getUrl();
+        window.open('http://plus.google.com/share?url=' + encodeURIComponent(googleurl)
+            + '&title=' + encodeURIComponent(document.getElementById("hdnReportDisplayName").value), '_new');
+    }
+
+    function getUrl() {
+        //oct12 deepak
+        var embedurl = 'https://databank.worldbank.org/embed/WDI-Tunisia/id/193e3be4/wd/0/ht/0/tbar//dd/';
+        return embedurl;
+    }
+
+    //Dhanya Dec 28 2011 - For Social Media - End
+    function getWidgetWidth() {
+        var widgQryWd = getParameterByName('wd');
+        var widgWd = document.documentElement.clientWidth;
+        if (widgQryWd != '') widgWd = parseInt(widgQryWd, 10);
+
+        var extrapadding = 0;
+        if ($('#hdnReportType').val().toUpperCase() == 'MAP') extrapadding = 5;
+
+        return widgWd - extrapadding; //padding
+    }
+
+    function getWidgetHeight() {
+        var widgQryHt = getParameterByName('ht');
+        var widgHt = document.documentElement.clientHeight;
+        if (widgQryHt != '') widgHt = parseInt(widgQryHt, 10);
+
+        var extrapadding = 0;
+        if ($('#hdnReportType').val().toUpperCase() == 'MAP') extrapadding = 2;
+
+        return widgHt - extrapadding; //padding
+    }
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function getContentWidth() {
+        var widgetTotWidth = getWidgetWidth();
+
+        var widgetContWidth = widgetTotWidth - 12; //12 - left & right padding 6 each
+
+        return widgetContWidth;
+    }
+
+    function getToolBarHeight() {
+        var varHeight = 0;
+        if (document.getElementById("divtoolbar") != null) varHeight += document.getElementById("divtoolbar").offsetHeight;
+        return varHeight;
+    }
+
+    function HasDisclaimer()
+    {
+        if (document.getElementById("widget-table-disclaimer") == null) return false;
+        if ($.trim($('#REPORT_PREVIEW_bDisclaimer').text()) == '' && $.trim($('#REPORT_PREVIEW_sDisclaimerMsg').text()) == '') return false;
+
+        return true;
+    }
+
+    function getDisplayElemHeight() {
+        var varHeight = 12; //padding
+
+        varHeight += getToolBarHeight();
+        if (document.getElementById("widget-table-dropdowns") != null) varHeight += (document.getElementById("widget-table-dropdowns").offsetHeight);
+        if (document.getElementById("widget-table-header") != null) varHeight += (document.getElementById("widget-table-header").offsetHeight);
+        if (document.getElementById("widget-table-footer") != null) varHeight += (document.getElementById("widget-table-footer").offsetHeight);
+        if (document.getElementById("widget-table-source") != null) varHeight += (document.getElementById("widget-table-source").offsetHeight);
+
+        if (HasDisclaimer()) varHeight += (document.getElementById("widget-table-disclaimer").offsetHeight);
+
+        varHeight += getHeaderDescHeight();
+        //varHeight += $('#widget').height();
+
+        return varHeight;
+    }
+
+    function getHeaderDescHeight()
+    {
+        var varHeight = 0;
+        if ($('#widgetTitle').is(':visible')) varHeight += $('#widgetTitle').outerHeight(true);//which includes margin, padding and borders as well
+        if ($('#widgetDesc').is(':visible')) varHeight += $('#widgetDesc').outerHeight(true);
+        return varHeight;
+    }
+
+    function getContentHeight() {
+        var widgetTotHeight = getWidgetHeight();
+
+        var widgetContHeight = widgetTotHeight - getDisplayElemHeight();
+
+        return widgetContHeight;
+    }
+
+    function resizeTableFromPreview() {
+        SynhronizeMyGridHeight();
+    }
+
+</script> 
+
+<style type="text/css">
+    .page-meta-icon {
+        vertical-align: super;
+        cursor: pointer;
+        position: relative;
+        top: 8px;
+        left: 2px;
+    }
+</style>
+
+
+    <style type="text/css">
+        .loading {
+        -moz-border-radius: 5px 5px 5px 5px;
+        display: none;
+        height: 50px;
+        opacity: 0.9;
+        padding: 2px;
+        position: absolute;
+        text-align: center;
+        width: 100px;
+        z-index: 100000;
+    }
+    .widget-maintable
+    {
+        border: 0px !important; 
+        padding: 0px;
+    }
+    .widget-maintable-row
+    {
+        padding: 0px;
+        border: 0px !important;
+    }
+    .widget-maintable-cell-disclaimer
+    {
+        padding: 10px 0 0 0;        
+        border: 0px !important;
+    }
+    .widget-maintable-cell
+    {
+        padding: 0px;
+        border: 0px !important;
+    }
+    </style>
+
+
+    <script type="text/javascript">
+
+        function showLinkContent(e, obj) {
+            $(".embedLinkDesc").hide();
+            
+            var linkanchor=$(obj).find("a").attr("id");
+            var contentDiv=$("#" + $(obj).find("a").attr("id") + "Desc");
+            var widgetWd = getWidgetWidth();
+
+            contentDiv.css("width","");
+            contentDiv.find("h4").css("width","");
+            
+            switch (linkanchor)
+            {
+            case "downloadLink":
+                 if(widgetWd<350)
+                    {
+                      var offset=350-widgetWd;
+                      var contentWd=292-offset;
+                      var contentHeaderWd=contentWd-10;
+                      contentDiv.css("width",contentWd+"px");
+                      contentDiv.find("h4").css("width",contentHeaderWd+"px");
+                    }
+                break;
+                
+            case "shareLink":
+             if(widgetWd<390)
+                    {
+                      var offset=390-widgetWd;
+                      var contentWd=292-offset;
+                      var contentHeaderWd=contentWd-10;
+                      contentDiv.css("width",contentWd+"px");
+                      contentDiv.find("h4").css("width",contentHeaderWd+"px");
+                     }
+                 break;
+            case "infoLink":
+                 if(widgetWd<295)
+                    {
+                      var offset=295-widgetWd;
+                      var contentWd=292-offset;
+                      var contentHeaderWd=contentWd-10;
+                      contentDiv.css("width",contentWd+"px");
+                      contentDiv.find("h4").css("width",contentHeaderWd+"px");
+                     }
+                 break;
+                       
+            }
+         
+            $("#" + $(obj).find("a").attr("id") + "Desc").show();
+            e.stopPropagation();
+
+        }
+
+        function fileDownloadClick(downloadid) {
+            $(downloadid).trigger('click');
+        }
+
+        function setHdrProps(prop, ctl) {
+            var strProps = getParameterByName(prop);
+            if (strProps != '') {
+                strProps = strProps.split(';');
+                if (strProps.length > 0) $(ctl).css('font-family', strProps[0]);
+                if (strProps.length > 1) $(ctl).css('font-size', strProps[1]);
+                if (strProps.length > 2) $(ctl).css('font-weight', (strProps[2].toLowerCase() == 'true' ? 'bold' : 'normal'));
+                if (strProps.length > 3) $(ctl).css('font-style', (strProps[3].toLowerCase() == 'true' ? 'italic' : 'normal'));
+                if (strProps.length > 4) $(ctl).css("color", strProps[4]);
+                if (strProps.length > 5) $(ctl).css("text-align", strProps[5]);
+            }
+        }
+
+
+        $(function () {
+
+            var allbuttonshidden = false;
+            if (getParameterByName('ti').toLowerCase() == 'n') 
+                $('#widgetTitle').hide();
+            else 
+                $('#widgetTitle').show();
+            if (getParameterByName('ds').toLowerCase() == 'y') 
+                $('#widgetDesc').show();
+            else
+                $('#widgetDesc').hide();
+            if (getParameterByName('tb').toLowerCase() == 'n' || getParameterByName('tbar').toLowerCase() == 'n') 
+            {
+                allbuttonshidden = true;
+                $("#embedLinks").hide();
+            }
+            else
+            {
+                allbuttonshidden = true;
+                if (getParameterByName('sh').toLowerCase() == 'n') 
+                    $("#shareLink").hide();
+                else
+                    allbuttonshidden = false;
+                if (getParameterByName('dw').toLowerCase() == 'n') 
+                    $("#downloadLink").hide();
+                else
+                    allbuttonshidden = false;
+                var printreq = 'N';
+                printreq = (printreq == "Y");
+                if (!printreq || getParameterByName('pr').toLowerCase() == 'n') 
+                    $("#printLink").hide();
+                else
+                    allbuttonshidden = false;
+                if (getParameterByName('inf').toLowerCase() == 'n') 
+                    $("#infoLink").hide();
+                else
+                    allbuttonshidden = false;
+            }
+            if (getParameterByName('dd').toLowerCase() == 'n') 
+            {
+                $("#REPORT_PREVIEW_divdropdown").hide();
+            }
+            if (getParameterByName('md').toLowerCase() == 'n' && $('#hdnReportType').val() == 'METADATA') {
+                $(".metadata-tools").hide();
+            }
+             if(getParameterByName('source').toLowerCase()=='n')
+            {
+            $("#widget-table-source").hide();
+            }
+            if (!allbuttonshidden)
+            {
+
+                if ($('#widget-table-dropdowns').height() < 24) $('#widget-table-dropdowns').height(24);
+
+            }
+            var exporttypes = getParameterByName('exptypes');
+            exporttypes = $.trim(exporttypes);
+            if (exporttypes != '') {
+                exporttypes = exporttypes.split(",");
+                $('li.downloadExcel').hide();
+                $('li.downloadCSV').hide();
+                $('li.downloadTAB').hide();
+                $('li.downloadPNG').hide();
+                $('li.downloadJPEG').hide();
+                $('li.downloadSVG').hide();
+                $('li.downloadPDF').hide();
+                $.each(exporttypes, function(ind, val) {
+                    val = val.toLowerCase();
+                    switch(val) {
+                        case 'excel':
+                            $('li.downloadExcel').show();
+                            break;
+                        case 'csv':
+                            $('li.downloadCSV').show();
+                            break;
+                        case 'tab':
+                            $('li.downloadTAB').show();
+                            break;
+                        case 'png':
+                            $('li.downloadPNG').show();
+                            break;
+                        case 'jpeg':
+                            $('li.downloadJPEG').show();
+                            break;
+                        case 'svg':
+                            $('li.downloadSVG').show();
+                            break;
+                        case 'pdf':
+                            $('li.downloadPDF').show();
+                            break;
+                    }
+                });
+            }
+
+            var selectedTheme = getParameterByName('theme');
+            $("#embedLinkList li").addClass(selectedTheme);
+            $("#infoLinkDesc,#downloadLinkDesc,#shareLinkDesc").addClass("embedLinkDesc").addClass(selectedTheme);
+
+            var strBdrClr = getParameterByName('bdrClr'), strBdrStyle = getParameterByName('bdrStyle'), strBdrWd = getParameterByName('bdrWidth');
+            $("#widgetpreview").css("border-width", strBdrWd);
+            $("#widgetpreview").css("border-style", strBdrStyle);
+            $("#widgetpreview").css("border-color", strBdrClr);
+
+            setHdrProps('title', '#widgetTitle');
+            setHdrProps('desc', '#widgetDesc');
+            $("#embedLinkList li").click(function (e) { showLinkContent(e, this); });
+            $(".closeToolTip").click(function (e) { $(".embedLinkDesc").hide(); e.stopPropagation(); });
+
+
+
+
+            if (getParameterByName('zm').toLowerCase() != 'n') 
+            {
+                $("#widgetpreview").mouseover(function () {
+                    $("#fullScreen").show();
+                });
+
+                $("#widgetpreview").mouseleave(function () {
+                    $("#fullScreen").hide();
+                });
+                 $("#fullScreen").click(function () {
+                    var availWidth = screen.availWidth + "px";
+                    var availHeight = screen.availHeight + "px";
+                    var strHasPort = 'Y';
+                    strHasPort = (strHasPort == "Y");
+                    
+//                    var currentqryparams = '?ti=n&ds=n&zm=n';
+//                    currentqryparams += '&dd=' + (getParameterByName('dd').toLowerCase() == 'n' ? 'n' : 'y');
+//                    currentqryparams += '&tb=' + (getParameterByName('tb').toLowerCase() == 'n' || getParameterByName('tbar').toLowerCase() == 'n' ? 'n' : 'y');
+//                    if (selectedTheme != '') currentqryparams += '&theme=' + selectedTheme;
+//                    if (getParameterByName('country') != '') currentqryparams += '&country=' + getParameterByName('country');
+                    var currentqryparams = '?zm=n';
+
+                    var embedurl = '';
+                    if (strHasPort) {
+                        embedurl = 'https://databank.worldbank.org:443/embed/WDI-Tunisia/id/193e3be4' + currentqryparams;
+                    }
+                    else {
+                        embedurl = 'https://databank.worldbank.org/embed/WDI-Tunisia/id/193e3be4' + currentqryparams;
+                    }
+
+                    window.open(embedurl, "_blank", "toolbar=yes, location=yes, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=yes, width=" + availWidth + ", height=" + availHeight + "");
+                });
+            }
+
+
+            setWidgetDisplaySize();
+            
+
+            $('#divtoolbar').hide();
+            $("#widget-table-dropdowns select").chosen();
+            $('#page-select-download-links select').chosen();
+            $('.chosen-container').width('auto');
+
+        });
+
+        function setWidgetDisplaySize() {
+            var widgWd = getWidgetWidth();
+
+
+            var widgHt = getWidgetHeight();
+
+            //$("#widgetpreviewcontent").width(widgWd);
+            $("#widgetpreviewcontent").height(widgHt - getHeaderDescHeight() - 10);
+
+            $("#divreportcontent").width(widgWd);
+            $("#divreportcontent").height(widgHt);
+
+
+        }
+    </script>
+
+
+    <style type="text/css">
+        html{ overflow-y:auto} 
+    </style>
+
+
+    <script type="text/JavaScript">
+        var wbgData = wbgData || {};        
+        wbgData.page = {
+            pageInfo: {
+                pageName: "en:wb:reports:/widgets",
+                pageCategory: "content page",
+                pageUid: "databank-widgets", // format to be discussed
+                pageFirstPub: "01-01-2015", // format will be mm-dd-yyyy
+                pageLastMod: "01-01-2016", // format will be mm-dd-yyyy
+                contentType: "Other",
+                channel: "DEC Databank EXT"
+            },
+            sectionInfo: {
+                siteSection: "databank/widgets",
+                subsectionP2: ""
+            }
+        },
+        wbgData.site = {
+            siteInfo: {
+                siteLanguage: "en", // format should be en,fr etc.
+                siteCountry: "usa", // format should be usa, ind etc.
+                siteEnv: "prod", // format should be prod,stg,uat etc.
+                siteType: "developmentdata"
+            },
+            techInfo: {
+                cmsType: "sharepoint",
+                bussVPUnit: "DEC",
+                bussUnit: "DECDG",
+                bussUserGroup: "external",
+                bussAgency: "ibrd"
+            }
+
+        },
+        wbgData.misc = {
+            dataFilters: "Database:World Development Indicators;Country:Tunisia;Series:Cash surplus/deficit (% of GDP);Series:Domestic credit provided by financial sector (% of GDP);Series:Exports of goods and services (% of GDP);Series:External debt stocks, total (DOD, current US$);Series:Foreign direct investment, net inflows (BoP, current US$);Series:GDP (current US$);Series:GDP growth (annual %);Series:GNI, PPP (current international $);Series:Imports of goods and services (% of GDP);Series:Industry (including construction), value added (% of GDP);Series:Inflation, GDP deflator (annual %);Series:Merchandise trade (% of GDP);Series:Net barter terms of trade index (2015 = 100);Series:Services, etc., value added (% of GDP);Series:Tax revenue (% of GDP);Series:Total debt service (% of exports of goods, services and primary income);Series:GNI per capita growth (annual %);Series:Gross capital formation (% of GDP);Series:High-technology exports (% of manufactured exports);Time:2016;Time:2017;Time:2018;Time:2019;Time:2020"
+        }
+    </script>
+
+    <script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/launch-7bc0cdc67098.min.js"> async</script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/EXd03e8106d1f243db980e918be6e67c79-libraryCode_source.min.js" async=""></script>
+
+
+<style id="at-makers-style" class="at-flicker-control">
+.mboxDefault {visibility: hidden;}
+</style><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RCb3929508fb31432496e845f770d4d38f-source.min.js" async=""></script><style type="text/css" id="REPORT_PREVIEW_grdTablePopupView_RowHeights">#REPORT_PREVIEW_grdTablePopupView_DXDataRow0 > td.dxgvHEC { height:18px } #REPORT_PREVIEW_grdTablePopupView_DXDataRow1 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow2 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow3 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow4 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow5 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow6 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow7 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow8 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow9 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow10 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow11 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow12 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow13 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow14 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow15 > td.dxgvHEC, #REPORT_PREVIEW_grdTablePopupView_DXDataRow16 > td.dxgvHEC { height:19px } #REPORT_PREVIEW_grdTablePopupView_DXHeadersRow0 > td.dxgvHEC { height:20px } </style><style id="poshytip-css-tips-more-info" type="text/css">div.tips-more-info{visibility:hidden;position:absolute;top:0;left:0;}div.tips-more-info table, div.tips-more-info td{margin:0;font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;font-variant:inherit;}div.tips-more-info td.tip-bg-image span{display:block;font:1px/1px sans-serif;height:10px;width:10px;overflow:hidden;}div.tips-more-info td.tip-right{background-position:100% 0;}div.tips-more-info td.tip-bottom{background-position:100% 100%;}div.tips-more-info td.tip-left{background-position:0 100%;}div.tips-more-info div.tip-inner{background-position:-10px -10px;}div.tips-more-info div.tip-arrow{visibility:hidden;position:absolute;overflow:hidden;font:1px/1px sans-serif;}</style><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RC5bee9bde6f5c406c948030bdb0554466-source.min.js" async=""></script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RCb453f6bd4b6b4056a53aa2926bf43934-source.min.js" async=""></script><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RC52892eadc2a84ac4841473647ded54cf-source.min.js" async=""></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style><script src="https://assets.adobedtm.com/223f6e2cf7c9/3eb6c9b72a93/d7b052282e61/RC94eebad5fb634dd2a222999f3d321efd-source.min.js" async=""></script></head>
+<body>        
+    <form method="post" action="/embed/WDI-Tunisia/id/193e3be4" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTg1MDc0MzYwNQ9kFgICAQ8WAh4GYWN0aW9uBR4vZW1iZWQvV0RJLVR1bmlzaWEvaWQvMTkzZTNiZTQWGGYPFgIeCWlubmVyaHRtbGVkAgEPFgIfAQUsV29ybGQgRGF0YUJhbmsKV29ybGQgRGV2ZWxvcG1lbnQgSW5kaWNhdG9ycwpkAgIPZBYGAgMPFgIeBXRpdGxlBRFBYm91dCB0aGlzIHJlcG9ydGQCBQ8WAh8CBRJEb3dubG9hZCB0aGlzIGRhdGFkAgcPFgIfAgUQU2hhcmUgdGhpcyBxdWVyeWQCAw8WAh8BBQVFeGNlbGQCBA8WAh8BBQNDU1ZkAgUPFgIfAQUKVGFiYmVkIFRYVGQCBg8WAh8BBQdUd2l0dGVyZAIHDxYCHwEFCEZhY2Vib29rZAIIDxYCHwEFCEdvb2dsZSArZAIJDxYCHwEFBUVtYWlsZAIKDxYCHwEFswI8ZGwgY2xhc3M9IndpZGdldC1kZXNjIj48ZHQ+Q3JlYXRlZCBieTwvZHQ+PGRkPkxvdGhhciBXw7ZsZmVsPC9kZD48ZHQ+RGVzY3JpcHRpb248L2R0PjxkZD5Xb3JsZCBEYXRhQmFuawpXb3JsZCBEZXZlbG9wbWVudCBJbmRpY2F0b3JzCjwvZGQ+PGR0PlRhZ3M8L2R0PjxkZD5FeHRlcm5hbCBEZWJ0IGFuZCBGaW5hbmNpYWwgRmxvd3Mgc3RhdGlzdGljcywgSGVhdGggc3RhdGlzdGljcywgR2VuZGVyLCBFY29ub215LCBTb2NpYWwgRGF0YTwvZGQ+PGR0Pkxhc3QgVXBkYXRlZDwvZHQ+PGRkPjQvMi8yMDIxIDI6MzY6MjcgUE08L2RkPjwvZGw+ZAILD2QWAmYPZBYGAgEPZBYCAgEPZBYCZg9kFgJmD2QWAmYPZBYEZg8QZGQWAWZkAgEPDxYGHghDc3NDbGFzcwUOcGFnZS1tZXRhLWljb24eB1Rvb2xUaXAFG0NsaWNrIGhlcmUgdG8gdmlldyBtZXRhZGF0YR4EXyFTQgICFgIeB29uY2xpY2sFJ2xvYWRNZXRhRGF0YVdpZGdldCgnVHVuaXNpYScsJ1RVTicsJ0MnKWQCBQ8WAh8BBQ1DcmVhdGVkIGZyb206ZAIGDw8WAh4EVGV4dAUoV29ybGQgQmFuaywgV29ybGQgRGV2ZWxvcG1lbnQgSW5kaWNhdG9yc2RkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBSBSRVBPUlRfUFJFVklFVyRncmRUYWJsZVBvcHVwVmlld3pV+lW7Cv+C0MoMdZF3Sq5BhAPfcHcOd3Orn3BG389G">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=393I9IlCM-ogyKs8Hd44dV1rcqpxUnf5H44tKzwISJGiDKh0ditDkmXtgCEO2EBjYC1NHStZFDv6PBmomMymBjZskflkGRAIGbp5gmBilds1&amp;t=638628224627334853" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=AALOUbU4Dy97IA6xs5Hcw4X_3p0ibfav5J8GkqLh6BbzPzvXiBAnsgNZA1RrvIy3Cq24Vv0mT4-0kFgmLmvABOnhUI0YWIq1ZhBpByOsfO1tbR7qzitMMnOOu-sS2aCfvrYTNmI24HhiFUf2YM3cd2wojXk4geRddjzgVXBu4qHNnssTgxV-lcjShS7DKY_50&amp;t=b990ecd" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=4P9Uvi0O8EDMt76T88pXW8vg_c1ZTEFN6M0EjArAsjwpjR1CWOdErMSvNQXCR7Z-hH8RCLJlBUcy6rv1dztwjrXUezATyvBQersA_tcP-cth8l5bdDE4Rb0VUJb4WWEC5d0FV4pzcpnGgnH1-5uHOd32fp56pvSu_dMCRszGj5viffOTZAf7-j-vfr4wyIjd0&amp;t=b990ecd" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A65B525F">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABi8d8rmnpbAafNoGBjT1ADzw3uGie5SxYylH3rIFXwD44eM/o1Y76OLK8K9Vp/602SEnCUhsHnnrlZGzrH9ezQpPFd4GSihSIZ4ALiHBaSEwJJ++OVtCb7+HZU/n9e79hUtuZbyMBV6sXnkyxyA8EUyf+y1yafd2BtBcQio3ltF9Hr4S2WsXIFF1efO1sZ3mL99H4bXMTJzeoZMbUh4MfBAPJ7TrLn3ydMlAnvKcRDiYm8xiNfd/uBtyPYWIhyFYchzLrx+nitzfEDfwoleT7S88YZrQ5tKaabpp98XTGwF4yidwY26yBS0RAJ9RPunvfz+Tb8B0wNAg9hABGF37BHqAHyaWTmkpHyWafvkWdhmAAMyIdJaRkeIY2fYt1l9gdyLcniTQuUsVlSksVwb2kTu+pp5n5hF3bDA3rwYTkTt7wMs6+00mlTY9OPCRuZbbShrEDyfk4nIP4zVGF2L0tRR+h4INNyRloyYp+Aox2TmDBs7wF5larrPCuDt9nz+oXhpzofukQdU1Ug855k+vJODwGIgOTYB0YSSHTqodOBiBQ==">
+</div>
+    <div id="widgetTitle" style=""></div>
+        <div class="clrBoth"></div>
+        <div id="widgetDesc" style="display: none;">World DataBank
+World Development Indicators
+</div>
+
+        <div id="widgetpreview" title="" style="font-size:11px;">
+     <div id="widgetpreviewcontent" class="clearfix" style="height: 700px;">
+                
+    <div id="divtoolbar" class="widget-options clearfix" style="display: none;">
+      <h2><span id="lblTitle">&nbsp;</span> </h2>
+      <ul class="widgetPills">
+        <li><a href="../../../views/reports/#widget-description-panel" id="aAboutReport" data-customlink="nl:header" data-text="About" class="w-description help-tips" title="About this report"> <span class="icon"></span> </a></li>
+        <li><a href="../../../views/reports/#widget-download-panel" id="aDownloadData" data-customlink="nl:header" data-text="Download" class="w-download help-tips" title="Download this data"> <span class="icon"></span> </a></li>
+        <li><a href="../../../views/reports/#widget-share-panel" id="aShareQuery" data-customlink="nl:header" data-text="Share" class="w-share help-tips" title="Share this query"> <span class="icon"></span> </a></li>
+      </ul>
+    </div>
+    <div class="widget-option-panel clearfix" style="display:none;">
+      <div id="widget-description-panel" class="opt-panel hide clearfix">
+        
+        
+      </div>
+      <div id="widget-download-panel" class="opt-panel hide clearfix"> Download this dataset as:
+        <ul>
+          <li class="file-excel"><a data-trackaction="Excel" data-text="Excel" href="#"><span class="icon"></span><span id="sExcel">Excel</span></a></li>
+          <li class="file-csv"><a data-trackaction="CSV" data-text="CSV" href="#"><span class="icon"></span><span id="sCSV">CSV</span></a></li>
+          <li class="file-tab"><a data-trackaction="Tabbed Text" data-text="Tabbed Text" href="#"><span class="icon"></span><span id="sTabbedTXT">Tabbed TXT</span></a></li>
+        </ul>
+      </div>
+      <div id="widget-share-panel" class="opt-panel hide clearfix"> Share this query via:
+        <ul>
+          <li class="share-twitter"><a data-text="Twitter" data-trackaction="share twitter" href="Javascript:Widgettwitter();"><span class="icon"></span><span id="sTwitter">Twitter</span></a></li>
+          <li class="share-facebook"><a data-text="Facebook" data-trackaction="share facebook" href="Javascript:Widgetfacebook();"><span class="icon"></span><span id="sFaceBook">Facebook</span></a></li>
+          <li class="share-delicious"><a data-text="Google Plus" data-trackaction="share Google Plus" href="Javascript:WidgetGooglePlus();"><span class="icon"></span><span id="sGooglePlus">Google +</span></a></li>
+          <li class="share-email"><a data-text="Email" data-trackaction="share Email" href="Javascript:WidgetEmail();"><span class="icon"></span><span id="sEmail">Email</span></a> </li>
+        </ul>
+      </div>
+    </div>
+     <div id="divreportcontent" style="width: 1280px; height: 720px;">
+        <div id="widget">
+                    <div id="widgetOptions">
+                        <div id="embedLinks">
+                            <ul id="embedLinkList">
+                                <li class="darkGrey">
+                                    <a href="javascript:void(0)" class="" id="shareLink"><span class="linkIcon"></span></a>
+                                    <div id="shareLinkDesc" class="darkGrey embedLinkDesc">
+                                        <div class="content">
+                                            <h4>Share<span class="closeToolTip"></span></h4>
+                                            <p>Share this query via:</p>
+                                            <ul class="shareLinks">
+                                                <li><a data-text="Twitter" data-trackaction="share twitter" href="Javascript:Widgettwitter()">Twitter</a></li>
+                                                <li><a data-text="Facebook" data-trackaction="share facebook" href="Javascript:Widgetfacebook();">Facebook</a></li>
+                                                <li><a data-text="Google Plus" data-trackaction="share GooglePlus" href="Javascript:WidgetGooglePlus();">Google +</a></li>
+                                                <li><a data-text="Email" data-trackaction="share Email" href="Javascript:WidgetEmail();">Email</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="darkGrey">
+                                    <a href="javascript:void(0)" id="downloadLink"><span class="linkIcon"></span></a>
+                                    <div id="downloadLinkDesc" class="darkGrey embedLinkDesc">
+                                        <div class="content">
+                                            <h4>Download<span class="closeToolTip"></span></h4>
+                                            <p>Download this dataset as:</p>
+                                            <ul class="shareLinks">
+
+                                                <li data-text="Excel" class="downloadlnk downloadExcel"><a data-trackaction="Excel" href="javascript:fileDownloadClick('.file-excel')">Excel</a></li>
+                                                <li data-text="CSV" class="downloadlnk downloadCSV"><a data-trackaction="CSV" href="javascript:fileDownloadClick('.file-csv')">CSV</a></li>
+                                                <li data-text="Tabbed Text" class="downloadlnk downloadTAB"><a data-trackaction="Tabbed Text" href="javascript:fileDownloadClick('.file-tab')">Tabbed TXT</a></li>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="darkGrey">
+
+                                    <a data-customlink="pr:header" data-text="Print" href="javascript:exportReport('print')" id="printLink" style="display: none;"><span class="linkIcon"></span></a>
+
+                                </li>
+                                <li class="darkGrey">
+                                    <a data-customlink="nl:header" data-text="Information" href="javascript:void(0)" id="infoLink"><span class="linkIcon"></span></a>
+                                    <div id="infoLinkDesc" class="darkGrey embedLinkDesc">
+                                        <div class="content">
+                                            <h4>INFORMATION <span class="closeToolTip"></span></h4>
+                                            <div id="reportDescription" class="panel-explore"><dl class="widget-desc"><dt>Created by</dt><dd>Lothar Wölfel</dd><dt>Description</dt><dd>World DataBank
+World Development Indicators
+</dd><dt>Tags</dt><dd>External Debt and Financial Flows statistics, Heath statistics, Gender, Economy, Social Data</dd><dt>Last Updated</dt><dd>4/2/2021 2:36:27 PM</dd></dl></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a data-customlink="nl:header" data-text="Full Screen" href="javascript:void(0)" id="fullScreen" title="Fullscreen"></a>
+                </div>
+
+        
+    
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<style type="text/css">
+    body
+    {
+        border: medium none;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        background: none repeat scroll 0 0 #FFFFFF;
+    }
+    .main-body
+    {
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .filter-results
+    {
+        color: #000000;
+        font-size: 11px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .select-assist
+    {
+        margin-bottom: 10px;
+    }
+    .main-body .btn-link
+    {
+        line-height: 19px;
+        margin: 0 10px;
+    }
+    .jPicker
+    {
+        top: 120px !important;
+        z-index: 100000 !important;
+    }
+    .rollover-cell
+    {
+        font-style: italic;
+        font-weight: bold;
+    }
+</style>
+
+<script type="text/javascript">
+    function pageDropdownSelected() {
+    }
+
+    var compDropdownChange = 0;
+    function compDropdownSelected(obj) {
+        compDropdownChange++;
+        var ctlid = obj.id;
+
+        compDropdownSelectedInterval(ctlid, compDropdownChange);
+    }
+
+    function compDropdownSelectedInterval(ctlid, lastvalue) {
+        setTimeout(function () {
+            if (lastvalue == compDropdownChange) {
+                if ($('#' + ctlid + '_chosen').hasClass('chosen-with-drop'))
+                    compDropdownSelectedInterval(ctlid, lastvalue)
+                else
+                    __doPostBack(ctlid.replace('REPORT_PREVIEW_', 'REPORT_PREVIEW$'), '');
+            }
+        }, 2000);
+    }
+    
+    function loadMetaDataWidget(Name, Code, Type) { //Atsushi 11/30/2011 - to display metadata popup from column header, use same function name
+       var ReportID = $("#hdnReportID").val();
+       var ReportType = $("#hdnReportType").val();
+       var ddlSelected = $("#REPORT_PREVIEW_cmbWidgetPage_1 option:selected").val();
+       var ddlSelectedValue = "";
+       if (ddlSelected != null) {
+           ddlSelected = ddlSelected.split('&');
+           ddlSelectedValue = ddlSelected[1].replace('[', '').replace(']', '');
+       }
+       var strURL = '/Views/Metadata/MetadataWidget.aspx' + "?Name=" + Name.replace(/\&#39;/g, "%27") + "&Code=" + Code + "&Type=" + Type + "&ReqType=Metadata&ddlSelectedValue=" + ddlSelectedValue;
+       if (ReportID != null && ReportID != '' && ReportType != null && ReportType != '')
+            strURL += '&ReportID=' + ReportID + '&ReportType=' + ReportType;
+	   var sFeatures = 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=800,height=400,left=200,top=200';
+	   window.open(strURL, 'Metadata', sFeatures);
+    }
+
+    function loadLeastSquareNote() {
+        document.getElementById("divMetaData-rpt").innerHTML = "";
+        $("#divMetaData-rpt").attr('title', 'Metadata')
+        var btnCancel = document.getElementById('hdnCancel').value;
+        var lsqrNote = document.getElementById('hdnLsqrNote').value;
+        var dialogbtns = {};
+        document.getElementById("divMetaData-rpt").innerHTML = lsqrNote;
+        dialogbtns[btnCancel] = function () {
+            $(this).dialog("close");
+        }
+
+        $("#divMetaData-rpt").dialog({ minWidth: 300, modal: true, close: function (event, ui) { $(this).dialog("destroy"); document.getElementById("divMetaData-rpt").innerHTML = ""; }, buttons: dialogbtns });
+        $("#divMetaData-rpt").dialog("open");
+    }
+
+    function loadFootNotesWidget(Code, MRVYearValue) { //Atsushi 11/30/2011 - to display footnote popup from data cell => just changed the function name to make it consistent with the function for metadata
+        var ReportID = $("#hdnReportID").val();
+        var ReportType = $("#hdnReportType").val();
+        var strURL = '/Views/Metadata/MetadataWidget.aspx' + '?Code=' + Code + '&ReqType=Footnote';
+        if (ReportID != null && ReportID != '' && ReportType != null && ReportType != '')
+            strURL += '&ReportID=' + ReportID + '&ReportType=' + ReportType;
+        if (MRVYearValue != '')
+            strURL += '&MRVYearValue=' + MRVYearValue;
+	    var sFeatures = "toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=800,height=200,left=200,top=200";
+	    window.open(strURL, "Footnote", sFeatures);
+
+      }
+
+      //Deepak Nov 21 -332 - Begin
+      function Shared(strURL) {
+          
+          //nov22 deepak added properties for popup
+          var params = 'width=' + screen.width;
+          params += ', height=' + screen.height;
+          params += ', top=0, left=0';
+          params += ', directories=no';
+          params += ', location=yes';
+          params += ', menubar=yes';
+          params += ', resizable=yes';
+          params += ', scrollbars=yes';
+          params += ', status=yes';
+          params += ', toolbar=yes';
+          window.open(strURL, '', params);
+          //window.open(strURL, '', "status=1, width='" + screen.width - 5 + "', height='" + screen.height - 5);
+      }
+      //Deepak Nov 21 -332 - End
+
+      function gridRenderingSettings() {
+
+          $(".dxgvTable_GridDefaultTheme tr:first-child").show();
+
+
+              $(".dxgvFCSD").scrollLeft($(".dxgvFCSD div").width());
+
+       
+
+      }
+
+</script>
+
+<script type="text/javascript">
+
+    $(function () {
+        setReportColumnWidth();
+        doCustomizations('REPORT_PREVIEW_grdTablePopupView');
+        resetTable();
+    });
+
+    function setReportColumnWidth() {
+        var totwidth = getWidgetWidth();
+        var iRowHeaderColPercent = (totwidth * 35 / 100);
+        var widthhdrmin = $('#hdnRowHdrMinMax').val().split('~')[0];
+        var widthhdrmax = $('#hdnRowHdrMinMax').val().split('~')[1];
+        var iRowHeaderWidth = (iRowHeaderColPercent < widthhdrmin ? widthhdrmin : (iRowHeaderColPercent > widthhdrmax ? widthhdrmax : iRowHeaderColPercent));
+        $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable td:eq(0)').width(iRowHeaderWidth);
+        if ($('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable').length > 0)
+            $('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable td:eq(0)').width(iRowHeaderWidth);
+    }
+
+    function resetTable() {
+        setTimeout(function () {
+
+            //var rootTable = grid.GetRootTable();
+            //var scrollDiv = grid.getScrollableControl();
+            var w = getContentWidth(); //only 2 padding for table
+            var h = getContentHeight();
+            //if (document.getElementById("REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv") != null) h -= (document.getElementById("REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv").offsetHeight);
+            if (document.getElementById("REPORT_PREVIEW_grdTablePopupView_DXPagerBottom") != null) h -= ((document.getElementById("REPORT_PREVIEW_grdTablePopupView_DXPagerBottom").offsetHeight) + 5);
+
+            //grid.SetWidth(w);
+            grid.SetHeight(h);
+            
+            $('#REPORT_PREVIEW_grdTablePopupView').width(w);
+            $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent().width(w);
+
+            var w = $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent().width() - 18;
+            $('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable').parent().width(w).parent().width(w);
+            $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').width(w);
+
+            var noverticalscroll = $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent()[0].scrollHeight == $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent()[0].clientHeight;
+            var headerpadding = 0;
+            if (noverticalscroll)
+            {
+                $('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent().css('overflow-y','hidden');
+                if ($('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').length>0) $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').width(w + 18);
+            }
+            else
+            {
+                headerpadding = -18;
+            }
+            if ($('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable').length>0) $('#REPORT_PREVIEW_grdTablePopupView_DXHeaderTable').parent().width($('#REPORT_PREVIEW_grdTablePopupView_DXMainTable').parent().width()+headerpadding);
+
+            if ($('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').length>0)
+            {
+                var nohorizontalscroll = $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv')[0].scrollWidth == $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv')[0].clientWidth;
+                if (nohorizontalscroll)
+                {
+                    $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').css('overflow-x','hidden');
+                }
+                else
+                {
+                    $('#REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv').css('overflow-x','scroll');
+                }
+            }
+        }, 50);
+    }
+
+    $(window).resize(function () { //Recall Freeze Header Function on Window Resize 
+        if ($('#widgetpreviewcontent').html() != '') resetTable();
+    });
+
+    function SynhronizeMyGridHeight() {
+        resetTable();
+    }
+</script>
+
+    <script type="text/javascript" language="javascript" src="/views/scripts/scriptinternaltable.js"></script>
+
+    <style id="customstyles" type="text/css">
+    .custom-cell-selection
+    {
+        color: black !important;
+        background-color: #E6E6E6 !important;
+    }
+    </style>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('REPORT_PREVIEW$ScriptManager1', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+<table class="widget-maintable" style="width: 100%" cellpadding="0" cellspacing="0">
+    <tbody><tr id="widget-table-dropdowns" class="widget-maintable-row"><td class="widget-maintable-cell">
+        <div id="REPORT_PREVIEW_divdropdown" class="rtldirection">
+        <table border="0" class="table_ddpage">
+	<tbody><tr>
+		<td class="table_ddpage"><select name="REPORT_PREVIEW$cmbWidgetPage_1" onchange="pageDropdownSelected();setTimeout('__doPostBack(\'REPORT_PREVIEW$cmbWidgetPage_1\',\'\')', 0)" id="REPORT_PREVIEW_cmbWidgetPage_1" selectctlname="ddp-WDI_Ctry" style="width: 220px; display: none;">
+			<option selected="selected" value="[WDI_Ctry].[List].&amp;[TUN]">Tunisia</option>
+
+		</select><div class="chosen-container chosen-container-single" style="width: auto;" title="" id="REPORT_PREVIEW_cmbWidgetPage_1_chosen"><a class="chosen-single" tabindex="-1"><span>Tunisia</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div><a id="REPORT_PREVIEW_hplPageMetadata1" title="Click here to view metadata" class="page-meta-icon" onclick="loadMetaDataWidget('Tunisia','TUN','C')"><span><span title="Click here to view metadata" class="metaDataIcon sprite icon-info"></span></span></a></td>
+	</tr>
+</tbody></table>
+
+        </div>
+    </td></tr>
+    <tr id="widget-table-header" class="widget-maintable-row"><td class="widget-maintable-cell">
+    </td></tr>
+    <tr id="widget-table-content" class="widget-maintable-row"><td class="widget-maintable-cell" style="border: 0px !important; direction:ltr">
+        <script id="dxis_57823885" src="/DXR.axd?r=1_11,1_12,1_252,1_23,1_64,1_13,1_14,1_19,1_213,1_224,1_225,1_212,1_214,1_222,1_223,1_211,1_227,1_236,1_238,1_239,1_226,1_231,1_233,1_215,1_228,1_230,1_234,1_240,1_183,1_184-8QKZt" type="text/javascript"></script><table class="dxgvControl_GridDefaultTheme dxgv" cellspacing="0" cellpadding="0" dir="ltr" id="REPORT_PREVIEW_grdTablePopupView" style="width: 100%; border-collapse: separate;">
+	<tbody><tr>
+		<td><div class="dxgvHSDC" style="width: 1250px; padding-right: 0px;">
+			<div style="overflow: hidden; width: 1280px;">
+				<table id="REPORT_PREVIEW_grdTablePopupView_DXHeaderTable" class="dxgvTable_GridDefaultTheme" cellspacing="0" cellpadding="0" oncontextmenu="return ASPx.GVContextMenu('REPORT_PREVIEW_grdTablePopupView',event);" style="width:100%;border-collapse:collapse;empty-cells:show;table-layout:fixed;overflow:hidden;text-overflow:ellipsis;">
+					<tbody><tr class="dxgvArm" style="height: 0px; padding: 0px 2px;">
+						<td style="width: 300px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="height: 0px; padding: 0px 2px;"></td>
+					</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXHeadersRow0" style="height: auto;">
+						<td id="REPORT_PREVIEW_grdTablePopupView_col0" class="dxgvHeader_GridDefaultTheme" style="font-size: 7pt; font-weight: normal; font-style: italic; text-align: left; border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader0" style="font-size: 7pt; font-weight: normal; font-style: italic; text-align: left; height: auto;"><span customid="D1"> </span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col2" class="dxgvHeader_GridDefaultTheme even dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader2" class="dx-wrap" style="height: auto;"><span customid="C12">2016</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col3" class="dxgvHeader_GridDefaultTheme odd dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader3" class="dx-wrap" style="height: auto;"><span customid="C13">2017</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col4" class="dxgvHeader_GridDefaultTheme even dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader4" class="dx-wrap" style="height: auto;"><span customid="C15">2018</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col5" class="dxgvHeader_GridDefaultTheme odd dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader5" class="dx-wrap" style="height: auto;"><span customid="C16">2019</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td id="REPORT_PREVIEW_grdTablePopupView_col6" class="dxgvPHEC dxgvHeader_GridDefaultTheme even dx-wrap" style="border-top-width: 0px; border-left-width: 0px; height: auto;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+							<tbody><tr style="height: auto;">
+								<td id="REPORT_PREVIEW_grdTablePopupView_tcheader6" class="dx-wrap" style="height: auto;"><span customid="C17">2020</span></td><td style="width: 1px; text-align: right; height: auto;"><span class="dx-vam">&nbsp;</span></td>
+							</tr>
+						</tbody></table></td><td class="dxgvHEC" style="height: auto;"></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div><div class="dxgvCSD" style="height: 606px; overflow: hidden; width: 1280px;">
+			<table id="REPORT_PREVIEW_grdTablePopupView_DXMainTable" class="dxgvTable_GridDefaultTheme dxgvRBB" cellspacing="0" cellpadding="0" oncontextmenu="return ASPx.GVContextMenu('REPORT_PREVIEW_grdTablePopupView',event);" style="width:100%;border-collapse:collapse;empty-cells:show;table-layout:fixed;overflow:hidden;text-overflow:ellipsis;">
+				<tbody><tr class="dxgvArm" style="height: 0px; padding: 0px 2px;">
+					<td style="width: 300px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="width: 100px; height: 0px; padding: 0px 2px;"></td><td style="height: 0px; padding: 0px 2px;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow0" class="dxgvDataRow_GridDefaultTheme" customid="R8" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R8" onclick="loadMetaDataWidget('Domestic credit provided by financial sector (% of GDP)','FS.AST.DOMS.GD.ZS','S')" style="height: auto;">Domestic credit provided by financial sector (% of GDP)</td><td class="even curr dir-en dxgv" align="right" customid="R8C12" style="height: auto;">87.8</td><td class="odd curr dir-en dxgv" align="right" customid="R8C13" style="height: auto;">92.5</td><td class="even curr dir-en dxgv" align="right" customid="R8C15" style="height: auto;">..</td><td class="odd curr dir-en dxgv" align="right" customid="R8C16" style="height: auto;">..</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R8C17" style="height: auto;">..</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow1" class="dxgvDataRow_GridDefaultTheme" customid="R11" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R11" onclick="loadMetaDataWidget('Exports of goods and services (% of GDP)','NE.EXP.GNFS.ZS','S')" style="height: auto;">Exports of goods and services (% of GDP)</td><td class="even curr dir-en dxgv" align="right" customid="R11C12" style="height: auto;">38.3</td><td class="odd curr dir-en dxgv" align="right" customid="R11C13" style="height: auto;">41.7</td><td class="even curr dir-en dxgv" align="right" customid="R11C15" style="height: auto;">45.5</td><td class="odd curr dir-en dxgv" align="right" customid="R11C16" style="height: auto;">46.0</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R11C17" style="height: auto;">38.0</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow2" class="dxgvDataRow_GridDefaultTheme" customid="R12" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R12" onclick="loadMetaDataWidget('External debt stocks, total (DOD, current US$)','DT.DOD.DECT.CD','S')" style="height: auto;">External debt stocks, total (DOD, current US$)</td><td class="even curr dir-en dxgv" align="right" customid="R12C12" style="height: auto;">29,527,167,044.6</td><td class="odd curr dir-en dxgv" align="right" customid="R12C13" style="height: auto;">33,714,237,269.7</td><td class="even curr dir-en dxgv" align="right" customid="R12C15" style="height: auto;">35,266,300,362.9</td><td class="odd curr dir-en dxgv" align="right" customid="R12C16" style="height: auto;">40,224,514,020.4</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R12C17" style="height: auto;">41,977,373,872.0</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow3" class="dxgvDataRow_GridDefaultTheme" customid="R14" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R14" onclick="loadMetaDataWidget('Foreign direct investment, net inflows (BoP, current US$)','BX.KLT.DINV.CD.WD','S')" style="height: auto;">Foreign direct investment, net inflows (BoP, current US$)</td><td class="even curr dir-en dxgv" align="right" customid="R14C12" style="height: auto;">622,569,482.2</td><td class="odd curr dir-en dxgv" align="right" customid="R14C13" style="height: auto;">810,936,482.8</td><td class="even curr dir-en dxgv" align="right" customid="R14C15" style="height: auto;">991,385,678.1</td><td class="odd curr dir-en dxgv" align="right" customid="R14C16" style="height: auto;">815,012,991.4</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R14C17" style="height: auto;">623,075,275.9</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow4" class="dxgvDataRow_GridDefaultTheme" customid="R16" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R16" onclick="loadMetaDataWidget('GDP (current US$)','NY.GDP.MKTP.CD','S')" style="height: auto;">GDP (current US$)</td><td class="even curr dir-en dxgv" align="right" customid="R16C12" style="height: auto;">44,360,072,680.4</td><td class="odd curr dir-en dxgv" align="right" customid="R16C13" style="height: auto;">42,163,530,590.9</td><td class="even curr dir-en dxgv" align="right" customid="R16C15" style="height: auto;">42,686,504,459.8</td><td class="odd curr dir-en dxgv" align="right" customid="R16C16" style="height: auto;">41,905,642,418.8</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R16C17" style="height: auto;">42,491,780,918.4</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow5" class="dxgvDataRow_GridDefaultTheme" customid="R17" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R17" onclick="loadMetaDataWidget('GDP growth (annual %)','NY.GDP.MKTP.KD.ZG','S')" style="height: auto;">GDP growth (annual %)</td><td class="even curr dir-en dxgv" align="right" customid="R17C12" style="height: auto;">1.1</td><td class="odd curr dir-en dxgv" align="right" customid="R17C13" style="height: auto;">2.2</td><td class="even curr dir-en dxgv" align="right" customid="R17C15" style="height: auto;">2.6</td><td class="odd curr dir-en dxgv" align="right" customid="R17C16" style="height: auto;">1.6</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R17C17" style="height: auto;">-9.0</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow6" class="dxgvDataRow_GridDefaultTheme" customid="R21" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R21" onclick="loadMetaDataWidget('GNI, PPP (current international $)','NY.GNP.MKTP.PP.CD','S')" style="height: auto;">GNI, PPP (current international $)</td><td class="even curr dir-en dxgv" align="right" customid="R21C12" style="height: auto;">124,009,382,893.0</td><td class="odd curr dir-en dxgv" align="right" customid="R21C13" style="height: auto;">128,424,124,617.9</td><td class="even curr dir-en dxgv" align="right" customid="R21C15" style="height: auto;">135,938,136,878.1</td><td class="odd curr dir-en dxgv" align="right" customid="R21C16" style="height: auto;">144,509,085,820.2</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R21C17" style="height: auto;">138,016,726,344.3</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow7" class="dxgvDataRow_GridDefaultTheme" customid="R27" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R27" onclick="loadMetaDataWidget('Imports of goods and services (% of GDP)','NE.IMP.GNFS.ZS','S')" style="height: auto;">Imports of goods and services (% of GDP)</td><td class="even curr dir-en dxgv" align="right" customid="R27C12" style="height: auto;">48.8</td><td class="odd curr dir-en dxgv" align="right" customid="R27C13" style="height: auto;">54.1</td><td class="even curr dir-en dxgv" align="right" customid="R27C15" style="height: auto;">58.4</td><td class="odd curr dir-en dxgv" align="right" customid="R27C16" style="height: auto;">56.4</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R27C17" style="height: auto;">46.4</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow8" class="dxgvDataRow_GridDefaultTheme" customid="R31" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R31" onclick="loadMetaDataWidget('Industry (including construction), value added (% of GDP)','NV.IND.TOTL.ZS','S')" style="height: auto;">Industry (including construction), value added (% of GDP)</td><td class="even curr dir-en dxgv" align="right" customid="R31C12" style="height: auto;">24.0</td><td class="odd curr dir-en dxgv" align="right" customid="R31C13" style="height: auto;">23.6</td><td class="even curr dir-en dxgv" align="right" customid="R31C15" style="height: auto;">23.7</td><td class="odd curr dir-en dxgv" align="right" customid="R31C16" style="height: auto;">23.2</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R31C17" style="height: auto;">21.5</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow9" class="dxgvDataRow_GridDefaultTheme" customid="R32" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R32" onclick="loadMetaDataWidget('Inflation, GDP deflator (annual %)','NY.GDP.DEFL.KD.ZG','S')" style="height: auto;">Inflation, GDP deflator (annual %)</td><td class="even curr dir-en dxgv" align="right" customid="R32C12" style="height: auto;">4.9</td><td class="odd curr dir-en dxgv" align="right" customid="R32C13" style="height: auto;">4.7</td><td class="even curr dir-en dxgv" align="right" customid="R32C15" style="height: auto;">7.9</td><td class="odd curr dir-en dxgv" align="right" customid="R32C16" style="height: auto;">7.1</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R32C17" style="height: auto;">6.8</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow10" class="dxgvDataRow_GridDefaultTheme" customid="R35" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R35" onclick="loadMetaDataWidget('Merchandise trade (% of GDP)','TG.VAL.TOTL.GD.ZS','S')" style="height: auto;">Merchandise trade (% of GDP)</td><td class="even curr dir-en dxgv" align="right" customid="R35C12" style="height: auto;">74.5</td><td class="odd curr dir-en dxgv" align="right" customid="R35C13" style="height: auto;">82.7</td><td class="even curr dir-en dxgv" align="right" customid="R35C15" style="height: auto;">89.6</td><td class="odd curr dir-en dxgv" align="right" customid="R35C16" style="height: auto;">87.1</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R35C17" style="height: auto;">75.7</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow11" class="dxgvDataRow_GridDefaultTheme" customid="R39" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R39" onclick="loadMetaDataWidget('Net barter terms of trade index (2015 = 100)','TT.PRI.MRCH.XD.WD','S')" style="height: auto;">Net barter terms of trade index (2015 = 100)</td><td class="even curr dir-en dxgv" align="right" customid="R39C12" style="height: auto;">101.3</td><td class="odd curr dir-en dxgv" align="right" customid="R39C13" style="height: auto;">97.4</td><td class="even curr dir-en dxgv" align="right" customid="R39C15" style="height: auto;">96.9</td><td class="odd curr dir-en dxgv" align="right" customid="R39C16" style="height: auto;">97.0</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R39C17" style="height: auto;">100.1</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow12" class="dxgvDataRow_GridDefaultTheme" customid="R56" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R56" onclick="loadMetaDataWidget('Tax revenue (% of GDP)','GC.TAX.TOTL.GD.ZS','S')" style="height: auto;">Tax revenue (% of GDP)</td><td class="even curr dir-en dxgv" align="right" customid="R56C12" style="height: auto;">..</td><td class="odd curr dir-en dxgv" align="right" customid="R56C13" style="height: auto;">..</td><td class="even curr dir-en dxgv" align="right" customid="R56C15" style="height: auto;">..</td><td class="odd curr dir-en dxgv" align="right" customid="R56C16" style="height: auto;">..</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R56C17" style="height: auto;">..</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow13" class="dxgvDataRow_GridDefaultTheme" customid="R59" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R59" onclick="loadMetaDataWidget('Total debt service (% of exports of goods, services and primary income)','DT.TDS.DECT.EX.ZS','S')" style="height: auto;">Total debt service (% of exports of goods, services and primary income)</td><td class="even curr dir-en dxgv" align="right" customid="R59C12" style="height: auto;">12.1</td><td class="odd curr dir-en dxgv" align="right" customid="R59C13" style="height: auto;">17.0</td><td class="even curr dir-en dxgv" align="right" customid="R59C15" style="height: auto;">21.1</td><td class="odd curr dir-en dxgv" align="right" customid="R59C16" style="height: auto;">22.6</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R59C17" style="height: auto;">27.6</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow14" class="dxgvDataRow_GridDefaultTheme" customid="R61" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R61" onclick="loadMetaDataWidget('GNI per capita growth (annual %)','NY.GNP.PCAP.KD.ZG','S')" style="height: auto;">GNI per capita growth (annual %)</td><td class="even curr dir-en dxgv" align="right" customid="R61C12" style="height: auto;">0.9</td><td class="odd curr dir-en dxgv" align="right" customid="R61C13" style="height: auto;">-0.9</td><td class="even curr dir-en dxgv" align="right" customid="R61C15" style="height: auto;">-0.1</td><td class="odd curr dir-en dxgv" align="right" customid="R61C16" style="height: auto;">0.3</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R61C17" style="height: auto;">-7.5</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow15" class="dxgvDataRow_GridDefaultTheme" customid="R22" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R22" onclick="loadMetaDataWidget('Gross capital formation (% of GDP)','NE.GDI.TOTL.ZS','S')" style="height: auto;">Gross capital formation (% of GDP)</td><td class="even curr dir-en dxgv" align="right" customid="R22C12" style="height: auto;">20.5</td><td class="odd curr dir-en dxgv" align="right" customid="R22C13" style="height: auto;">21.3</td><td class="even curr dir-en dxgv" align="right" customid="R22C15" style="height: auto;">23.0</td><td class="odd curr dir-en dxgv" align="right" customid="R22C16" style="height: auto;">19.8</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R22C17" style="height: auto;">12.7</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr><tr id="REPORT_PREVIEW_grdTablePopupView_DXDataRow16" class="dxgvDataRow_GridDefaultTheme dxgvLVR" customid="R25" style="height: auto;">
+					<td title="Click here to view metadata" class="colhead dxgvFixedColumn_GridDefaultTheme dx-wrap dxgv mv" customid="R25" onclick="loadMetaDataWidget('High-technology exports (% of manufactured exports)','TX.VAL.TECH.MF.ZS','S')" style="height: auto;">High-technology exports (% of manufactured exports)</td><td class="even curr dir-en dxgv" align="right" customid="R25C12" style="height: auto;">7.9</td><td class="odd curr dir-en dxgv" align="right" customid="R25C13" style="height: auto;">7.4</td><td class="even curr dir-en dxgv" align="right" customid="R25C15" style="height: auto;">6.8</td><td class="odd curr dir-en dxgv" align="right" customid="R25C16" style="height: auto;">6.9</td><td class="dxgvPHEC even curr dir-en dxgv" align="right" customid="R25C17" style="height: auto;">7.6</td><td class="dxgvHEC" style="height: auto;"></td>
+				</tr>
+			</tbody></table>
+		</div><div id="REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsDiv" class="dxgvFCSD" style="height: 1px; width: 1280px; overflow: hidden;">
+			<div id="REPORT_PREVIEW_grdTablePopupView_DXFixedColumnsContentDiv" style="height: 1px; width: 800px;">
+
+			</div>
+		</div><table id="REPORT_PREVIEW_grdTablePopupView_LP" class="dxgvLoadingPanel_GridDefaultTheme" cellspacing="0" cellpadding="0" style="border-collapse:collapse;left:0px;top:0px;z-index:30000;display:none;">
+			<tbody><tr>
+				<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_89-8QKZt" alt="" align="middle"></td><td class="dx" style="padding-left:0px;"><span id="REPORT_PREVIEW_grdTablePopupView_TL">Loading...</span></td>
+			</tr>
+		</tbody></table><div id="REPORT_PREVIEW_grdTablePopupView_LD" class="dxgvLoadingDiv_GridDefaultTheme" style="display:none;z-index:29999;position:absolute;">
+
+		</div><img id="REPORT_PREVIEW_grdTablePopupView_IADD" class="dxGridView_gvDragAndDropArrowDown_GridDefaultTheme" src="/DXR.axd?r=1_89-8QKZt" alt="Down Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="REPORT_PREVIEW_grdTablePopupView_IADU" class="dxGridView_gvDragAndDropArrowUp_GridDefaultTheme" src="/DXR.axd?r=1_89-8QKZt" alt="Up Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="REPORT_PREVIEW_grdTablePopupView_IADL" class="dxGridView_gvDragAndDropArrowLeft_GridDefaultTheme" src="/DXR.axd?r=1_89-8QKZt" alt="Left Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="REPORT_PREVIEW_grdTablePopupView_IADR" class="dxGridView_gvDragAndDropArrowRight_GridDefaultTheme" src="/DXR.axd?r=1_89-8QKZt" alt="Right Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="REPORT_PREVIEW_grdTablePopupView_IDHF" class="dxGridView_gvDragAndDropHideColumn_GridDefaultTheme" src="/DXR.axd?r=1_89-8QKZt" alt="Hide" style="position:absolute;visibility:hidden;top:-100px;"></td>
+	</tr>
+</tbody></table><script id="dxss_50726352" type="text/javascript" data-executed="true">
+<!--
+ASPx.createControl(ASPxClientGridView,'REPORT_PREVIEW_grdTablePopupView','grid',{'callBack':function(arg) { WebForm_DoCallback('REPORT_PREVIEW$grdTablePopupView',arg,ASPx.Callback,'REPORT_PREVIEW_grdTablePopupView',ASPx.CallbackError,true); },'disableSwipeGestures':true,'uniqueID':'REPORT_PREVIEW$grdTablePopupView','stateObject':{'keys':['FS.AST.DOMS.GD.ZS','NE.EXP.GNFS.ZS','DT.DOD.DECT.CD','BX.KLT.DINV.CD.WD','NY.GDP.MKTP.CD','NY.GDP.MKTP.KD.ZG','NY.GNP.MKTP.PP.CD','NE.IMP.GNFS.ZS','NV.IND.TOTL.ZS','NY.GDP.DEFL.KD.ZG','TG.VAL.TOTL.GD.ZS','TT.PRI.MRCH.XD.WD','GC.TAX.TOTL.GD.ZS','DT.TDS.DECT.EX.ZS','NY.GNP.PCAP.KD.ZG','NE.GDI.TOTL.ZS','TX.VAL.TECH.MF.ZS'],'resizingState':'','callbackState':'+uTLOKSYvXsmouSsSxDzLwiSPzeky6uuUgkjmV1QD++Ye5esnZ2ZHR7wYSiNJyaQC4tfjdrgcNAQWtXTGbrUhXv5HlNzagIqNmid6HDaWVyD8E7NfgPLD9bLPL+uMi1NRPIPxHLJXUD69PNZeqoPJ3xheabkS6tFHQ+t2hC0KAN1ECmfOzNQPwFqJ0S+oOwjoaNCqp68izLw1/yjh7nnzSAlDhTWBT5Vk5urU1WiwtdIAdRAYTvoJGv5SlvOJZN2HAPR9tmif3fLpNDz7RLHOL7SuHdJSbYxIgt5e20TycHfiQfUZ5Iy2GlYKLdYJ3sQznqBEoGp0nbl0x5RsfXjIBKpcTeEyaJFFUlkYTBgeTNkPcoBukTLpAJpgx03jVDGY/RSRIMdIvV4denITmj6m7LKx0ZmAwSLa+jSJmTfF81xcnCQJap4WXZYmB24J8iCkDS2TVl3HPh9TZTxX89CAMNz5QI/GU20GgXpLiQ41gSYpsOAJdC89Re9XJhKAKdbKhJVXkpSnvBiNDlhc3WOahct4pIb+yH3RLh+lDCGkOH/GngYfgCOYGG9G80xjAIeJcxUBA3B0C0nVf3NQywdlYS8yT0H5GfonN8kD1zIqPe1Cs3KYCdCNfcOkk4hciAmBVNjW97qq9s9OShJJ2HryyXC6sc4W5g/+f7s8bUREl3IJlZm7dNMiLVHVjAqjmEBLoRf4h+++ceLVo5ij5QwyRFNze2PpWirEdr7D3SKcQ11RWn78a4dijuCdFHWHjqSn26K9AEArtsVDL9W+Kh1aLI4YsbCrD8Ll101Y2sIfGWgNx/7Mjy/w1PN6uJsHfjE61LJitCvbcu4wkTPUIEMOYOLK/edalohJrMK/Qb2bb8M4Ncf0Owno8ei7ODWQjnZP4LV1Il6FMYGR4aZfH2FHZW6hJgF/abtvSrb06qmbxWud/lcLwF66Ucb+Aid7UTV99hsUN4A9aGUMd+3jj8ebbTkEppY9G0DTAx5GCtr9G8RBsTc9KDZPOeUlc99Vruxyg28ppqw9H+agGYlx8oevNUakUo3QCNj6iIBjA5BApyV9qr1yO0ROELuzkw6VC12O3QZlI+AfrOljrG3TjYjSOxl9bS7eAO6Cay2Zh2ocpJ1VQHxfxcd1i7gkPUm0t0QXoIe0o+B8UxQ8+RU36sF57I42xJvHQpfyKrKljAQhdR/GOgF7tFD8YQYGnF8RZ3W+mF+ZmfJfOCuFgOb6Odwzml0Z6cHuNUnm4ZwRKjobbpgR+sYGjQuWjX45fzqypTB7oUx5uDJIGKKEAKThaocsrqALEUfkt8h3pxBD79Qa9TTaP8X7Mew/JEPIwc3wyGSf1qxYwS/E7KvUmW7yhicBOJwHWr5bvLp7EQ9V7MgN4p0YF/PYLRS8iG8XL022G6TXlvybl4bR97CyHQhjifc2jqCdYnDnoNR8Lwfq8CDJF92pwSFSS0p1/it6gfWy0/1CvV3jDhXBwkVYcupUvtk1fuM40b8iauDONq5F9yYRLk7Rmc9pv40o1Gjr9Ou3fnj8oNlmtfcUFmU+7q3+iUn3yOB8E+KrqyzlY3QMfJOsF/yvtNVhj1ZcZ9q3QVWxOyghJFNKMmfUN1z+iaE/iqPkErmG8vVHNfhqDGErlVMa9NRpqiclTlvEnIpk5dlz0wo4kcAosqOV//ZE9rRKy+FAHPxdPaR1xruA4ihH+hzBZo+MTfpAuEVCSO+OLFQdOBTJBPQkOT3nZtRq0ylGtOyKZobDAa8NqcxwHGVK9TEfF3BDpgVworT/S7SzQirgMCaml7Z7N4Aq1BUX9fmx7Ewi8akS5PF8H3vTrOpwAzxnm4wYoIirs2s8HLD+piU5HUkabA6braenjsw9xbIMMuy68qDH+fQHFSJCyLOvyisCS64839pAfMu70zLz5XTesJ6rFO0GwXTuBnYuZx0iImYGJ8hZ/84uZa6ajG4KA2ZxGuKajpIN74ePlCjKgWeIf6RLCOejx61aujN409qwnpUBouaI7YaPdbreSID/J9fNVa3jO99U7d99HaFN9Ls5rwPeVb/k476CsNJzeW6U3mCn1r+LBjzxNrO/nXFP/IhBTqOdH/Vj90m26o58Ukbf5ogNGqtrZ7TW/hMOMV1W0E4v/8XE5I0l+QSzAGs1YOFFi+OI2rRH9R/w45m4kTesTrJxNZhNjkxJj/FH2PFFuHGBxRrphTwBqL49jvt2CXTHSsIqJQfu+41J6j15SiNSjf5gXHGe/dCsRTq7v4BWJLxI6/MwziJsFwR/nBEnGoh3TkhTqE4Gt2bIdBW9x6/Vp3taG6Xt6y9OkGOSNc26VmmRqOasrj0FP9qzSjmRjz60lFbrwJNT7jxjxIPx0IzxpDRjIhSmu4Q0JRkd7jSSMD3KE6CXPumSDsS53n2ZmYFjpu1FU3HZHggj3WGg+lx2Oqs2Qt/DeBCIVfuv/fBqPlbUScg+PWf/p2vkIcc5eCj4W/ln1IsZPbpr2WqQEfjxfMlBj7DULnCr6Ye62JXFLE98S+akSnXnNw9ryz1DUJjIV88tcgNQLVA//kneT3tsGclc8KC6+HPtPsYleftXLd6t12y2SUHjclXMCRvc141aB/b3anSfG+iJkKa0+jpy91smb5RcPW2AjHAdtKqksZsRtfIqxUai7wD95rNNy0v53TEsgTn4/CwybuhbmJd0bvD6hdcbXFm3eMBR3s3pBX+SaVNK21pPgacg6KssC1QhC05c4M3pdbugsz0U5NhXlo/t/DvqiMy+qmRB/6ufOUpttdNov2VaFyIyW4AAjWtrhg9dFC+aoS3o+QV/7hQq3qOG3RJloKQU5CVvL4qLS9lUVzAazgPd7+5iwwgBbHTOsf4B5AUs9C6IAb6yAcbT7mp+wDFM3ASwLYDEZEFvflFdv/r0o+jNOkOZ3biCMzGutq8PDbq5rcDquOXv787KlXjBh4l2UJfMWYfLoHlcBHlZxWPv9fz4CSzgKXi3xg+ysfK2VqdTa+reXBw41wamgkpb+cHmfQvANbLzbXI9vcl1191M0TLWEQwzNNV2T2NXbLIOcbycfp5x48DYgt5U9icZ8tsKUlWaFA7kCWPmF9GiqBScY3Bu1VWQ6IRFOpBjfB8fI/GNI9ZLRfqFz/7fGeOcN6rI47WNkrGIlvbypRif4GMT/0uHYz+fg1eEQw6b9pIW7qgcLZ3M2CB3IY2vbHAhVTA0zFJiHtCEyvY1dSsa1+AAt/6KHbYSLrw5ou2IcCWBGCfpgx+TDT8uyFhGM6uU46jK6mFqGa4wi4rauVmZXmXoCaJpsDUo3hIRY43Eh9mNHrxkbhHos6UNGVH6vh9Y8LXcprTZf1WDCS0tt/e7csU7ejOMjXXV5XFk+CmHDwULzqBKa6RBbm6WQ33keYIf9NSdRggqja6rj2W88CIWJDT7K645HAJLNDC/zyCS2hlz9jpsV/wuAl9cDJTzKA44MRJ4vBVp71ZZOwEXbv7b8Dak5vDxMdUGIOvSpbuPO2snkg1qGLLCEoSXjCgVw6x','groupLevelState':{},'scrollState':null,'selection':''},'callBacksEnabled':true,'pageRowCount':17,'pageRowSize':50,'pageIndex':0,'pageCount':1,'selectedWithoutPageRowCount':0,'visibleStartIndex':0,'focusedRowIndex':-1,'allowFocusedRow':false,'allowSelectByItemClick':false,'allowSelectSingleRowOnly':false,'horzScroll':1,'vertScroll':1,'callbackOnFocusedRowChanged':false,'callbackOnSelectionChanged':false,'editState':0,'editItemVisibleIndex':-1,'searchPanelFilter':'','allowDelete':true,'allowEdit':true,'allowInsert':true,'columnProp':[[0,,,'Indicator Name',,,,,0,,,,1],[1,0,,'Indicator Code',,,,,,,,,1,,,,1],[2,,,'2016',,,,,1],[3,,,'2017',,,,,2],[4,,,'2018',,,,,3],[5,,,'2019',,,,,4],[6,,,'2020',,,,,5]],'shouldScrollToNewRow':false,'editMode':2,'indentColumnCount':0,'allowChangeColumnHierarchy':false,'allowMultiColumnAutoFilter':false,'columnResizeMode':1,'fixedColumnCount':1,'showGroupButton':false},{'Init':function(s, e) { 
+        gridRenderingSettings();
+            SynhronizeMyGridHeight();
+            doSetRowHeight('REPORT_PREVIEW_grdTablePopupView'); 
+                },'EndCallback':function(s, e) { 
+                setReportColumnWidth();
+                SynhronizeMyGridHeight();
+                doCustomizations('REPORT_PREVIEW_grdTablePopupView');
+            },'ColumnSorting':function(s, e) { 
+                	if (event.srcElement.tagName.toLowerCase() == 'img') e.cancel = true;
+                    return true;
+                },'ColumnResized':function(s, e) { 
+                SynhronizeMyGridHeight();
+            }});
+ASPxClientGridBase.PostponeInitialize('REPORT_PREVIEW_grdTablePopupView',({'commandButtonIDs':[],'styleInfo':{'ei':'<tr class="dxgvEditingErrorRow_GridDefaultTheme">\r\n\t<td class="dxgvPHEC dxgv" data-colSpan="6"></td><td class="dxgvHEC"></td>\r\n</tr>','fc':{'className':'dxgvFocusedCell_GridDefaultTheme'},'bec':{'className':'dxgvBatchEditCell_GridDefaultTheme dxgv'},'bemc':{'className':'dxgvBatchEditModifiedCell_GridDefaultTheme dxgv'},'bemergmc':{'className':'dxgvBatchEditModifiedCell_GridDefaultTheme dxgvBatchEditCell_GridDefaultTheme dxgv'},'bedi':{'className':'dxgvBatchEditDeletedItem_GridDefaultTheme dxgv'},'sel':{'className':'dxgvSelectedRow_GridDefaultTheme'},'fi':{'className':'dxgvFocusedRow_GridDefaultTheme'},'fgi':{'className':'dxgvFocusedGroupRow_GridDefaultTheme'},'beni':{'className':'dxgvBatchEditNewItem_GridDefaultTheme dxgv'}}}));
+
+//-->
+</script>
+    </td></tr>
+    <tr id="widget-table-footer" class="widget-maintable-row"><td class="widget-maintable-cell">
+        
+
+        <br>
+        
+
+    </td></tr>
+    <tr id="widget-table-source" class="widget-maintable-row"><td class="widget-maintable-cell">
+    <span id="REPORT_PREVIEW_sReportSource" class="reportSourceLink">Created from:</span>
+        <a id="REPORT_PREVIEW_hplDatabaseName" class="reportSourceLink-widget">World Bank, World Development Indicators</a>
+        <br>
+
+          
+
+    </td></tr>
+    <tr id="widget-table-disclaimer" class="widget-maintable-row"><td class="widget-maintable-cell-disclaimer">
+       <b id="REPORT_PREVIEW_bDisclaimer" class="disclaimer-widget"></b>
+        <span id="REPORT_PREVIEW_sDisclaimerMsg" class="disclaimer-widget"> </span>
+    </td></tr>
+</tbody></table>
+<input name="REPORT_PREVIEW$hdnLsqrNote" type="hidden" id="hdnLsqrNote" value="Growth rate calculated for less than the full period.">
+
+    <input name="REPORT_PREVIEW$hdnTableFormatStyles" type="hidden" id="hdnTableFormatStyles">
+    <input name="REPORT_PREVIEW$hdnTableFormatRows" type="hidden" id="hdnTableFormatRows">
+    <input name="REPORT_PREVIEW$hdnTotalRows" type="hidden" id="hdnTotalRows" value="17">
+    <input name="REPORT_PREVIEW$hdnRowHdrMinMax" type="hidden" id="hdnRowHdrMinMax" value="100~300">
+
+ <div id="divMetaData-rpt">
+    
+</div>
+
+
+    
+    
+
+    </div>
+    </div>
+    <div id="file-loading-widget-preview" class="loading">
+        <img src="/images/ajax-loader.gif" width="32" height="32" alt=""><br><strong>Loading...</strong>
+    </div>
+    <iframe id="dl-iframe-widget-preview" style="display:none;"></iframe>
+    <iframe id="dl-iframe-widget-preview-omni" style="display:none;"></iframe>
+    </div>
+    <input name="hdnReportID" type="hidden" id="hdnReportID" value="48810">
+    <input name="hdnReportType" type="hidden" id="hdnReportType" value="Table">
+    <input name="hdnLanguage" type="hidden" id="hdnLanguage" value="en">
+    <input id="hdnPublishedReport" type="hidden" value="n">
+    
+    
+    <input type="hidden" name="hdnCubeDisplayName" id="hdnCubeDisplayName" value="World Development Indicators">
+    <input type="hidden" name="hdnReportName" id="hdnReportName" value="WDI-Tunisia">
+    <input type="hidden" name="hdnIsWidget" id="hdnIsWidget" value="true">
+    <input type="hidden" name="hdnReportDisplayName" id="hdnReportDisplayName" value="WDI Tunisia">
+    <input type="hidden" name="hdnReportwithCustomTheme" id="hdnReportwithCustomTheme" value="0">   
+
+    <input name="hdnCubeId" type="hidden" id="hdnCubeId">
+    <input name="hdnDownload" type="hidden" id="hdnDownload" value="Download">
+    <input name="hdnCancel" type="hidden" id="hdnCancel" value="Cancel">
+    <input name="hdnLoading" type="hidden" id="hdnLoading" value="Loading...">
+        <!-- Shaheer Oct 31st 2012 -->
+    <input type="hidden" name="hdnZoomLevel" id="hdnZoomLevel">
+    <input type="hidden" name="hdnLatitude" id="hdnLatitude">
+    <input type="hidden" name="hdnLongitude" id="hdnLongitude">
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=_XN1TibxYXFEkyd-NIeA4E6EW-kG4ZyZ7q7cX9_cdDCoOivQktYvv7eO7KbxoHnpxkx2E8Oy9Z5hAqZwyzDDI774ZQA7C6BuFCgMY56--8M1&t=638628224627334853';
+WebForm_InitCallback();//]]>
+</script>
+<input type="hidden" name="DXScript" value="1_11,1_12,1_252,1_23,1_64,1_13,1_14,1_19,1_213,1_224,1_225,1_212,1_214,1_222,1_223,1_211,1_227,1_236,1_238,1_239,1_226,1_231,1_233,1_215,1_228,1_230,1_234,1_240,1_183,1_184"><input type="hidden" name="DXCss" value="1_68,1_210,1_209"></form>
+
+
+    <div style="display: none">
+        <form id="dl-metadata-form" action="">
+        <input id="meta-down-radio" type="radio" name="meta-down-radio" value="meta-all" checked="checked">
+        <input type="hidden" name="DXScript" value="1_11,1_12,1_252,1_23,1_64,1_13,1_14,1_19,1_213,1_224,1_225,1_212,1_214,1_222,1_223,1_211,1_227,1_236,1_238,1_239,1_226,1_231,1_233,1_215,1_228,1_230,1_234,1_240,1_183,1_184"><input type="hidden" name="DXCss" value="1_68,1_210,1_209"></form>
+    </div>
+
+    <script type="text/JavaScript">
+        /*_satellite.pageBottom();*/
+
+        function AnalyticsControlClick(clickdetails, params) {            
+            wbgData.page.sectionInfo.siteSection = 'databank/' + clickdetails;
+            wbgData.page.sectionInfo.subsectionP2 = params;
+
+            _satellite.track("dynamicdata");
+        }
+    </script>
+
+
+
+<script>_satellite["_runScript1"](function(event, target, Promise) {
+ // Check if the 'typeofUser' cookie exists
+ var typeofUserCookie = _satellite.cookie.get('typeofUser');
+
+ // If the cookie exists and has a value, set the user type from the cookie
+ if (typeofUserCookie) {
+   wbgData.typeofUser = typeofUserCookie;
+ } else {
+   //If the cookie doesn't exist, make an HTTP call to determine the user type
+   var xhr = new XMLHttpRequest();
+   xhr.open("GET", "https://ibrdtf.worldbank.org/portal/tfsearch", true);
+   
+   xhr.timeout =2000;
+   xhr.onreadystatechange = function() {
+     if (xhr.readyState === XMLHttpRequest.DONE) {
+       if (xhr.status === 200) {
+         var response = xhr.responseText;
+         _satellite.cookie.set('typeofUser', 'internal', {
+           expires: 730
+         });
+
+       } else if (xhr.status === 400) {
+         // Handle 400 response
+         _satellite.cookie.set('typeofUser', 'external', {
+           expires: 730
+         });
+         
+       } else {
+         // Handle other response statuses
+         _satellite.cookie.set('typeofUser', 'external', {
+           expires: 730
+         });
+
+       }
+     }
+   }; 
+
+   xhr.ontimeout = function() {
+     // Handle timeout
+   };
+
+   xhr.onerror = function() {
+     // Handle error
+   };
+
+   xhr.send();
+ }
+
+ // Function to get cookie value by name
+ function getCookie(name) {
+   var cookieName = _satellite.cookie.get('typeofUser');
+   var cookies = cookieName.split(';');
+   for (var i = 0; i < cookies.length; i++) {
+     var cookie = cookies[i].trim();
+     if (cookie.startsWith(name + '=')) {
+       return cookie.substring(name.length + 1);
+     }
+   }
+   return null;
+ }
+});</script><script>_satellite["_runScript2"](function(event, target, Promise) {
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+});</script><script>_satellite["_runScript3"](function(event, target, Promise) {
+if (typeof kWidget !== "undefined") {
+	kWidget.addReadyCallback(function (playerId) {
+	var kdp = document.getElementById(playerId);
+
+	//console.log("player "+kdp);
+	//console.log("Name "+kdp.evaluate('{mediaProxy.entry.name}'));
+	//console.log("Duration "+kdp.evaluate('{duration}'));
+	//console.log("Current Time "+kdp.evaluate('{video.player.currentTime}'));
+	/*
+	kdp.kBind('playerStateChange', function (event) {
+		console.log("event "+event);
+		kulturaPlayerHandler("playing", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});*/
+	kdp.kBind("playerPlayed", function (MediaPlayerState) {
+			kulturaPlayerHandler("playing", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("seek", function (MediaPlayerState) {
+			kulturaPlayerHandler("seeking", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("seeked", function (MediaPlayerState) {
+			kulturaPlayerHandler("seeked", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("playerPaused", function (MediaPlayerState) {
+			kulturaPlayerHandler("paused", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+		kdp.kBind("playerPlayEnd", function (MediaPlayerState) {
+			kulturaPlayerHandler("ended", kdp.evaluate('{mediaProxy.entry.name}'), kdp.evaluate('{duration}'), kdp.evaluate('{video.player.currentTime}'));
+		});
+	});
+}
+
+function kulturaPlayerHandler(playerState,mediaName,videoDuration,videoCurrentTime){
+	var videoPlayer = "Kaltura";
+	var mediaOffset = videoCurrentTime>0?Math.floor(videoCurrentTime):0;
+	var mediaLength = Math.floor(videoDuration);
+
+	s.Media.playerName = videoPlayer;
+
+	//console.log("mediaOffset - "+mediaOffset);
+	//console.log("mediaLength - "+mediaLength);
+	//console.log("playerState - "+playerState);
+
+	if(playerState == "playing" && mediaLength == 0){
+	videoContentType = "live:kaltura video";
+	s.Media.trackSeconds = 60;
+	s.Media.open(mediaName, mediaLength, videoPlayer);
+	//s.Media.play(mediaName, mediaOffset);*/
+	}
+
+	if(playerState == "playing"){
+		if (mediaOffset == 0 && mediaLength > 0){
+			videoContentType = "replay:kaltura video";
+			s.Media.segmentByMilestones = true;
+			s.Media.trackMilestones = '25,50,75';
+			//console.log("milestone tracking set");
+			s.Media.open(mediaName, mediaLength, videoPlayer);
+			s.Media.play(mediaName, mediaOffset);
+			_satellite.getVar('FBPixelVideoReplay');
+      _satellite.getVar('TwitterPixelVideoReplay');
+      _satellite.getVar('GAdwordsTagVideoReplay');
+		}else{
+			s.Media.play(mediaName, mediaOffset);
+		}
+	}else if(playerState == "seeking"){
+		s.Media.stop(mediaName, mediaOffset);
+	}else if(playerState == "seeked"){
+		s.Media.play(mediaName, mediaOffset);
+	}else if(playerState == "paused"){
+		s.Media.stop(mediaName, mediaOffset);
+	}else if(playerState == "ended"){
+		s.Media.stop(mediaName, mediaOffset);
+		s.Media.close(mediaName);
+		mediaOffset = 0;
+	}
+}
+});</script><div class="tips-more-info"><div class="tip-inner tip-bg-image"></div><div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div></div><div class="tips-more-info"><div class="tip-inner tip-bg-image"></div><div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div></div><div class="tips-more-info"><div class="tip-inner tip-bg-image"></div><div class="tip-arrow tip-arrow-top tip-arrow-right tip-arrow-bottom tip-arrow-left"></div></div><script>_satellite["_runScript4"](function(event, target, Promise) {
+var n=0;if("undefined"!=typeof JQuery)jQuery("iframe").each((function(){var e=jQuery(this).attr("src");e&&e.indexOf("youtube.com")>-1&&(e.indexOf("?")>-1?-1==e.indexOf("enablejsapi")&&(e+="&enablejsapi=1"):e+="?enablejsapi=1",jQuery(this).attr("src",e),jQuery(this).attr("id","ytplayer"+n),n++)}));else{var iFrames=document.getElementsByTagName("iframe");for(i=0;i<iFrames.length;i++){var src=iFrames[i].getAttribute("src");src&&src.indexOf("youtube.com")>-1&&(src.indexOf("?")>-1?-1==src.indexOf("enablejsapi")&&(src+="&enablejsapi=1"):src+="?enablejsapi=1",iFrames[i].setAttribute("src",src),iFrames[i].setAttribute("id","ytplayer"+n),n++)}}if(n>0){var tag=document.createElement("script");tag.src="https://www.youtube.com/iframe_api";var firstScriptTag=document.getElementsByTagName("script")[0];firstScriptTag.parentNode.insertBefore(tag,firstScriptTag);var playerInfoList=new Array;if(document.getElementsByTagName("iframe"))for(i=0;i<document.getElementsByTagName("iframe").length;i++)document.getElementsByTagName("iframe")[i].id.indexOf("ytplayer")>-1&&playerInfoList.push(document.getElementsByTagName("iframe")[i]);var players=new Array;function onPlayerStateChange(e){var a="YouTube",t=Math.floor(e.target.getCurrentTime()),i=Math.floor(e.target.getDuration());console.log("event: "+e.data),console.log("YT.PlayerState.PLAYING: "+YT.PlayerState.PLAYING),console.log("YT.PlayerState.PAUSED: "+YT.PlayerState.PAUSED),console.log("mediaOffset: "+t),console.log("media length: "+i);var r=e.target.getVideoData().title;3==e.data&&0==t&&0==i&&(videoContentType="live:youtube video",s.Media.trackSeconds=60,s.Media.open(r,i,a),s.Media.play(r,t),_satellite.getVar("FBPixelVideoLive")),e.data==YT.PlayerState.PLAYING?0==t&&i>0?(videoContentType="replay:youtube video",s.Media.segmentByMilestones=!0,s.Media.trackMilestones="25,50,75",s.Media.open(r,i,a),s.Media.play(r,t),_satellite.getVar("FBPixelVideoReplay"),_satellite.getVar("TwitterPixelVideoReplay"),_satellite.getVar("GAdwordsTagVideoReplay")):s.Media.play(r,t):e.data==YT.PlayerState.PAUSED||e.data==YT.PlayerState.BUFFERING?s.Media.stop(r,t):e.data==YT.PlayerState.ENDED&&(s.Media.stop(r,t),s.Media.close(r),t=0)}window.playersaem=players,window.onYouTubeIframeAPIReady=function(){for(x=0;x<playerInfoList.length;x++)players[x]=new YT.Player(playerInfoList[x],{events:{onStateChange:onPlayerStateChange}})}}
+});</script><!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+<script type="text/javascript">
+(function(){var g=function(e,h,f,g){
+this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
+this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
+this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};
+this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g+ "&t=" + (new Date()).getTime();document.body&&document.body.appendChild(a)}};
+this.start=function(){var a=this;window.addEventListener?window.addEventListener("load",function(){a.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){a.go()})}};
+try{(new g(100,"r","QSI_S_ZN_ahoepSezTqpB2GV","https://znahoepseztqpb2gv-wbgwebvisitor.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_ahoepSezTqpB2GV")).start()}catch(i){}})();
+</script><div id="ZN_ahoepSezTqpB2GV"><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+<!--END WEBSITE FEEDBACK SNIPPET--><script>_satellite["_runScript5"](function(event, target, Promise) {
+var n=0;if("undefined"!=typeof JQuery)jQuery("iframe").each((function(){var e=jQuery(this).attr("src");e&&(e.indexOf("video.ibm.com")>-1||e.indexOf("ustream.tv")>-1)&&(jQuery(this).attr("src",e),jQuery(this).attr("id","UstreamIframe"+n),n++)}));else{var iFrames=document.getElementsByTagName("iframe");for(i=0;i<iFrames.length;i++){var src=iFrames[i].getAttribute("src");src&&(src.indexOf("video.ibm.com")>-1||src.indexOf("ustream.tv")>-1)&&(iFrames[i].setAttribute("src",src),iFrames[i].setAttribute("id","UstreamIframe"+n),n++)}}if(n>0){var UstreamEmbed=function(){function e(e){return t(e)}function t(e){var t=i(e),l=function(e){function t(t){if("socialstream"!==t){if(!w)return M||(M=[]),void M.push(arguments);var n=d(arguments).slice(1);n[0]&&"function"==typeof n[0]&&(b[t]||(b[t]=[]),b[t].push(n[0])),o(e,h,{cmd:t,args:n})}else if(f(window,"message",m),T=i(arguments[1]),E=s(T.getAttribute("src")),O=!0,x.length)for(var r=0,v=x.length;v>r;r++)a(x[r])}function l(){if(M){for(;M.length;)t.apply(this,M.shift());M=null}}function m(e){var t=T;(t&&t.contentWindow&&t.contentWindow===e.source||e.source===T.id)&&g.onmessage(e)}function u(e){var i,n=JSON.parse(e.data);return n.cmd&&"ready"==n.cmd?void o(T,E,{cmd:"ready"}):(i=(i=[n.cmd]).concat(n.args),void t.apply(this,i))}function p(){w=!0,l()}function y(){t.apply(this,arguments)}var g,h,E,T,w=!1,O=!1,M=[],b={},L={},x=[];return h=s(e.getAttribute("src")),g={host:h,callMethod:y,getProperty:function(){y.apply(this,arguments)},addListener:function(e,t){L[e]||(L[e]=[]),L[e].push(t)},removeListener:function(e,t){if(t)for(var i=0,n=L[e].length;n>i;i++)L[e][i]===t&&L[e].splice(i,1);else L[e]=null},onmessage:function(e){var t;if(h||E||x.push({origin:e.origin,data:e.data}),e.origin==h){try{t=JSON.parse(e.data)}catch(e){return}if(t.sstream)return void u(e);if(t.event&&t.event.ready&&(p(),n(L,"ready")),t.event&&!0===t.event.live)return void n(L,"live");if(t.event&&!1===t.event.live)return void n(L,"offline");if(t.event&&!t.event.ready)if(v)Object.keys(t.event).forEach((function(e){n(L,e,t.event[e])}));else for(var i in t.event)t.event.hasOwnProperty(i)&&n(L,i,t.event[i]);if(t.property)if(v)Object.keys(t.property).forEach((function(e){r(b,e,t.property[e])}));else for(var i in t.property)t.property.hasOwnProperty(i)&&r(b,i,t.property[i])}else if(O&&e.origin==E)return void u(e)},destroy:function(){w=!1,h="",O=!1,E="",T=null,M=[],b={},L={},x=[],c[e.id]&&(c[e.id]=null),e=null}}}(t);return t.id||(t.id="UstreamEmbed"+Math.ceil(1e5*Math.random())),l.id=t.id,c[t.id]=l,l}function i(e){return"string"==typeof e&&(e=document.getElementById(e)),e}function n(e,t,i){for(var n in e[t])e[t].hasOwnProperty(n)&&e[t][n].call(window,t,i)}function r(e,t,i){if(e[t]){for(var n in e[t])e[t].hasOwnProperty(n)&&e[t][n].call(window,i);e[t]=null,delete e[t]}}function a(e){var t,i;for(t in c)c.hasOwnProperty(t)&&c[t]&&((i=document.getElementById(t))&&i.contentWindow?i.contentWindow===e.source&&c[t].onmessage(e):"string"==typeof e.source&&e.source==t&&c[t].onmessage(e))}function o(e,t,i){e.contentWindow.postMessage(JSON.stringify(i),t)}function s(e){return e.indexOf("http")<0&&(e=location.protocol+e),e.match(l)[1].toString()}function d(e){return Array.prototype.slice.call(e,0)}function f(e,t,i){e.addEventListener?e.addEventListener(t,i,!1):e.attachEvent("on"+t,i)}var v=void 0!==Object.keys,c={},l=new RegExp("^(http(?:s)?://[^/]+)","im");return f(window,"message",a),window.UstreamEmbed=e}();if(document.getElementsByTagName("iframe"))for(i=0;i<document.getElementsByTagName("iframe").length;i++)if(document.getElementsByTagName("iframe")[i].id.indexOf("UstreamIframe")>-1){var videoTitle,mediaLength,iFrame=document.getElementsByTagName("iframe")[i].id,viewer=UstreamEmbed(document.getElementsByTagName("iframe")[i].id),videoType="channels",mediaOffset=0;viewer.getProperty("content",(function(e){"recorded"===e[0]?videoType="videos":"channels"===e[0]&&(videoType="channels");var t=e[1];videoTitle=getVideoTitle(t,videoType)[0],mediaLength=getVideoTitle(t,videoType)[1]})),viewer.addListener("playing",onEmbedEvent),viewer.addListener("finished",onEmbedEvent),viewer.addListener("offline",onEmbedEvent)}var prevEvent="",startTime=0;function onEmbedEvent(e,t){var i="ustream tv";t&&"playing"===e&&prevEvent!=e?("paused"!==prevEvent?("channels"===videoType?(videoContentType="live:ustream video",s.Media.trackSeconds=150,_satellite.getVar("FBPixelVideoLive")):"videos"===videoType&&(videoContentType="replay:ustream video",s.Media.segmentByMilestones=!0,s.Media.trackMilestones="25,50,75",_satellite.getVar("FBPixelVideoReplay"),_satellite.getVar("TwitterPixelVideoReplay"),_satellite.getVar("GAdwordsTagVideoReplay")),s.Media.open(videoTitle,mediaLength,i),s.Media.play(videoTitle,mediaOffset),startTime=new Date):"paused"===prevEvent&&(s.Media.play(videoTitle,mediaOffset),startTime=new Date),prevEvent=e):t||"playing"!==e||"paused"==prevEvent?!t||"finished"!==e&&"offline"!==e||(mediaOffset+=Math.round((new Date-startTime)/1e3),s.Media.stop(videoTitle,mediaOffset),s.Media.close(videoTitle),mediaOffset=0,prevEvent=e):(mediaOffset+=Math.round((new Date-startTime)/1e3),s.Media.stop(videoTitle,mediaOffset),prevEvent="paused")}function getVideoTitle(e,t){var i=e,n=0,r=new XMLHttpRequest;return r.onreadystatechange=function(){if(4==this.readyState&&200==this.status){var e=JSON.parse(r.responseText);"videos"===t?(i=e.video.title,n=Math.round(e.video.length)):"channels"===t&&(i=e.channel.title)}},r.open("GET","https://api.ustream.tv/"+t+"/"+e+".json",!0),r.send(),[i,n]}}
+});</script><script type="text/javascript" src="https://znahoepseztqpb2gv-wbgwebvisitor.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_ahoepSezTqpB2GV&amp;t=1755017034200"></script><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div><script>_satellite["_runScript6"](function(event, target, Promise) {
+!function(e,t,n,c,o,a,f){e.fbq||(o=e.fbq=function(){o.callMethod?o.callMethod.apply(o,arguments):o.queue.push(arguments)},e._fbq||(e._fbq=o),o.push=o,o.loaded=!0,o.version="2.0",o.queue=[],(a=t.createElement(n)).async=!0,a.src=c,(f=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,f))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js"),fbq("init","1458892451075570"),fbq("track","PageView"),fbq("track","ViewContent");
+});</script></body></html>

@@ -1,0 +1,431 @@
+Tunisia | Data
+Tunisia
+Jump to
+Topic
+Social
+Indicator
+Most recent value
+Trend
+Poverty headcount ratio at $3.00 a day (2021 PPP) (% of population)
+Poverty headcount ratio at $3.00 a day (2021 PPP) (% of population)
+Most recent value
+(
+2021
+)
+0.7
+(
+2021
+)
+Trend
+2000
+2024
+0
+12
+Tunisia
+Life expectancy at birth, total (years)
+Life expectancy at birth, total (years)
+Most recent value
+(
+2023
+)
+77
+(
+2023
+)
+Trend
+2000
+2024
+72
+77
+Tunisia
+Population, total
+Population, total
+Most recent value
+(
+2024
+)
+12,277,109
+(
+2024
+)
+Trend
+2000
+2024
+Million
+9.5
+12.3
+Tunisia
+Population growth (annual %)
+Population growth (annual %)
+Most recent value
+(
+2024
+)
+0.6
+(
+2024
+)
+Trend
+2000
+2024
+0
+2
+Tunisia
+Net migration
+Net migration
+Most recent value
+(
+2024
+)
+-15,221
+(
+2024
+)
+Trend
+2000
+2024
+Thousand
+-28
+-5
+Tunisia
+Human Capital Index (HCI) (scale 0-1)
+Human Capital Index (HCI) (scale 0-1)
+Most recent value
+(
+2020
+)
+0.5
+(
+2020
+)
+Trend
+2000
+2024
+0
+1
+Tunisia
+Economic
+Indicator
+Most recent value
+Trend
+GDP (current US$)
+GDP (current US$)
+current US$
+constant US$
+current LCU
+constant LCU
+Most recent value
+(
+2024 billion
+)
+53.41
+(
+2024 billion
+)
+Trend
+2000
+2024
+21
+57
+Tunisia
+GDP per capita (current US$)
+GDP per capita (current US$)
+current US$
+constant US$
+current LCU
+constant LCU
+Most recent value
+(
+2024
+)
+4,350.4
+(
+2024
+)
+Trend
+2000
+2024
+Thousand
+2.0
+4.5
+Tunisia
+GDP growth (annual %)
+GDP growth (annual %)
+Most recent value
+(
+2024
+)
+1.4
+(
+2024
+)
+Trend
+2000
+2024
+-10
+8
+Tunisia
+Unemployment, total (% of total labor force) (modeled ILO estimate)
+Unemployment, total (% of total labor force) (modeled ILO estimate)
+Most recent value
+(
+2024
+)
+16.2
+(
+2024
+)
+Trend
+2000
+2024
+12
+19
+Tunisia
+Inflation, consumer prices (annual %)
+Inflation, consumer prices (annual %)
+Most recent value
+(
+2024
+)
+7.2
+(
+2024
+)
+Trend
+2000
+2024
+1
+10
+Tunisia
+Personal remittances, received (% of GDP)
+Personal remittances, received (% of GDP)
+Most recent value
+(
+2023
+)
+6.0
+(
+2023
+)
+Trend
+2000
+2024
+3
+7
+Tunisia
+Environment
+Indicator
+Most recent value
+Trend
+Forest area (% of land area)
+Forest area (% of land area)
+Most recent value
+(
+2022
+)
+4.5
+(
+2022
+)
+Trend
+2000
+2024
+4
+5
+Tunisia
+Carbon dioxide (CO2) emissions excluding LULUCF per capita (t CO2e/capita)
+Carbon dioxide (CO2) emissions excluding LULUCF per capita (t CO2e/capita)
+Most recent value
+(
+2023
+)
+2.6
+(
+2023
+)
+Trend
+2000
+2024
+2
+3
+Tunisia
+Access to electricity (% of population)
+Access to electricity (% of population)
+Most recent value
+(
+2023
+)
+100.0
+(
+2023
+)
+Trend
+2000
+2024
+94
+100
+Tunisia
+Annual freshwater withdrawals, total (% of internal resources)
+Annual freshwater withdrawals, total (% of internal resources)
+Most recent value
+(
+2021
+)
+92
+(
+2021
+)
+Trend
+2000
+2024
+60
+96
+Tunisia
+Electricity production from renewable sources, excluding hydroelectric (% of total)
+Electricity production from renewable sources, excluding hydroelectric (% of total)
+Most recent value
+(
+2021
+)
+2.7
+(
+2021
+)
+Trend
+2000
+2024
+-1
+3
+Tunisia
+People using safely managed sanitation services (% of population)
+People using safely managed sanitation services (% of population)
+Most recent value
+(
+2022
+)
+81
+(
+2022
+)
+Trend
+2000
+2024
+52
+84
+Tunisia
+Institutions
+Indicator
+Most recent value
+Trend
+Intentional homicides (per 100,000 people)
+Intentional homicides (per 100,000 people)
+Most recent value
+(
+2020
+)
+5
+(
+2020
+)
+Trend
+2000
+2024
+1
+5
+Tunisia
+Central government debt, total (% of GDP)
+Central government debt, total (% of GDP)
+Most recent value
+(
+2012
+)
+42.5
+(
+2012
+)
+Trend
+2000
+2024
+38
+58
+Tunisia
+Statistical performance indicators (SPI): Overall score (scale 0-100)
+Statistical performance indicators (SPI): Overall score (scale 0-100)
+Most recent value
+(
+2023
+)
+75.8
+(
+2023
+)
+Trend
+2000
+2024
+58
+76
+Tunisia
+Individuals using the Internet (% of population)
+Individuals using the Internet (% of population)
+Most recent value
+(
+2023
+)
+72
+(
+2023
+)
+Trend
+2000
+2024
+0
+80
+Tunisia
+Proportion of seats held by women in national parliaments (%)
+Proportion of seats held by women in national parliaments (%)
+Most recent value
+(
+2024
+)
+16
+(
+2024
+)
+Trend
+2000
+2024
+9
+33
+Tunisia
+Foreign direct investment, net inflows (% of GDP)
+Foreign direct investment, net inflows (% of GDP)
+Most recent value
+(
+2023
+)
+1.5
+(
+2023
+)
+Trend
+2000
+2024
+0
+10
+Tunisia
+Back to top
+Projects & Operations
+Finances
+Surveys
+Human Capital Index
+Global Economic Prospects - Forecasts
+Climate Change
+Help us improve this site
+Help / Feedback
+©
+2025
+The World Bank Group, All Rights Reserved.
+REPORT FRAUD OR CORRUPTION
+This site uses cookies to optimize functionality and give you the best possible experience. If you continue to navigate this website beyond this page, cookies will be placed on your browser. To learn more about cookies,
+click here.
+×
